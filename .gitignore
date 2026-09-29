@@ -8,6 +8,9 @@
 # production
 /build
 
+# one-off cPanel manual-upload archive (regenerate with: npm run build, then zip out/*)
+/admission-calendar-dist.zip
+
 # misc
 .DS_Store
 *.pem
