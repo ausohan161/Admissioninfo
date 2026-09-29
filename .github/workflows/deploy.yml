@@ -13,6 +13,11 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# deploy ব্রাঞ্চে পুশ করতে GITHUB_TOKEN-এর write অ্যাক্সেস লাগে — কিছু
+# রিপোতে এটা ডিফল্টভাবে read-only থাকে, তাই এখানে স্পষ্ট করে দেওয়া হলো।
+permissions:
+  contents: write
+
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
@@ -41,7 +46,7 @@ jobs:
       - name: dates.json বাদ দেওয়া
         run: rm -f out/dates.json
 
-      - name: "deploy" ব্রাঞ্চে বিল্ড আউটপুট পুশ
+      - name: deploy ব্রাঞ্চে বিল্ড আউটপুট পুশ
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
