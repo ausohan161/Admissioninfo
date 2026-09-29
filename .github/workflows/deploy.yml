@@ -1,14 +1,20 @@
-name: Deploy to Hostinger
+name: Build and publish static site
 
 # চলবে: main ব্রাঞ্চে push হলেই স্বয়ংক্রিয়ভাবে, অথবা GitHub-এর Actions ট্যাব থেকে
 # ম্যানুয়ালি "Run workflow" চেপেও চালানো যাবে।
+#
+# এই workflow সাইট বিল্ড করে "deploy" ব্রাঞ্চে পুশ করে — এই ব্রাঞ্চে শুধু বিল্ড হওয়া
+# plain HTML/CSS/JS থাকে (সোর্স কোড না)। cPanel-এর Git Version Control ফিচার এই
+# "deploy" ব্রাঞ্চ থেকে সরাসরি সার্ভারে পুল করে সাইট লাইভ করে — কোনো FTP secret বা
+# ম্যানুয়াল ফাইল আপলোডের দরকার নেই। সেটআপের ধাপ README.md-এর
+# "cPanel দিয়ে সরাসরি ডিপ্লয়" অংশে আছে।
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  build-and-publish:
     runs-on: ubuntu-latest
     steps:
       - name: রিপো checkout
@@ -26,22 +32,19 @@ jobs:
       - name: স্ট্যাটিক সাইট বিল্ড (তৈরি হবে out/ ফোল্ডার)
         run: npm run build
 
-      # নিচের ৪টি secret GitHub repo → Settings → Secrets and variables →
-      # Actions -এ যোগ করতে হবে (মান আসবে Hostinger hPanel → Files → FTP
-      # Accounts থেকে)। বিস্তারিত ধাপ চ্যাটে দেওয়া হয়েছে।
-      - name: Hostinger-এ FTP দিয়ে আপলোড
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: cPanel deploy হুকের জন্য .cpanel.yml যোগ
+        run: cp cpanel/.cpanel.yml out/.cpanel.yml
+
+      # dates.json সার্ভারে সরাসরি (cPanel File Manager থেকে) এডিট করা হয় — তাই
+      # deploy ব্রাঞ্চে এটি রাখা হয় না, ফলে প্রতিটি ডিপ্লয়ে সার্ভারের এডিট করা
+      # dates.json অক্ষত থাকে (git pull ট্র্যাক না-করা ফাইল মোছে না)।
+      - name: dates.json বাদ দেওয়া
+        run: rm -f out/dates.json
+
+      - name: "deploy" ব্রাঞ্চে বিল্ড আউটপুট পুশ
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
-          local-dir: ./out/
-          protocol: ftps
-          # dates.json সার্ভারে সরাসরি (cPanel/File Manager থেকে) এডিট করা হয় — তাই
-          # ডিপ্লয়ে এটি ওভাররাইট বা ডিলিট হবে না।
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            dates.json
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: deploy
+          force_orphan: true
