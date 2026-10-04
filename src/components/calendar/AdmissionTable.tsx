@@ -4,7 +4,6 @@ import { FlatUnitRow } from "@/data/types";
 import { getCategoryById } from "@/data/categories";
 import { formatBanglaDate, toBanglaNumber } from "@/lib/bangla";
 import { CountdownBadge } from "@/components/ui/CountdownBadge";
-import { DemoTag } from "@/components/ui/DemoTag";
 import { getCategoryTheme } from "@/lib/categoryTheme";
 
 export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: string }) {
@@ -33,12 +32,12 @@ export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: st
                 key={`${university.id}-${unit.id}`}
                 className={`align-top hover:bg-indigo-50/40 ${index % 2 === 1 ? "bg-slate-50/60" : "bg-white"}`}
               >
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-400">
+                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-base font-extrabold text-slate-600">
                   {toBanglaNumber(index + 1)}
                 </td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3">
                   <span
-                    className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[11px] font-medium ${theme.badge}`}
+                    className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-semibold ${theme.badge}`}
                   >
                     <span className={`h-1.5 w-1.5 rounded-full ${theme.dot}`} aria-hidden />
                     {category?.shortNameBn ?? "—"}
@@ -51,7 +50,6 @@ export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: st
                 <td className="border border-slate-200 px-3 py-3 text-slate-600">
                   <div className="flex items-center gap-1.5">
                     <span>{unit.nameBn ?? "—"}</span>
-                    {unit.isDemoData && <DemoTag />}
                   </div>
                 </td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">

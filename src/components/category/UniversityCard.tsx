@@ -7,7 +7,6 @@ import { University } from "@/data/types";
 import { formatBanglaDate } from "@/lib/bangla";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { CountdownBadge } from "@/components/ui/CountdownBadge";
-import { DemoTag } from "@/components/ui/DemoTag";
 import { getCategoryTheme } from "@/lib/categoryTheme";
 import { useToday } from "@/lib/useToday";
 
@@ -56,19 +55,19 @@ export function UniversityCard({ university }: { university: University }) {
         <>
           <div className="mt-4 grid grid-cols-3 gap-2 text-center sm:gap-3">
             <div className="rounded-lg bg-slate-50 px-2 py-2.5">
-              <p className="text-[10px] text-slate-400 sm:text-xs">আবেদন শুরু</p>
+              <p className="text-xs font-semibold text-slate-500 sm:text-sm">আবেদন শুরু</p>
               <p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">
                 {formatBanglaDate(activeUnit.applicationStart) ?? "প্রকাশিত হয়নি"}
               </p>
             </div>
             <div className="rounded-lg bg-slate-50 px-2 py-2.5">
-              <p className="text-[10px] text-slate-400 sm:text-xs">আবেদন শেষ</p>
+              <p className="text-xs font-semibold text-slate-500 sm:text-sm">আবেদন শেষ</p>
               <p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">
                 {formatBanglaDate(activeUnit.applicationEnd) ?? "প্রকাশিত হয়নি"}
               </p>
             </div>
             <div className="rounded-lg bg-slate-50 px-2 py-2.5">
-              <p className="text-[10px] text-slate-400 sm:text-xs">ভর্তি পরীক্ষা</p>
+              <p className="text-xs font-semibold text-slate-500 sm:text-sm">ভর্তি পরীক্ষা</p>
               <p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">
                 {formatBanglaDate(activeUnit.examDate) ?? "প্রকাশিত হয়নি"}
               </p>
@@ -78,7 +77,6 @@ export function UniversityCard({ university }: { university: University }) {
           <div className="mt-3 flex flex-wrap items-center gap-2">
             <StatusBadge unit={activeUnit} today={today} />
             {activeUnit.examDate && <CountdownBadge unit={activeUnit} today={today} />}
-            {activeUnit.isDemoData && <DemoTag />}
           </div>
         </>
       )}

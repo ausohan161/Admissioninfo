@@ -8,7 +8,6 @@ import { getCategoryById } from "@/data/categories";
 import { formatBanglaDate, toBanglaNumber } from "@/lib/bangla";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { CountdownBadge } from "@/components/ui/CountdownBadge";
-import { DemoTag } from "@/components/ui/DemoTag";
 import { InfoSection } from "./InfoSection";
 import { CircularButton } from "./CircularButton";
 import { getCategoryTheme } from "@/lib/categoryTheme";
@@ -77,7 +76,6 @@ export function UniversityInfoPanel({ university }: { university: University }) 
           <div className="mt-3 flex flex-wrap items-center gap-2">
             <StatusBadge unit={activeUnit} today={today} />
             {activeUnit.examDate && <CountdownBadge unit={activeUnit} today={today} />}
-            {activeUnit.isDemoData && <DemoTag />}
           </div>
         </InfoSection>
 

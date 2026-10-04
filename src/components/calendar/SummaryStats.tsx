@@ -57,7 +57,7 @@ export function SummaryStatsBar({ stats }: { stats: Stats }) {
               <p className="text-lg font-bold leading-tight text-navy-900 sm:text-xl">
                 {toBanglaNumber(values[item.key])}
               </p>
-              <p className="truncate text-[11px] leading-tight text-slate-500 sm:text-xs">{item.label}</p>
+              <p className="truncate text-xs leading-tight text-slate-500 sm:text-xs">{item.label}</p>
             </div>
           </div>
         );

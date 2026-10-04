@@ -10,7 +10,7 @@ html {
   scroll-behavior: smooth;
   /* Bumps every rem-based Tailwind text/spacing size up proportionally
      (browser default is 16px) for clearer, easier-to-read text site-wide. */
-  font-size: 17px;
+  font-size: 18px;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
   /* Slightly bolder baseline than the browser default (400) so plain text
      without an explicit Tailwind font-weight utility reads more clearly;
      elements with font-semibold/font-bold remain visibly heavier still. */
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* Custom focus ring for accessibility, consistent with the navy accent */

@@ -4,7 +4,6 @@ import { FlatUnitRow } from "@/data/types";
 import { getCategoryById } from "@/data/categories";
 import { formatBanglaDate } from "@/lib/bangla";
 import { CountdownBadge } from "@/components/ui/CountdownBadge";
-import { DemoTag } from "@/components/ui/DemoTag";
 import { getCategoryTheme } from "@/lib/categoryTheme";
 
 export function AdmissionMobileList({ rows, today }: { rows: FlatUnitRow[]; today: string }) {
@@ -22,7 +21,7 @@ export function AdmissionMobileList({ rows, today }: { rows: FlatUnitRow[]; toda
             <div className="flex items-start justify-between gap-2">
               <div className="min-w-0">
                 <span
-                  className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[10px] font-medium ${theme.badge}`}
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-semibold ${theme.badge}`}
                 >
                   <span className={`h-1.5 w-1.5 rounded-full ${theme.dot}`} aria-hidden />
                   {category?.shortNameBn}
@@ -30,7 +29,6 @@ export function AdmissionMobileList({ rows, today }: { rows: FlatUnitRow[]; toda
                 <h3 className="mt-1.5 text-sm font-bold leading-snug text-navy-900">{university.nameBn}</h3>
                 <div className="mt-1 flex flex-wrap items-center gap-1.5">
                   {unit.nameBn && <p className="text-xs text-slate-500">{unit.nameBn}</p>}
-                  {unit.isDemoData && <DemoTag />}
                 </div>
               </div>
               <ChevronRight className="mt-1 h-4 w-4 shrink-0 text-slate-300" aria-hidden />

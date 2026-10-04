@@ -2,7 +2,6 @@ import { Sparkles } from "lucide-react";
 import { FlatUnitRow } from "@/data/types";
 import { CountdownBadge } from "@/components/ui/CountdownBadge";
 import { EmptyState } from "@/components/ui/EmptyState";
-import { DemoTag } from "@/components/ui/DemoTag";
 import { toBanglaNumber } from "@/lib/bangla";
 
 export function UpcomingTests({ rows, today }: { rows: FlatUnitRow[]; today: string }) {
@@ -23,7 +22,7 @@ export function UpcomingTests({ rows, today }: { rows: FlatUnitRow[]; today: str
             {rows.map(({ university, unit }, index) => (
               <li key={`${university.id}-${unit.id}`} className="flex items-start justify-between gap-3 py-2.5">
                 <div className="flex min-w-0 items-start gap-2.5">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 text-[11px] font-bold text-white">
+                  <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 text-sm font-extrabold text-white">
                     {toBanglaNumber(index + 1)}
                   </span>
                   <div className="min-w-0">
@@ -33,7 +32,6 @@ export function UpcomingTests({ rows, today }: { rows: FlatUnitRow[]; today: str
                         <span className="font-normal text-slate-500"> — {unit.nameBn}</span>
                       )}
                     </p>
-                    {unit.isDemoData && <DemoTag />}
                   </div>
                 </div>
                 <CountdownBadge unit={unit} today={today} />
