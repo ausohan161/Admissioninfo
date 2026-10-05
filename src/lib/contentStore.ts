@@ -118,8 +118,11 @@ export function applyContent(files: ContentFiles): boolean {
     }
   }
 
-  if (Array.isArray(files.notices) && files.notices.every((n) => typeof n === "string")) {
-    notices.splice(0, notices.length, ...(files.notices as string[]));
+  const noticeList = Array.isArray(files.notices)
+    ? files.notices
+    : (files.notices as { notices?: unknown } | undefined)?.notices;
+  if (Array.isArray(noticeList) && noticeList.every((n) => typeof n === "string")) {
+    notices.splice(0, notices.length, ...(noticeList as string[]));
     changed = true;
   }
 

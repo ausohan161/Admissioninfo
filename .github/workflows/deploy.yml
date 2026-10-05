@@ -40,8 +40,14 @@ jobs:
       - name: cPanel deploy হুকের জন্য .cpanel.yml যোগ
         run: cp cpanel/.cpanel.yml out/.cpanel.yml
 
-      # public/content/ (প্রতিষ্ঠান, তারিখ, তথ্য, নোটিশ, লেখা) সোর্স থেকে তৈরি হয়ে deploy-এ যায়;
-      # সোর্স বদলায় CMS (/admin) বা GitHub — তাই সার্ভারে আলাদা এডিট রাখা হয় না।
+      # public/content/ সার্ভারে অ্যাডমিন প্যানেল (manage/) লেখে, তাই deploy ব্রাঞ্চে যায় না।
+      # প্রাথমিক তথ্য (seed) হিসেবে কপি হয় manage/seed-এ, যেটা অ্যাডমিন প্রথমবার ব্যবহার করে।
+      - name: সার্ভার-এডিটযোগ্য content বাদ দেওয়া
+        run: |
+          mkdir -p out/manage/seed
+          cp out/content/*.json out/manage/seed/
+          rm -rf out/content
+
       - name: deploy ব্রাঞ্চে বিল্ড আউটপুট পুশ
         uses: peaceiris/actions-gh-pages@v4
         with:

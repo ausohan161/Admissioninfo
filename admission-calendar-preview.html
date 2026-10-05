@@ -3859,8 +3859,9 @@ function applyContent(files) {
     universities.splice(0, universities.length, ...merged);
     changed = true;
   }
-  if (Array.isArray(files.notices) && files.notices.every((n) => typeof n === "string")) {
-    NOTICES.splice(0, NOTICES.length, ...files.notices);
+  const noticeList = Array.isArray(files.notices) ? files.notices : (files.notices && files.notices.notices);
+  if (Array.isArray(noticeList) && noticeList.every((n) => typeof n === "string")) {
+    NOTICES.splice(0, NOTICES.length, ...noticeList);
     changed = true;
   }
   if (isObj(files.texts)) {
