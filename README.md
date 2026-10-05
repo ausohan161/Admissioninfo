@@ -13,7 +13,7 @@
 ## টেক স্ট্যাক
 
 - **Next.js 15** (App Router) + **TypeScript**
-- **Tailwind CSS** — Hind Siliguri (Bengali) টাইপোগ্রাফি
+- **Tailwind CSS** — Noto Sans Bengali (Bengali) টাইপোগ্রাফি
 - **lucide-react** — আইকন
 - সম্পূর্ণভাবে ক্লায়েন্ট-সাইড dynamic date logic (Asia/Dhaka timezone), কোনো ব্যাকএন্ড/ডেটাবেজ প্রয়োজন নেই
 - **Static export** (`output: "export"`) — বিল্ড করলে plain HTML/CSS/JS ফাইল তৈরি হয়, তাই Hostinger-এর মতো যেকোনো সাধারণ (shared) হোস্টিং-এ Node.js ছাড়াই চলে

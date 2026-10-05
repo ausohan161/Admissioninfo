@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Hind_Siliguri } from "next/font/google";
+import { Noto_Sans_Bengali } from "next/font/google";
 import "./globals.css";
 import { ContentProvider } from "@/components/layout/ContentProvider";
 import { texts } from "@/lib/texts";
 
-const hindSiliguri = Hind_Siliguri({
+const notoBengali = Noto_Sans_Bengali({
   subsets: ["bengali", "latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-bangla",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-noto-bangla",
   display: "swap",
 });
 
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="bn" className={hindSiliguri.variable}>
+    <html lang="bn" className={notoBengali.variable}>
       <body className="min-h-screen antialiased">
         <ContentProvider>{children}</ContentProvider>
       </body>

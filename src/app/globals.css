@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-bangla: "Hind Siliguri", system-ui, sans-serif;
+  --font-bangla: var(--font-noto-bangla), system-ui, sans-serif;
 }
 
 html {
