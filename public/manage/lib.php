@@ -103,3 +103,28 @@ function valid_id(string $value): bool
 {
     return (bool) preg_match('/^[a-z0-9-]+$/', $value);
 }
+
+/** Returns the accounts map: username => ['hash' => ..., 'role' => 'admin'|'editor']. */
+function load_users(): array
+{
+    if (!file_exists(config_path())) {
+        return [];
+    }
+    $config = require config_path();
+    if (isset($config['username'], $config['hash'])) {
+        return [$config['username'] => ['hash' => $config['hash'], 'role' => 'admin']];
+    }
+    return $config['users'] ?? [];
+}
+
+function save_users(array $users): void
+{
+    $config = "<?php\nreturn " . var_export(['users' => $users], true) . ";\n";
+    file_put_contents(config_path(), $config, LOCK_EX);
+}
+
+function log_action(string $user, string $text): void
+{
+    $line = date('Y-m-d H:i:s') . " $user $text\n";
+    file_put_contents(__DIR__ . '/activity.log', $line, FILE_APPEND | LOCK_EX);
+}

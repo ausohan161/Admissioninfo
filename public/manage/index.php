@@ -12,7 +12,7 @@ const CATEGORIES = [
     'general-cluster' => 'সাধারণ বিশ্ববিদ্যালয় (গুচ্ছ)',
 ];
 const GROUPS = ['science' => 'বিজ্ঞান', 'commerce' => 'বাণিজ্য', 'arts' => 'মানবিক', 'any' => 'সব গ্রুপ'];
-const TABS = ['home' => '১. হোম পেজ', 'info' => '২. তথ্যকণিকা', 'checker' => '৩. আবেদনযোগ্যতা যাচাই', 'texts' => '৪. সাধারণ লেখা'];
+const TABS = ['home' => '১. হোম পেজ', 'info' => '২. তথ্যকণিকা', 'checker' => '৩. আবেদনযোগ্যতা যাচাই', 'texts' => '৪. সাধারণ লেখা', 'users' => '৫. ব্যবহারকারী'];
 
 // ---------- first-time setup: create the admin account once ----------
 if (!file_exists(config_path())) {
@@ -23,8 +23,7 @@ if (!file_exists(config_path())) {
         if ($username === '' || strlen($password) < 10 || $password !== ($_POST['confirm'] ?? '')) {
             $message = 'ইউজারনেম দিন, পাসওয়ার্ড কমপক্ষে ১০ অক্ষর হতে হবে এবং দুবার একই হতে হবে।';
         } else {
-            $config = "<?php\nreturn " . var_export(['username' => $username, 'hash' => password_hash($password, PASSWORD_DEFAULT)], true) . ";\n";
-            file_put_contents(config_path(), $config, LOCK_EX);
+            save_users([$username => ['hash' => password_hash($password, PASSWORD_DEFAULT), 'role' => 'admin']]);
             header('Location: ./');
             exit;
         }
@@ -45,8 +44,6 @@ if (!file_exists(config_path())) {
     exit;
 }
 
-$config = require config_path();
-
 if (isset($_GET['logout'])) {
     session_destroy();
     header('Location: ./');
@@ -59,9 +56,11 @@ if (empty($_SESSION['user'])) {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $username = trim($_POST['username'] ?? '');
         $password = $_POST['password'] ?? '';
-        if (hash_equals($config['username'], $username) && password_verify($password, $config['hash'])) {
+        $account = load_users()[$username] ?? null;
+        if ($account !== null && password_verify($password, $account['hash'])) {
             session_regenerate_id(true);
             $_SESSION['user'] = $username;
+            $_SESSION['role'] = $account['role'];
             header('Location: ./');
             exit;
         }
@@ -296,6 +295,79 @@ function save_texts(): string
     return 'লেখাগুলো সংরক্ষিত হয়েছে।';
 }
 
+function is_admin(): bool
+{
+    return ($_SESSION['role'] ?? '') === 'admin';
+}
+
+function add_user(): string
+{
+    if (!is_admin()) {
+        return 'শুধু অ্যাডমিন নতুন ব্যবহারকারী যোগ করতে পারেন।';
+    }
+    $username = trim($_POST['new_username'] ?? '');
+    $password = $_POST['new_password'] ?? '';
+    $role = $_POST['new_role'] ?? '';
+    if (!preg_match('/^[a-zA-Z0-9_.-]{3,30}$/', $username)) {
+        return 'ইউজারনেম ৩-৩০ অক্ষর, শুধু ইংরেজি অক্ষর, সংখ্যা, _ . - ব্যবহার করুন।';
+    }
+    if (strlen($password) < 10) {
+        return 'পাসওয়ার্ড কমপক্ষে ১০ অক্ষর হতে হবে।';
+    }
+    if (!in_array($role, ['admin', 'editor'], true)) {
+        return 'ভূমিকা ঠিক নেই।';
+    }
+    $users = load_users();
+    if (isset($users[$username])) {
+        return 'এই ইউজারনেম আগে থেকেই আছে।';
+    }
+    $users[$username] = ['hash' => password_hash($password, PASSWORD_DEFAULT), 'role' => $role];
+    save_users($users);
+    log_action($_SESSION['user'], "নতুন ব্যবহারকারী যোগ: $username ($role)");
+    return "ব্যবহারকারী $username যোগ হয়েছে।";
+}
+
+function delete_user(): string
+{
+    if (!is_admin()) {
+        return 'শুধু অ্যাডমিন ব্যবহারকারী মুছতে পারেন।';
+    }
+    $target = trim($_POST['target'] ?? '');
+    $users = load_users();
+    if (!isset($users[$target])) {
+        return 'ব্যবহারকারী পাওয়া যায়নি।';
+    }
+    if ($target === $_SESSION['user']) {
+        return 'নিজের অ্যাকাউন্ট মুছতে পারবেন না।';
+    }
+    $admins = array_filter($users, fn($u) => $u['role'] === 'admin');
+    if ($users[$target]['role'] === 'admin' && count($admins) <= 1) {
+        return 'শেষ অ্যাডমিন অ্যাকাউন্ট মোছা যাবে না।';
+    }
+    unset($users[$target]);
+    save_users($users);
+    log_action($_SESSION['user'], "ব্যবহারকারী মুছে ফেলা: $target");
+    return "ব্যবহারকারী $target মুছে ফেলা হয়েছে।";
+}
+
+function change_password(): string
+{
+    $me = $_SESSION['user'];
+    $users = load_users();
+    $current = $_POST['current_password'] ?? '';
+    $new = $_POST['new_password_own'] ?? '';
+    if (!isset($users[$me]) || !password_verify($current, $users[$me]['hash'])) {
+        return 'বর্তমান পাসওয়ার্ড ভুল।';
+    }
+    if (strlen($new) < 10) {
+        return 'নতুন পাসওয়ার্ড কমপক্ষে ১০ অক্ষর হতে হবে।';
+    }
+    $users[$me]['hash'] = password_hash($new, PASSWORD_DEFAULT);
+    save_users($users);
+    log_action($me, 'পাসওয়ার্ড বদলানো হয়েছে');
+    return 'পাসওয়ার্ড বদলানো হয়েছে।';
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     check_csrf();
     $action = $_POST['action'] ?? '';
@@ -305,8 +377,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'info' => save_info(),
         'checker' => save_checker(),
         'texts' => save_texts(),
+        'add_user' => add_user(),
+        'delete_user' => delete_user(),
+        'change_password' => change_password(),
         default => 'অজানা অনুরোধ।',
     };
+    if (in_array($action, ['home', 'notices', 'info', 'checker', 'texts'], true)) {
+        log_action($_SESSION['user'], "তথ্য সংরক্ষণ: $action");
+    }
 }
 
 // ---------- rendering ----------
@@ -537,6 +615,61 @@ button{background:#4f46e5;color:#fff;border:0;border-radius:6px;padding:10px 18p
       <p><button>লেখাগুলো সংরক্ষণ করুন</button></p>
     </form>
   </div>
+
+<?php elseif ($tab === 'users'): ?>
+  <div class="box">
+    <h3>আমার পাসওয়ার্ড বদলান</h3>
+    <form method="post">
+      <input type="hidden" name="csrf" value="<?= $csrf ?>">
+      <input type="hidden" name="action" value="change_password">
+      <div class="grid">
+        <div><label>বর্তমান পাসওয়ার্ড</label><input type="password" name="current_password" required></div>
+        <div><label>নতুন পাসওয়ার্ড (কমপক্ষে ১০ অক্ষর)</label><input type="password" name="new_password_own" required></div>
+      </div>
+      <p><button>পাসওয়ার্ড বদলান</button></p>
+    </form>
+  </div>
+
+  <?php if (is_admin()): $users = load_users(); ?>
+  <div class="box">
+    <h3>ব্যবহারকারীর তালিকা</h3>
+    <table style="width:100%;border-collapse:collapse">
+      <tr><th style="text-align:left">ইউজারনেম</th><th style="text-align:left">ভূমিকা</th><th></th></tr>
+      <?php foreach ($users as $name => $account): ?>
+      <tr style="border-top:1px solid #e2e8f0">
+        <td><?= h($name) ?><?= $name === $_SESSION['user'] ? ' <span class="hint">(আপনি)</span>' : '' ?></td>
+        <td><?= $account['role'] === 'admin' ? 'অ্যাডমিন' : 'সম্পাদক' ?></td>
+        <td>
+          <?php if ($name !== $_SESSION['user']): ?>
+          <form method="post" onsubmit="return confirm('এই ব্যবহারকারী মুছবেন?')">
+            <input type="hidden" name="csrf" value="<?= $csrf ?>">
+            <input type="hidden" name="action" value="delete_user">
+            <input type="hidden" name="target" value="<?= h($name) ?>">
+            <button style="background:#dc2626">মুছুন</button>
+          </form>
+          <?php endif; ?>
+        </td>
+      </tr>
+      <?php endforeach; ?>
+    </table>
+  </div>
+
+  <div class="box">
+    <h3>নতুন ব্যবহারকারী যোগ করুন</h3>
+    <form method="post">
+      <input type="hidden" name="csrf" value="<?= $csrf ?>">
+      <input type="hidden" name="action" value="add_user">
+      <div class="grid">
+        <div><label>ইউজারনেম <span class="hint">(ইংরেজি, ৩-৩০ অক্ষর)</span></label><input type="text" name="new_username" required></div>
+        <div><label>প্রাথমিক পাসওয়ার্ড <span class="hint">(কমপক্ষে ১০ অক্ষর)</span></label><input type="text" name="new_password" required></div>
+        <div><label>ভূমিকা</label>
+          <select name="new_role"><option value="editor">সম্পাদক (তথ্য বদলাতে পারবেন)</option><option value="admin">অ্যাডমিন (ব্যবহারকারীও পরিচালনা করতে পারবেন)</option></select></div>
+      </div>
+      <p><button>যোগ করুন</button></p>
+    </form>
+    <p class="hint">নতুন ব্যবহারকারীকে পাসওয়ার্ড আলাদাভাবে জানান। তিনি লগইন করে নিজের পাসওয়ার্ড বদলাতে পারবেন।</p>
+  </div>
+  <?php endif; ?>
 <?php endif; ?>
 </main>
 </body>
