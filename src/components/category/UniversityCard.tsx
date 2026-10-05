@@ -83,7 +83,7 @@ export function UniversityCard({ university }: { university: University }) {
       )}
 
       <Link
-        href={`/university/${university.id}${activeUnit && hasNamedUnits ? `?unit=${activeUnit.id}` : ""}`}
+        href={`/university/?id=${university.id}${activeUnit && hasNamedUnits ? `&unit=${activeUnit.id}` : ""}`}
         className={`mt-4 flex items-center justify-center gap-1 rounded-lg py-2 text-sm font-semibold text-white shadow-sm transition-colors ${theme.solid}`}
       >
         {texts.viewDetails}

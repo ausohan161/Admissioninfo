@@ -67,7 +67,7 @@ export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: st
                 </td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-right">
                   <Link
-                    href={`/university/${university.id}`}
+                    href={`/university/?id=${university.id}`}
                     className="inline-flex items-center gap-0.5 text-xs font-medium text-indigo-600 hover:text-indigo-800"
                   >
                     {texts.details}

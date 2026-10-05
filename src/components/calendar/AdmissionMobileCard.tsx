@@ -16,7 +16,7 @@ export function AdmissionMobileList({ rows, today }: { rows: FlatUnitRow[]; toda
         return (
           <Link
             key={`${university.id}-${unit.id}`}
-            href={`/university/${university.id}`}
+            href={`/university/?id=${university.id}`}
             className={`block rounded-xl border border-slate-200 border-t-4 bg-white p-4 shadow-soft active:bg-slate-50 ${theme.topBorder}`}
           >
             <div className="flex items-start justify-between gap-2">

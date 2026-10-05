@@ -276,7 +276,7 @@ function ResultsSection({
                       {unit.nameBn && <p className="text-sm font-medium text-slate-500">{unit.nameBn}</p>}
                     </div>
                     <Link
-                      href={`/university/${university.id}${unit.nameBn ? `?unit=${unit.id}` : ""}`}
+                      href={`/university/?id=${university.id}${unit.nameBn ? `&unit=${unit.id}` : ""}`}
                       className="inline-flex shrink-0 items-center gap-0.5 text-sm font-bold text-purple-600 hover:text-purple-800"
                     >
                       {texts.details}
