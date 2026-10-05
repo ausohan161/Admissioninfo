@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: "Noto Sans Bengali", var(--font-bangla);
+  font-family: var(--font-bangla);
   background-color: #f7f9fc;
   color: #14213d;
   /* Slightly bolder baseline than the browser default (400) so plain text
