@@ -13,22 +13,10 @@ public_folder: "/uploads"
 
 locale: "en"
 
-collections:
-  - name: "notices"
-    label: "জরুরি নোটিশ (স্ক্রলিং)"
-    label_singular: "নোটিশ তালিকা"
-    files:
-      - name: "notices"
-        label: "জরুরি নোটিশ তালিকা"
-        file: "src/data/notices.json"
-        fields:
-          - label: "নোটিশসমূহ"
-            name: "notices"
-            widget: "list"
-            field: { label: "নোটিশ", name: "notice", widget: "string" }
 
-  - name: "universities"
-    label: "বিশ্ববিদ্যালয় / প্রতিষ্ঠান"
+collections:
+  - name: "institutions"
+    label: "১. প্রতিষ্ঠান, ইউনিট ও তারিখ"
     label_singular: "প্রতিষ্ঠান"
     folder: "src/data/universities"
     create: true
@@ -36,19 +24,12 @@ collections:
     slug: "{{fields.id}}"
     format: "json"
     identifier_field: "nameBn"
-    summary: "{{nameBn}} ({{shortName}}) — {{category}}"
-    sortable_fields: ["nameBn", "category"]
+    summary: "{{nameBn}} ({{shortName}})"
     fields:
-      - label: "আইডি (ইংরেজি অক্ষর, সংখ্যা ও হাইফেন — একবার সেভ করার পর পরিবর্তন করবেন না)"
-        name: "id"
-        widget: "string"
-        pattern: ["^[a-z0-9-]+$", "শুধু ছোট হাতের ইংরেজি অক্ষর, সংখ্যা ও হাইফেন (-) ব্যবহার করুন, যেমন: buet, du, gst-cluster"]
-        hint: "উদাহরণ: buet, du, gst-cluster"
-
+      - { label: "আইডি (ইংরেজি ছোট হাতের অক্ষর, সংখ্যা, হাইফেন — একবার সেভ হলে বদলাবেন না)", name: "id", widget: "string", pattern: ["^[a-z0-9-]+$", "শুধু ছোট হাতের ইংরেজি অক্ষর, সংখ্যা ও হাইফেন"] }
       - { label: "নাম (বাংলা)", name: "nameBn", widget: "string" }
-      - { label: "নাম (ইংরেজি)", name: "nameEn", widget: "string" }
+      - { label: "নাম (ইংরেজি)", name: "nameEn", widget: "string", required: false }
       - { label: "সংক্ষিপ্ত নাম (যেমন BUET, DU)", name: "shortName", widget: "string" }
-
       - label: "ক্যাটাগরি"
         name: "category"
         widget: "select"
@@ -58,71 +39,30 @@ collections:
           - { label: "ইঞ্জিনিয়ারিং বিশ্ববিদ্যালয় (গুচ্ছ)", value: "engineering-cluster" }
           - { label: "সাধারণ বিশ্ববিদ্যালয় (স্বতন্ত্র)", value: "general-independent" }
           - { label: "সাধারণ বিশ্ববিদ্যালয় (গুচ্ছ)", value: "general-cluster" }
+      - { label: "সাব-গ্রুপ (ঐচ্ছিক)", name: "subGroupBn", widget: "string", required: false }
+      - { label: "ভর্তি সেশন (যেমন ২০২৬-২৭)", name: "admissionSession", widget: "string" }
+      - { label: "সংক্ষিপ্ত পরিচিতি (তথ্যকণিকা)", name: "introBn", widget: "text", required: false }
 
-      - label: "সাব-গ্রুপ (ঐচ্ছিক, শুধু মেডিকেল ক্যাটাগরির জন্য)"
-        name: "subGroupBn"
-        widget: "string"
-        required: false
-        hint: "যেমন: আর্মড ফোর্সেস মেডিকেল কলেজ"
-
-      - { label: "ভর্তি সেশন", name: "admissionSession", widget: "string", hint: "যেমন: ২০২৬-২৭" }
-
-      - label: "সংক্ষিপ্ত পরিচিতি (ঐচ্ছিক)"
-        name: "introBn"
-        widget: "text"
-        required: false
-
-      - label: "ভর্তি ইউনিটসমূহ"
+      - label: "ইউনিটসমূহ (প্রতিটি ইউনিটের তারিখ, আসন, যোগ্যতা, বিষয় ইত্যাদি এখানে)"
         name: "units"
         widget: "list"
-        summary: "{{fields.nameBn}} — পরীক্ষা: {{fields.examDate}}"
+        summary: "{{fields.nameBn}}"
         fields:
-          - label: "ইউনিট আইডি (ইংরেজি, ইউনিটের মধ্যে ইউনিক)"
-            name: "id"
-            widget: "string"
-            pattern: ["^[a-z0-9-]+$", "শুধু ছোট হাতের ইংরেজি অক্ষর, সংখ্যা ও হাইফেন"]
-            hint: "একটিমাত্র ইউনিট হলে 'default' লিখুন"
+          - { label: "ইউনিট আইডি (ইংরেজি; একটিমাত্র ইউনিট হলে default)", name: "id", widget: "string", pattern: ["^[a-z0-9-]+$", "শুধু ছোট হাতের ইংরেজি অক্ষর, সংখ্যা ও হাইফেন"] }
+          - { label: "ইউনিটের নাম (বাংলা) — একটিমাত্র ইউনিট হলে খালি রাখুন", name: "nameBn", widget: "string", required: false }
+          - { label: "আবেদন শুরু", name: "applicationStart", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+          - { label: "আবেদন শেষ", name: "applicationEnd", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+          - { label: "ভর্তি পরীক্ষার তারিখ", name: "examDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+          - { label: "এটি কি নমুনা তারিখ? (সার্কুলার এলে আনচেক করুন)", name: "isDemoData", widget: "boolean", default: false, required: false }
 
-          - label: "ইউনিটের নাম (বাংলা) — একটিমাত্র ইউনিট হলে খালি রাখুন"
-            name: "nameBn"
-            widget: "string"
-            required: false
-
-          - label: "আবেদন শুরুর তারিখ (না জানলে খালি রাখুন)"
-            name: "applicationStart"
-            widget: "datetime"
-            date_format: "YYYY-MM-DD"
-            time_format: false
-            required: false
-
-          - label: "আবেদনের শেষ তারিখ (না জানলে খালি রাখুন)"
-            name: "applicationEnd"
-            widget: "datetime"
-            date_format: "YYYY-MM-DD"
-            time_format: false
-            required: false
-
-          - label: "ভর্তি পরীক্ষার তারিখ (না জানলে খালি রাখুন)"
-            name: "examDate"
-            widget: "datetime"
-            date_format: "YYYY-MM-DD"
-            time_format: false
-            required: false
-
-          - label: "এটি কি নমুনা/ডেমো তারিখ? (official সার্কুলার এলে আনচেক করুন)"
-            name: "isDemoData"
-            widget: "boolean"
-            default: false
-            required: false
-
-          - label: "আসন সংখ্যা (ঐচ্ছিক)"
+          - label: "আসন সংখ্যা (তথ্যকণিকা)"
             name: "seats"
             widget: "object"
             required: false
             collapsed: true
             fields:
               - { label: "মোট আসন", name: "total", widget: "number", value_type: "int", required: false }
-              - label: "বিভাজন (ঐচ্ছিক, যেমন কোটাভিত্তিক)"
+              - label: "বিভাজন"
                 name: "breakdown"
                 widget: "list"
                 required: false
@@ -130,40 +70,176 @@ collections:
                   - { label: "নাম", name: "nameBn", widget: "string" }
                   - { label: "সংখ্যা", name: "count", widget: "number", value_type: "int" }
 
-          - label: "আবেদন যোগ্যতা (ঐচ্ছিক)"
+          - label: "আবেদন যোগ্যতা (তথ্যকণিকা)"
             name: "eligibility"
             widget: "object"
             required: false
             collapsed: true
             fields:
               - { label: "বিবরণ", name: "descriptionBn", widget: "text", required: false }
-              - label: "পয়েন্ট আকারে যোগ্যতা (ঐচ্ছিক)"
+              - label: "পয়েন্ট"
                 name: "points"
                 widget: "list"
                 required: false
                 field: { label: "পয়েন্ট", name: "point", widget: "string" }
 
-          - label: "পরীক্ষার ধরন (ঐচ্ছিক)"
-            name: "examPattern"
-            widget: "string"
-            required: false
-            hint: "যেমন: MCQ, Written, MCQ + Written"
-
-          - label: "বিষয় ও প্রশ্নসংখ্যা (ঐচ্ছিক)"
+          - { label: "পরীক্ষার ধরন (যেমন MCQ, Written)", name: "examPattern", widget: "string", required: false }
+          - label: "বিষয় ও নম্বর"
             name: "subjects"
             widget: "list"
             required: false
             fields:
               - { label: "বিষয়ের নাম", name: "nameBn", widget: "string" }
               - { label: "নম্বর", name: "marks", widget: "number", value_type: "int" }
+          - { label: "ফলাফল নির্ণয় পদ্ধতি", name: "resultMethod", widget: "string", required: false }
+          - { label: "সার্কুলার লিংক", name: "circularUrl", widget: "string", required: false }
 
-          - label: "ফলাফল নির্ণয় পদ্ধতি (ঐচ্ছিক)"
-            name: "resultMethod"
-            widget: "string"
+          - label: "আবেদনযোগ্যতা চেকার-এর শর্ত (জিপিএ)"
+            name: "eligibilityCriteria"
+            widget: "object"
             required: false
+            collapsed: true
+            fields:
+              - label: "গ্রুপ"
+                name: "group"
+                widget: "select"
+                options:
+                  - { label: "বিজ্ঞান", value: "science" }
+                  - { label: "বাণিজ্য", value: "commerce" }
+                  - { label: "মানবিক", value: "arts" }
+                  - { label: "সব গ্রুপ", value: "any" }
+              - { label: "ন্যূনতম SSC জিপিএ", name: "minSscGpa", widget: "number", value_type: "float", required: false }
+              - { label: "ন্যূনতম HSC জিপিএ", name: "minHscGpa", widget: "number", value_type: "float", required: false }
+              - { label: "ন্যূনতম মোট (SSC+HSC) জিপিএ", name: "minCombinedGpa", widget: "number", value_type: "float", required: false }
+              - label: "বিষয়ভিত্তিক ন্যূনতম জিপিএ"
+                name: "subjectMinimums"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "বিষয় (পদার্থবিজ্ঞান, রসায়ন, জীববিজ্ঞান, উচ্চতর গণিত, ইংরেজি)", name: "subjectBn", widget: "string" }
+                  - { label: "ন্যূনতম জিপিএ", name: "minGpa", widget: "number", value_type: "float" }
+              - label: "বিষয়সমষ্টির শর্ত (ঐচ্ছিক)"
+                name: "subjectGroupMinTotal"
+                widget: "object"
+                required: false
+                collapsed: true
+                fields:
+                  - label: "বিষয়সমূহ"
+                    name: "subjectsBn"
+                    widget: "list"
+                    field: { label: "বিষয়", name: "subject", widget: "string" }
+                  - { label: "মোট ন্যূনতম", name: "minTotal", widget: "number", value_type: "float" }
+              - { label: "টীকা (চেকারে দেখাবে)", name: "noteBn", widget: "text", required: false }
 
-          - label: "সার্কুলার লিংক (ঐচ্ছিক)"
-            name: "circularUrl"
-            widget: "string"
-            required: false
-            hint: "সরাসরি PDF বা ওয়েবপেজের লিংক"
+  - name: "notices"
+    label: "২. জরুরি নোটিশ (স্ক্রলিং)"
+    label_singular: "নোটিশ"
+    files:
+      - name: "notices"
+        label: "জরুরি নোটিশের তালিকা"
+        file: "src/data/notices.json"
+        fields:
+          - label: "নোটিশসমূহ (প্রতিটি লাইন একটি নোটিশ)"
+            name: "notices"
+            widget: "list"
+            field: { label: "নোটিশ", name: "notice", widget: "string" }
+
+  - name: "site_texts"
+    label: "৩. সাইটের লেখা (টাইটেল, হেডিং, বাটন)"
+    label_singular: "লেখা"
+    files:
+      - name: "texts"
+        label: "সাইটের সব লেখা (বাম পাশের নাম ঠিক রাখুন)"
+        file: "src/data/texts.json"
+        fields:
+      - { label: "appName", name: "appName", widget: "string", required: false }
+      - { label: "appTagline", name: "appTagline", widget: "string", required: false }
+      - { label: "lastUpdated", name: "lastUpdated", widget: "string", required: false }
+      - { label: "mainMenuAria", name: "mainMenuAria", widget: "string", required: false }
+      - { label: "tabOverview", name: "tabOverview", widget: "string", required: false }
+      - { label: "tabInfo", name: "tabInfo", widget: "string", required: false }
+      - { label: "tabEligibility", name: "tabEligibility", widget: "string", required: false }
+      - { label: "footerNote1", name: "footerNote1", widget: "text", required: false }
+      - { label: "footerNote2", name: "footerNote2", widget: "text", required: false }
+      - { label: "sectionUpcoming", name: "sectionUpcoming", widget: "string", required: false }
+      - { label: "emptyUpcomingTitle", name: "emptyUpcomingTitle", widget: "string", required: false }
+      - { label: "emptyUpcomingDesc", name: "emptyUpcomingDesc", widget: "string", required: false }
+      - { label: "urgentLabel", name: "urgentLabel", widget: "string", required: false }
+      - { label: "noticeLabel", name: "noticeLabel", widget: "string", required: false }
+      - { label: "todayLastDay", name: "todayLastDay", widget: "string", required: false }
+      - { label: "daysLeftTemplate", name: "daysLeftTemplate", widget: "string", required: false }
+      - { label: "deadlinePrefix", name: "deadlinePrefix", widget: "string", required: false }
+      - { label: "statusAll", name: "statusAll", widget: "string", required: false }
+      - { label: "statusOngoing", name: "statusOngoing", widget: "string", required: false }
+      - { label: "applicationEnd", name: "applicationEnd", widget: "string", required: false }
+      - { label: "statusUpcomingExam", name: "statusUpcomingExam", widget: "string", required: false }
+      - { label: "statusCompleted", name: "statusCompleted", widget: "string", required: false }
+      - { label: "searchPlaceholder", name: "searchPlaceholder", widget: "string", required: false }
+      - { label: "searchAria", name: "searchAria", widget: "string", required: false }
+      - { label: "categoryFilterAria", name: "categoryFilterAria", widget: "string", required: false }
+      - { label: "allCategories", name: "allCategories", widget: "string", required: false }
+      - { label: "statusFilterAria", name: "statusFilterAria", widget: "string", required: false }
+      - { label: "sectionSchedule", name: "sectionSchedule", widget: "string", required: false }
+      - { label: "emptyResults", name: "emptyResults", widget: "string", required: false }
+      - { label: "emptyResultsDesc", name: "emptyResultsDesc", widget: "string", required: false }
+      - { label: "statTotal", name: "statTotal", widget: "string", required: false }
+      - { label: "statUpcoming", name: "statUpcoming", widget: "string", required: false }
+      - { label: "statThisWeek", name: "statThisWeek", widget: "string", required: false }
+      - { label: "colNo", name: "colNo", widget: "string", required: false }
+      - { label: "colCategory", name: "colCategory", widget: "string", required: false }
+      - { label: "colUniversity", name: "colUniversity", widget: "string", required: false }
+      - { label: "colUnit", name: "colUnit", widget: "string", required: false }
+      - { label: "applicationStart", name: "applicationStart", widget: "string", required: false }
+      - { label: "examDate", name: "examDate", widget: "string", required: false }
+      - { label: "colDaysLeft", name: "colDaysLeft", widget: "string", required: false }
+      - { label: "details", name: "details", widget: "string", required: false }
+      - { label: "notPublished", name: "notPublished", widget: "string", required: false }
+      - { label: "notPublishedShort", name: "notPublishedShort", widget: "string", required: false }
+      - { label: "sectionImportantDates", name: "sectionImportantDates", widget: "string", required: false }
+      - { label: "admissionSession", name: "admissionSession", widget: "string", required: false }
+      - { label: "sectionSeats", name: "sectionSeats", widget: "string", required: false }
+      - { label: "totalSeats", name: "totalSeats", widget: "string", required: false }
+      - { label: "sectionEligibility", name: "sectionEligibility", widget: "string", required: false }
+      - { label: "sectionExamPattern", name: "sectionExamPattern", widget: "string", required: false }
+      - { label: "sectionSubjects", name: "sectionSubjects", widget: "string", required: false }
+      - { label: "sectionResultMethod", name: "sectionResultMethod", widget: "string", required: false }
+      - { label: "sectionCircular", name: "sectionCircular", widget: "string", required: false }
+      - { label: "circularNotPublished", name: "circularNotPublished", widget: "string", required: false }
+      - { label: "viewCircular", name: "viewCircular", widget: "string", required: false }
+      - { label: "viewDetails", name: "viewDetails", widget: "string", required: false }
+      - { label: "backToList", name: "backToList", widget: "string", required: false }
+      - { label: "backToCategoryAria", name: "backToCategoryAria", widget: "string", required: false }
+      - { label: "emptyCategory", name: "emptyCategory", widget: "string", required: false }
+      - { label: "emptyDefaultTitle", name: "emptyDefaultTitle", widget: "string", required: false }
+      - { label: "errorTitle", name: "errorTitle", widget: "string", required: false }
+      - { label: "errorDesc", name: "errorDesc", widget: "text", required: false }
+      - { label: "retry", name: "retry", widget: "string", required: false }
+      - { label: "categoryPickTitle", name: "categoryPickTitle", widget: "string", required: false }
+      - { label: "categoryPickDesc", name: "categoryPickDesc", widget: "text", required: false }
+      - { label: "institutionCountSuffix", name: "institutionCountSuffix", widget: "string", required: false }
+      - { label: "groupScience", name: "groupScience", widget: "string", required: false }
+      - { label: "groupCommerce", name: "groupCommerce", widget: "string", required: false }
+      - { label: "groupArts", name: "groupArts", widget: "string", required: false }
+      - { label: "checkerTitle", name: "checkerTitle", widget: "string", required: false }
+      - { label: "checkerSubtitle", name: "checkerSubtitle", widget: "text", required: false }
+      - { label: "groupLabel", name: "groupLabel", widget: "string", required: false }
+      - { label: "sscGpaLabel", name: "sscGpaLabel", widget: "string", required: false }
+      - { label: "hscGpaLabel", name: "hscGpaLabel", widget: "string", required: false }
+      - { label: "gpaPlaceholder", name: "gpaPlaceholder", widget: "string", required: false }
+      - { label: "subjectGpaLabel", name: "subjectGpaLabel", widget: "string", required: false }
+      - { label: "sscYearLabel", name: "sscYearLabel", widget: "string", required: false }
+      - { label: "hscYearLabel", name: "hscYearLabel", widget: "string", required: false }
+      - { label: "mobileLabel", name: "mobileLabel", widget: "string", required: false }
+      - { label: "mobilePlaceholder", name: "mobilePlaceholder", widget: "string", required: false }
+      - { label: "checkButton", name: "checkButton", widget: "string", required: false }
+      - { label: "checkerDisclaimer", name: "checkerDisclaimer", widget: "text", required: false }
+      - { label: "noEligibleTitle", name: "noEligibleTitle", widget: "text", required: false }
+      - { label: "noEligibleDesc", name: "noEligibleDesc", widget: "text", required: false }
+      - { label: "eligibleCountPrefix", name: "eligibleCountPrefix", widget: "string", required: false }
+      - { label: "eligibleCountSuffix", name: "eligibleCountSuffix", widget: "string", required: false }
+      - { label: "minRequirements", name: "minRequirements", widget: "string", required: false }
+      - { label: "noteLabel", name: "noteLabel", widget: "string", required: false }
+      - { label: "backHome", name: "backHome", widget: "string", required: false }
+      - { label: "yearPlaceholder", name: "yearPlaceholder", widget: "string", required: false }
+      - { label: "pageTitle", name: "pageTitle", widget: "text", required: false }
+      - { label: "notFoundTitle", name: "notFoundTitle", widget: "string", required: false }

@@ -40,11 +40,8 @@ jobs:
       - name: cPanel deploy হুকের জন্য .cpanel.yml যোগ
         run: cp cpanel/.cpanel.yml out/.cpanel.yml
 
-      # public/content/ ফাইলগুলো (তারিখ, তথ্য, নোটিশ, লেখা) সার্ভারে cPanel থেকে এডিট করা হয়
-      # — তাই deploy ব্রাঞ্চে এগুলো রাখা হয় না, ফলে git pull সার্ভারের এডিট মোছে না।
-      - name: সার্ভার-এডিটযোগ্য ফাইল বাদ দেওয়া
-        run: rm -rf out/content
-
+      # public/content/ (প্রতিষ্ঠান, তারিখ, তথ্য, নোটিশ, লেখা) সোর্স থেকে তৈরি হয়ে deploy-এ যায়;
+      # সোর্স বদলায় CMS (/admin) বা GitHub — তাই সার্ভারে আলাদা এডিট রাখা হয় না।
       - name: deploy ব্রাঞ্চে বিল্ড আউটপুট পুশ
         uses: peaceiris/actions-gh-pages@v4
         with:
