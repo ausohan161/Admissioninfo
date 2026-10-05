@@ -12,13 +12,19 @@
       "nameBn": null,
       "applicationStart": null,
       "applicationEnd": null,
-      "examDate": null,
+      "examDate": "2027-01-08",
       "isDemoData": false,
       "seats": {
         "total": 1065,
         "breakdown": [
-          { "nameBn": "সাধারণ আসন", "count": 1060 },
-          { "nameBn": "সংরক্ষিত আসন", "count": 5 }
+          {
+            "nameBn": "সাধারণ আসন",
+            "count": 1060
+          },
+          {
+            "nameBn": "সংরক্ষিত আসন",
+            "count": 5
+          }
         ]
       },
       "eligibility": {
@@ -33,20 +39,52 @@
         "minHscGpa": null,
         "minCombinedGpa": null,
         "subjectMinimums": [
-          { "subjectBn": "উচ্চতর গণিত", "minGpa": 4 },
-          { "subjectBn": "পদার্থবিজ্ঞান", "minGpa": 4 },
-          { "subjectBn": "রসায়ন", "minGpa": 4 }
+          {
+            "subjectBn": "উচ্চতর গণিত",
+            "minGpa": 4
+          },
+          {
+            "subjectBn": "পদার্থবিজ্ঞান",
+            "minGpa": 4
+          },
+          {
+            "subjectBn": "রসায়ন",
+            "minGpa": 4
+          }
         ],
-        "subjectGroupMinTotal": { "subjectsBn": ["উচ্চতর গণিত", "পদার্থবিজ্ঞান", "রসায়ন", "ইংরেজি"], "minTotal": 18 },
+        "subjectGroupMinTotal": {
+          "subjectsBn": [
+            "উচ্চতর গণিত",
+            "পদার্থবিজ্ঞান",
+            "রসায়ন",
+            "ইংরেজি"
+          ],
+          "minTotal": 18
+        },
         "noteBn": "বায়োমেডিকেল ইঞ্জিনিয়ারিং বিভাগে জীববিজ্ঞানে কমপক্ষে জিপি ৪ আলাদাভাবে প্রয়োজন।"
       },
       "examPattern": "গ্রুপ 'ক': ৫০০ নম্বর (লিখিত), সময় ৩ ঘণ্টা। গ্রুপ 'খ': আর্কিটেকচার ১০০ নম্বর, সময় ১ ঘণ্টা। (ক্যালকুলেটর ব্যবহার করা যাবে)",
       "subjects": [
-        { "nameBn": "গ্রুপ ক — গণিত (১৫টি প্রশ্ন × ১০)", "marks": 150 },
-        { "nameBn": "গ্রুপ ক — পদার্থবিজ্ঞান (১৫টি প্রশ্ন × ১০)", "marks": 150 },
-        { "nameBn": "গ্রুপ ক — রসায়ন (১৫টি প্রশ্ন × ১০)", "marks": 150 },
-        { "nameBn": "গ্রুপ ক — ইংরেজি (৫টি প্রশ্ন × ১০)", "marks": 50 },
-        { "nameBn": "গ্রুপ খ — মুক্তহস্ত অংকন (৪টি প্রশ্ন × ২৫)", "marks": 100 }
+        {
+          "nameBn": "গ্রুপ ক — গণিত (১৫টি প্রশ্ন × ১০)",
+          "marks": 150
+        },
+        {
+          "nameBn": "গ্রুপ ক — পদার্থবিজ্ঞান (১৫টি প্রশ্ন × ১০)",
+          "marks": 150
+        },
+        {
+          "nameBn": "গ্রুপ ক — রসায়ন (১৫টি প্রশ্ন × ১০)",
+          "marks": 150
+        },
+        {
+          "nameBn": "গ্রুপ ক — ইংরেজি (৫টি প্রশ্ন × ১০)",
+          "marks": 50
+        },
+        {
+          "nameBn": "গ্রুপ খ — মুক্তহস্ত অংকন (৪টি প্রশ্ন × ২৫)",
+          "marks": 100
+        }
       ],
       "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
       "circularUrl": "https://kuet.ac.bd"

@@ -12,9 +12,12 @@
       "nameBn": "'A' Unit",
       "applicationStart": null,
       "applicationEnd": null,
-      "examDate": null,
+      "examDate": "2026-12-19",
       "isDemoData": false,
-      "seats": { "total": 570, "breakdown": [] },
+      "seats": {
+        "total": 570,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC-তে (৪র্থ বিষয় বাদে) ন্যূনতম জিপি ৪ থাকতে হবে। HSC-তে গণিত, পদার্থবিজ্ঞান, রসায়ন প্রতিটিতে ন্যূনতম জিপি ৪ এবং ইংরেজিসহ এই ৪টি বিষয়ে মোট জিপি ১৮ থাকতে হবে।",
         "points": []
@@ -25,19 +28,48 @@
         "minHscGpa": null,
         "minCombinedGpa": null,
         "subjectMinimums": [
-          { "subjectBn": "উচ্চতর গণিত", "minGpa": 4 },
-          { "subjectBn": "পদার্থবিজ্ঞান", "minGpa": 4 },
-          { "subjectBn": "রসায়ন", "minGpa": 4 }
+          {
+            "subjectBn": "উচ্চতর গণিত",
+            "minGpa": 4
+          },
+          {
+            "subjectBn": "পদার্থবিজ্ঞান",
+            "minGpa": 4
+          },
+          {
+            "subjectBn": "রসায়ন",
+            "minGpa": 4
+          }
         ],
-        "subjectGroupMinTotal": { "subjectsBn": ["উচ্চতর গণিত", "পদার্থবিজ্ঞান", "রসায়ন", "ইংরেজি"], "minTotal": 18 },
+        "subjectGroupMinTotal": {
+          "subjectsBn": [
+            "উচ্চতর গণিত",
+            "পদার্থবিজ্ঞান",
+            "রসায়ন",
+            "ইংরেজি"
+          ],
+          "minTotal": 18
+        },
         "noteBn": null
       },
       "examPattern": "২০০ নম্বরের লিখিত পরীক্ষা, সময় ৩ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে।",
       "subjects": [
-        { "nameBn": "গণিত", "marks": 80 },
-        { "nameBn": "পদার্থবিজ্ঞান", "marks": 60 },
-        { "nameBn": "রসায়ন", "marks": 40 },
-        { "nameBn": "ইংরেজি", "marks": 20 }
+        {
+          "nameBn": "গণিত",
+          "marks": 80
+        },
+        {
+          "nameBn": "পদার্থবিজ্ঞান",
+          "marks": 60
+        },
+        {
+          "nameBn": "রসায়ন",
+          "marks": 40
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 20
+        }
       ],
       "resultMethod": "SSC + HSC-এর (Math+Phy+Che) প্রাপ্ত নম্বরের ৪০% + লিখিত পরীক্ষার ৬০% নিয়ে ফলাফল প্রকাশ করা হয়।",
       "circularUrl": "https://mist.ac.bd"
@@ -47,9 +79,12 @@
       "nameBn": "'B' Unit (আর্কিটেকচার)",
       "applicationStart": null,
       "applicationEnd": null,
-      "examDate": null,
+      "examDate": "2026-12-19",
       "isDemoData": false,
-      "seats": { "total": 570, "breakdown": [] },
+      "seats": {
+        "total": 570,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC-তে (৪র্থ বিষয় বাদে) ন্যূনতম জিপি ৪ থাকতে হবে। HSC-তে গণিত, পদার্থবিজ্ঞান, রসায়ন প্রতিটিতে ন্যূনতম জিপি ৪ এবং ইংরেজিসহ এই ৪টি বিষয়ে মোট জিপি ১৮ থাকতে হবে।",
         "points": []
@@ -60,16 +95,36 @@
         "minHscGpa": null,
         "minCombinedGpa": null,
         "subjectMinimums": [
-          { "subjectBn": "উচ্চতর গণিত", "minGpa": 4 },
-          { "subjectBn": "পদার্থবিজ্ঞান", "minGpa": 4 },
-          { "subjectBn": "রসায়ন", "minGpa": 4 }
+          {
+            "subjectBn": "উচ্চতর গণিত",
+            "minGpa": 4
+          },
+          {
+            "subjectBn": "পদার্থবিজ্ঞান",
+            "minGpa": 4
+          },
+          {
+            "subjectBn": "রসায়ন",
+            "minGpa": 4
+          }
         ],
-        "subjectGroupMinTotal": { "subjectsBn": ["উচ্চতর গণিত", "পদার্থবিজ্ঞান", "রসায়ন", "ইংরেজি"], "minTotal": 18 },
+        "subjectGroupMinTotal": {
+          "subjectsBn": [
+            "উচ্চতর গণিত",
+            "পদার্থবিজ্ঞান",
+            "রসায়ন",
+            "ইংরেজি"
+          ],
+          "minTotal": 18
+        },
         "noteBn": null
       },
       "examPattern": "আর্কিটেকচার ২০০ নম্বর (লিখিত), সময় ২ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে।",
       "subjects": [
-        { "nameBn": "মুক্তহস্ত অংকন এবং দৃষ্টিগত ও স্থানিক ধীশক্তি", "marks": 200 }
+        {
+          "nameBn": "মুক্তহস্ত অংকন এবং দৃষ্টিগত ও স্থানিক ধীশক্তি",
+          "marks": 200
+        }
       ],
       "resultMethod": "SSC + HSC-এর (Math+Phy+Che) প্রাপ্ত নম্বরের ৪০% + লিখিত পরীক্ষার ৬০% নিয়ে ফলাফল প্রকাশ করা হয়।",
       "circularUrl": "https://mist.ac.bd"

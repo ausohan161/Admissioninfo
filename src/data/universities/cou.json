@@ -10,11 +10,14 @@
     {
       "id": "a-unit",
       "nameBn": "'A' ইউনিট (বিজ্ঞান)",
-      "applicationStart": null,
-      "applicationEnd": null,
-      "examDate": null,
+      "applicationStart": "2026-11-15",
+      "applicationEnd": "2026-12-10",
+      "examDate": "2027-02-05",
       "isDemoData": false,
-      "seats": { "total": 300, "breakdown": [] },
+      "seats": {
+        "total": 300,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC ও HSC (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩ সহ সর্বমোট জিপিএ ৭ থাকতে হবে।",
         "points": []
@@ -29,9 +32,18 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
       "subjects": [
-        { "nameBn": "পদার্থবিজ্ঞান", "marks": 25 },
-        { "nameBn": "রসায়ন", "marks": 25 },
-        { "nameBn": "বাংলা ও ইংরেজি/গণিত/জীববিজ্ঞান — ৩টি থেকে যেকোনো ২টি (প্রতিটি ২৫)", "marks": 50 }
+        {
+          "nameBn": "পদার্থবিজ্ঞান",
+          "marks": 25
+        },
+        {
+          "nameBn": "রসায়ন",
+          "marks": 25
+        },
+        {
+          "nameBn": "বাংলা ও ইংরেজি/গণিত/জীববিজ্ঞান — ৩টি থেকে যেকোনো ২টি (প্রতিটি ২৫)",
+          "marks": 50
+        }
       ],
       "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ২) + (HSC GPA × ২)।",
       "circularUrl": "https://cou.ac.bd"
@@ -39,11 +51,14 @@
     {
       "id": "b-unit",
       "nameBn": "'B' ইউনিট (মানবিক)",
-      "applicationStart": null,
-      "applicationEnd": null,
-      "examDate": null,
+      "applicationStart": "2026-11-15",
+      "applicationEnd": "2026-12-10",
+      "examDate": "2027-02-06",
       "isDemoData": false,
-      "seats": { "total": 390, "breakdown": [] },
+      "seats": {
+        "total": 390,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC ও HSC-তে ৪র্থ বিষয়সহ ন্যূনতম জিপিএ ৩ এবং মানবিক শাখায় সর্বমোট জিপিএ ৬ থাকতে হবে।",
         "points": []
@@ -58,10 +73,22 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
       "subjects": [
-        { "nameBn": "ইংরেজি", "marks": 25 },
-        { "nameBn": "বাংলা", "marks": 25 },
-        { "nameBn": "সাধারণ জ্ঞান", "marks": 10 },
-        { "nameBn": "মানবিক শাখার বিষয়ভিত্তিক", "marks": 40 }
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 25
+        },
+        {
+          "nameBn": "বাংলা",
+          "marks": 25
+        },
+        {
+          "nameBn": "সাধারণ জ্ঞান",
+          "marks": 10
+        },
+        {
+          "nameBn": "মানবিক শাখার বিষয়ভিত্তিক",
+          "marks": 40
+        }
       ],
       "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ২) + (HSC GPA × ২)।",
       "circularUrl": "https://cou.ac.bd"

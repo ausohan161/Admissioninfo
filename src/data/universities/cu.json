@@ -10,11 +10,14 @@
     {
       "id": "a-unit",
       "nameBn": "'A' ইউনিট (বিজ্ঞান)",
-      "applicationStart": null,
-      "applicationEnd": null,
-      "examDate": null,
+      "applicationStart": "2026-11-15",
+      "applicationEnd": "2026-12-10",
+      "examDate": "2027-01-30",
       "isDemoData": false,
-      "seats": { "total": 1093, "breakdown": [] },
+      "seats": {
+        "total": 1093,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC + HSC (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৮ থাকতে হবে (SSC-তে ন্যূনতম জিপিএ ৪ এবং HSC-তে ন্যূনতম জিপিএ ৩ থাকতে হবে)।",
         "points": []
@@ -29,8 +32,14 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে।",
       "subjects": [
-        { "nameBn": "ইংরেজি", "marks": 25 },
-        { "nameBn": "রসায়ন, পদার্থবিজ্ঞান, গণিত, জীববিজ্ঞান — যেকোনো ৩টি (প্রতিটি ২৫)", "marks": 75 }
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 25
+        },
+        {
+          "nameBn": "রসায়ন, পদার্থবিজ্ঞান, গণিত, জীববিজ্ঞান — যেকোনো ৩টি (প্রতিটি ২৫)",
+          "marks": 75
+        }
       ],
       "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর। মেধাক্রম সমান হলে মেধাক্রম প্রকাশে বিভিন্ন শর্তাবলি প্রযোজ্য হবে।",
       "circularUrl": "https://cu.ac.bd"
@@ -38,16 +47,25 @@
     {
       "id": "b-unit",
       "nameBn": "'B' ইউনিট (কলা)",
-      "applicationStart": null,
-      "applicationEnd": null,
-      "examDate": null,
+      "applicationStart": "2026-11-15",
+      "applicationEnd": "2026-12-10",
+      "examDate": "2027-02-05",
       "isDemoData": false,
       "seats": {
         "total": 1994,
         "breakdown": [
-          { "nameBn": "কলা অনুষদ", "count": 970 },
-          { "nameBn": "সমাজবিজ্ঞান অনুষদ", "count": 889 },
-          { "nameBn": "চারুকলা", "count": 135 }
+          {
+            "nameBn": "কলা অনুষদ",
+            "count": 970
+          },
+          {
+            "nameBn": "সমাজবিজ্ঞান অনুষদ",
+            "count": 889
+          },
+          {
+            "nameBn": "চারুকলা",
+            "count": 135
+          }
         ]
       },
       "eligibility": {
@@ -64,9 +82,18 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
       "subjects": [
-        { "nameBn": "বাংলা/ঐচ্ছিক ইংরেজি", "marks": 30 },
-        { "nameBn": "ইংরেজি", "marks": 30 },
-        { "nameBn": "সাধারণ জ্ঞান", "marks": 40 }
+        {
+          "nameBn": "বাংলা/ঐচ্ছিক ইংরেজি",
+          "marks": 30
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 30
+        },
+        {
+          "nameBn": "সাধারণ জ্ঞান",
+          "marks": 40
+        }
       ],
       "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর। মেধাক্রম সমান হলে মেধাক্রম প্রকাশে বিভিন্ন শর্তাবলি প্রযোজ্য হবে।",
       "circularUrl": "https://cu.ac.bd"
@@ -93,9 +120,18 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
       "subjects": [
-        { "nameBn": "বাংলা/ঐচ্ছিক ইংরেজি", "marks": 25 },
-        { "nameBn": "ইংরেজি", "marks": 25 },
-        { "nameBn": "সাধারণ জ্ঞান", "marks": 50 }
+        {
+          "nameBn": "বাংলা/ঐচ্ছিক ইংরেজি",
+          "marks": 25
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 25
+        },
+        {
+          "nameBn": "সাধারণ জ্ঞান",
+          "marks": 50
+        }
       ],
       "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর। মেধাক্রম সমান হলে মেধাক্রম প্রকাশে বিভিন্ন শর্তাবলি প্রযোজ্য হবে।",
       "circularUrl": "https://cu.ac.bd"
@@ -121,10 +157,19 @@
         "noteBn": null
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। আরবি, ইসলামিক স্টাডিজ ও পালি এবং সাধারণ জ্ঞান — এই বিষয়গুলো থেকে যেকোনো দুটির উত্তর দিতে হবে।",
-        "subjects": [
-        { "nameBn": "বাংলা/ঐচ্ছিক ইংরেজি", "marks": 20 },
-        { "nameBn": "ইংরেজি", "marks": 20 },
-        { "nameBn": "আরবি/ইসলামিক স্টাডিজ/পালি/সাধারণ জ্ঞান (যেকোনো ২টি, প্রতিটি ৩০)", "marks": 60 }
+      "subjects": [
+        {
+          "nameBn": "বাংলা/ঐচ্ছিক ইংরেজি",
+          "marks": 20
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 20
+        },
+        {
+          "nameBn": "আরবি/ইসলামিক স্টাডিজ/পালি/সাধারণ জ্ঞান (যেকোনো ২টি, প্রতিটি ৩০)",
+          "marks": 60
+        }
       ],
       "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর। মেধাক্রম সমান হলে মেধাক্রম প্রকাশে বিভিন্ন শর্তাবলি প্রযোজ্য হবে।",
       "circularUrl": "https://cu.ac.bd"
@@ -132,16 +177,25 @@
     {
       "id": "d-unit",
       "nameBn": "'D' ইউনিট (সমাজবিজ্ঞান)",
-      "applicationStart": null,
-      "applicationEnd": null,
-      "examDate": null,
+      "applicationStart": "2026-11-15",
+      "applicationEnd": "2026-12-10",
+      "examDate": "2027-02-06",
       "isDemoData": false,
       "seats": {
         "total": 1994,
         "breakdown": [
-          { "nameBn": "কলা অনুষদ", "count": 970 },
-          { "nameBn": "সমাজবিজ্ঞান অনুষদ", "count": 889 },
-          { "nameBn": "চারুকলা", "count": 135 }
+          {
+            "nameBn": "কলা অনুষদ",
+            "count": 970
+          },
+          {
+            "nameBn": "সমাজবিজ্ঞান অনুষদ",
+            "count": 889
+          },
+          {
+            "nameBn": "চারুকলা",
+            "count": 135
+          }
         ]
       },
       "eligibility": {
@@ -158,10 +212,22 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
       "subjects": [
-        { "nameBn": "বাংলা/ঐচ্ছিক ইংরেজি", "marks": 30 },
-        { "nameBn": "ইংরেজি", "marks": 30 },
-        { "nameBn": "বিভাগ সংশ্লিষ্ট", "marks": 20 },
-        { "nameBn": "সাধারণ জ্ঞান/গণিত/অর্থনীতি", "marks": 20 }
+        {
+          "nameBn": "বাংলা/ঐচ্ছিক ইংরেজি",
+          "marks": 30
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 30
+        },
+        {
+          "nameBn": "বিভাগ সংশ্লিষ্ট",
+          "marks": 20
+        },
+        {
+          "nameBn": "সাধারণ জ্ঞান/গণিত/অর্থনীতি",
+          "marks": 20
+        }
       ],
       "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর। মেধাক্রম সমান হলে মেধাক্রম প্রকাশে বিভিন্ন শর্তাবলি প্রযোজ্য হবে।",
       "circularUrl": "https://cu.ac.bd"

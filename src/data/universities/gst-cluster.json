@@ -10,11 +10,14 @@
     {
       "id": "a-unit",
       "nameBn": "'A' ইউনিট (বিজ্ঞান)",
-      "applicationStart": "2026-09-01",
-      "applicationEnd": "2026-09-17",
-      "examDate": "2026-10-15",
-      "isDemoData": true,
-      "seats": { "total": 5994, "breakdown": [] },
+      "applicationStart": null,
+      "applicationEnd": null,
+      "examDate": "2027-03-27",
+      "isDemoData": false,
+      "seats": {
+        "total": 5994,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC ও HSC উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩.২৫ সহ সর্বমোট জিপিএ কমপক্ষে ৭ থাকতে হবে।",
         "points": []
@@ -29,10 +32,22 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
       "subjects": [
-        { "nameBn": "পদার্থবিজ্ঞান", "marks": 25 },
-        { "nameBn": "রসায়ন", "marks": 25 },
-        { "nameBn": "গণিত/জীববিজ্ঞান (যেকোনো একটি)", "marks": 25 },
-        { "nameBn": "বাংলা/ইংরেজি (বিকল্প হিসেবে)", "marks": 15 }
+        {
+          "nameBn": "পদার্থবিজ্ঞান",
+          "marks": 25
+        },
+        {
+          "nameBn": "রসায়ন",
+          "marks": 25
+        },
+        {
+          "nameBn": "গণিত/জীববিজ্ঞান (যেকোনো একটি)",
+          "marks": 25
+        },
+        {
+          "nameBn": "বাংলা/ইংরেজি (বিকল্প হিসেবে)",
+          "marks": 15
+        }
       ],
       "resultMethod": "শুধু ভর্তি পরীক্ষার প্রাপ্ত নম্বরের ভিত্তিতে মেধাক্রম প্রকাশ করা হয়। পরবর্তীতে বিভিন্ন বিশ্ববিদ্যালয় নিজস্ব নীতিমালা অনুসারে মেধা তালিকা দিয়ে থাকে।",
       "circularUrl": "https://gstadmission.ac.bd"
@@ -40,11 +55,14 @@
     {
       "id": "b-unit",
       "nameBn": "'B' ইউনিট (মানবিক)",
-      "applicationStart": "2026-09-01",
-      "applicationEnd": "2026-09-17",
-      "examDate": "2026-10-15",
-      "isDemoData": true,
-      "seats": { "total": 3000, "breakdown": [] },
+      "applicationStart": null,
+      "applicationEnd": null,
+      "examDate": "2027-03-19",
+      "isDemoData": false,
+      "seats": {
+        "total": 3000,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC ও HSC উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩ এবং সর্বমোট জিপিএ ৬ থাকতে হবে।",
         "points": []
@@ -59,9 +77,18 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। পাশ নম্বর ৩০।",
       "subjects": [
-        { "nameBn": "বাংলা", "marks": 35 },
-        { "nameBn": "ইংরেজি", "marks": 35 },
-        { "nameBn": "সাধারণ জ্ঞান", "marks": 30 }
+        {
+          "nameBn": "বাংলা",
+          "marks": 35
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 35
+        },
+        {
+          "nameBn": "সাধারণ জ্ঞান",
+          "marks": 30
+        }
       ],
       "resultMethod": "শুধু ভর্তি পরীক্ষার প্রাপ্ত নম্বরের ভিত্তিতে মেধাক্রম প্রকাশ করা হয়। পরবর্তীতে বিভিন্ন বিশ্ববিদ্যালয় নিজস্ব নীতিমালা অনুসারে ভর্তি নিয়ে থাকে।",
       "circularUrl": "https://gstadmission.ac.bd"

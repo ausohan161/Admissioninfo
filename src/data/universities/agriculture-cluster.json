@@ -12,9 +12,12 @@
       "nameBn": null,
       "applicationStart": null,
       "applicationEnd": null,
-      "examDate": null,
+      "examDate": "2027-01-02",
       "isDemoData": false,
-      "seats": { "total": 3701, "breakdown": [] },
+      "seats": {
+        "total": 3701,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC ও HSC-তে জীববিজ্ঞান, রসায়ন, পদার্থবিজ্ঞান ও গণিত বিষয়সহ উত্তীর্ণ হতে হবে। SSC ও HSC প্রতিটিতে (৪র্থ বিষয় ব্যতীত) ন্যূনতম জিপিএ ৪ এবং সর্বমোট SSC+HSC ন্যূনতম জিপিএ ৮.৫০ থাকতে হবে।",
         "points": []
@@ -29,12 +32,30 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
       "subjects": [
-        { "nameBn": "গণিত", "marks": 20 },
-        { "nameBn": "পদার্থবিজ্ঞান", "marks": 20 },
-        { "nameBn": "রসায়ন", "marks": 20 },
-        { "nameBn": "উদ্ভিদবিজ্ঞান", "marks": 15 },
-        { "nameBn": "প্রাণিবিজ্ঞান", "marks": 15 },
-        { "nameBn": "ইংরেজি", "marks": 10 }
+        {
+          "nameBn": "গণিত",
+          "marks": 20
+        },
+        {
+          "nameBn": "পদার্থবিজ্ঞান",
+          "marks": 20
+        },
+        {
+          "nameBn": "রসায়ন",
+          "marks": 20
+        },
+        {
+          "nameBn": "উদ্ভিদবিজ্ঞান",
+          "marks": 15
+        },
+        {
+          "nameBn": "প্রাণিবিজ্ঞান",
+          "marks": 15
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 10
+        }
       ],
       "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC = ২৫ নম্বর + HSC = ২৫ নম্বর)।",
       "circularUrl": "https://acas.edu.bd"

@@ -10,11 +10,14 @@
     {
       "id": "c-unit",
       "nameBn": "'C' ইউনিট (বিজ্ঞান)",
-      "applicationStart": null,
-      "applicationEnd": null,
-      "examDate": null,
+      "applicationStart": "2026-11-12",
+      "applicationEnd": "2026-11-27",
+      "examDate": "2027-01-09",
       "isDemoData": false,
-      "seats": { "total": 1536, "breakdown": [] },
+      "seats": {
+        "total": 1536,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC ও HSC উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩.৫ সহ সর্বমোট জিপিএ ৮ থাকতে হবে।",
         "points": []
@@ -29,10 +32,22 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
       "subjects": [
-        { "nameBn": "আবশ্যিক — পদার্থবিজ্ঞান (২৫টি প্রশ্ন × ১.২৫)", "marks": 31 },
-        { "nameBn": "আবশ্যিক — রসায়ন (২৫টি প্রশ্ন × ১.২৫)", "marks": 31 },
-        { "nameBn": "আবশ্যিক — ICT (৫টি প্রশ্ন × ১.২৫)", "marks": 6 },
-        { "nameBn": "ঐচ্ছিক — গণিত/জীববিজ্ঞান (২৫টি প্রশ্ন × ১.২৫), অথবা উভয় বিষয় মিলিয়ে উত্তর", "marks": 31 }
+        {
+          "nameBn": "আবশ্যিক — পদার্থবিজ্ঞান (২৫টি প্রশ্ন × ১.২৫)",
+          "marks": 31
+        },
+        {
+          "nameBn": "আবশ্যিক — রসায়ন (২৫টি প্রশ্ন × ১.২৫)",
+          "marks": 31
+        },
+        {
+          "nameBn": "আবশ্যিক — ICT (৫টি প্রশ্ন × ১.২৫)",
+          "marks": 6
+        },
+        {
+          "nameBn": "ঐচ্ছিক — গণিত/জীববিজ্ঞান (২৫টি প্রশ্ন × ১.২৫), অথবা উভয় বিষয় মিলিয়ে উত্তর",
+          "marks": 31
+        }
       ],
       "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
       "circularUrl": "https://ru.ac.bd"
@@ -40,18 +55,33 @@
     {
       "id": "a-unit",
       "nameBn": "'A' ইউনিট (কলা)",
-      "applicationStart": null,
-      "applicationEnd": null,
-      "examDate": null,
+      "applicationStart": "2026-11-12",
+      "applicationEnd": "2026-11-27",
+      "examDate": "2027-01-16",
       "isDemoData": false,
       "seats": {
         "total": 1897,
         "breakdown": [
-          { "nameBn": "কলা অনুষদ", "count": 931 },
-          { "nameBn": "আইন", "count": 160 },
-          { "nameBn": "সামাজিক বিজ্ঞান", "count": 636 },
-          { "nameBn": "চারুকলা", "count": 120 },
-          { "nameBn": "আইইআর", "count": 50 }
+          {
+            "nameBn": "কলা অনুষদ",
+            "count": 931
+          },
+          {
+            "nameBn": "আইন",
+            "count": 160
+          },
+          {
+            "nameBn": "সামাজিক বিজ্ঞান",
+            "count": 636
+          },
+          {
+            "nameBn": "চারুকলা",
+            "count": 120
+          },
+          {
+            "nameBn": "আইইআর",
+            "count": 50
+          }
         ]
       },
       "eligibility": {
@@ -68,9 +98,18 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
       "subjects": [
-        { "nameBn": "বাংলা", "marks": 35 },
-        { "nameBn": "ইংরেজি", "marks": 35 },
-        { "nameBn": "সাধারণ জ্ঞান", "marks": 30 }
+        {
+          "nameBn": "বাংলা",
+          "marks": 35
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 35
+        },
+        {
+          "nameBn": "সাধারণ জ্ঞান",
+          "marks": 30
+        }
       ],
       "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর ভিত্তি করে মেধাতালিকা প্রকাশ করা হয়।",
       "circularUrl": "https://ru.ac.bd"

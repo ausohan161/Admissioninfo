@@ -10,15 +10,21 @@
     {
       "id": "default",
       "nameBn": null,
-      "applicationStart": "2026-10-01",
-      "applicationEnd": "2026-10-30",
-      "examDate": "2026-11-20",
-      "isDemoData": true,
+      "applicationStart": null,
+      "applicationEnd": null,
+      "examDate": "2026-12-04",
+      "isDemoData": false,
       "seats": {
         "total": 5645,
         "breakdown": [
-          { "nameBn": "মেডিকেল", "count": 5100 },
-          { "nameBn": "ডেন্টাল", "count": 545 }
+          {
+            "nameBn": "মেডিকেল",
+            "count": 5100
+          },
+          {
+            "nameBn": "ডেন্টাল",
+            "count": 545
+          }
         ]
       },
       "eligibility": {
@@ -30,16 +36,36 @@
         "minSscGpa": null,
         "minHscGpa": null,
         "minCombinedGpa": 8.5,
-        "subjectMinimums": [{ "subjectBn": "জীববিজ্ঞান", "minGpa": 3.5 }],
+        "subjectMinimums": [
+          {
+            "subjectBn": "জীববিজ্ঞান",
+            "minGpa": 3.5
+          }
+        ],
         "noteBn": "উপজাতি/প্রতিবন্ধী কোটাসহ কিছু ক্ষেত্রে সর্বমোট জিপিএ ৮ পর্যন্ত শিথিলযোগ্য — নির্দিষ্ট সার্কুলারে যাচাই করুন।"
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা ১৫ মিনিট। পাশ নম্বর ৪০। ক্যালকুলেটর ব্যবহার করা যাবে না।",
       "subjects": [
-        { "nameBn": "জীববিজ্ঞান", "marks": 30 },
-        { "nameBn": "রসায়ন", "marks": 25 },
-        { "nameBn": "পদার্থবিজ্ঞান", "marks": 15 },
-        { "nameBn": "ইংরেজি", "marks": 15 },
-        { "nameBn": "সাধারণ জ্ঞান, প্রণোদনা ও মানবিক গুণাবলি", "marks": 15 }
+        {
+          "nameBn": "জীববিজ্ঞান",
+          "marks": 30
+        },
+        {
+          "nameBn": "রসায়ন",
+          "marks": 25
+        },
+        {
+          "nameBn": "পদার্থবিজ্ঞান",
+          "marks": 15
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 15
+        },
+        {
+          "nameBn": "সাধারণ জ্ঞান, প্রণোদনা ও মানবিক গুণাবলি",
+          "marks": 15
+        }
       ],
       "resultMethod": "(SSC GPA × ৮) + (HSC GPA × ১২) + ভর্তি পরীক্ষার ১০০ নম্বর = সর্বমোট ২০০ নম্বরের মধ্যে মেধাতালিকা প্রকাশ করা হয়।",
       "circularUrl": "https://dgme.gov.bd"

@@ -12,9 +12,12 @@
       "nameBn": "'A' ইউনিট (বিজ্ঞান)",
       "applicationStart": null,
       "applicationEnd": null,
-      "examDate": null,
+      "examDate": "2027-01-24",
       "isDemoData": false,
-      "seats": { "total": 1275, "breakdown": [] },
+      "seats": {
+        "total": 1275,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC ও HSC-তে ৪র্থ বিষয়সহ ন্যূনতম জিপিএ ৩.৫০ এবং সর্বমোট জিপিএ ৭.৫০ থাকতে হবে।",
         "points": []
@@ -29,10 +32,22 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
       "subjects": [
-        { "nameBn": "পদার্থবিজ্ঞান", "marks": 25 },
-        { "nameBn": "রসায়ন", "marks": 25 },
-        { "nameBn": "জীববিজ্ঞান", "marks": 25 },
-        { "nameBn": "ইংরেজি", "marks": 25 }
+        {
+          "nameBn": "পদার্থবিজ্ঞান",
+          "marks": 25
+        },
+        {
+          "nameBn": "রসায়ন",
+          "marks": 25
+        },
+        {
+          "nameBn": "জীববিজ্ঞান",
+          "marks": 25
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 25
+        }
       ],
       "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর: (SSC = ৪০% + HSC = ৬০%)।",
       "circularUrl": "https://hstu.ac.bd"
@@ -42,9 +57,12 @@
       "nameBn": "'B' ইউনিট (বিজ্ঞান)",
       "applicationStart": null,
       "applicationEnd": null,
-      "examDate": null,
+      "examDate": "2027-01-24",
       "isDemoData": false,
-      "seats": { "total": 1275, "breakdown": [] },
+      "seats": {
+        "total": 1275,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC ও HSC-তে ৪র্থ বিষয়সহ ন্যূনতম জিপিএ ৩.৫০ এবং সর্বমোট জিপিএ ৭.৫০ থাকতে হবে।",
         "points": []
@@ -59,10 +77,22 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
       "subjects": [
-        { "nameBn": "পদার্থবিজ্ঞান", "marks": 25 },
-        { "nameBn": "রসায়ন", "marks": 25 },
-        { "nameBn": "গণিত", "marks": 25 },
-        { "nameBn": "ইংরেজি", "marks": 25 }
+        {
+          "nameBn": "পদার্থবিজ্ঞান",
+          "marks": 25
+        },
+        {
+          "nameBn": "রসায়ন",
+          "marks": 25
+        },
+        {
+          "nameBn": "গণিত",
+          "marks": 25
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 25
+        }
       ],
       "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর: (SSC = ৪০% + HSC = ৬০%)।",
       "circularUrl": "https://hstu.ac.bd"
@@ -72,9 +102,12 @@
       "nameBn": "'D' ইউনিট (মানবিক)",
       "applicationStart": null,
       "applicationEnd": null,
-      "examDate": null,
+      "examDate": "2027-01-24",
       "isDemoData": false,
-      "seats": { "total": 240, "breakdown": [] },
+      "seats": {
+        "total": 240,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC ও HSC-তে ৪র্থ বিষয়সহ ন্যূনতম জিপিএ ৩ এবং সর্বমোট জিপিএ ৬ থাকতে হবে।",
         "points": []
@@ -89,9 +122,18 @@
       },
       "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
       "subjects": [
-        { "nameBn": "বাংলা", "marks": 25 },
-        { "nameBn": "ইংরেজি", "marks": 50 },
-        { "nameBn": "সাধারণ জ্ঞান", "marks": 25 }
+        {
+          "nameBn": "বাংলা",
+          "marks": 25
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 50
+        },
+        {
+          "nameBn": "সাধারণ জ্ঞান",
+          "marks": 25
+        }
       ],
       "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর: (SSC = ৪০% + HSC = ৬০%)।",
       "circularUrl": "https://hstu.ac.bd"

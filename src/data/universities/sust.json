@@ -12,9 +12,12 @@
       "nameBn": "'A' ইউনিট (বিজ্ঞান ও প্রকৌশল)",
       "applicationStart": null,
       "applicationEnd": null,
-      "examDate": null,
+      "examDate": "2027-01-26",
       "isDemoData": false,
-      "seats": { "total": 985, "breakdown": [] },
+      "seats": {
+        "total": 985,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC ও HSC-তে ন্যূনতম জিপিএ ৩ সহ মোট জিপিএ ৬.৫ পেতে হবে। HSC/সমমান পরীক্ষায় গণিতে ন্যূনতম জিপিএ ৩ থাকতে হবে।",
         "points": []
@@ -24,16 +27,36 @@
         "minSscGpa": 3,
         "minHscGpa": 3,
         "minCombinedGpa": 6.5,
-        "subjectMinimums": [{ "subjectBn": "উচ্চতর গণিত", "minGpa": 3 }],
+        "subjectMinimums": [
+          {
+            "subjectBn": "উচ্চতর গণিত",
+            "minGpa": 3
+          }
+        ],
         "noteBn": null
       },
       "examPattern": "Group-1 (A1): ৮০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা ৩০ মিনিট। Group-2 (A2): আর্কিটেকচার ৩০ নম্বর, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে।",
       "subjects": [
-        { "nameBn": "আবশ্যিক — পদার্থবিজ্ঞান", "marks": 20 },
-        { "nameBn": "আবশ্যিক — রসায়ন", "marks": 20 },
-        { "nameBn": "আবশ্যিক — গণিত", "marks": 20 },
-        { "nameBn": "ঐচ্ছিক — জীববিজ্ঞান/ইংরেজি (যেকোনো ১টি)", "marks": 20 },
-        { "nameBn": "Group-2 — ড্রয়িং ও স্থাপত্য বিষয়ক সাধারণ জ্ঞান", "marks": 30 }
+        {
+          "nameBn": "আবশ্যিক — পদার্থবিজ্ঞান",
+          "marks": 20
+        },
+        {
+          "nameBn": "আবশ্যিক — রসায়ন",
+          "marks": 20
+        },
+        {
+          "nameBn": "আবশ্যিক — গণিত",
+          "marks": 20
+        },
+        {
+          "nameBn": "ঐচ্ছিক — জীববিজ্ঞান/ইংরেজি (যেকোনো ১টি)",
+          "marks": 20
+        },
+        {
+          "nameBn": "Group-2 — ড্রয়িং ও স্থাপত্য বিষয়ক সাধারণ জ্ঞান",
+          "marks": 30
+        }
       ],
       "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ২) + (HSC GPA × ২)।",
       "circularUrl": "https://sust.edu"
@@ -43,9 +66,12 @@
       "nameBn": "'B' ইউনিট (সামাজিক বিজ্ঞান ও ব্যবসায় শিক্ষা)",
       "applicationStart": null,
       "applicationEnd": null,
-      "examDate": null,
+      "examDate": "2027-01-27",
       "isDemoData": false,
-      "seats": { "total": 581, "breakdown": [] },
+      "seats": {
+        "total": 581,
+        "breakdown": []
+      },
       "eligibility": {
         "descriptionBn": "SSC ও HSC-তে ন্যূনতম জিপিএ ৩ সহ মোট জিপিএ ৬ পেতে হবে।",
         "points": []
@@ -60,12 +86,30 @@
       },
       "examPattern": "৮০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা ৩০ মিনিট।",
       "subjects": [
-        { "nameBn": "ইংরেজি", "marks": 15 },
-        { "nameBn": "বাংলা", "marks": 15 },
-        { "nameBn": "সাধারণ গণিত", "marks": 15 },
-        { "nameBn": "বাংলাদেশ ও বিশ্বপরিচয়", "marks": 10 },
-        { "nameBn": "আইসিটি", "marks": 15 },
-        { "nameBn": "অর্থনীতি, পৌরনীতি, সামাজিক বিজ্ঞান, সমাজকল্যাণ ও ইতিহাস সম্পর্কিত প্রশ্নাবলি", "marks": 15 }
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 15
+        },
+        {
+          "nameBn": "বাংলা",
+          "marks": 15
+        },
+        {
+          "nameBn": "সাধারণ গণিত",
+          "marks": 15
+        },
+        {
+          "nameBn": "বাংলাদেশ ও বিশ্বপরিচয়",
+          "marks": 10
+        },
+        {
+          "nameBn": "আইসিটি",
+          "marks": 15
+        },
+        {
+          "nameBn": "অর্থনীতি, পৌরনীতি, সামাজিক বিজ্ঞান, সমাজকল্যাণ ও ইতিহাস সম্পর্কিত প্রশ্নাবলি",
+          "marks": 15
+        }
       ],
       "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ২) + (HSC GPA × ২)।",
       "circularUrl": "https://sust.edu"
