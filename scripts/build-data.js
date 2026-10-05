@@ -130,57 +130,70 @@ function main() {
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(universities, null, 2) + "\n", "utf8");
   console.log(`✓ Generated ${OUTPUT_FILE} from ${files.length} university file(s).`);
 
-  syncDatesFile(universities);
-  writeContentFile(universities);
+  writeContentFolder(universities);
 }
 
-// public/content.json is the server-editable copy of institutions and notices.
-// It is always rewritten here from the source files; the site prefers it at
-// runtime when present, so cPanel edits to it take effect without a rebuild.
-function writeContentFile(universities) {
-  const noticesFile = path.join(__dirname, "..", "src", "data", "notices.json");
-  const notices = JSON.parse(fs.readFileSync(noticesFile, "utf8")).notices;
-  const contentFile = path.join(__dirname, "..", "public", "content.json");
-  const textsFile = path.join(__dirname, "..", "src", "data", "texts.json");
-  const texts = JSON.parse(fs.readFileSync(textsFile, "utf8"));
-  fs.writeFileSync(contentFile, JSON.stringify({ universities, notices, texts }, null, 2) + "\n", "utf8");
-  console.log(`✓ Wrote ${contentFile}`);
-}
-
-// public/dates.json is the file the site owner edits directly on the server
-// (cPanel / hPanel File Manager) to change dates without rebuilding. This only
-// ADDS missing units and refreshes the human-readable labels; any date value
-// already present is preserved so local edits are never overwritten.
-function syncDatesFile(universities) {
-  const datesFile = path.join(__dirname, "..", "public", "dates.json");
-  let existing = {};
-  if (fs.existsSync(datesFile)) {
-    try {
-      existing = JSON.parse(fs.readFileSync(datesFile, "utf8"));
-    } catch (err) {
-      console.warn(`! public/dates.json is not valid JSON, leaving it untouched: ${err.message}`);
-      return;
-    }
-  }
-
-  const out = {
-    _নির্দেশনা:
-      'প্রতিটি ইউনিটের তারিখ YYYY-MM-DD ফরম্যাটে লিখুন (যেমন 2026-03-15)। ফাঁকা "" বা null রাখলে সাইটের মূল তারিখই থাকবে। শুধু তারিখের মান বদলান — নাম/কী (key) বদলাবেন না।',
+// public/content/ holds every server-editable file. The site fetches them at
+// runtime, so cPanel edits take effect without a rebuild. Each file is written
+// here from the source data; the deploy workflow keeps them off the deploy branch.
+function writeContentFolder(universities) {
+  const outDir = path.join(__dirname, "..", "public", "content");
+  fs.mkdirSync(outDir, { recursive: true });
+  const write = (name, data) => {
+    fs.writeFileSync(path.join(outDir, name), JSON.stringify(data, null, 2) + "\n", "utf8");
+    console.log(`✓ Wrote public/content/${name}`);
   };
-  for (const uni of universities) {
-    for (const unit of uni.units) {
-      const key = `${uni.id}/${unit.id}`;
-      const prev = existing[key] || {};
-      out[key] = {
-        _নাম: unit.nameBn ? `${uni.nameBn} — ${unit.nameBn}` : uni.nameBn,
-        applicationStart: prev.applicationStart !== undefined ? prev.applicationStart : unit.applicationStart,
-        applicationEnd: prev.applicationEnd !== undefined ? prev.applicationEnd : unit.applicationEnd,
-        examDate: prev.examDate !== undefined ? prev.examDate : unit.examDate,
+
+  write("admissions.json", {
+    universities: universities.map((u) => ({
+      id: u.id,
+      nameBn: u.nameBn,
+      nameEn: u.nameEn,
+      shortName: u.shortName,
+      category: u.category,
+      subGroupBn: u.subGroupBn ?? null,
+      admissionSession: u.admissionSession,
+      units: u.units.map((unit) => ({
+        id: unit.id,
+        nameBn: unit.nameBn,
+        applicationStart: unit.applicationStart,
+        applicationEnd: unit.applicationEnd,
+        examDate: unit.examDate,
+        isDemoData: unit.isDemoData,
+      })),
+    })),
+  });
+
+  const info = {};
+  const eligibility = {};
+  for (const u of universities) {
+    info[u.id] = {
+      introBn: u.introBn ?? null,
+      units: {},
+    };
+    for (const unit of u.units) {
+      info[u.id].units[unit.id] = {
+        seats: unit.seats,
+        eligibility: unit.eligibility,
+        examPattern: unit.examPattern,
+        subjects: unit.subjects,
+        resultMethod: unit.resultMethod,
+        circularUrl: unit.circularUrl,
       };
+      if (unit.eligibilityCriteria) {
+        eligibility[u.id] = eligibility[u.id] || {};
+        eligibility[u.id][unit.id] = unit.eligibilityCriteria;
+      }
     }
   }
-  fs.writeFileSync(datesFile, JSON.stringify(out, null, 2) + "\n", "utf8");
-  console.log(`✓ Synced ${datesFile}`);
+  write("info.json", info);
+  write("eligibility.json", eligibility);
+
+  const noticesSource = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "data", "notices.json"), "utf8"));
+  write("notices.json", noticesSource);
+
+  const textsSource = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "src", "data", "texts.json"), "utf8"));
+  write("site-texts.json", textsSource);
 }
 
 main();

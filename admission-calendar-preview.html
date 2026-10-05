@@ -3806,56 +3806,82 @@ function EligibilityResults({ resultsByCategory, totalCount, onOpenUniversity })
 /* =========================================================================
    APP
    ========================================================================= */
-function applyDateOverrides(overrides) {
-  const isValid = (v) => typeof v === "string" && /^d{4}-d{2}-d{2}$/.test(v) && !Number.isNaN(new Date(v + "T00:00:00Z").getTime()) && new Date(v + "T00:00:00Z").toISOString().slice(0, 10) === v;
-  let changed = 0;
-  for (const university of universities) {
-    for (const unit of university.units) {
-      const entry = overrides[university.id + "/" + unit.id];
-      if (!entry || typeof entry !== "object") continue;
-      for (const field of ["applicationStart", "applicationEnd", "examDate"]) {
-        const value = entry[field];
-        if (value == null || value === "" || !isValid(value)) continue;
-        if (unit[field] !== value) { unit[field] = value; unit.isDemoData = false; changed++; }
-      }
-    }
-  }
-  return changed;
+const bundledById = new Map(universities.map((u) => [u.id, u]));
+function buildUniversity(raw, info, elig) {
+  const id = raw.id;
+  const bundled = bundledById.get(id);
+  const infoUni = info ? info[id] : null;
+  const eligUni = elig ? elig[id] : null;
+  const units = raw.units.map((rawUnit) => {
+    const unitId = rawUnit.id;
+    const bundledUnit = bundled ? bundled.units.find((x) => x.id === unitId) : null;
+    const infoUnit = infoUni && infoUni.units ? infoUni.units[unitId] : null;
+    const ui = infoUnit || bundledUnit || {};
+    const criteria = eligUni && unitId in eligUni ? eligUni[unitId] : (bundledUnit ? bundledUnit.eligibilityCriteria : null) ?? null;
+    return {
+      id: unitId,
+      nameBn: rawUnit.nameBn ?? null,
+      applicationStart: rawUnit.applicationStart ?? null,
+      applicationEnd: rawUnit.applicationEnd ?? null,
+      examDate: rawUnit.examDate ?? null,
+      isDemoData: !!rawUnit.isDemoData,
+      seats: ui.seats ?? null,
+      eligibility: ui.eligibility ?? null,
+      examPattern: ui.examPattern ?? null,
+      subjects: ui.subjects ?? [],
+      resultMethod: ui.resultMethod ?? null,
+      circularUrl: ui.circularUrl ?? null,
+      eligibilityCriteria: criteria,
+    };
+  });
+  const introSource = infoUni ? infoUni.introBn : (bundled ? bundled.introBn : undefined);
+  return {
+    id,
+    nameBn: raw.nameBn,
+    nameEn: raw.nameEn ?? (bundled ? bundled.nameEn : ""),
+    shortName: raw.shortName,
+    category: raw.category,
+    subGroupBn: raw.subGroupBn ?? (bundled ? bundled.subGroupBn : undefined),
+    admissionSession: raw.admissionSession ?? (bundled ? bundled.admissionSession : ""),
+    introBn: introSource ?? undefined,
+    units,
+  };
 }
-function applyContent(data) {
-  if (!data || typeof data !== "object") return false;
+function applyContent(files) {
   let changed = false;
-  const isUni = (u) => u && typeof u.id === "string" && typeof u.nameBn === "string" && typeof u.shortName === "string" && typeof u.category === "string" && Array.isArray(u.units) && u.units.length > 0 && u.units.every((x) => x && typeof x.id === "string");
-  if (Array.isArray(data.universities) && data.universities.length > 0 && data.universities.every(isUni)) {
-    const withDefaults = data.universities.map((uni) => ({ ...uni, units: uni.units.map((unit) => ({ ...unit, nameBn: unit.nameBn ?? null, applicationStart: unit.applicationStart ?? null, applicationEnd: unit.applicationEnd ?? null, examDate: unit.examDate ?? null, seats: unit.seats ?? null, eligibility: unit.eligibility ?? null, examPattern: unit.examPattern ?? null, resultMethod: unit.resultMethod ?? null, circularUrl: unit.circularUrl ?? null, subjects: unit.subjects ?? [], isDemoData: !!unit.isDemoData })) }));
-    universities.splice(0, universities.length, ...withDefaults);
+  const isObj = (v) => !!v && typeof v === "object" && !Array.isArray(v);
+  const isAdmissionUni = (u) => u && typeof u.id === "string" && typeof u.nameBn === "string" && typeof u.shortName === "string" && typeof u.category === "string" && Array.isArray(u.units) && u.units.length > 0 && u.units.every((x) => x && typeof x.id === "string");
+  const adm = files.admissions;
+  if (isObj(adm) && Array.isArray(adm.universities) && adm.universities.length > 0 && adm.universities.every(isAdmissionUni)) {
+    const info = isObj(files.info) ? files.info : null;
+    const elig = isObj(files.eligibility) ? files.eligibility : null;
+    const merged = adm.universities.map((u) => buildUniversity(u, info, elig));
+    universities.splice(0, universities.length, ...merged);
     changed = true;
   }
-  if (data.texts && typeof data.texts === "object") {
+  if (Array.isArray(files.notices) && files.notices.every((n) => typeof n === "string")) {
+    NOTICES.splice(0, NOTICES.length, ...files.notices);
+    changed = true;
+  }
+  if (isObj(files.texts)) {
     for (const key of Object.keys(texts)) {
-      const value = data.texts[key];
+      const value = files.texts[key];
       if (typeof value === "string" && value.trim() !== "") { texts[key] = value; changed = true; }
     }
   }
-  if (Array.isArray(data.notices) && data.notices.every((n) => typeof n === "string")) {
-    NOTICES.splice(0, NOTICES.length, ...data.notices);
-    changed = true;
-  }
   return changed;
 }
-function DateOverridesProvider({ children }) {
+function ContentProvider({ children }) {
   const [version, setVersion] = useState(0);
   useEffect(() => {
     let cancelled = false;
-    const bust = "?t=" + Date.now();
-    const getJson = (path) => fetch(path + bust, { cache: "no-store" }).then((res) => (res.ok ? res.json() : null)).catch(() => null);
-    (async () => {
-      let changed = applyContent(await getJson("content.json"));
-      const dates = await getJson("dates.json");
-      if (dates && typeof dates === "object" && applyDateOverrides(dates) > 0) changed = true;
-      document.title = texts.pageTitle;
-      if (!cancelled && changed) setVersion((v) => v + 1);
-    })();
+    const names = ["admissions", "info", "eligibility", "notices", "site-texts"];
+    Promise.all(names.map((n) => fetch("content/" + n + ".json?t=" + Date.now(), { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).catch(() => null)))
+      .then(([admissions, info, eligibility, notices, siteTexts]) => {
+        const changed = applyContent({ admissions, info, eligibility, notices, texts: siteTexts });
+        document.title = texts.pageTitle;
+        if (!cancelled && changed) setVersion((v) => v + 1);
+      });
     return () => { cancelled = true; };
   }, []);
   return <React.Fragment key={version}>{children}</React.Fragment>;
@@ -3883,7 +3909,7 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<DateOverridesProvider><App /></DateOverridesProvider>);
+ReactDOM.createRoot(document.getElementById("root")).render(<ContentProvider><App /></ContentProvider>);
 </script>
 </body>
 </html>

@@ -1,0 +1,633 @@
+{
+  "universities": [
+    {
+      "id": "agriculture-cluster",
+      "nameBn": "কৃষি গুচ্ছ",
+      "nameEn": "Agriculture Cluster",
+      "shortName": "কৃষি গুচ্ছ",
+      "category": "general-cluster",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "armed-forces-medical",
+      "nameBn": "আর্মড ফোর্সেস মেডিকেল কলেজ",
+      "nameEn": "Armed Forces Medical College",
+      "shortName": "AFMC",
+      "category": "medical",
+      "subGroupBn": "আর্মড ফোর্সেস মেডিকেল কলেজ",
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "army-medical",
+      "nameBn": "আর্মি মেডিকেল কলেজ",
+      "nameEn": "Army Medical College",
+      "shortName": "AMC",
+      "category": "medical",
+      "subGroupBn": "আর্মি মেডিকেল কলেজ",
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "buet",
+      "nameBn": "বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয়",
+      "nameEn": "Bangladesh University of Engineering and Technology",
+      "shortName": "BUET",
+      "category": "engineering-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": "2026-09-01",
+          "applicationEnd": "2026-09-15",
+          "examDate": "2026-10-01",
+          "isDemoData": true
+        }
+      ]
+    },
+    {
+      "id": "bup",
+      "nameBn": "বাংলাদেশ ইউনিভার্সিটি অব প্রফেশনালস",
+      "nameEn": "Bangladesh University of Professionals",
+      "shortName": "BUP",
+      "category": "general-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "fst",
+          "nameBn": "FST (বিজ্ঞান ও প্রযুক্তি অনুষদ)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "fass",
+          "nameBn": "FASS (কলা ও সামাজিক বিজ্ঞান অনুষদ)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "fsss",
+          "nameBn": "FSSS (সামাজিক বিজ্ঞান অনুষদ)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "butex",
+      "nameBn": "বাংলাদেশ টেক্সটাইল বিশ্ববিদ্যালয়",
+      "nameEn": "Bangladesh University of Textiles",
+      "shortName": "BUTEX",
+      "category": "engineering-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "cou",
+      "nameBn": "কুমিল্লা বিশ্ববিদ্যালয়",
+      "nameEn": "Comilla University",
+      "shortName": "CoU",
+      "category": "general-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (মানবিক)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "cu",
+      "nameBn": "চট্টগ্রাম বিশ্ববিদ্যালয়",
+      "nameEn": "University of Chittagong",
+      "shortName": "CU",
+      "category": "general-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (কলা)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "b1-unit",
+          "nameBn": "'B1' ইউনিট",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "b2-unit",
+          "nameBn": "'B2' ইউনিট",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "d-unit",
+          "nameBn": "'D' ইউনিট (সমাজবিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "cuet",
+      "nameBn": "চট্টগ্রাম প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয়",
+      "nameEn": "Chittagong University of Engineering & Technology",
+      "shortName": "CUET",
+      "category": "engineering-cluster",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": "2026-08-01",
+          "applicationEnd": "2026-08-25",
+          "examDate": "2026-09-15",
+          "isDemoData": true
+        }
+      ]
+    },
+    {
+      "id": "du",
+      "nameBn": "ঢাকা বিশ্ববিদ্যালয়",
+      "nameEn": "University of Dhaka",
+      "shortName": "DU",
+      "category": "general-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "science",
+          "nameBn": "বিজ্ঞান ('ক') ইউনিট",
+          "applicationStart": "2026-08-01",
+          "applicationEnd": "2026-09-10",
+          "examDate": "2026-10-05",
+          "isDemoData": true
+        },
+        {
+          "id": "arts",
+          "nameBn": "কলা, আইন ও সামাজিক বিজ্ঞান ('খ') ইউনিট",
+          "applicationStart": "2026-09-05",
+          "applicationEnd": "2026-09-25",
+          "examDate": "2026-10-20",
+          "isDemoData": true
+        },
+        {
+          "id": "business",
+          "nameBn": "ব্যবসায় শিক্ষা ইউনিট",
+          "applicationStart": "2026-09-20",
+          "applicationEnd": "2026-10-10",
+          "examDate": "2026-11-05",
+          "isDemoData": true
+        },
+        {
+          "id": "fine-arts",
+          "nameBn": "চারুকলা ইউনিট",
+          "applicationStart": "2026-07-01",
+          "applicationEnd": "2026-07-20",
+          "examDate": "2026-08-15",
+          "isDemoData": true
+        }
+      ]
+    },
+    {
+      "id": "gst-cluster",
+      "nameBn": "GST গুচ্ছ",
+      "nameEn": "General, Science & Technology (GST) Cluster",
+      "shortName": "GST",
+      "category": "general-cluster",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান)",
+          "applicationStart": "2026-09-01",
+          "applicationEnd": "2026-09-17",
+          "examDate": "2026-10-15",
+          "isDemoData": true
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (মানবিক)",
+          "applicationStart": "2026-09-01",
+          "applicationEnd": "2026-09-17",
+          "examDate": "2026-10-15",
+          "isDemoData": true
+        }
+      ]
+    },
+    {
+      "id": "hstu",
+      "nameBn": "হাজী মোহাম্মদ দানেশ বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়",
+      "nameEn": "Hajee Mohammad Danesh Science and Technology University",
+      "shortName": "HSTU",
+      "category": "general-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "d-unit",
+          "nameBn": "'D' ইউনিট (মানবিক)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "iut",
+      "nameBn": "ইসলামিক ইউনিভার্সিটি অব টেকনোলজি",
+      "nameEn": "Islamic University of Technology",
+      "shortName": "IUT",
+      "category": "engineering-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "jnu",
+      "nameBn": "জগন্নাথ বিশ্ববিদ্যালয়",
+      "nameEn": "Jagannath University",
+      "shortName": "JnU",
+      "category": "general-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (কলা ও আইন)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "d-unit",
+          "nameBn": "'D' ইউনিট (সামাজিক বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "ju",
+      "nameBn": "জাহাঙ্গীরনগর বিশ্ববিদ্যালয়",
+      "nameEn": "Jahangirnagar University",
+      "shortName": "JU",
+      "category": "general-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "d-unit",
+          "nameBn": "'D' ইউনিট (জীববিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (মানবিক)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "c-unit",
+          "nameBn": "'C' ইউনিট (ব্যবসায় শিক্ষা)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "c1-unit",
+          "nameBn": "'C1' ইউনিট",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "ku",
+      "nameBn": "খুলনা বিশ্ববিদ্যালয়",
+      "nameEn": "Khulna University",
+      "shortName": "KU",
+      "category": "general-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "c-unit",
+          "nameBn": "'C' ইউনিট (মানবিক)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "kuet",
+      "nameBn": "খুলনা প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয়",
+      "nameEn": "Khulna University of Engineering & Technology",
+      "shortName": "KUET",
+      "category": "engineering-cluster",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "medical-dental",
+      "nameBn": "মেডিকেল ও ডেন্টাল কলেজ",
+      "nameEn": "Medical & Dental College Admission",
+      "shortName": "MBBS/BDS",
+      "category": "medical",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": "2026-10-01",
+          "applicationEnd": "2026-10-30",
+          "examDate": "2026-11-20",
+          "isDemoData": true
+        }
+      ]
+    },
+    {
+      "id": "mist",
+      "nameBn": "মিলিটারি ইনস্টিটিউট অব সায়েন্স অ্যান্ড টেকনোলজি",
+      "nameEn": "Military Institute of Science and Technology",
+      "shortName": "MIST",
+      "category": "engineering-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' Unit",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' Unit (আর্কিটেকচার)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "navy-medical",
+      "nameBn": "নেভি মেডিকেল কলেজ",
+      "nameEn": "Navy Medical College",
+      "shortName": "NMC",
+      "category": "medical",
+      "subGroupBn": "নেভি মেডিকেল কলেজ",
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "ru",
+      "nameBn": "রাজশাহী বিশ্ববিদ্যালয়",
+      "nameEn": "University of Rajshahi",
+      "shortName": "RU",
+      "category": "general-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "c-unit",
+          "nameBn": "'C' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (কলা)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "ruet",
+      "nameBn": "রাজশাহী প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয়",
+      "nameEn": "Rajshahi University of Engineering & Technology",
+      "shortName": "RUET",
+      "category": "engineering-cluster",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    },
+    {
+      "id": "sust",
+      "nameBn": "শাহজালাল বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়",
+      "nameEn": "Shahjalal University of Science and Technology",
+      "shortName": "SUST",
+      "category": "general-independent",
+      "subGroupBn": null,
+      "admissionSession": "২০২৬-২৭",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান ও প্রকৌশল)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (সামাজিক বিজ্ঞান ও ব্যবসায় শিক্ষা)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false
+        }
+      ]
+    }
+  ]
+}

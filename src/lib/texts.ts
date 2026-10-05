@@ -2,7 +2,7 @@ import textData from "@/data/texts.json";
 
 export type TextKey = keyof typeof textData;
 
-/** Mutable on purpose: `applyContent` overwrites these from `content.json` at runtime. */
+/** Mutable on purpose: `applyContent` overwrites these from `content/site-texts.json` at runtime. */
 export const texts: Record<TextKey, string> = { ...textData };
 
 export function fillTemplate(template: string, values: Record<string, string>): string {

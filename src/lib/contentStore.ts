@@ -1,9 +1,34 @@
 import { universities } from "@/data/universities";
-import { University } from "@/data/types";
+import { AdmissionUnit, EligibilityCriteria, University } from "@/data/types";
 import { notices } from "@/lib/notices";
 import { texts, TextKey } from "@/lib/texts";
 
-function isUniversityLike(value: unknown): value is University {
+/** Snapshot of the built-in institutions, used whenever a server file has no entry for a unit. */
+const bundledById = new Map(universities.map((u) => [u.id, u] as const));
+
+interface InfoUnit {
+  seats?: AdmissionUnit["seats"];
+  eligibility?: AdmissionUnit["eligibility"];
+  examPattern?: string | null;
+  subjects?: AdmissionUnit["subjects"];
+  resultMethod?: string | null;
+  circularUrl?: string | null;
+}
+
+interface InfoUniversity {
+  introBn?: string | null;
+  units?: Record<string, InfoUnit>;
+}
+
+export interface ContentFiles {
+  admissions?: unknown;
+  info?: unknown;
+  eligibility?: unknown;
+  notices?: unknown;
+  texts?: unknown;
+}
+
+function isAdmissionUniversity(value: unknown): boolean {
   if (!value || typeof value !== "object") return false;
   const u = value as Record<string, unknown>;
   return (
@@ -17,54 +42,90 @@ function isUniversityLike(value: unknown): value is University {
   );
 }
 
-function withUnitDefaults(university: University): University {
+function buildUniversity(
+  raw: Record<string, unknown>,
+  info: Record<string, InfoUniversity> | null,
+  eligibility: Record<string, Record<string, EligibilityCriteria | null>> | null,
+): University {
+  const id = raw.id as string;
+  const bundled = bundledById.get(id);
+  const infoUni = info?.[id];
+  const eligUni = eligibility?.[id];
+  const rawUnits = raw.units as Array<Record<string, unknown>>;
+
+  const units = rawUnits.map((rawUnit): AdmissionUnit => {
+    const unitId = rawUnit.id as string;
+    const bundledUnit = bundled?.units.find((x) => x.id === unitId);
+    const infoUnit = infoUni?.units?.[unitId];
+    const info: InfoUnit = infoUnit ?? (bundledUnit ?? {});
+
+    const criteria =
+      eligUni && unitId in eligUni
+        ? eligUni[unitId]
+        : bundledUnit?.eligibilityCriteria ?? null;
+
+    return {
+      id: unitId,
+      nameBn: (rawUnit.nameBn as string | null) ?? null,
+      applicationStart: (rawUnit.applicationStart as string | null) ?? null,
+      applicationEnd: (rawUnit.applicationEnd as string | null) ?? null,
+      examDate: (rawUnit.examDate as string | null) ?? null,
+      isDemoData: !!rawUnit.isDemoData,
+      seats: info.seats ?? null,
+      eligibility: info.eligibility ?? null,
+      examPattern: info.examPattern ?? null,
+      subjects: info.subjects ?? [],
+      resultMethod: info.resultMethod ?? null,
+      circularUrl: info.circularUrl ?? null,
+      eligibilityCriteria: criteria,
+    };
+  });
+
+  const introSource = infoUni ? infoUni.introBn : bundled?.introBn;
   return {
-    ...university,
-    units: university.units.map((unit) => ({
-      ...unit,
-      nameBn: unit.nameBn ?? null,
-      applicationStart: unit.applicationStart ?? null,
-      applicationEnd: unit.applicationEnd ?? null,
-      examDate: unit.examDate ?? null,
-      seats: unit.seats ?? null,
-      eligibility: unit.eligibility ?? null,
-      examPattern: unit.examPattern ?? null,
-      resultMethod: unit.resultMethod ?? null,
-      circularUrl: unit.circularUrl ?? null,
-      subjects: unit.subjects ?? [],
-      isDemoData: !!unit.isDemoData,
-    })),
+    id,
+    nameBn: raw.nameBn as string,
+    nameEn: (raw.nameEn as string) ?? bundled?.nameEn ?? "",
+    shortName: raw.shortName as string,
+    category: raw.category as University["category"],
+    subGroupBn: (raw.subGroupBn as string | null) ?? bundled?.subGroupBn ?? undefined,
+    admissionSession: (raw.admissionSession as string) ?? bundled?.admissionSession ?? "",
+    introBn: introSource ?? undefined,
+    units,
   };
 }
 
-/** Replaces institutions and notices in place from a parsed `content.json`. Malformed
- * entries are rejected whole so a typo can't blank the page; the built-in data stays. */
-export function applyContent(data: unknown): boolean {
-  if (!data || typeof data !== "object") return false;
-  const { universities: incomingUniversities, notices: incomingNotices, texts: incomingTexts } = data as {
-    universities?: unknown;
-    notices?: unknown;
-    texts?: unknown;
-  };
+/** Applies the server-editable content files. Each file is independent: a missing or
+ * malformed file leaves that part on the built-in data. Returns true if anything changed. */
+export function applyContent(files: ContentFiles): boolean {
   let changed = false;
+  const isObject = (v: unknown): v is Record<string, unknown> => !!v && typeof v === "object" && !Array.isArray(v);
 
-  if (Array.isArray(incomingUniversities) && incomingUniversities.length > 0) {
-    if (incomingUniversities.every(isUniversityLike)) {
-      universities.splice(0, universities.length, ...incomingUniversities.map(withUnitDefaults));
+  const admissions = files.admissions;
+  if (isObject(admissions) && Array.isArray(admissions.universities) && admissions.universities.length > 0) {
+    if (admissions.universities.every(isAdmissionUniversity)) {
+      const info = isObject(files.info) ? (files.info as Record<string, InfoUniversity>) : null;
+      const eligibility = isObject(files.eligibility)
+        ? (files.eligibility as Record<string, Record<string, EligibilityCriteria | null>>)
+        : null;
+      const merged = (admissions.universities as Record<string, unknown>[]).map((u) =>
+        buildUniversity(u, info, eligibility),
+      );
+      universities.splice(0, universities.length, ...merged);
       changed = true;
     } else {
-      console.warn("content.json: কিছু প্রতিষ্ঠানের ফরম্যাট ভুল — ডিফল্ট তথ্য দেখানো হচ্ছে।");
+      console.warn("admissions.json: কিছু প্রতিষ্ঠানের ফরম্যাট ভুল — ডিফল্ট তথ্য দেখানো হচ্ছে।");
     }
   }
 
-  if (Array.isArray(incomingNotices) && incomingNotices.every((n) => typeof n === "string")) {
-    notices.splice(0, notices.length, ...(incomingNotices as string[]));
+  if (Array.isArray(files.notices) && files.notices.every((n) => typeof n === "string")) {
+    notices.splice(0, notices.length, ...(files.notices as string[]));
     changed = true;
   }
 
-  if (incomingTexts && typeof incomingTexts === "object") {
+  if (isObject(files.texts)) {
     for (const key of Object.keys(texts) as TextKey[]) {
-      const value = (incomingTexts as Record<string, unknown>)[key];
+      const value = files.texts[key];
       if (typeof value === "string" && value.trim() !== "") {
         texts[key] = value;
         changed = true;

@@ -4,7 +4,7 @@ import { texts } from "@/lib/texts";
 
 /** Scrolling news-ticker style banner for general site/admission notices —
  * distinct from `DeadlineTicker`, which only shows auto-computed deadline
- * countdowns. Notices come from `lib/notices`, which `content.json` can replace at runtime. */
+ * countdowns. Notices come from `lib/notices`, which `content/notices.json` can replace at runtime. */
 export function NoticeTicker() {
   if (notices.length === 0) return null;
 

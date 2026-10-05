@@ -40,11 +40,10 @@ jobs:
       - name: cPanel deploy হুকের জন্য .cpanel.yml যোগ
         run: cp cpanel/.cpanel.yml out/.cpanel.yml
 
-      # dates.json সার্ভারে সরাসরি (cPanel File Manager থেকে) এডিট করা হয় — তাই
-      # deploy ব্রাঞ্চে এটি রাখা হয় না, ফলে প্রতিটি ডিপ্লয়ে সার্ভারের এডিট করা
-      # dates.json অক্ষত থাকে (git pull ট্র্যাক না-করা ফাইল মোছে না)।
-      - name: dates.json বাদ দেওয়া
-        run: rm -f out/dates.json out/content.json
+      # public/content/ ফাইলগুলো (তারিখ, তথ্য, নোটিশ, লেখা) সার্ভারে cPanel থেকে এডিট করা হয়
+      # — তাই deploy ব্রাঞ্চে এগুলো রাখা হয় না, ফলে git pull সার্ভারের এডিট মোছে না।
+      - name: সার্ভার-এডিটযোগ্য ফাইল বাদ দেওয়া
+        run: rm -rf out/content
 
       - name: deploy ব্রাঞ্চে বিল্ড আউটপুট পুশ
         uses: peaceiris/actions-gh-pages@v4
