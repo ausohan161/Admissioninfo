@@ -1,0 +1,2698 @@
+{
+  "universities": [
+    {
+      "id": "agriculture-cluster",
+      "nameBn": "কৃষি গুচ্ছ",
+      "nameEn": "Agriculture Cluster",
+      "shortName": "কৃষি গুচ্ছ",
+      "category": "general-cluster",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "কৃষি বিশ্ববিদ্যালয় গুচ্ছ ভর্তি পরীক্ষা — সদস্য বিশ্ববিদ্যালয়: BAU, SAU, KAU, PSTU, CVASU, GAU, HAU, KuriAU (৯টি বিশ্ববিদ্যালয়)। তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 3701,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC-তে জীববিজ্ঞান, রসায়ন, পদার্থবিজ্ঞান ও গণিত বিষয়সহ উত্তীর্ণ হতে হবে। SSC ও HSC প্রতিটিতে (৪র্থ বিষয় ব্যতীত) ন্যূনতম জিপিএ ৪ এবং সর্বমোট SSC+HSC ন্যূনতম জিপিএ ৮.৫০ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 4,
+            "minHscGpa": 4,
+            "minCombinedGpa": 8.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": "SSC ও HSC-তে জীববিজ্ঞান, রসায়ন, পদার্থবিজ্ঞান ও গণিত বিষয়ে উত্তীর্ণ থাকতে হবে।"
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "গণিত",
+              "marks": 20
+            },
+            {
+              "nameBn": "পদার্থবিজ্ঞান",
+              "marks": 20
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 20
+            },
+            {
+              "nameBn": "উদ্ভিদবিজ্ঞান",
+              "marks": 15
+            },
+            {
+              "nameBn": "প্রাণিবিজ্ঞান",
+              "marks": 15
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 10
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC = ২৫ নম্বর + HSC = ২৫ নম্বর)।",
+          "circularUrl": "https://acas.edu.bd"
+        }
+      ]
+    },
+    {
+      "id": "armed-forces-medical",
+      "nameBn": "আর্মড ফোর্সেস মেডিকেল কলেজ",
+      "nameEn": "Armed Forces Medical College",
+      "shortName": "AFMC",
+      "category": "medical",
+      "subGroupBn": "আর্মড ফোর্সেস মেডিকেল কলেজ",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 125,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC মিলিয়ে ন্যূনতম জিপিএ ৮.৫০ থাকতে হবে (HSC পরীক্ষায় জীববিজ্ঞানে জিপিএ ৩.৫ এর কম নয়)।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": null,
+            "minHscGpa": null,
+            "minCombinedGpa": 8.5,
+            "subjectMinimums": [
+              {
+                "subjectBn": "জীববিজ্ঞান",
+                "minGpa": 3.5
+              }
+            ],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা ১৫ মিনিট। পাশ নম্বর ৪০। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "জীববিজ্ঞান",
+              "marks": 30
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 25
+            },
+            {
+              "nameBn": "পদার্থবিজ্ঞান",
+              "marks": 15
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 15
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান, প্রণোদনা ও মানবিক গুণাবলি",
+              "marks": 15
+            }
+          ],
+          "resultMethod": "(SSC GPA × ৮) + (HSC GPA × ১২) + ভর্তি পরীক্ষার ১০০ নম্বর = সর্বমোট ২০০ নম্বরের মধ্যে মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://afmc.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "army-medical",
+      "nameBn": "আর্মি মেডিকেল কলেজ",
+      "nameEn": "Army Medical College",
+      "shortName": "AMC",
+      "category": "medical",
+      "subGroupBn": "আর্মি মেডিকেল কলেজ",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "আর্মি ও নেভি মেডিকেল কলেজ মিলিয়ে মোট আসন ৩১০টি — পৃথক আসন-বিভাজন এখনো প্রকাশিত হয়নি। তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": null,
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC মিলিয়ে ন্যূনতম জিপিএ ৮.৫০ থাকতে হবে (HSC পরীক্ষায় জীববিজ্ঞানে জিপিএ ৩.৫ এর কম নয়)।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": null,
+            "minHscGpa": null,
+            "minCombinedGpa": 8.5,
+            "subjectMinimums": [
+              {
+                "subjectBn": "জীববিজ্ঞান",
+                "minGpa": 3.5
+              }
+            ],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা ১৫ মিনিট। পাশ নম্বর ৪০। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "জীববিজ্ঞান",
+              "marks": 30
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 25
+            },
+            {
+              "nameBn": "পদার্থবিজ্ঞান",
+              "marks": 15
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 15
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান, প্রণোদনা ও মানবিক গুণাবলি",
+              "marks": 15
+            }
+          ],
+          "resultMethod": "(SSC GPA × ৮) + (HSC GPA × ১২) + ভর্তি পরীক্ষার ১০০ নম্বর = সর্বমোট ২০০ নম্বরের মধ্যে মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://afmc.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "buet",
+      "nameBn": "বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয়",
+      "nameEn": "Bangladesh University of Engineering and Technology",
+      "shortName": "BUET",
+      "category": "engineering-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": "2026-09-01",
+          "applicationEnd": "2026-09-15",
+          "examDate": "2026-10-01",
+          "isDemoData": true,
+          "seats": {
+            "total": 1309,
+            "breakdown": [
+              {
+                "nameBn": "সাধারণ আসন",
+                "count": 1305
+              },
+              {
+                "nameBn": "সংরক্ষিত আসন",
+                "count": 4
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "SSC-তে গণিত, পদার্থবিজ্ঞান ও রসায়নসহ ৫ স্কেলে ন্যূনতম জিপিএ ৪ পেতে হবে। HSC-তে ৫ স্কেলে সামগ্রিক জিপিএ ৫ এবং উচ্চতর গণিত, পদার্থবিজ্ঞান ও রসায়ন বিষয়সমূহের প্রতিটিতে ন্যূনতম জিপিএ ৫ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 4,
+            "minHscGpa": 5,
+            "minCombinedGpa": null,
+            "subjectMinimums": [
+              {
+                "subjectBn": "উচ্চতর গণিত",
+                "minGpa": 5
+              },
+              {
+                "subjectBn": "পদার্থবিজ্ঞান",
+                "minGpa": 5
+              },
+              {
+                "subjectBn": "রসায়ন",
+                "minGpa": 5
+              }
+            ],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "গ্রুপ 'ক': লিখিত পরীক্ষা ৬০০ নম্বর, সময় ৩ ঘণ্টা (ক্যালকুলেটর ব্যবহার করা যাবে)। গ্রুপ 'খ': আর্কিটেকচার ৪০০ নম্বর, সময় ১ ঘণ্টা ৩০ মিনিট।",
+          "subjects": [
+            {
+              "nameBn": "গ্রুপ ক — উচ্চতর গণিত (২০টি প্রশ্ন × ১০)",
+              "marks": 200
+            },
+            {
+              "nameBn": "গ্রুপ ক — পদার্থবিজ্ঞান (২০টি প্রশ্ন × ১০)",
+              "marks": 200
+            },
+            {
+              "nameBn": "গ্রুপ ক — রসায়ন (২০টি প্রশ্ন × ১০)",
+              "marks": 200
+            },
+            {
+              "nameBn": "গ্রুপ খ — মুক্তহস্ত অংকন (৩টি প্রশ্ন × ১১২)",
+              "marks": 336
+            },
+            {
+              "nameBn": "গ্রুপ খ — দৃষ্টিগত ও স্থানিক ধীশক্তি (৪টি প্রশ্ন × ১৬)",
+              "marks": 64
+            }
+          ],
+          "resultMethod": "শুধু লিখিত পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://buet.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "bup",
+      "nameBn": "বাংলাদেশ ইউনিভার্সিটি অব প্রফেশনালস",
+      "nameEn": "Bangladesh University of Professionals",
+      "shortName": "BUP",
+      "category": "general-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "fst",
+          "nameBn": "FST (বিজ্ঞান ও প্রযুক্তি অনুষদ)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 300,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC + HSC ন্যূনতম জিপিএ ৮ থাকতে হবে। HSC-তে পদার্থবিজ্ঞান, রসায়ন ও জীববিজ্ঞানে A গ্রেড এবং ইংরেজিতে ন্যূনতম A- গ্রেড থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": null,
+            "minHscGpa": null,
+            "minCombinedGpa": 8,
+            "subjectMinimums": [
+              {
+                "subjectBn": "পদার্থবিজ্ঞান",
+                "minGpa": 4
+              },
+              {
+                "subjectBn": "রসায়ন",
+                "minGpa": 4
+              },
+              {
+                "subjectBn": "জীববিজ্ঞান",
+                "minGpa": 4
+              },
+              {
+                "subjectBn": "ইংরেজি",
+                "minGpa": 3.5
+              }
+            ],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "৬০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে।",
+          "subjects": [
+            {
+              "nameBn": "গণিত, জীববিজ্ঞান, পদার্থবিজ্ঞান, রসায়ন — ৪টি থেকে যেকোনো ৩টি (প্রতিটি ২০)",
+              "marks": 60
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষা থেকে ৫৫% + (SSC = ২০% + HSC = ২৫%)।",
+          "circularUrl": "https://bup.edu.bd"
+        },
+        {
+          "id": "fass",
+          "nameBn": "FASS (কলা ও সামাজিক বিজ্ঞান অনুষদ)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 600,
+            "breakdown": [
+              {
+                "nameBn": "FASS",
+                "count": 350
+              },
+              {
+                "nameBn": "FSSS",
+                "count": 250
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "SSC + HSC ন্যূনতম জিপিএ ৭.৫ থেকে ৮ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": null,
+            "minHscGpa": null,
+            "minCombinedGpa": 7.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
+          "subjects": [
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 40
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান",
+              "marks": 40
+            },
+            {
+              "nameBn": "বাংলা",
+              "marks": 20
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষা থেকে ৫৫% + (SSC = ২০% + HSC = ২৫%)।",
+          "circularUrl": "https://bup.edu.bd"
+        },
+        {
+          "id": "fsss",
+          "nameBn": "FSSS (সামাজিক বিজ্ঞান অনুষদ)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 600,
+            "breakdown": [
+              {
+                "nameBn": "FASS",
+                "count": 350
+              },
+              {
+                "nameBn": "FSSS",
+                "count": 250
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "SSC + HSC ন্যূনতম জিপিএ ৮ থেকে ৮.৫ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": null,
+            "minHscGpa": null,
+            "minCombinedGpa": 8,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
+          "subjects": [
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 40
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান",
+              "marks": 40
+            },
+            {
+              "nameBn": "বাংলা",
+              "marks": 20
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষা থেকে ৫৫% + (SSC = ২০% + HSC = ২৫%)।",
+          "circularUrl": "https://bup.edu.bd"
+        }
+      ]
+    },
+    {
+      "id": "butex",
+      "nameBn": "বাংলাদেশ টেক্সটাইল বিশ্ববিদ্যালয়",
+      "nameEn": "Bangladesh University of Textiles",
+      "shortName": "BUTEX",
+      "category": "engineering-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 630,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC-তে ৫ স্কেলে ন্যূনতম জিপিএ ৪ পেতে হবে। HSC-তে ৫ স্কেলে ন্যূনতম জিপিএ ৪ এবং উচ্চতর গণিত, পদার্থবিজ্ঞান, রসায়ন ও ইংরেজি বিষয়ে আলাদাভাবে ন্যূনতম জিপি ৩.৫০ ও সর্বমোট কমপক্ষে ১৭.৫০ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 4,
+            "minHscGpa": 4,
+            "minCombinedGpa": null,
+            "subjectMinimums": [
+              {
+                "subjectBn": "উচ্চতর গণিত",
+                "minGpa": 3.5
+              },
+              {
+                "subjectBn": "পদার্থবিজ্ঞান",
+                "minGpa": 3.5
+              },
+              {
+                "subjectBn": "রসায়ন",
+                "minGpa": 3.5
+              },
+              {
+                "subjectBn": "ইংরেজি",
+                "minGpa": 3.5
+              }
+            ],
+            "subjectGroupMinTotal": {
+              "subjectsBn": [
+                "উচ্চতর গণিত",
+                "পদার্থবিজ্ঞান",
+                "রসায়ন",
+                "ইংরেজি"
+              ],
+              "minTotal": 17.5
+            },
+            "noteBn": null
+          },
+          "examPattern": "২০০ নম্বরের লিখিত পরীক্ষা, সময় ২ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে।",
+          "subjects": [
+            {
+              "nameBn": "গণিত",
+              "marks": 60
+            },
+            {
+              "nameBn": "পদার্থবিজ্ঞান",
+              "marks": 60
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 60
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 20
+            }
+          ],
+          "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://butex.edu.bd"
+        }
+      ]
+    },
+    {
+      "id": "cou",
+      "nameBn": "কুমিল্লা বিশ্ববিদ্যালয়",
+      "nameEn": "Comilla University",
+      "shortName": "CoU",
+      "category": "general-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 300,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩ সহ সর্বমোট জিপিএ ৭ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 3,
+            "minHscGpa": 3,
+            "minCombinedGpa": 7,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "পদার্থবিজ্ঞান",
+              "marks": 25
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 25
+            },
+            {
+              "nameBn": "বাংলা ও ইংরেজি/গণিত/জীববিজ্ঞান — ৩টি থেকে যেকোনো ২টি (প্রতিটি ২৫)",
+              "marks": 50
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ২) + (HSC GPA × ২)।",
+          "circularUrl": "https://cou.ac.bd"
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (মানবিক)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 390,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC-তে ৪র্থ বিষয়সহ ন্যূনতম জিপিএ ৩ এবং মানবিক শাখায় সর্বমোট জিপিএ ৬ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3,
+            "minHscGpa": 3,
+            "minCombinedGpa": 6,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
+          "subjects": [
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 25
+            },
+            {
+              "nameBn": "বাংলা",
+              "marks": 25
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান",
+              "marks": 10
+            },
+            {
+              "nameBn": "মানবিক শাখার বিষয়ভিত্তিক",
+              "marks": 40
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ২) + (HSC GPA × ২)।",
+          "circularUrl": "https://cou.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "cu",
+      "nameBn": "চট্টগ্রাম বিশ্ববিদ্যালয়",
+      "nameEn": "University of Chittagong",
+      "shortName": "CU",
+      "category": "general-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 1093,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC + HSC (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৮ থাকতে হবে (SSC-তে ন্যূনতম জিপিএ ৪ এবং HSC-তে ন্যূনতম জিপিএ ৩ থাকতে হবে)।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 4,
+            "minHscGpa": 3,
+            "minCombinedGpa": 8,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে।",
+          "subjects": [
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 25
+            },
+            {
+              "nameBn": "রসায়ন, পদার্থবিজ্ঞান, গণিত, জীববিজ্ঞান — যেকোনো ৩টি (প্রতিটি ২৫)",
+              "marks": 75
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর। মেধাক্রম সমান হলে মেধাক্রম প্রকাশে বিভিন্ন শর্তাবলি প্রযোজ্য হবে।",
+          "circularUrl": "https://cu.ac.bd"
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (কলা)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 1994,
+            "breakdown": [
+              {
+                "nameBn": "কলা অনুষদ",
+                "count": 970
+              },
+              {
+                "nameBn": "সমাজবিজ্ঞান অনুষদ",
+                "count": 889
+              },
+              {
+                "nameBn": "চারুকলা",
+                "count": 135
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "B, B1 ও B2 ইউনিট: SSC-তে ন্যূনতম জিপিএ ৩ ও HSC-তে ন্যূনতম জিপিএ ২.৫ (৪র্থ বিষয়সহ) সহ মোট জিপিএ ৬.৫ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3,
+            "minHscGpa": 2.5,
+            "minCombinedGpa": 6.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা/ঐচ্ছিক ইংরেজি",
+              "marks": 30
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 30
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান",
+              "marks": 40
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর। মেধাক্রম সমান হলে মেধাক্রম প্রকাশে বিভিন্ন শর্তাবলি প্রযোজ্য হবে।",
+          "circularUrl": "https://cu.ac.bd"
+        },
+        {
+          "id": "b1-unit",
+          "nameBn": "'B1' ইউনিট",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": null,
+          "eligibility": {
+            "descriptionBn": "B, B1 ও B2 ইউনিট: SSC-তে ন্যূনতম জিপিএ ৩ ও HSC-তে ন্যূনতম জিপিএ ২.৫ (৪র্থ বিষয়সহ) সহ মোট জিপিএ ৬.৫ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3,
+            "minHscGpa": 2.5,
+            "minCombinedGpa": 6.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা/ঐচ্ছিক ইংরেজি",
+              "marks": 25
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 25
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান",
+              "marks": 50
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর। মেধাক্রম সমান হলে মেধাক্রম প্রকাশে বিভিন্ন শর্তাবলি প্রযোজ্য হবে।",
+          "circularUrl": "https://cu.ac.bd"
+        },
+        {
+          "id": "b2-unit",
+          "nameBn": "'B2' ইউনিট",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": null,
+          "eligibility": {
+            "descriptionBn": "B, B1 ও B2 ইউনিট: SSC-তে ন্যূনতম জিপিএ ৩ ও HSC-তে ন্যূনতম জিপিএ ২.৫ (৪র্থ বিষয়সহ) সহ মোট জিপিএ ৬.৫ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3,
+            "minHscGpa": 2.5,
+            "minCombinedGpa": 6.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। আরবি, ইসলামিক স্টাডিজ ও পালি এবং সাধারণ জ্ঞান — এই বিষয়গুলো থেকে যেকোনো দুটির উত্তর দিতে হবে।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা/ঐচ্ছিক ইংরেজি",
+              "marks": 20
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 20
+            },
+            {
+              "nameBn": "আরবি/ইসলামিক স্টাডিজ/পালি/সাধারণ জ্ঞান (যেকোনো ২টি, প্রতিটি ৩০)",
+              "marks": 60
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর। মেধাক্রম সমান হলে মেধাক্রম প্রকাশে বিভিন্ন শর্তাবলি প্রযোজ্য হবে।",
+          "circularUrl": "https://cu.ac.bd"
+        },
+        {
+          "id": "d-unit",
+          "nameBn": "'D' ইউনিট (সমাজবিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 1994,
+            "breakdown": [
+              {
+                "nameBn": "কলা অনুষদ",
+                "count": 970
+              },
+              {
+                "nameBn": "সমাজবিজ্ঞান অনুষদ",
+                "count": 889
+              },
+              {
+                "nameBn": "চারুকলা",
+                "count": 135
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "D ইউনিট: SSC-তে ন্যূনতম জিপিএ ৩.৫ ও HSC-তে ন্যূনতম জিপিএ ৩ (৪র্থ বিষয়সহ) সহ মোট জিপিএ ৭.৫ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3.5,
+            "minHscGpa": 3,
+            "minCombinedGpa": 7.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা/ঐচ্ছিক ইংরেজি",
+              "marks": 30
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 30
+            },
+            {
+              "nameBn": "বিভাগ সংশ্লিষ্ট",
+              "marks": 20
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান/গণিত/অর্থনীতি",
+              "marks": 20
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর। মেধাক্রম সমান হলে মেধাক্রম প্রকাশে বিভিন্ন শর্তাবলি প্রযোজ্য হবে।",
+          "circularUrl": "https://cu.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "cuet",
+      "nameBn": "চট্টগ্রাম প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয়",
+      "nameEn": "Chittagong University of Engineering & Technology",
+      "shortName": "CUET",
+      "category": "engineering-cluster",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": "2026-08-01",
+          "applicationEnd": "2026-08-25",
+          "examDate": "2026-09-15",
+          "isDemoData": true,
+          "seats": {
+            "total": 931,
+            "breakdown": [
+              {
+                "nameBn": "সাধারণ আসন",
+                "count": 920
+              },
+              {
+                "nameBn": "সংরক্ষিত আসন",
+                "count": 11
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "SSC-তে মাধ্যমিক বা সমমানের পরীক্ষায় কমপক্ষে জিপিএ ৪ পেতে হবে। HSC-তে উচ্চতর গণিত, পদার্থবিজ্ঞান, রসায়ন বিষয়ের মোট গ্রেড পয়েন্ট কমপক্ষে ১৪ এবং ইংরেজিতে 'B' গ্রেড পেতে হবে।",
+            "points": [
+              "বায়োমেডিকেল ইঞ্জিনিয়ারিং বিভাগে ভর্তি হতে হলে জীববিজ্ঞানে কমপক্ষে জিপি ৪ পেতে হবে।"
+            ]
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 4,
+            "minHscGpa": null,
+            "minCombinedGpa": null,
+            "subjectMinimums": [
+              {
+                "subjectBn": "ইংরেজি",
+                "minGpa": 3
+              }
+            ],
+            "subjectGroupMinTotal": {
+              "subjectsBn": [
+                "উচ্চতর গণিত",
+                "পদার্থবিজ্ঞান",
+                "রসায়ন"
+              ],
+              "minTotal": 14
+            },
+            "noteBn": "ইংরেজিতে ন্যূনতম 'B' গ্রেড (জিপি ৩) প্রয়োজন। বায়োমেডিকেল ইঞ্জিনিয়ারিং বিভাগে জীববিজ্ঞানে কমপক্ষে জিপি ৪ আলাদাভাবে প্রয়োজন।"
+          },
+          "examPattern": "গ্রুপ 'ক': ৫০০ নম্বর (MCQ), সময় ২ ঘণ্টা ৩০ মিনিট। গ্রুপ 'খ': আর্কিটেকচার ২০০ নম্বর, সময় ১ ঘণ্টা। (ক্যালকুলেটর ব্যবহার করা যাবে)",
+          "subjects": [
+            {
+              "nameBn": "গ্রুপ ক — গণিত (২৫টি প্রশ্ন × ৬)",
+              "marks": 150
+            },
+            {
+              "nameBn": "গ্রুপ ক — পদার্থবিজ্ঞান (২৫টি প্রশ্ন × ৬)",
+              "marks": 150
+            },
+            {
+              "nameBn": "গ্রুপ ক — রসায়ন (২৫টি প্রশ্ন × ৬)",
+              "marks": 150
+            },
+            {
+              "nameBn": "গ্রুপ ক — ইংরেজি (২৫টি প্রশ্ন × ২)",
+              "marks": 50
+            },
+            {
+              "nameBn": "গ্রুপ খ — মুক্তহস্ত অংকন (৪টি প্রশ্ন × ৫০)",
+              "marks": 200
+            }
+          ],
+          "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://cuet.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "du",
+      "nameBn": "ঢাকা বিশ্ববিদ্যালয়",
+      "nameEn": "University of Dhaka",
+      "shortName": "DU",
+      "category": "general-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে। ব্যবসায় শিক্ষা ও চারুকলা ইউনিটের বিস্তারিত তথ্য এখনো প্রকাশিত হয়নি।",
+      "units": [
+        {
+          "id": "science",
+          "nameBn": "বিজ্ঞান ('ক') ইউনিট",
+          "applicationStart": "2026-08-01",
+          "applicationEnd": "2026-09-10",
+          "examDate": "2026-10-05",
+          "isDemoData": true,
+          "seats": {
+            "total": 1891,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC-তে ৪র্থ বিষয়সহ ন্যূনতম জিপিএ ৩.৫ এবং সর্বমোট জিপিএ ৮ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 3.5,
+            "minHscGpa": 3.5,
+            "minCombinedGpa": 8,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বর (MCQ ৬০ + লিখিত ৪০), সময় ১ ঘণ্টা ৩০ মিনিট। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "পদার্থবিজ্ঞান — MCQ ১৫ + লিখিত ১০",
+              "marks": 25
+            },
+            {
+              "nameBn": "রসায়ন — MCQ ১৫ + লিখিত ১০",
+              "marks": 25
+            },
+            {
+              "nameBn": "নির্বাচনি বিষয় — MCQ ১৫ + লিখিত ১০",
+              "marks": 25
+            },
+            {
+              "nameBn": "৪র্থ বিষয়/বাংলা/ইংরেজি (যেকোনো ১টি) — MCQ ১৫ + লিখিত ১০",
+              "marks": 25
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ২) + (HSC GPA × ২)।",
+          "circularUrl": "https://du.ac.bd"
+        },
+        {
+          "id": "arts",
+          "nameBn": "কলা, আইন ও সামাজিক বিজ্ঞান ('খ') ইউনিট",
+          "applicationStart": "2026-09-05",
+          "applicationEnd": "2026-09-25",
+          "examDate": "2026-10-20",
+          "isDemoData": true,
+          "seats": {
+            "total": 2934,
+            "breakdown": [
+              {
+                "nameBn": "মানবিক শাখা",
+                "count": 1694
+              },
+              {
+                "nameBn": "বিজ্ঞান শাখা",
+                "count": 962
+              },
+              {
+                "nameBn": "ব্যবসায় শিক্ষা শাখা",
+                "count": 278
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC-তে ৪র্থ বিষয়সহ ন্যূনতম জিপিএ ৩ এবং সর্বমোট জিপিএ ৭.৫ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3,
+            "minHscGpa": 3,
+            "minCombinedGpa": 7.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বর (MCQ ৬০ + লিখিত ৪০), সময় ১ ঘণ্টা ৩০ মিনিট।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা/Advanced English — MCQ ১৫ + লিখিত ২০",
+              "marks": 35
+            },
+            {
+              "nameBn": "General English — MCQ ১৫ + লিখিত ২০",
+              "marks": 35
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান — MCQ ৩০",
+              "marks": 30
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ২) + (HSC GPA × ২)।",
+          "circularUrl": "https://du.ac.bd"
+        },
+        {
+          "id": "business",
+          "nameBn": "ব্যবসায় শিক্ষা ইউনিট",
+          "applicationStart": "2026-09-20",
+          "applicationEnd": "2026-10-10",
+          "examDate": "2026-11-05",
+          "isDemoData": true,
+          "seats": null,
+          "eligibility": null,
+          "eligibilityCriteria": null,
+          "examPattern": null,
+          "subjects": [],
+          "resultMethod": null,
+          "circularUrl": null
+        },
+        {
+          "id": "fine-arts",
+          "nameBn": "চারুকলা ইউনিট",
+          "applicationStart": "2026-07-01",
+          "applicationEnd": "2026-07-20",
+          "examDate": "2026-08-15",
+          "isDemoData": true,
+          "seats": null,
+          "eligibility": null,
+          "eligibilityCriteria": null,
+          "examPattern": null,
+          "subjects": [],
+          "resultMethod": null,
+          "circularUrl": null
+        }
+      ]
+    },
+    {
+      "id": "gst-cluster",
+      "nameBn": "GST গুচ্ছ",
+      "nameEn": "General, Science & Technology (GST) Cluster",
+      "shortName": "GST",
+      "category": "general-cluster",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "সাধারণ, বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয় গুচ্ছ ভর্তি পরীক্ষা — সদস্য বিশ্ববিদ্যালয়: IU, MBSTU, PSTU, NSTU, JKKNIU, JUST, PUST, BRUR, GSTU, BU, RMSTU, RUB, GDU, NeU, JSTU, CSTU, KiU, SSTU, PRSTU, NAU (২০টি বিশ্ববিদ্যালয়)। তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান)",
+          "applicationStart": "2026-09-01",
+          "applicationEnd": "2026-09-17",
+          "examDate": "2026-10-15",
+          "isDemoData": true,
+          "seats": {
+            "total": 5994,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩.২৫ সহ সর্বমোট জিপিএ কমপক্ষে ৭ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 3.25,
+            "minHscGpa": 3.25,
+            "minCombinedGpa": 7,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "পদার্থবিজ্ঞান",
+              "marks": 25
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 25
+            },
+            {
+              "nameBn": "গণিত/জীববিজ্ঞান (যেকোনো একটি)",
+              "marks": 25
+            },
+            {
+              "nameBn": "বাংলা/ইংরেজি (বিকল্প হিসেবে)",
+              "marks": 15
+            }
+          ],
+          "resultMethod": "শুধু ভর্তি পরীক্ষার প্রাপ্ত নম্বরের ভিত্তিতে মেধাক্রম প্রকাশ করা হয়। পরবর্তীতে বিভিন্ন বিশ্ববিদ্যালয় নিজস্ব নীতিমালা অনুসারে মেধা তালিকা দিয়ে থাকে।",
+          "circularUrl": "https://gstadmission.ac.bd"
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (মানবিক)",
+          "applicationStart": "2026-09-01",
+          "applicationEnd": "2026-09-17",
+          "examDate": "2026-10-15",
+          "isDemoData": true,
+          "seats": {
+            "total": 3000,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩ এবং সর্বমোট জিপিএ ৬ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3,
+            "minHscGpa": 3,
+            "minCombinedGpa": 6,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। পাশ নম্বর ৩০।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা",
+              "marks": 35
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 35
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান",
+              "marks": 30
+            }
+          ],
+          "resultMethod": "শুধু ভর্তি পরীক্ষার প্রাপ্ত নম্বরের ভিত্তিতে মেধাক্রম প্রকাশ করা হয়। পরবর্তীতে বিভিন্ন বিশ্ববিদ্যালয় নিজস্ব নীতিমালা অনুসারে ভর্তি নিয়ে থাকে।",
+          "circularUrl": "https://gstadmission.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "hstu",
+      "nameBn": "হাজী মোহাম্মদ দানেশ বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়",
+      "nameEn": "Hajee Mohammad Danesh Science and Technology University",
+      "shortName": "HSTU",
+      "category": "general-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 1275,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC-তে ৪র্থ বিষয়সহ ন্যূনতম জিপিএ ৩.৫০ এবং সর্বমোট জিপিএ ৭.৫০ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 3.5,
+            "minHscGpa": 3.5,
+            "minCombinedGpa": 7.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "পদার্থবিজ্ঞান",
+              "marks": 25
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 25
+            },
+            {
+              "nameBn": "জীববিজ্ঞান",
+              "marks": 25
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 25
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর: (SSC = ৪০% + HSC = ৬০%)।",
+          "circularUrl": "https://hstu.ac.bd"
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 1275,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC-তে ৪র্থ বিষয়সহ ন্যূনতম জিপিএ ৩.৫০ এবং সর্বমোট জিপিএ ৭.৫০ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 3.5,
+            "minHscGpa": 3.5,
+            "minCombinedGpa": 7.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "পদার্থবিজ্ঞান",
+              "marks": 25
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 25
+            },
+            {
+              "nameBn": "গণিত",
+              "marks": 25
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 25
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর: (SSC = ৪০% + HSC = ৬০%)।",
+          "circularUrl": "https://hstu.ac.bd"
+        },
+        {
+          "id": "d-unit",
+          "nameBn": "'D' ইউনিট (মানবিক)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 240,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC-তে ৪র্থ বিষয়সহ ন্যূনতম জিপিএ ৩ এবং সর্বমোট জিপিএ ৬ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3,
+            "minHscGpa": 3,
+            "minCombinedGpa": 6,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা",
+              "marks": 25
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 50
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান",
+              "marks": 25
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর: (SSC = ৪০% + HSC = ৬০%)।",
+          "circularUrl": "https://hstu.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "iut",
+      "nameBn": "ইসলামিক ইউনিভার্সিটি অব টেকনোলজি",
+      "nameEn": "Islamic University of Technology",
+      "shortName": "IUT",
+      "category": "engineering-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 550,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC এবং HSC উভয়ে ন্যূনতম জিপিএ ৪.৫ থাকতে হবে। HSC-তে পদার্থবিজ্ঞান, রসায়ন ও গণিত প্রতিটিতে A+ এবং ইংরেজিতে কমপক্ষে A পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 4.5,
+            "minHscGpa": 4.5,
+            "minCombinedGpa": null,
+            "subjectMinimums": [
+              {
+                "subjectBn": "পদার্থবিজ্ঞান",
+                "minGpa": 5
+              },
+              {
+                "subjectBn": "রসায়ন",
+                "minGpa": 5
+              },
+              {
+                "subjectBn": "উচ্চতর গণিত",
+                "minGpa": 5
+              },
+              {
+                "subjectBn": "ইংরেজি",
+                "minGpa": 4
+              }
+            ],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ২ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে।",
+          "subjects": [
+            {
+              "nameBn": "গণিত (BSc Engg ও BBA)",
+              "marks": 35
+            },
+            {
+              "nameBn": "পদার্থবিজ্ঞান",
+              "marks": 35
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 15
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 15
+            }
+          ],
+          "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://iutoic-dhaka.edu"
+        }
+      ]
+    },
+    {
+      "id": "jnu",
+      "nameBn": "জগন্নাথ বিশ্ববিদ্যালয়",
+      "nameEn": "Jagannath University",
+      "shortName": "JnU",
+      "category": "general-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 840,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC-তে ন্যূনতম জিপিএ ৩.২৫ সহ মোট জিপিএ ৭.৫ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 3.25,
+            "minHscGpa": 3.25,
+            "minCombinedGpa": 7.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "৭২ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "পদার্থবিজ্ঞান",
+              "marks": 24
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 24
+            },
+            {
+              "nameBn": "গণিত/জীববিজ্ঞান",
+              "marks": 24
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC থেকে ১০ নম্বর + HSC থেকে ১৮ নম্বর)।",
+          "circularUrl": "https://jnu.ac.bd"
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (কলা ও আইন)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 1395,
+            "breakdown": [
+              {
+                "nameBn": "কলা ও আইন অনুষদ",
+                "count": 785
+              },
+              {
+                "nameBn": "সামাজিক বিজ্ঞান অনুষদ",
+                "count": 610
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC-তে ন্যূনতম জিপিএ ৩ সহ মোট জিপিএ ৬.৫ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3,
+            "minHscGpa": 3,
+            "minCombinedGpa": 6.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "৭২ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা",
+              "marks": 24
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 24
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান",
+              "marks": 24
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC থেকে ১০ নম্বর + HSC থেকে ১৮ নম্বর)।",
+          "circularUrl": "https://jnu.ac.bd"
+        },
+        {
+          "id": "d-unit",
+          "nameBn": "'D' ইউনিট (সামাজিক বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 1395,
+            "breakdown": [
+              {
+                "nameBn": "কলা ও আইন অনুষদ",
+                "count": 785
+              },
+              {
+                "nameBn": "সামাজিক বিজ্ঞান অনুষদ",
+                "count": 610
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC-তে ন্যূনতম জিপিএ ৩ সহ মোট জিপিএ ৬.৫ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3,
+            "minHscGpa": 3,
+            "minCombinedGpa": 6.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "৭২ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা",
+              "marks": 24
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 24
+            },
+            {
+              "nameBn": "গাণিতিক বুদ্ধিমত্তা ও সাধারণ জ্ঞান",
+              "marks": 24
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC থেকে ১০ নম্বর + HSC থেকে ১৮ নম্বর)।",
+          "circularUrl": "https://jnu.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "ju",
+      "nameBn": "জাহাঙ্গীরনগর বিশ্ববিদ্যালয়",
+      "nameEn": "Jahangirnagar University",
+      "shortName": "JU",
+      "category": "general-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 736,
+            "breakdown": [
+              {
+                "nameBn": "ছেলে",
+                "count": 368
+              },
+              {
+                "nameBn": "মেয়ে",
+                "count": 368
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC মিলিয়ে মোট জিপিএ ৮.৫০ (প্রতিটিতে পৃথকভাবে ন্যূনতম জিপিএ ৪ থাকতে হবে)।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 4,
+            "minHscGpa": 4,
+            "minCombinedGpa": 8.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "৮০ নম্বরের MCQ পরীক্ষা, সময় ৫৫ মিনিট। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "গণিত",
+              "marks": 22
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 22
+            },
+            {
+              "nameBn": "বাংলা",
+              "marks": 3
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 3
+            },
+            {
+              "nameBn": "আইসিটি",
+              "marks": 8
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ১.৫) + (HSC GPA × ২.৫)।",
+          "circularUrl": "https://juniv.edu"
+        },
+        {
+          "id": "d-unit",
+          "nameBn": "'D' ইউনিট (জীববিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 736,
+            "breakdown": [
+              {
+                "nameBn": "ছেলে",
+                "count": 368
+              },
+              {
+                "nameBn": "মেয়ে",
+                "count": 368
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC মিলিয়ে মোট জিপিএ ৯ (প্রতিটিতে পৃথকভাবে ন্যূনতম জিপিএ ৪ থাকতে হবে)।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 4,
+            "minHscGpa": 4,
+            "minCombinedGpa": 9,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "৮০ নম্বরের MCQ পরীক্ষা, সময় ৫৫ মিনিট। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা",
+              "marks": 4
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 4
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 24
+            },
+            {
+              "nameBn": "উদ্ভিদবিজ্ঞান",
+              "marks": 22
+            },
+            {
+              "nameBn": "প্রাণিবিজ্ঞান",
+              "marks": 22
+            },
+            {
+              "nameBn": "বুদ্ধিমত্তা",
+              "marks": 4
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ১.৫) + (HSC GPA × ২.৫)।",
+          "circularUrl": "https://juniv.edu"
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (মানবিক)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 856,
+            "breakdown": [
+              {
+                "nameBn": "ছেলে",
+                "count": 428
+              },
+              {
+                "nameBn": "মেয়ে",
+                "count": 428
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "মানবিক ও ব্যবসায় শিক্ষা শাখার জন্য SSC + HSC মোট জিপিএ ৭.৫ থাকতে হবে (প্রতিটিতে পৃথকভাবে ন্যূনতম জিপিএ ৩.৫)।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3.5,
+            "minHscGpa": 3.5,
+            "minCombinedGpa": 7.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "৮০ নম্বরের MCQ পরীক্ষা, সময় ৫৫ মিনিট।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা",
+              "marks": 20
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 20
+            },
+            {
+              "nameBn": "সাধারণ গণিত",
+              "marks": 20
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান",
+              "marks": 15
+            },
+            {
+              "nameBn": "যৌক্তিক বিশ্লেষণ",
+              "marks": 5
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ১.৫) + (HSC GPA × ২.৫)।",
+          "circularUrl": "https://juniv.edu"
+        },
+        {
+          "id": "c-unit",
+          "nameBn": "'C' ইউনিট (ব্যবসায় শিক্ষা)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 856,
+            "breakdown": [
+              {
+                "nameBn": "ছেলে",
+                "count": 428
+              },
+              {
+                "nameBn": "মেয়ে",
+                "count": 428
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "মানবিক ও ব্যবসায় শিক্ষা শাখার জন্য SSC + HSC মোট জিপিএ ৭.৫ থাকতে হবে (প্রতিটিতে পৃথকভাবে ন্যূনতম জিপিএ ৩.৫)।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3.5,
+            "minHscGpa": 3.5,
+            "minCombinedGpa": 7.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "৮০ নম্বরের MCQ পরীক্ষা, সময় ৫৫ মিনিট।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা",
+              "marks": 20
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 20
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান ও বিভাগ সংশ্লিষ্ট অন্যান্য বিষয়",
+              "marks": 40
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ১.৫) + (HSC GPA × ২.৫)।",
+          "circularUrl": "https://juniv.edu"
+        },
+        {
+          "id": "c1-unit",
+          "nameBn": "'C1' ইউনিট",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": null,
+          "eligibility": {
+            "descriptionBn": "মানবিক ও ব্যবসায় শিক্ষা শাখার জন্য SSC + HSC মোট জিপিএ ৭.৫ থাকতে হবে (প্রতিটিতে পৃথকভাবে ন্যূনতম জিপিএ ৩.৫)।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3.5,
+            "minHscGpa": 3.5,
+            "minCombinedGpa": 7.5,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "৮০ নম্বরের MCQ পরীক্ষা, সময় ৫৫ মিনিট।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা",
+              "marks": 10
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 10
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান",
+              "marks": 20
+            },
+            {
+              "nameBn": "বিভাগ সংশ্লিষ্ট অন্যান্য বিষয়",
+              "marks": 40
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ১.৫) + (HSC GPA × ২.৫)।",
+          "circularUrl": "https://juniv.edu"
+        }
+      ]
+    },
+    {
+      "id": "ku",
+      "nameBn": "খুলনা বিশ্ববিদ্যালয়",
+      "nameEn": "Khulna University",
+      "shortName": "KU",
+      "category": "general-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 601,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC মিলিয়ে মোট জিপিএ ৮ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": null,
+            "minHscGpa": null,
+            "minCombinedGpa": 8,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বর (MCQ ৬০ + লিখিত ৪০), সময় ১ ঘণ্টা ৩০ মিনিট। ক্যালকুলেটর ব্যবহার করা যাবে।",
+          "subjects": [
+            {
+              "nameBn": "গণিত — MCQ ১৫ + লিখিত ১০",
+              "marks": 25
+            },
+            {
+              "nameBn": "পদার্থবিজ্ঞান — MCQ ১৫ + লিখিত ১০",
+              "marks": 25
+            },
+            {
+              "nameBn": "রসায়ন — MCQ ১৫ + লিখিত ১০",
+              "marks": 25
+            },
+            {
+              "nameBn": "ইংরেজি — MCQ ১০ + লিখিত ১০",
+              "marks": 20
+            },
+            {
+              "nameBn": "ICT — MCQ ৫",
+              "marks": 5
+            }
+          ],
+          "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://ku.ac.bd"
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 601,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC মিলিয়ে মোট জিপিএ ৮ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": null,
+            "minHscGpa": null,
+            "minCombinedGpa": 8,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বর (MCQ ৬০ + লিখিত ৪০), সময় ১ ঘণ্টা ৩০ মিনিট। ক্যালকুলেটর ব্যবহার করা যাবে।",
+          "subjects": [
+            {
+              "nameBn": "জীববিজ্ঞান — MCQ ১৫ + লিখিত ১০",
+              "marks": 25
+            },
+            {
+              "nameBn": "পদার্থবিজ্ঞান — MCQ ১২ + লিখিত ৮",
+              "marks": 20
+            },
+            {
+              "nameBn": "রসায়ন — MCQ ১৫ + লিখিত ১০",
+              "marks": 25
+            },
+            {
+              "nameBn": "ইংরেজি — MCQ ৯ + লিখিত ৬",
+              "marks": 15
+            },
+            {
+              "nameBn": "ICT — MCQ ৯",
+              "marks": 9
+            }
+          ],
+          "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://ku.ac.bd"
+        },
+        {
+          "id": "c-unit",
+          "nameBn": "'C' ইউনিট (মানবিক)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 415,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC মিলিয়ে মোট জিপিএ ৭ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "arts",
+            "minSscGpa": null,
+            "minHscGpa": null,
+            "minCombinedGpa": 7,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বর (MCQ ৬০ + লিখিত ৪০), সময় ১ ঘণ্টা ৩০ মিনিট।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা — MCQ ১০ + লিখিত ১০",
+              "marks": 20
+            },
+            {
+              "nameBn": "ইংরেজি — MCQ ২৫ + লিখিত ৩০",
+              "marks": 55
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান — MCQ ২৫",
+              "marks": 25
+            }
+          ],
+          "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://ku.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "kuet",
+      "nameBn": "খুলনা প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয়",
+      "nameEn": "Khulna University of Engineering & Technology",
+      "shortName": "KUET",
+      "category": "engineering-cluster",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 1065,
+            "breakdown": [
+              {
+                "nameBn": "সাধারণ আসন",
+                "count": 1060
+              },
+              {
+                "nameBn": "সংরক্ষিত আসন",
+                "count": 5
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "SSC-তে মাধ্যমিক বা সমমানের পরীক্ষায় কমপক্ষে জিপিএ ৪ পেতে হবে। HSC-তে উচ্চতর গণিত, পদার্থবিজ্ঞান ও রসায়নে পৃথকভাবে কমপক্ষে জিপি ৪ এবং ইংরেজিসহ মোট জিপি ১৮ পেতে হবে।",
+            "points": [
+              "বায়োমেডিকেল ইঞ্জিনিয়ারিং বিভাগে ভর্তি হতে হলে জীববিজ্ঞানে কমপক্ষে জিপি ৪ পেতে হবে।"
+            ]
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 4,
+            "minHscGpa": null,
+            "minCombinedGpa": null,
+            "subjectMinimums": [
+              {
+                "subjectBn": "উচ্চতর গণিত",
+                "minGpa": 4
+              },
+              {
+                "subjectBn": "পদার্থবিজ্ঞান",
+                "minGpa": 4
+              },
+              {
+                "subjectBn": "রসায়ন",
+                "minGpa": 4
+              }
+            ],
+            "subjectGroupMinTotal": {
+              "subjectsBn": [
+                "উচ্চতর গণিত",
+                "পদার্থবিজ্ঞান",
+                "রসায়ন",
+                "ইংরেজি"
+              ],
+              "minTotal": 18
+            },
+            "noteBn": "বায়োমেডিকেল ইঞ্জিনিয়ারিং বিভাগে জীববিজ্ঞানে কমপক্ষে জিপি ৪ আলাদাভাবে প্রয়োজন।"
+          },
+          "examPattern": "গ্রুপ 'ক': ৫০০ নম্বর (লিখিত), সময় ৩ ঘণ্টা। গ্রুপ 'খ': আর্কিটেকচার ১০০ নম্বর, সময় ১ ঘণ্টা। (ক্যালকুলেটর ব্যবহার করা যাবে)",
+          "subjects": [
+            {
+              "nameBn": "গ্রুপ ক — গণিত (১৫টি প্রশ্ন × ১০)",
+              "marks": 150
+            },
+            {
+              "nameBn": "গ্রুপ ক — পদার্থবিজ্ঞান (১৫টি প্রশ্ন × ১০)",
+              "marks": 150
+            },
+            {
+              "nameBn": "গ্রুপ ক — রসায়ন (১৫টি প্রশ্ন × ১০)",
+              "marks": 150
+            },
+            {
+              "nameBn": "গ্রুপ ক — ইংরেজি (৫টি প্রশ্ন × ১০)",
+              "marks": 50
+            },
+            {
+              "nameBn": "গ্রুপ খ — মুক্তহস্ত অংকন (৪টি প্রশ্ন × ২৫)",
+              "marks": 100
+            }
+          ],
+          "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://kuet.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "medical-dental",
+      "nameBn": "মেডিকেল ও ডেন্টাল কলেজ",
+      "nameEn": "Medical & Dental College Admission",
+      "shortName": "MBBS/BDS",
+      "category": "medical",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "সরকারি ও বেসরকারি মেডিকেল এবং ডেন্টাল কলেজে ভর্তি পরীক্ষা। তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": "2026-10-01",
+          "applicationEnd": "2026-10-30",
+          "examDate": "2026-11-20",
+          "isDemoData": true,
+          "seats": {
+            "total": 5645,
+            "breakdown": [
+              {
+                "nameBn": "মেডিকেল",
+                "count": 5100
+              },
+              {
+                "nameBn": "ডেন্টাল",
+                "count": 545
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC মিলিয়ে ন্যূনতম জিপিএ ৮.৫ থাকতে হবে (HSC পরীক্ষায় জীববিজ্ঞানে জিপিএ ৩.৫ এর কম নয়)।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": null,
+            "minHscGpa": null,
+            "minCombinedGpa": 8.5,
+            "subjectMinimums": [
+              {
+                "subjectBn": "জীববিজ্ঞান",
+                "minGpa": 3.5
+              }
+            ],
+            "subjectGroupMinTotal": null,
+            "noteBn": "উপজাতি/প্রতিবন্ধী কোটাসহ কিছু ক্ষেত্রে সর্বমোট জিপিএ ৮ পর্যন্ত শিথিলযোগ্য — নির্দিষ্ট সার্কুলারে যাচাই করুন।"
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা ১৫ মিনিট। পাশ নম্বর ৪০। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "জীববিজ্ঞান",
+              "marks": 30
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 25
+            },
+            {
+              "nameBn": "পদার্থবিজ্ঞান",
+              "marks": 15
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 15
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান, প্রণোদনা ও মানবিক গুণাবলি",
+              "marks": 15
+            }
+          ],
+          "resultMethod": "(SSC GPA × ৮) + (HSC GPA × ১২) + ভর্তি পরীক্ষার ১০০ নম্বর = সর্বমোট ২০০ নম্বরের মধ্যে মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://dgme.gov.bd"
+        }
+      ]
+    },
+    {
+      "id": "mist",
+      "nameBn": "মিলিটারি ইনস্টিটিউট অব সায়েন্স অ্যান্ড টেকনোলজি",
+      "nameEn": "Military Institute of Science and Technology",
+      "shortName": "MIST",
+      "category": "engineering-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' Unit",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 570,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC-তে (৪র্থ বিষয় বাদে) ন্যূনতম জিপি ৪ থাকতে হবে। HSC-তে গণিত, পদার্থবিজ্ঞান, রসায়ন প্রতিটিতে ন্যূনতম জিপি ৪ এবং ইংরেজিসহ এই ৪টি বিষয়ে মোট জিপি ১৮ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 4,
+            "minHscGpa": null,
+            "minCombinedGpa": null,
+            "subjectMinimums": [
+              {
+                "subjectBn": "উচ্চতর গণিত",
+                "minGpa": 4
+              },
+              {
+                "subjectBn": "পদার্থবিজ্ঞান",
+                "minGpa": 4
+              },
+              {
+                "subjectBn": "রসায়ন",
+                "minGpa": 4
+              }
+            ],
+            "subjectGroupMinTotal": {
+              "subjectsBn": [
+                "উচ্চতর গণিত",
+                "পদার্থবিজ্ঞান",
+                "রসায়ন",
+                "ইংরেজি"
+              ],
+              "minTotal": 18
+            },
+            "noteBn": null
+          },
+          "examPattern": "২০০ নম্বরের লিখিত পরীক্ষা, সময় ৩ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে।",
+          "subjects": [
+            {
+              "nameBn": "গণিত",
+              "marks": 80
+            },
+            {
+              "nameBn": "পদার্থবিজ্ঞান",
+              "marks": 60
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 40
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 20
+            }
+          ],
+          "resultMethod": "SSC + HSC-এর (Math+Phy+Che) প্রাপ্ত নম্বরের ৪০% + লিখিত পরীক্ষার ৬০% নিয়ে ফলাফল প্রকাশ করা হয়।",
+          "circularUrl": "https://mist.ac.bd"
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' Unit (আর্কিটেকচার)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 570,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC-তে (৪র্থ বিষয় বাদে) ন্যূনতম জিপি ৪ থাকতে হবে। HSC-তে গণিত, পদার্থবিজ্ঞান, রসায়ন প্রতিটিতে ন্যূনতম জিপি ৪ এবং ইংরেজিসহ এই ৪টি বিষয়ে মোট জিপি ১৮ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 4,
+            "minHscGpa": null,
+            "minCombinedGpa": null,
+            "subjectMinimums": [
+              {
+                "subjectBn": "উচ্চতর গণিত",
+                "minGpa": 4
+              },
+              {
+                "subjectBn": "পদার্থবিজ্ঞান",
+                "minGpa": 4
+              },
+              {
+                "subjectBn": "রসায়ন",
+                "minGpa": 4
+              }
+            ],
+            "subjectGroupMinTotal": {
+              "subjectsBn": [
+                "উচ্চতর গণিত",
+                "পদার্থবিজ্ঞান",
+                "রসায়ন",
+                "ইংরেজি"
+              ],
+              "minTotal": 18
+            },
+            "noteBn": null
+          },
+          "examPattern": "আর্কিটেকচার ২০০ নম্বর (লিখিত), সময় ২ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে।",
+          "subjects": [
+            {
+              "nameBn": "মুক্তহস্ত অংকন এবং দৃষ্টিগত ও স্থানিক ধীশক্তি",
+              "marks": 200
+            }
+          ],
+          "resultMethod": "SSC + HSC-এর (Math+Phy+Che) প্রাপ্ত নম্বরের ৪০% + লিখিত পরীক্ষার ৬০% নিয়ে ফলাফল প্রকাশ করা হয়।",
+          "circularUrl": "https://mist.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "navy-medical",
+      "nameBn": "নেভি মেডিকেল কলেজ",
+      "nameEn": "Navy Medical College",
+      "shortName": "NMC",
+      "category": "medical",
+      "subGroupBn": "নেভি মেডিকেল কলেজ",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "আর্মি ও নেভি মেডিকেল কলেজ মিলিয়ে মোট আসন ৩১০টি — পৃথক আসন-বিভাজন এখনো প্রকাশিত হয়নি। তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": null,
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC মিলিয়ে ন্যূনতম জিপিএ ৮.৫০ থাকতে হবে (HSC পরীক্ষায় জীববিজ্ঞানে জিপিএ ৩.৫ এর কম নয়)।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": null,
+            "minHscGpa": null,
+            "minCombinedGpa": 8.5,
+            "subjectMinimums": [
+              {
+                "subjectBn": "জীববিজ্ঞান",
+                "minGpa": 3.5
+              }
+            ],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা ১৫ মিনিট। পাশ নম্বর ৪০। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "জীববিজ্ঞান",
+              "marks": 30
+            },
+            {
+              "nameBn": "রসায়ন",
+              "marks": 25
+            },
+            {
+              "nameBn": "পদার্থবিজ্ঞান",
+              "marks": 15
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 15
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান, প্রণোদনা ও মানবিক গুণাবলি",
+              "marks": 15
+            }
+          ],
+          "resultMethod": "(SSC GPA × ৮) + (HSC GPA × ১২) + ভর্তি পরীক্ষার ১০০ নম্বর = সর্বমোট ২০০ নম্বরের মধ্যে মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://afmc.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "ru",
+      "nameBn": "রাজশাহী বিশ্ববিদ্যালয়",
+      "nameEn": "University of Rajshahi",
+      "shortName": "RU",
+      "category": "general-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে। ব্যবসায় শিক্ষা ('B') ইউনিটের বিস্তারিত তথ্য এখনো প্রকাশিত হয়নি।",
+      "units": [
+        {
+          "id": "c-unit",
+          "nameBn": "'C' ইউনিট (বিজ্ঞান)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 1536,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩.৫ সহ সর্বমোট জিপিএ ৮ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 3.5,
+            "minHscGpa": 3.5,
+            "minCombinedGpa": 8,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+          "subjects": [
+            {
+              "nameBn": "আবশ্যিক — পদার্থবিজ্ঞান (২৫টি প্রশ্ন × ১.২৫)",
+              "marks": 31
+            },
+            {
+              "nameBn": "আবশ্যিক — রসায়ন (২৫টি প্রশ্ন × ১.২৫)",
+              "marks": 31
+            },
+            {
+              "nameBn": "আবশ্যিক — ICT (৫টি প্রশ্ন × ১.২৫)",
+              "marks": 6
+            },
+            {
+              "nameBn": "ঐচ্ছিক — গণিত/জীববিজ্ঞান (২৫টি প্রশ্ন × ১.২৫), অথবা উভয় বিষয় মিলিয়ে উত্তর",
+              "marks": 31
+            }
+          ],
+          "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://ru.ac.bd"
+        },
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (কলা)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 1897,
+            "breakdown": [
+              {
+                "nameBn": "কলা অনুষদ",
+                "count": 931
+              },
+              {
+                "nameBn": "আইন",
+                "count": 160
+              },
+              {
+                "nameBn": "সামাজিক বিজ্ঞান",
+                "count": 636
+              },
+              {
+                "nameBn": "চারুকলা",
+                "count": 120
+              },
+              {
+                "nameBn": "আইইআর",
+                "count": 50
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩ সহ মোট জিপিএ ৭ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "arts",
+            "minSscGpa": 3,
+            "minHscGpa": 3,
+            "minCombinedGpa": 7,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
+          "subjects": [
+            {
+              "nameBn": "বাংলা",
+              "marks": 35
+            },
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 35
+            },
+            {
+              "nameBn": "সাধারণ জ্ঞান",
+              "marks": 30
+            }
+          ],
+          "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর ভিত্তি করে মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://ru.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "ruet",
+      "nameBn": "রাজশাহী প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয়",
+      "nameEn": "Rajshahi University of Engineering & Technology",
+      "shortName": "RUET",
+      "category": "engineering-cluster",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "default",
+          "nameBn": null,
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 1235,
+            "breakdown": [
+              {
+                "nameBn": "সাধারণ আসন",
+                "count": 1230
+              },
+              {
+                "nameBn": "সংরক্ষিত আসন",
+                "count": 5
+              }
+            ]
+          },
+          "eligibility": {
+            "descriptionBn": "SSC-তে মাধ্যমিক বা সমমানের পরীক্ষায় কমপক্ষে জিপিএ ৪ পেতে হবে। HSC-তে উচ্চতর গণিত, পদার্থবিজ্ঞান ও রসায়ন — এই ৩ বিষয়ে মোট ন্যূনতম জিপি ১৪ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 4,
+            "minHscGpa": null,
+            "minCombinedGpa": null,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": {
+              "subjectsBn": [
+                "উচ্চতর গণিত",
+                "পদার্থবিজ্ঞান",
+                "রসায়ন"
+              ],
+              "minTotal": 14
+            },
+            "noteBn": null
+          },
+          "examPattern": "গ্রুপ 'ক': MCQ পরীক্ষা ৪০০ নম্বর, সময় ২ ঘণ্টা ৩০ মিনিট (ক্যালকুলেটর ব্যবহার করা যাবে)। গ্রুপ 'খ': আর্কিটেকচার ২০০ নম্বর, সময় ১ ঘণ্টা।",
+          "subjects": [
+            {
+              "nameBn": "গ্রুপ ক — উচ্চতর গণিত (২০টি প্রশ্ন × ৬)",
+              "marks": 120
+            },
+            {
+              "nameBn": "গ্রুপ ক — পদার্থবিজ্ঞান (২০টি প্রশ্ন × ৬)",
+              "marks": 120
+            },
+            {
+              "nameBn": "গ্রুপ ক — রসায়ন (২০টি প্রশ্ন × ৬)",
+              "marks": 120
+            },
+            {
+              "nameBn": "গ্রুপ ক — ইংরেজি (২০টি প্রশ্ন × ২)",
+              "marks": 40
+            },
+            {
+              "nameBn": "গ্রুপ খ — মুক্তহস্ত অংকন (২টি প্রশ্ন × ৫০)",
+              "marks": 100
+            },
+            {
+              "nameBn": "গ্রুপ খ — দৃষ্টিগত ও স্থানিক ধীশক্তি (২টি প্রশ্ন × ৫০)",
+              "marks": 100
+            }
+          ],
+          "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
+          "circularUrl": "https://ruet.ac.bd"
+        }
+      ]
+    },
+    {
+      "id": "sust",
+      "nameBn": "শাহজালাল বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়",
+      "nameEn": "Shahjalal University of Science and Technology",
+      "shortName": "SUST",
+      "category": "general-independent",
+      "admissionSession": "২০২৬-২৭",
+      "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+      "units": [
+        {
+          "id": "a-unit",
+          "nameBn": "'A' ইউনিট (বিজ্ঞান ও প্রকৌশল)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 985,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC-তে ন্যূনতম জিপিএ ৩ সহ মোট জিপিএ ৬.৫ পেতে হবে। HSC/সমমান পরীক্ষায় গণিতে ন্যূনতম জিপিএ ৩ থাকতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "science",
+            "minSscGpa": 3,
+            "minHscGpa": 3,
+            "minCombinedGpa": 6.5,
+            "subjectMinimums": [
+              {
+                "subjectBn": "উচ্চতর গণিত",
+                "minGpa": 3
+              }
+            ],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "Group-1 (A1): ৮০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা ৩০ মিনিট। Group-2 (A2): আর্কিটেকচার ৩০ নম্বর, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে।",
+          "subjects": [
+            {
+              "nameBn": "আবশ্যিক — পদার্থবিজ্ঞান",
+              "marks": 20
+            },
+            {
+              "nameBn": "আবশ্যিক — রসায়ন",
+              "marks": 20
+            },
+            {
+              "nameBn": "আবশ্যিক — গণিত",
+              "marks": 20
+            },
+            {
+              "nameBn": "ঐচ্ছিক — জীববিজ্ঞান/ইংরেজি (যেকোনো ১টি)",
+              "marks": 20
+            },
+            {
+              "nameBn": "Group-2 — ড্রয়িং ও স্থাপত্য বিষয়ক সাধারণ জ্ঞান",
+              "marks": 30
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ২) + (HSC GPA × ২)।",
+          "circularUrl": "https://sust.edu"
+        },
+        {
+          "id": "b-unit",
+          "nameBn": "'B' ইউনিট (সামাজিক বিজ্ঞান ও ব্যবসায় শিক্ষা)",
+          "applicationStart": null,
+          "applicationEnd": null,
+          "examDate": null,
+          "isDemoData": false,
+          "seats": {
+            "total": 581,
+            "breakdown": []
+          },
+          "eligibility": {
+            "descriptionBn": "SSC ও HSC-তে ন্যূনতম জিপিএ ৩ সহ মোট জিপিএ ৬ পেতে হবে।",
+            "points": []
+          },
+          "eligibilityCriteria": {
+            "group": "any",
+            "minSscGpa": 3,
+            "minHscGpa": 3,
+            "minCombinedGpa": 6,
+            "subjectMinimums": [],
+            "subjectGroupMinTotal": null,
+            "noteBn": null
+          },
+          "examPattern": "৮০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা ৩০ মিনিট।",
+          "subjects": [
+            {
+              "nameBn": "ইংরেজি",
+              "marks": 15
+            },
+            {
+              "nameBn": "বাংলা",
+              "marks": 15
+            },
+            {
+              "nameBn": "সাধারণ গণিত",
+              "marks": 15
+            },
+            {
+              "nameBn": "বাংলাদেশ ও বিশ্বপরিচয়",
+              "marks": 10
+            },
+            {
+              "nameBn": "আইসিটি",
+              "marks": 15
+            },
+            {
+              "nameBn": "অর্থনীতি, পৌরনীতি, সামাজিক বিজ্ঞান, সমাজকল্যাণ ও ইতিহাস সম্পর্কিত প্রশ্নাবলি",
+              "marks": 15
+            }
+          ],
+          "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ২) + (HSC GPA × ২)।",
+          "circularUrl": "https://sust.edu"
+        }
+      ]
+    }
+  ],
+  "notices": [
+    "এই ওয়েবসাইটের সকল তথ্য ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+    "যেকোনো সিদ্ধান্ত নেওয়ার আগে সংশ্লিষ্ট বিশ্ববিদ্যালয়ের অফিসিয়াল ওয়েবসাইট ও প্রকাশিত সার্কুলার অবশ্যই যাচাই করুন।",
+    "নতুন সার্কুলার প্রকাশিত হওয়ার সাথে সাথে এই ক্যালেন্ডারে তথ্য আপডেট করা হবে।"
+  ]
+}

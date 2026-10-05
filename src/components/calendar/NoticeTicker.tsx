@@ -1,11 +1,10 @@
 import { Megaphone } from "lucide-react";
-import noticeData from "@/data/notices.json";
+import { notices } from "@/lib/notices";
 
 /** Scrolling news-ticker style banner for general site/admission notices —
  * distinct from `DeadlineTicker`, which only shows auto-computed deadline
- * countdowns. Content is editable in `src/data/notices.json` (or via the CMS). */
+ * countdowns. Notices come from `lib/notices`, which `content.json` can replace at runtime. */
 export function NoticeTicker() {
-  const notices = noticeData.notices;
   if (notices.length === 0) return null;
 
   // Duplicated once so the track can loop seamlessly from -50% back to 0.

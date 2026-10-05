@@ -3729,14 +3729,33 @@ function applyDateOverrides(overrides) {
   }
   return changed;
 }
+function applyContent(data) {
+  if (!data || typeof data !== "object") return false;
+  let changed = false;
+  const isUni = (u) => u && typeof u.id === "string" && typeof u.nameBn === "string" && typeof u.shortName === "string" && typeof u.category === "string" && Array.isArray(u.units) && u.units.length > 0 && u.units.every((x) => x && typeof x.id === "string");
+  if (Array.isArray(data.universities) && data.universities.length > 0 && data.universities.every(isUni)) {
+    const withDefaults = data.universities.map((uni) => ({ ...uni, units: uni.units.map((unit) => ({ ...unit, nameBn: unit.nameBn ?? null, applicationStart: unit.applicationStart ?? null, applicationEnd: unit.applicationEnd ?? null, examDate: unit.examDate ?? null, seats: unit.seats ?? null, eligibility: unit.eligibility ?? null, examPattern: unit.examPattern ?? null, resultMethod: unit.resultMethod ?? null, circularUrl: unit.circularUrl ?? null, subjects: unit.subjects ?? [], isDemoData: !!unit.isDemoData })) }));
+    universities.splice(0, universities.length, ...withDefaults);
+    changed = true;
+  }
+  if (Array.isArray(data.notices) && data.notices.every((n) => typeof n === "string")) {
+    NOTICES.splice(0, NOTICES.length, ...data.notices);
+    changed = true;
+  }
+  return changed;
+}
 function DateOverridesProvider({ children }) {
   const [version, setVersion] = useState(0);
   useEffect(() => {
     let cancelled = false;
-    fetch("dates.json?t=" + Date.now(), { cache: "no-store" })
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data) => { if (!cancelled && data && typeof data === "object" && applyDateOverrides(data) > 0) setVersion((v) => v + 1); })
-      .catch(() => {});
+    const bust = "?t=" + Date.now();
+    const getJson = (path) => fetch(path + bust, { cache: "no-store" }).then((res) => (res.ok ? res.json() : null)).catch(() => null);
+    (async () => {
+      let changed = applyContent(await getJson("content.json"));
+      const dates = await getJson("dates.json");
+      if (dates && typeof dates === "object" && applyDateOverrides(dates) > 0) changed = true;
+      if (!cancelled && changed) setVersion((v) => v + 1);
+    })();
     return () => { cancelled = true; };
   }, []);
   return <React.Fragment key={version}>{children}</React.Fragment>;

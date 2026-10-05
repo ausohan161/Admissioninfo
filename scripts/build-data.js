@@ -131,6 +131,18 @@ function main() {
   console.log(`✓ Generated ${OUTPUT_FILE} from ${files.length} university file(s).`);
 
   syncDatesFile(universities);
+  writeContentFile(universities);
+}
+
+// public/content.json is the server-editable copy of institutions and notices.
+// It is always rewritten here from the source files; the site prefers it at
+// runtime when present, so cPanel edits to it take effect without a rebuild.
+function writeContentFile(universities) {
+  const noticesFile = path.join(__dirname, "..", "src", "data", "notices.json");
+  const notices = JSON.parse(fs.readFileSync(noticesFile, "utf8")).notices;
+  const contentFile = path.join(__dirname, "..", "public", "content.json");
+  fs.writeFileSync(contentFile, JSON.stringify({ universities, notices }, null, 2) + "\n", "utf8");
+  console.log(`✓ Wrote ${contentFile}`);
 }
 
 // public/dates.json is the file the site owner edits directly on the server
