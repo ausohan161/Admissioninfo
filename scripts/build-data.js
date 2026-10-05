@@ -102,6 +102,38 @@ function normalizeUniversity(uni) {
   };
 }
 
+// The three admin tabs edit three folders: src/data/universities (home: names and dates),
+// src/data/info (information tab) and src/data/eligibility (checker). They merge here
+// into the single per-institution shape the rest of the build expects.
+function readOptionalJson(file) {
+  return fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : null;
+}
+
+function mergeTabs(parsed) {
+  const info = readOptionalJson(path.join(__dirname, "..", "src", "data", "info", `${parsed.id}.json`));
+  const elig = readOptionalJson(path.join(__dirname, "..", "src", "data", "eligibility", `${parsed.id}.json`));
+  const infoUnits = new Map((info?.units || []).map((u) => [u.id, u]));
+  const eligUnits = new Map((elig?.units || []).map((u) => [u.id, u]));
+  return {
+    ...parsed,
+    introBn: info?.introBn ?? undefined,
+    units: (parsed.units || []).map((unit) => {
+      const i = infoUnits.get(unit.id) || {};
+      const e = eligUnits.get(unit.id) || {};
+      return {
+        ...unit,
+        seats: i.seats ?? null,
+        eligibility: i.eligibility ?? null,
+        examPattern: i.examPattern ?? null,
+        subjects: i.subjects ?? [],
+        resultMethod: i.resultMethod ?? null,
+        circularUrl: i.circularUrl ?? null,
+        eligibilityCriteria: e.eligibilityCriteria ?? null,
+      };
+    }),
+  };
+}
+
 function main() {
   if (!fs.existsSync(SOURCE_DIR)) {
     throw new Error(`Universities source directory not found: ${SOURCE_DIR}`);
@@ -124,7 +156,7 @@ function main() {
     if (path.basename(file, ".json") !== parsed.id) {
       throw new Error(`${file}: filename must match the "id" field ("${parsed.id}")`);
     }
-    return normalizeUniversity(parsed);
+    return normalizeUniversity(mergeTabs(parsed));
   });
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(universities, null, 2) + "\n", "utf8");

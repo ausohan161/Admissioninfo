@@ -1,0 +1,97 @@
+{
+  "id": "du",
+  "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে। ব্যবসায় শিক্ষা ও চারুকলা ইউনিটের বিস্তারিত তথ্য এখনো প্রকাশিত হয়নি।",
+  "units": [
+    {
+      "id": "science",
+      "seats": {
+        "total": 1891,
+        "breakdown": []
+      },
+      "eligibility": {
+        "descriptionBn": "SSC ও HSC-তে ৪র্থ বিষয়সহ ন্যূনতম জিপিএ ৩.৫ এবং সর্বমোট জিপিএ ৮ থাকতে হবে।",
+        "points": []
+      },
+      "examPattern": "১০০ নম্বর (MCQ ৬০ + লিখিত ৪০), সময় ১ ঘণ্টা ৩০ মিনিট। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+      "subjects": [
+        {
+          "nameBn": "পদার্থবিজ্ঞান — MCQ ১৫ + লিখিত ১০",
+          "marks": 25
+        },
+        {
+          "nameBn": "রসায়ন — MCQ ১৫ + লিখিত ১০",
+          "marks": 25
+        },
+        {
+          "nameBn": "নির্বাচনি বিষয় — MCQ ১৫ + লিখিত ১০",
+          "marks": 25
+        },
+        {
+          "nameBn": "৪র্থ বিষয়/বাংলা/ইংরেজি (যেকোনো ১টি) — MCQ ১৫ + লিখিত ১০",
+          "marks": 25
+        }
+      ],
+      "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ২) + (HSC GPA × ২)।",
+      "circularUrl": "https://du.ac.bd"
+    },
+    {
+      "id": "arts",
+      "seats": {
+        "total": 2934,
+        "breakdown": [
+          {
+            "nameBn": "মানবিক শাখা",
+            "count": 1694
+          },
+          {
+            "nameBn": "বিজ্ঞান শাখা",
+            "count": 962
+          },
+          {
+            "nameBn": "ব্যবসায় শিক্ষা শাখা",
+            "count": 278
+          }
+        ]
+      },
+      "eligibility": {
+        "descriptionBn": "SSC ও HSC-তে ৪র্থ বিষয়সহ ন্যূনতম জিপিএ ৩ এবং সর্বমোট জিপিএ ৭.৫ থাকতে হবে।",
+        "points": []
+      },
+      "examPattern": "১০০ নম্বর (MCQ ৬০ + লিখিত ৪০), সময় ১ ঘণ্টা ৩০ মিনিট।",
+      "subjects": [
+        {
+          "nameBn": "বাংলা/Advanced English — MCQ ১৫ + লিখিত ২০",
+          "marks": 35
+        },
+        {
+          "nameBn": "General English — MCQ ১৫ + লিখিত ২০",
+          "marks": 35
+        },
+        {
+          "nameBn": "সাধারণ জ্ঞান — MCQ ৩০",
+          "marks": 30
+        }
+      ],
+      "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ২) + (HSC GPA × ২)।",
+      "circularUrl": "https://du.ac.bd"
+    },
+    {
+      "id": "business",
+      "seats": null,
+      "eligibility": null,
+      "examPattern": null,
+      "subjects": [],
+      "resultMethod": null,
+      "circularUrl": null
+    },
+    {
+      "id": "fine-arts",
+      "seats": null,
+      "eligibility": null,
+      "examPattern": null,
+      "subjects": [],
+      "resultMethod": null,
+      "circularUrl": null
+    }
+  ]
+}

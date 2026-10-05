@@ -1,0 +1,35 @@
+{
+  "id": "du",
+  "units": [
+    {
+      "id": "science",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 3.5,
+        "minHscGpa": 3.5,
+        "minCombinedGpa": 8,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "arts",
+      "eligibilityCriteria": {
+        "group": "any",
+        "minSscGpa": 3,
+        "minHscGpa": 3,
+        "minCombinedGpa": 7.5,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "business",
+      "eligibilityCriteria": null
+    },
+    {
+      "id": "fine-arts",
+      "eligibilityCriteria": null
+    }
+  ]
+}

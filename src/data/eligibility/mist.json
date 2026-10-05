@@ -1,0 +1,71 @@
+{
+  "id": "mist",
+  "units": [
+    {
+      "id": "a-unit",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 4,
+        "minHscGpa": null,
+        "minCombinedGpa": null,
+        "subjectMinimums": [
+          {
+            "subjectBn": "উচ্চতর গণিত",
+            "minGpa": 4
+          },
+          {
+            "subjectBn": "পদার্থবিজ্ঞান",
+            "minGpa": 4
+          },
+          {
+            "subjectBn": "রসায়ন",
+            "minGpa": 4
+          }
+        ],
+        "subjectGroupMinTotal": {
+          "subjectsBn": [
+            "উচ্চতর গণিত",
+            "পদার্থবিজ্ঞান",
+            "রসায়ন",
+            "ইংরেজি"
+          ],
+          "minTotal": 18
+        },
+        "noteBn": null
+      }
+    },
+    {
+      "id": "b-unit",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 4,
+        "minHscGpa": null,
+        "minCombinedGpa": null,
+        "subjectMinimums": [
+          {
+            "subjectBn": "উচ্চতর গণিত",
+            "minGpa": 4
+          },
+          {
+            "subjectBn": "পদার্থবিজ্ঞান",
+            "minGpa": 4
+          },
+          {
+            "subjectBn": "রসায়ন",
+            "minGpa": 4
+          }
+        ],
+        "subjectGroupMinTotal": {
+          "subjectsBn": [
+            "উচ্চতর গণিত",
+            "পদার্থবিজ্ঞান",
+            "রসায়ন",
+            "ইংরেজি"
+          ],
+          "minTotal": 18
+        },
+        "noteBn": null
+      }
+    }
+  ]
+}

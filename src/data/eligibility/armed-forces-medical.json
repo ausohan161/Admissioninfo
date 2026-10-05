@@ -1,0 +1,21 @@
+{
+  "id": "armed-forces-medical",
+  "units": [
+    {
+      "id": "default",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": null,
+        "minHscGpa": null,
+        "minCombinedGpa": 8.5,
+        "subjectMinimums": [
+          {
+            "subjectBn": "জীববিজ্ঞান",
+            "minGpa": 3.5
+          }
+        ],
+        "noteBn": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "buet",
+  "units": [
+    {
+      "id": "default",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 4,
+        "minHscGpa": 5,
+        "minCombinedGpa": null,
+        "subjectMinimums": [
+          {
+            "subjectBn": "উচ্চতর গণিত",
+            "minGpa": 5
+          },
+          {
+            "subjectBn": "পদার্থবিজ্ঞান",
+            "minGpa": 5
+          },
+          {
+            "subjectBn": "রসায়ন",
+            "minGpa": 5
+          }
+        ],
+        "noteBn": null
+      }
+    }
+  ]
+}

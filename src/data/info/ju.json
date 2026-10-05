@@ -1,0 +1,211 @@
+{
+  "id": "ju",
+  "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+  "units": [
+    {
+      "id": "a-unit",
+      "seats": {
+        "total": 736,
+        "breakdown": [
+          {
+            "nameBn": "ছেলে",
+            "count": 368
+          },
+          {
+            "nameBn": "মেয়ে",
+            "count": 368
+          }
+        ]
+      },
+      "eligibility": {
+        "descriptionBn": "SSC ও HSC মিলিয়ে মোট জিপিএ ৮.৫০ (প্রতিটিতে পৃথকভাবে ন্যূনতম জিপিএ ৪ থাকতে হবে)।",
+        "points": []
+      },
+      "examPattern": "৮০ নম্বরের MCQ পরীক্ষা, সময় ৫৫ মিনিট। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+      "subjects": [
+        {
+          "nameBn": "গণিত",
+          "marks": 22
+        },
+        {
+          "nameBn": "রসায়ন",
+          "marks": 22
+        },
+        {
+          "nameBn": "বাংলা",
+          "marks": 3
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 3
+        },
+        {
+          "nameBn": "আইসিটি",
+          "marks": 8
+        }
+      ],
+      "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ১.৫) + (HSC GPA × ২.৫)।",
+      "circularUrl": "https://juniv.edu"
+    },
+    {
+      "id": "d-unit",
+      "seats": {
+        "total": 736,
+        "breakdown": [
+          {
+            "nameBn": "ছেলে",
+            "count": 368
+          },
+          {
+            "nameBn": "মেয়ে",
+            "count": 368
+          }
+        ]
+      },
+      "eligibility": {
+        "descriptionBn": "SSC ও HSC মিলিয়ে মোট জিপিএ ৯ (প্রতিটিতে পৃথকভাবে ন্যূনতম জিপিএ ৪ থাকতে হবে)।",
+        "points": []
+      },
+      "examPattern": "৮০ নম্বরের MCQ পরীক্ষা, সময় ৫৫ মিনিট। ক্যালকুলেটর ব্যবহার করা যাবে না।",
+      "subjects": [
+        {
+          "nameBn": "বাংলা",
+          "marks": 4
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 4
+        },
+        {
+          "nameBn": "রসায়ন",
+          "marks": 24
+        },
+        {
+          "nameBn": "উদ্ভিদবিজ্ঞান",
+          "marks": 22
+        },
+        {
+          "nameBn": "প্রাণিবিজ্ঞান",
+          "marks": 22
+        },
+        {
+          "nameBn": "বুদ্ধিমত্তা",
+          "marks": 4
+        }
+      ],
+      "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ১.৫) + (HSC GPA × ২.৫)।",
+      "circularUrl": "https://juniv.edu"
+    },
+    {
+      "id": "b-unit",
+      "seats": {
+        "total": 856,
+        "breakdown": [
+          {
+            "nameBn": "ছেলে",
+            "count": 428
+          },
+          {
+            "nameBn": "মেয়ে",
+            "count": 428
+          }
+        ]
+      },
+      "eligibility": {
+        "descriptionBn": "মানবিক ও ব্যবসায় শিক্ষা শাখার জন্য SSC + HSC মোট জিপিএ ৭.৫ থাকতে হবে (প্রতিটিতে পৃথকভাবে ন্যূনতম জিপিএ ৩.৫)।",
+        "points": []
+      },
+      "examPattern": "৮০ নম্বরের MCQ পরীক্ষা, সময় ৫৫ মিনিট।",
+      "subjects": [
+        {
+          "nameBn": "বাংলা",
+          "marks": 20
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 20
+        },
+        {
+          "nameBn": "সাধারণ গণিত",
+          "marks": 20
+        },
+        {
+          "nameBn": "সাধারণ জ্ঞান",
+          "marks": 15
+        },
+        {
+          "nameBn": "যৌক্তিক বিশ্লেষণ",
+          "marks": 5
+        }
+      ],
+      "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ১.৫) + (HSC GPA × ২.৫)।",
+      "circularUrl": "https://juniv.edu"
+    },
+    {
+      "id": "c-unit",
+      "seats": {
+        "total": 856,
+        "breakdown": [
+          {
+            "nameBn": "ছেলে",
+            "count": 428
+          },
+          {
+            "nameBn": "মেয়ে",
+            "count": 428
+          }
+        ]
+      },
+      "eligibility": {
+        "descriptionBn": "মানবিক ও ব্যবসায় শিক্ষা শাখার জন্য SSC + HSC মোট জিপিএ ৭.৫ থাকতে হবে (প্রতিটিতে পৃথকভাবে ন্যূনতম জিপিএ ৩.৫)।",
+        "points": []
+      },
+      "examPattern": "৮০ নম্বরের MCQ পরীক্ষা, সময় ৫৫ মিনিট।",
+      "subjects": [
+        {
+          "nameBn": "বাংলা",
+          "marks": 20
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 20
+        },
+        {
+          "nameBn": "সাধারণ জ্ঞান ও বিভাগ সংশ্লিষ্ট অন্যান্য বিষয়",
+          "marks": 40
+        }
+      ],
+      "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ১.৫) + (HSC GPA × ২.৫)।",
+      "circularUrl": "https://juniv.edu"
+    },
+    {
+      "id": "c1-unit",
+      "seats": null,
+      "eligibility": {
+        "descriptionBn": "মানবিক ও ব্যবসায় শিক্ষা শাখার জন্য SSC + HSC মোট জিপিএ ৭.৫ থাকতে হবে (প্রতিটিতে পৃথকভাবে ন্যূনতম জিপিএ ৩.৫)।",
+        "points": []
+      },
+      "examPattern": "৮০ নম্বরের MCQ পরীক্ষা, সময় ৫৫ মিনিট।",
+      "subjects": [
+        {
+          "nameBn": "বাংলা",
+          "marks": 10
+        },
+        {
+          "nameBn": "ইংরেজি",
+          "marks": 10
+        },
+        {
+          "nameBn": "সাধারণ জ্ঞান",
+          "marks": 20
+        },
+        {
+          "nameBn": "বিভাগ সংশ্লিষ্ট অন্যান্য বিষয়",
+          "marks": 40
+        }
+      ],
+      "resultMethod": "ভর্তি পরীক্ষায় প্রাপ্ত নম্বর + (SSC GPA × ১.৫) + (HSC GPA × ২.৫)।",
+      "circularUrl": "https://juniv.edu"
+    }
+  ]
+}

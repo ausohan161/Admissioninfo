@@ -1,0 +1,16 @@
+{
+  "id": "agriculture-cluster",
+  "units": [
+    {
+      "id": "default",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 4,
+        "minHscGpa": 4,
+        "minCombinedGpa": 8.5,
+        "subjectMinimums": [],
+        "noteBn": "SSC ও HSC-তে জীববিজ্ঞান, রসায়ন, পদার্থবিজ্ঞান ও গণিত বিষয়ে উত্তীর্ণ থাকতে হবে।"
+      }
+    }
+  ]
+}

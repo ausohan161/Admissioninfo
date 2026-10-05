@@ -1,0 +1,106 @@
+{
+  "id": "ku",
+  "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
+  "units": [
+    {
+      "id": "a-unit",
+      "seats": {
+        "total": 601,
+        "breakdown": []
+      },
+      "eligibility": {
+        "descriptionBn": "SSC ও HSC মিলিয়ে মোট জিপিএ ৮ পেতে হবে।",
+        "points": []
+      },
+      "examPattern": "১০০ নম্বর (MCQ ৬০ + লিখিত ৪০), সময় ১ ঘণ্টা ৩০ মিনিট। ক্যালকুলেটর ব্যবহার করা যাবে।",
+      "subjects": [
+        {
+          "nameBn": "গণিত — MCQ ১৫ + লিখিত ১০",
+          "marks": 25
+        },
+        {
+          "nameBn": "পদার্থবিজ্ঞান — MCQ ১৫ + লিখিত ১০",
+          "marks": 25
+        },
+        {
+          "nameBn": "রসায়ন — MCQ ১৫ + লিখিত ১০",
+          "marks": 25
+        },
+        {
+          "nameBn": "ইংরেজি — MCQ ১০ + লিখিত ১০",
+          "marks": 20
+        },
+        {
+          "nameBn": "ICT — MCQ ৫",
+          "marks": 5
+        }
+      ],
+      "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
+      "circularUrl": "https://ku.ac.bd"
+    },
+    {
+      "id": "b-unit",
+      "seats": {
+        "total": 601,
+        "breakdown": []
+      },
+      "eligibility": {
+        "descriptionBn": "SSC ও HSC মিলিয়ে মোট জিপিএ ৮ পেতে হবে।",
+        "points": []
+      },
+      "examPattern": "১০০ নম্বর (MCQ ৬০ + লিখিত ৪০), সময় ১ ঘণ্টা ৩০ মিনিট। ক্যালকুলেটর ব্যবহার করা যাবে।",
+      "subjects": [
+        {
+          "nameBn": "জীববিজ্ঞান — MCQ ১৫ + লিখিত ১০",
+          "marks": 25
+        },
+        {
+          "nameBn": "পদার্থবিজ্ঞান — MCQ ১২ + লিখিত ৮",
+          "marks": 20
+        },
+        {
+          "nameBn": "রসায়ন — MCQ ১৫ + লিখিত ১০",
+          "marks": 25
+        },
+        {
+          "nameBn": "ইংরেজি — MCQ ৯ + লিখিত ৬",
+          "marks": 15
+        },
+        {
+          "nameBn": "ICT — MCQ ৯",
+          "marks": 9
+        }
+      ],
+      "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
+      "circularUrl": "https://ku.ac.bd"
+    },
+    {
+      "id": "c-unit",
+      "seats": {
+        "total": 415,
+        "breakdown": []
+      },
+      "eligibility": {
+        "descriptionBn": "SSC ও HSC মিলিয়ে মোট জিপিএ ৭ পেতে হবে।",
+        "points": []
+      },
+      "examPattern": "১০০ নম্বর (MCQ ৬০ + লিখিত ৪০), সময় ১ ঘণ্টা ৩০ মিনিট।",
+      "subjects": [
+        {
+          "nameBn": "বাংলা — MCQ ১০ + লিখিত ১০",
+          "marks": 20
+        },
+        {
+          "nameBn": "ইংরেজি — MCQ ২৫ + লিখিত ৩০",
+          "marks": 55
+        },
+        {
+          "nameBn": "সাধারণ জ্ঞান — MCQ ২৫",
+          "marks": 25
+        }
+      ],
+      "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
+      "circularUrl": "https://ku.ac.bd"
+    }
+  ]
+}

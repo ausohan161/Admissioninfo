@@ -1,0 +1,29 @@
+{
+  "id": "cuet",
+  "units": [
+    {
+      "id": "default",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 4,
+        "minHscGpa": null,
+        "minCombinedGpa": null,
+        "subjectMinimums": [
+          {
+            "subjectBn": "ইংরেজি",
+            "minGpa": 3
+          }
+        ],
+        "subjectGroupMinTotal": {
+          "subjectsBn": [
+            "উচ্চতর গণিত",
+            "পদার্থবিজ্ঞান",
+            "রসায়ন"
+          ],
+          "minTotal": 14
+        },
+        "noteBn": "ইংরেজিতে ন্যূনতম 'B' গ্রেড (জিপি ৩) প্রয়োজন। বায়োমেডিকেল ইঞ্জিনিয়ারিং বিভাগে জীববিজ্ঞানে কমপক্ষে জিপি ৪ আলাদাভাবে প্রয়োজন।"
+      }
+    }
+  ]
+}

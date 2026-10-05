@@ -5,7 +5,6 @@
   "shortName": "BUP",
   "category": "general-independent",
   "admissionSession": "২০২৬-২৭",
-  "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
   "units": [
     {
       "id": "fst",
@@ -13,49 +12,7 @@
       "applicationStart": null,
       "applicationEnd": null,
       "examDate": "2027-01-08",
-      "isDemoData": false,
-      "seats": {
-        "total": 300,
-        "breakdown": []
-      },
-      "eligibility": {
-        "descriptionBn": "SSC + HSC ন্যূনতম জিপিএ ৮ থাকতে হবে। HSC-তে পদার্থবিজ্ঞান, রসায়ন ও জীববিজ্ঞানে A গ্রেড এবং ইংরেজিতে ন্যূনতম A- গ্রেড থাকতে হবে।",
-        "points": []
-      },
-      "eligibilityCriteria": {
-        "group": "science",
-        "minSscGpa": null,
-        "minHscGpa": null,
-        "minCombinedGpa": 8,
-        "subjectMinimums": [
-          {
-            "subjectBn": "পদার্থবিজ্ঞান",
-            "minGpa": 4
-          },
-          {
-            "subjectBn": "রসায়ন",
-            "minGpa": 4
-          },
-          {
-            "subjectBn": "জীববিজ্ঞান",
-            "minGpa": 4
-          },
-          {
-            "subjectBn": "ইংরেজি",
-            "minGpa": 3.5
-          }
-        ],
-        "noteBn": null
-      },
-      "examPattern": "৬০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে।",
-      "subjects": [
-        {
-          "nameBn": "গণিত, জীববিজ্ঞান, পদার্থবিজ্ঞান, রসায়ন — ৪টি থেকে যেকোনো ৩টি (প্রতিটি ২০)",
-          "marks": 60
-        }
-      ],
-      "resultMethod": "ভর্তি পরীক্ষা থেকে ৫৫% + (SSC = ২০% + HSC = ২৫%)।",
-      "circularUrl": "https://bup.edu.bd"
+      "isDemoData": false
     },
     {
       "id": "fass",
@@ -63,49 +20,7 @@
       "applicationStart": null,
       "applicationEnd": null,
       "examDate": "2027-01-02",
-      "isDemoData": false,
-      "seats": {
-        "total": 600,
-        "breakdown": [
-          {
-            "nameBn": "FASS",
-            "count": 350
-          },
-          {
-            "nameBn": "FSSS",
-            "count": 250
-          }
-        ]
-      },
-      "eligibility": {
-        "descriptionBn": "SSC + HSC ন্যূনতম জিপিএ ৭.৫ থেকে ৮ থাকতে হবে।",
-        "points": []
-      },
-      "eligibilityCriteria": {
-        "group": "any",
-        "minSscGpa": null,
-        "minHscGpa": null,
-        "minCombinedGpa": 7.5,
-        "subjectMinimums": [],
-        "noteBn": null
-      },
-      "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
-      "subjects": [
-        {
-          "nameBn": "ইংরেজি",
-          "marks": 40
-        },
-        {
-          "nameBn": "সাধারণ জ্ঞান",
-          "marks": 40
-        },
-        {
-          "nameBn": "বাংলা",
-          "marks": 20
-        }
-      ],
-      "resultMethod": "ভর্তি পরীক্ষা থেকে ৫৫% + (SSC = ২০% + HSC = ২৫%)।",
-      "circularUrl": "https://bup.edu.bd"
+      "isDemoData": false
     },
     {
       "id": "fsss",
@@ -113,49 +28,7 @@
       "applicationStart": null,
       "applicationEnd": null,
       "examDate": "2027-01-08",
-      "isDemoData": false,
-      "seats": {
-        "total": 600,
-        "breakdown": [
-          {
-            "nameBn": "FASS",
-            "count": 350
-          },
-          {
-            "nameBn": "FSSS",
-            "count": 250
-          }
-        ]
-      },
-      "eligibility": {
-        "descriptionBn": "SSC + HSC ন্যূনতম জিপিএ ৮ থেকে ৮.৫ থাকতে হবে।",
-        "points": []
-      },
-      "eligibilityCriteria": {
-        "group": "any",
-        "minSscGpa": null,
-        "minHscGpa": null,
-        "minCombinedGpa": 8,
-        "subjectMinimums": [],
-        "noteBn": null
-      },
-      "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
-      "subjects": [
-        {
-          "nameBn": "ইংরেজি",
-          "marks": 40
-        },
-        {
-          "nameBn": "সাধারণ জ্ঞান",
-          "marks": 40
-        },
-        {
-          "nameBn": "বাংলা",
-          "marks": 20
-        }
-      ],
-      "resultMethod": "ভর্তি পরীক্ষা থেকে ৫৫% + (SSC = ২০% + HSC = ২৫%)।",
-      "circularUrl": "https://bup.edu.bd"
+      "isDemoData": false
     }
   ]
 }

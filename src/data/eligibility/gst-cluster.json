@@ -1,0 +1,27 @@
+{
+  "id": "gst-cluster",
+  "units": [
+    {
+      "id": "a-unit",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 3.25,
+        "minHscGpa": 3.25,
+        "minCombinedGpa": 7,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "b-unit",
+      "eligibilityCriteria": {
+        "group": "any",
+        "minSscGpa": 3,
+        "minHscGpa": 3,
+        "minCombinedGpa": 6,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    }
+  ]
+}

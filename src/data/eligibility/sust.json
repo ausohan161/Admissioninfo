@@ -1,0 +1,32 @@
+{
+  "id": "sust",
+  "units": [
+    {
+      "id": "a-unit",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 3,
+        "minHscGpa": 3,
+        "minCombinedGpa": 6.5,
+        "subjectMinimums": [
+          {
+            "subjectBn": "উচ্চতর গণিত",
+            "minGpa": 3
+          }
+        ],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "b-unit",
+      "eligibilityCriteria": {
+        "group": "any",
+        "minSscGpa": 3,
+        "minHscGpa": 3,
+        "minCombinedGpa": 6,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    }
+  ]
+}

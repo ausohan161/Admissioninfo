@@ -5,7 +5,6 @@
   "shortName": "BUET",
   "category": "engineering-independent",
   "admissionSession": "২০২৬-২৭",
-  "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
   "units": [
     {
       "id": "default",
@@ -13,70 +12,7 @@
       "applicationStart": null,
       "applicationEnd": null,
       "examDate": "2027-01-16",
-      "isDemoData": false,
-      "seats": {
-        "total": 1309,
-        "breakdown": [
-          {
-            "nameBn": "সাধারণ আসন",
-            "count": 1305
-          },
-          {
-            "nameBn": "সংরক্ষিত আসন",
-            "count": 4
-          }
-        ]
-      },
-      "eligibility": {
-        "descriptionBn": "SSC-তে গণিত, পদার্থবিজ্ঞান ও রসায়নসহ ৫ স্কেলে ন্যূনতম জিপিএ ৪ পেতে হবে। HSC-তে ৫ স্কেলে সামগ্রিক জিপিএ ৫ এবং উচ্চতর গণিত, পদার্থবিজ্ঞান ও রসায়ন বিষয়সমূহের প্রতিটিতে ন্যূনতম জিপিএ ৫ পেতে হবে।",
-        "points": []
-      },
-      "eligibilityCriteria": {
-        "group": "science",
-        "minSscGpa": 4,
-        "minHscGpa": 5,
-        "minCombinedGpa": null,
-        "subjectMinimums": [
-          {
-            "subjectBn": "উচ্চতর গণিত",
-            "minGpa": 5
-          },
-          {
-            "subjectBn": "পদার্থবিজ্ঞান",
-            "minGpa": 5
-          },
-          {
-            "subjectBn": "রসায়ন",
-            "minGpa": 5
-          }
-        ],
-        "noteBn": null
-      },
-      "examPattern": "গ্রুপ 'ক': লিখিত পরীক্ষা ৬০০ নম্বর, সময় ৩ ঘণ্টা (ক্যালকুলেটর ব্যবহার করা যাবে)। গ্রুপ 'খ': আর্কিটেকচার ৪০০ নম্বর, সময় ১ ঘণ্টা ৩০ মিনিট।",
-      "subjects": [
-        {
-          "nameBn": "গ্রুপ ক — উচ্চতর গণিত (২০টি প্রশ্ন × ১০)",
-          "marks": 200
-        },
-        {
-          "nameBn": "গ্রুপ ক — পদার্থবিজ্ঞান (২০টি প্রশ্ন × ১০)",
-          "marks": 200
-        },
-        {
-          "nameBn": "গ্রুপ ক — রসায়ন (২০টি প্রশ্ন × ১০)",
-          "marks": 200
-        },
-        {
-          "nameBn": "গ্রুপ খ — মুক্তহস্ত অংকন (৩টি প্রশ্ন × ১১২)",
-          "marks": 336
-        },
-        {
-          "nameBn": "গ্রুপ খ — দৃষ্টিগত ও স্থানিক ধীশক্তি (৪টি প্রশ্ন × ১৬)",
-          "marks": 64
-        }
-      ],
-      "resultMethod": "শুধু লিখিত পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
-      "circularUrl": "https://buet.ac.bd"
+      "isDemoData": false
     }
   ]
 }

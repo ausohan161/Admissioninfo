@@ -1,0 +1,24 @@
+{
+  "id": "ruet",
+  "units": [
+    {
+      "id": "default",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 4,
+        "minHscGpa": null,
+        "minCombinedGpa": null,
+        "subjectMinimums": [],
+        "subjectGroupMinTotal": {
+          "subjectsBn": [
+            "উচ্চতর গণিত",
+            "পদার্থবিজ্ঞান",
+            "রসায়ন"
+          ],
+          "minTotal": 14
+        },
+        "noteBn": null
+      }
+    }
+  ]
+}

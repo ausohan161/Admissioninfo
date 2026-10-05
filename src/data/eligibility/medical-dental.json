@@ -1,0 +1,21 @@
+{
+  "id": "medical-dental",
+  "units": [
+    {
+      "id": "default",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": null,
+        "minHscGpa": null,
+        "minCombinedGpa": 8.5,
+        "subjectMinimums": [
+          {
+            "subjectBn": "জীববিজ্ঞান",
+            "minGpa": 3.5
+          }
+        ],
+        "noteBn": "উপজাতি/প্রতিবন্ধী কোটাসহ কিছু ক্ষেত্রে সর্বমোট জিপিএ ৮ পর্যন্ত শিথিলযোগ্য — নির্দিষ্ট সার্কুলারে যাচাই করুন।"
+      }
+    }
+  ]
+}

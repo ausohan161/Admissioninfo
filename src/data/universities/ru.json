@@ -5,7 +5,6 @@
   "shortName": "RU",
   "category": "general-independent",
   "admissionSession": "২০২৬-২৭",
-  "introBn": "তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে। ব্যবসায় শিক্ষা ('B') ইউনিটের বিস্তারিত তথ্য এখনো প্রকাশিত হয়নি।",
   "units": [
     {
       "id": "c-unit",
@@ -13,44 +12,7 @@
       "applicationStart": "2026-11-12",
       "applicationEnd": "2026-11-27",
       "examDate": "2027-01-09",
-      "isDemoData": false,
-      "seats": {
-        "total": 1536,
-        "breakdown": []
-      },
-      "eligibility": {
-        "descriptionBn": "SSC ও HSC উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩.৫ সহ সর্বমোট জিপিএ ৮ থাকতে হবে।",
-        "points": []
-      },
-      "eligibilityCriteria": {
-        "group": "science",
-        "minSscGpa": 3.5,
-        "minHscGpa": 3.5,
-        "minCombinedGpa": 8,
-        "subjectMinimums": [],
-        "noteBn": null
-      },
-      "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা। ক্যালকুলেটর ব্যবহার করা যাবে না।",
-      "subjects": [
-        {
-          "nameBn": "আবশ্যিক — পদার্থবিজ্ঞান (২৫টি প্রশ্ন × ১.২৫)",
-          "marks": 31
-        },
-        {
-          "nameBn": "আবশ্যিক — রসায়ন (২৫টি প্রশ্ন × ১.২৫)",
-          "marks": 31
-        },
-        {
-          "nameBn": "আবশ্যিক — ICT (৫টি প্রশ্ন × ১.২৫)",
-          "marks": 6
-        },
-        {
-          "nameBn": "ঐচ্ছিক — গণিত/জীববিজ্ঞান (২৫টি প্রশ্ন × ১.২৫), অথবা উভয় বিষয় মিলিয়ে উত্তর",
-          "marks": 31
-        }
-      ],
-      "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর মেধাতালিকা প্রকাশ করা হয়।",
-      "circularUrl": "https://ru.ac.bd"
+      "isDemoData": false
     },
     {
       "id": "a-unit",
@@ -58,61 +20,7 @@
       "applicationStart": "2026-11-12",
       "applicationEnd": "2026-11-27",
       "examDate": "2027-01-16",
-      "isDemoData": false,
-      "seats": {
-        "total": 1897,
-        "breakdown": [
-          {
-            "nameBn": "কলা অনুষদ",
-            "count": 931
-          },
-          {
-            "nameBn": "আইন",
-            "count": 160
-          },
-          {
-            "nameBn": "সামাজিক বিজ্ঞান",
-            "count": 636
-          },
-          {
-            "nameBn": "চারুকলা",
-            "count": 120
-          },
-          {
-            "nameBn": "আইইআর",
-            "count": 50
-          }
-        ]
-      },
-      "eligibility": {
-        "descriptionBn": "SSC ও HSC উভয় পরীক্ষায় (৪র্থ বিষয়সহ) ন্যূনতম জিপিএ ৩ সহ মোট জিপিএ ৭ পেতে হবে।",
-        "points": []
-      },
-      "eligibilityCriteria": {
-        "group": "arts",
-        "minSscGpa": 3,
-        "minHscGpa": 3,
-        "minCombinedGpa": 7,
-        "subjectMinimums": [],
-        "noteBn": null
-      },
-      "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা।",
-      "subjects": [
-        {
-          "nameBn": "বাংলা",
-          "marks": 35
-        },
-        {
-          "nameBn": "ইংরেজি",
-          "marks": 35
-        },
-        {
-          "nameBn": "সাধারণ জ্ঞান",
-          "marks": 30
-        }
-      ],
-      "resultMethod": "শুধু ভর্তি পরীক্ষায় প্রাপ্ত নম্বরের উপর ভিত্তি করে মেধাতালিকা প্রকাশ করা হয়।",
-      "circularUrl": "https://ru.ac.bd"
+      "isDemoData": false
     }
   ]
 }

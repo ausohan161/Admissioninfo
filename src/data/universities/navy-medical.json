@@ -6,7 +6,6 @@
   "category": "medical",
   "subGroupBn": "নেভি মেডিকেল কলেজ",
   "admissionSession": "২০২৬-২৭",
-  "introBn": "আর্মি ও নেভি মেডিকেল কলেজ মিলিয়ে মোট আসন ৩১০টি — পৃথক আসন-বিভাজন এখনো প্রকাশিত হয়নি। তথ্যসূত্র: ২০২৫ সালের ভর্তি বিজ্ঞপ্তি অনুসারে সংকলিত তথ্য — ২০২৬ সালের চূড়ান্ত সার্কুলার প্রকাশিত হলে তারিখসহ সব তথ্য হালনাগাদ করা হবে।",
   "units": [
     {
       "id": "default",
@@ -14,30 +13,7 @@
       "applicationStart": null,
       "applicationEnd": null,
       "examDate": null,
-      "isDemoData": false,
-      "seats": null,
-      "eligibility": {
-        "descriptionBn": "SSC ও HSC মিলিয়ে ন্যূনতম জিপিএ ৮.৫০ থাকতে হবে (HSC পরীক্ষায় জীববিজ্ঞানে জিপিএ ৩.৫ এর কম নয়)।",
-        "points": []
-      },
-      "eligibilityCriteria": {
-        "group": "science",
-        "minSscGpa": null,
-        "minHscGpa": null,
-        "minCombinedGpa": 8.5,
-        "subjectMinimums": [{ "subjectBn": "জীববিজ্ঞান", "minGpa": 3.5 }],
-        "noteBn": null
-      },
-      "examPattern": "১০০ নম্বরের MCQ পরীক্ষা, সময় ১ ঘণ্টা ১৫ মিনিট। পাশ নম্বর ৪০। ক্যালকুলেটর ব্যবহার করা যাবে না।",
-      "subjects": [
-        { "nameBn": "জীববিজ্ঞান", "marks": 30 },
-        { "nameBn": "রসায়ন", "marks": 25 },
-        { "nameBn": "পদার্থবিজ্ঞান", "marks": 15 },
-        { "nameBn": "ইংরেজি", "marks": 15 },
-        { "nameBn": "সাধারণ জ্ঞান, প্রণোদনা ও মানবিক গুণাবলি", "marks": 15 }
-      ],
-      "resultMethod": "(SSC GPA × ৮) + (HSC GPA × ১২) + ভর্তি পরীক্ষার ১০০ নম্বর = সর্বমোট ২০০ নম্বরের মধ্যে মেধাতালিকা প্রকাশ করা হয়।",
-      "circularUrl": "https://afmc.ac.bd"
+      "isDemoData": false
     }
   ]
 }

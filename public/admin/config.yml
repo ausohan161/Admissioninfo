@@ -15,8 +15,8 @@ locale: "en"
 
 
 collections:
-  - name: "institutions"
-    label: "১. প্রতিষ্ঠান, ইউনিট ও তারিখ"
+  - name: "home"
+    label: "১. হোম পেজ (একনজরে ক্যালেন্ডার)"
     label_singular: "প্রতিষ্ঠান"
     folder: "src/data/universities"
     create: true
@@ -41,9 +41,7 @@ collections:
           - { label: "সাধারণ বিশ্ববিদ্যালয় (গুচ্ছ)", value: "general-cluster" }
       - { label: "সাব-গ্রুপ (ঐচ্ছিক)", name: "subGroupBn", widget: "string", required: false }
       - { label: "ভর্তি সেশন (যেমন ২০২৬-২৭)", name: "admissionSession", widget: "string" }
-      - { label: "সংক্ষিপ্ত পরিচিতি (তথ্যকণিকা)", name: "introBn", widget: "text", required: false }
-
-      - label: "ইউনিটসমূহ (প্রতিটি ইউনিটের তারিখ, আসন, যোগ্যতা, বিষয় ইত্যাদি এখানে)"
+      - label: "ইউনিট ও তারিখ"
         name: "units"
         widget: "list"
         summary: "{{fields.nameBn}}"
@@ -55,7 +53,39 @@ collections:
           - { label: "ভর্তি পরীক্ষার তারিখ", name: "examDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
           - { label: "এটি কি নমুনা তারিখ? (সার্কুলার এলে আনচেক করুন)", name: "isDemoData", widget: "boolean", default: false, required: false }
 
-          - label: "আসন সংখ্যা (তথ্যকণিকা)"
+  - name: "home_notices"
+    label: "১. হোম পেজ — জরুরি নোটিশ (স্ক্রলিং)"
+    label_singular: "নোটিশ"
+    files:
+      - name: "notices"
+        label: "জরুরি নোটিশের তালিকা"
+        file: "src/data/notices.json"
+        fields:
+          - label: "নোটিশসমূহ (প্রতিটি লাইন একটি নোটিশ)"
+            name: "notices"
+            widget: "list"
+            field: { label: "নোটিশ", name: "notice", widget: "string" }
+
+  - name: "info"
+    label: "২. তথ্যকণিকা"
+    label_singular: "প্রতিষ্ঠানের তথ্য"
+    folder: "src/data/info"
+    create: true
+    delete: true
+    slug: "{{fields.id}}"
+    format: "json"
+    identifier_field: "id"
+    summary: "{{fields.id}}"
+    fields:
+      - { label: "আইডি (ইংরেজি ছোট হাতের অক্ষর, সংখ্যা, হাইফেন — একবার সেভ হলে বদলাবেন না)", name: "id", widget: "string", pattern: ["^[a-z0-9-]+$", "শুধু ছোট হাতের ইংরেজি অক্ষর, সংখ্যা ও হাইফেন"] }
+      - { label: "সংক্ষিপ্ত পরিচিতি", name: "introBn", widget: "text", required: false }
+      - label: "ইউনিটের তথ্য"
+        name: "units"
+        widget: "list"
+        summary: "{{fields.id}}"
+        fields:
+          - { label: "ইউনিট আইডি (ইংরেজি; একটিমাত্র ইউনিট হলে default)", name: "id", widget: "string", pattern: ["^[a-z0-9-]+$", "শুধু ছোট হাতের ইংরেজি অক্ষর, সংখ্যা ও হাইফেন"] }
+          - label: "আসন সংখ্যা"
             name: "seats"
             widget: "object"
             required: false
@@ -69,8 +99,7 @@ collections:
                 fields:
                   - { label: "নাম", name: "nameBn", widget: "string" }
                   - { label: "সংখ্যা", name: "count", widget: "number", value_type: "int" }
-
-          - label: "আবেদন যোগ্যতা (তথ্যকণিকা)"
+          - label: "আবেদন যোগ্যতা"
             name: "eligibility"
             widget: "object"
             required: false
@@ -82,7 +111,6 @@ collections:
                 widget: "list"
                 required: false
                 field: { label: "পয়েন্ট", name: "point", widget: "string" }
-
           - { label: "পরীক্ষার ধরন (যেমন MCQ, Written)", name: "examPattern", widget: "string", required: false }
           - label: "বিষয় ও নম্বর"
             name: "subjects"
@@ -94,11 +122,29 @@ collections:
           - { label: "ফলাফল নির্ণয় পদ্ধতি", name: "resultMethod", widget: "string", required: false }
           - { label: "সার্কুলার লিংক", name: "circularUrl", widget: "string", required: false }
 
-          - label: "আবেদনযোগ্যতা চেকার-এর শর্ত (জিপিএ)"
+  - name: "checker"
+    label: "৩. আবেদনযোগ্যতা যাচাই"
+    label_singular: "শর্ত"
+    folder: "src/data/eligibility"
+    create: true
+    delete: true
+    slug: "{{fields.id}}"
+    format: "json"
+    identifier_field: "id"
+    summary: "{{fields.id}}"
+    fields:
+      - { label: "আইডি (ইংরেজি ছোট হাতের অক্ষর, সংখ্যা, হাইফেন — একবার সেভ হলে বদলাবেন না)", name: "id", widget: "string", pattern: ["^[a-z0-9-]+$", "শুধু ছোট হাতের ইংরেজি অক্ষর, সংখ্যা ও হাইফেন"] }
+      - label: "ইউনিটের শর্ত"
+        name: "units"
+        widget: "list"
+        summary: "{{fields.id}}"
+        fields:
+          - { label: "ইউনিট আইডি (ইংরেজি; একটিমাত্র ইউনিট হলে default)", name: "id", widget: "string", pattern: ["^[a-z0-9-]+$", "শুধু ছোট হাতের ইংরেজি অক্ষর, সংখ্যা ও হাইফেন"] }
+          - label: "জিপিএ শর্ত (খালি রাখলে এই ইউনিট যাচাইয়ে আসবে না)"
             name: "eligibilityCriteria"
             widget: "object"
             required: false
-            collapsed: true
+            collapsed: false
             fields:
               - label: "গ্রুপ"
                 name: "group"
@@ -131,21 +177,8 @@ collections:
                   - { label: "মোট ন্যূনতম", name: "minTotal", widget: "number", value_type: "float" }
               - { label: "টীকা (চেকারে দেখাবে)", name: "noteBn", widget: "text", required: false }
 
-  - name: "notices"
-    label: "২. জরুরি নোটিশ (স্ক্রলিং)"
-    label_singular: "নোটিশ"
-    files:
-      - name: "notices"
-        label: "জরুরি নোটিশের তালিকা"
-        file: "src/data/notices.json"
-        fields:
-          - label: "নোটিশসমূহ (প্রতিটি লাইন একটি নোটিশ)"
-            name: "notices"
-            widget: "list"
-            field: { label: "নোটিশ", name: "notice", widget: "string" }
-
   - name: "site_texts"
-    label: "৩. সাইটের লেখা (টাইটেল, হেডিং, বাটন)"
+    label: "৪. সাধারণ লেখা (টাইটেল, মেনু, বাটন — সব পেজ)"
     label_singular: "লেখা"
     files:
       - name: "texts"

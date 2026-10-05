@@ -1,0 +1,33 @@
+{
+  "id": "iut",
+  "units": [
+    {
+      "id": "default",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 4.5,
+        "minHscGpa": 4.5,
+        "minCombinedGpa": null,
+        "subjectMinimums": [
+          {
+            "subjectBn": "পদার্থবিজ্ঞান",
+            "minGpa": 5
+          },
+          {
+            "subjectBn": "রসায়ন",
+            "minGpa": 5
+          },
+          {
+            "subjectBn": "উচ্চতর গণিত",
+            "minGpa": 5
+          },
+          {
+            "subjectBn": "ইংরেজি",
+            "minGpa": 4
+          }
+        ],
+        "noteBn": null
+      }
+    }
+  ]
+}

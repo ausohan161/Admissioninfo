@@ -1,0 +1,42 @@
+{
+  "id": "butex",
+  "units": [
+    {
+      "id": "default",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 4,
+        "minHscGpa": 4,
+        "minCombinedGpa": null,
+        "subjectMinimums": [
+          {
+            "subjectBn": "উচ্চতর গণিত",
+            "minGpa": 3.5
+          },
+          {
+            "subjectBn": "পদার্থবিজ্ঞান",
+            "minGpa": 3.5
+          },
+          {
+            "subjectBn": "রসায়ন",
+            "minGpa": 3.5
+          },
+          {
+            "subjectBn": "ইংরেজি",
+            "minGpa": 3.5
+          }
+        ],
+        "subjectGroupMinTotal": {
+          "subjectsBn": [
+            "উচ্চতর গণিত",
+            "পদার্থবিজ্ঞান",
+            "রসায়ন",
+            "ইংরেজি"
+          ],
+          "minTotal": 17.5
+        },
+        "noteBn": null
+      }
+    }
+  ]
+}

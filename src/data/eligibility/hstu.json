@@ -1,0 +1,38 @@
+{
+  "id": "hstu",
+  "units": [
+    {
+      "id": "a-unit",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 3.5,
+        "minHscGpa": 3.5,
+        "minCombinedGpa": 7.5,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "b-unit",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 3.5,
+        "minHscGpa": 3.5,
+        "minCombinedGpa": 7.5,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "d-unit",
+      "eligibilityCriteria": {
+        "group": "any",
+        "minSscGpa": 3,
+        "minHscGpa": 3,
+        "minCombinedGpa": 6,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    }
+  ]
+}

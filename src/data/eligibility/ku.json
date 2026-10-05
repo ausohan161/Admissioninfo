@@ -1,0 +1,38 @@
+{
+  "id": "ku",
+  "units": [
+    {
+      "id": "a-unit",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": null,
+        "minHscGpa": null,
+        "minCombinedGpa": 8,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "b-unit",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": null,
+        "minHscGpa": null,
+        "minCombinedGpa": 8,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "c-unit",
+      "eligibilityCriteria": {
+        "group": "arts",
+        "minSscGpa": null,
+        "minHscGpa": null,
+        "minCombinedGpa": 7,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    }
+  ]
+}

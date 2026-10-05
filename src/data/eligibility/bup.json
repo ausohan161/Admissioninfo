@@ -1,0 +1,55 @@
+{
+  "id": "bup",
+  "units": [
+    {
+      "id": "fst",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": null,
+        "minHscGpa": null,
+        "minCombinedGpa": 8,
+        "subjectMinimums": [
+          {
+            "subjectBn": "পদার্থবিজ্ঞান",
+            "minGpa": 4
+          },
+          {
+            "subjectBn": "রসায়ন",
+            "minGpa": 4
+          },
+          {
+            "subjectBn": "জীববিজ্ঞান",
+            "minGpa": 4
+          },
+          {
+            "subjectBn": "ইংরেজি",
+            "minGpa": 3.5
+          }
+        ],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "fass",
+      "eligibilityCriteria": {
+        "group": "any",
+        "minSscGpa": null,
+        "minHscGpa": null,
+        "minCombinedGpa": 7.5,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "fsss",
+      "eligibilityCriteria": {
+        "group": "any",
+        "minSscGpa": null,
+        "minHscGpa": null,
+        "minCombinedGpa": 8,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    }
+  ]
+}

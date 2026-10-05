@@ -1,0 +1,27 @@
+{
+  "id": "ru",
+  "units": [
+    {
+      "id": "c-unit",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 3.5,
+        "minHscGpa": 3.5,
+        "minCombinedGpa": 8,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "a-unit",
+      "eligibilityCriteria": {
+        "group": "arts",
+        "minSscGpa": 3,
+        "minHscGpa": 3,
+        "minCombinedGpa": 7,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    }
+  ]
+}

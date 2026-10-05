@@ -1,0 +1,60 @@
+{
+  "id": "ju",
+  "units": [
+    {
+      "id": "a-unit",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 4,
+        "minHscGpa": 4,
+        "minCombinedGpa": 8.5,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "d-unit",
+      "eligibilityCriteria": {
+        "group": "science",
+        "minSscGpa": 4,
+        "minHscGpa": 4,
+        "minCombinedGpa": 9,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "b-unit",
+      "eligibilityCriteria": {
+        "group": "any",
+        "minSscGpa": 3.5,
+        "minHscGpa": 3.5,
+        "minCombinedGpa": 7.5,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "c-unit",
+      "eligibilityCriteria": {
+        "group": "any",
+        "minSscGpa": 3.5,
+        "minHscGpa": 3.5,
+        "minCombinedGpa": 7.5,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    },
+    {
+      "id": "c1-unit",
+      "eligibilityCriteria": {
+        "group": "any",
+        "minSscGpa": 3.5,
+        "minHscGpa": 3.5,
+        "minCombinedGpa": 7.5,
+        "subjectMinimums": [],
+        "noteBn": null
+      }
+    }
+  ]
+}
