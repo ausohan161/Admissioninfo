@@ -1,6 +1,7 @@
 import { universities } from "@/data/universities";
 import { University } from "@/data/types";
 import { notices } from "@/lib/notices";
+import { texts, TextKey } from "@/lib/texts";
 
 function isUniversityLike(value: unknown): value is University {
   if (!value || typeof value !== "object") return false;
@@ -40,9 +41,10 @@ function withUnitDefaults(university: University): University {
  * entries are rejected whole so a typo can't blank the page; the built-in data stays. */
 export function applyContent(data: unknown): boolean {
   if (!data || typeof data !== "object") return false;
-  const { universities: incomingUniversities, notices: incomingNotices } = data as {
+  const { universities: incomingUniversities, notices: incomingNotices, texts: incomingTexts } = data as {
     universities?: unknown;
     notices?: unknown;
+    texts?: unknown;
   };
   let changed = false;
 
@@ -58,6 +60,16 @@ export function applyContent(data: unknown): boolean {
   if (Array.isArray(incomingNotices) && incomingNotices.every((n) => typeof n === "string")) {
     notices.splice(0, notices.length, ...(incomingNotices as string[]));
     changed = true;
+  }
+
+  if (incomingTexts && typeof incomingTexts === "object") {
+    for (const key of Object.keys(texts) as TextKey[]) {
+      const value = (incomingTexts as Record<string, unknown>)[key];
+      if (typeof value === "string" && value.trim() !== "") {
+        texts[key] = value;
+        changed = true;
+      }
+    }
   }
 
   return changed;

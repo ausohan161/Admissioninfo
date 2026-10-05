@@ -1,12 +1,13 @@
 import { ReactNode } from "react";
 import { LucideIcon } from "lucide-react";
+import { texts } from "@/lib/texts";
 
 export function InfoSection({
   title,
   icon: Icon,
   children,
   isEmpty,
-  emptyText = "তথ্য প্রকাশিত হয়নি",
+  emptyText = texts.notPublished,
 }: {
   title: string;
   icon?: LucideIcon;

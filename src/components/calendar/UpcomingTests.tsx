@@ -3,19 +3,20 @@ import { FlatUnitRow } from "@/data/types";
 import { CountdownBadge } from "@/components/ui/CountdownBadge";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { toBanglaNumber } from "@/lib/bangla";
+import { texts } from "@/lib/texts";
 
 export function UpcomingTests({ rows, today }: { rows: FlatUnitRow[]; today: string }) {
   return (
     <section>
       <h2 className="mb-3 flex items-center gap-1.5 text-sm font-bold text-violet-700 sm:text-base">
         <Sparkles className="h-4 w-4 text-violet-500" aria-hidden />
-        সামনে যেসব ভর্তি পরীক্ষা
+        {texts.sectionUpcoming}
       </h2>
       <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-soft sm:p-5">
         {rows.length === 0 ? (
           <EmptyState
-            title="আসন্ন কোনো ভর্তি পরীক্ষার তথ্য প্রকাশিত হয়নি"
-            description="সার্কুলার প্রকাশিত হলে তথ্য এখানে আপডেট করা হবে।"
+            title={texts.emptyUpcomingTitle}
+            description={texts.emptyUpcomingDesc}
           />
         ) : (
           <ul className="divide-y divide-slate-200">

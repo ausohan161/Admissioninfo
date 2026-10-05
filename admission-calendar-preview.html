@@ -2961,6 +2961,99 @@ const IconFileText = (p) => <Ic {...p}><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0
 const IconCheckCircle = (p) => <Ic {...p}><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></Ic>;
 const IconInfo = (p) => <Ic {...p}><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></Ic>;
 
+const texts = {
+  "appName": "অ্যাডমিশন ক্যালেন্ডার",
+  "appTagline": "একনজরে বিশ্ববিদ্যালয়সমূহের ভর্তি পরীক্ষার সূচি ও তথ্য",
+  "lastUpdated": "সর্বশেষ আপডেট:",
+  "mainMenuAria": "প্রধান মেনু",
+  "tabOverview": "একনজরে অ্যাডমিশন ক্যালেন্ডার",
+  "tabInfo": "অ্যাডমিশন তথ্যকণিকা",
+  "tabEligibility": "আবেদনযোগ্যতা চেকার",
+  "footerNote1": "সর্বশেষ তথ্যের জন্য সংশ্লিষ্ট বিশ্ববিদ্যালয়ের অফিসিয়াল সার্কুলার অনুসরণ করুন।",
+  "footerNote2": "ভর্তি সংক্রান্ত সিদ্ধান্ত নেওয়ার আগে সংশ্লিষ্ট বিশ্ববিদ্যালয়ের অফিসিয়াল ওয়েবসাইট ও প্রকাশিত সার্কুলার যাচাই করুন।",
+  "sectionUpcoming": "সামনে যেসব ভর্তি পরীক্ষা",
+  "emptyUpcomingTitle": "আসন্ন কোনো ভর্তি পরীক্ষার তথ্য প্রকাশিত হয়নি",
+  "emptyUpcomingDesc": "সার্কুলার প্রকাশিত হলে তথ্য এখানে আপডেট করা হবে।",
+  "urgentLabel": "জরুরি",
+  "noticeLabel": "জরুরি নোটিশ",
+  "todayLastDay": "আজ শেষ দিন",
+  "daysLeftTemplate": "আর মাত্র {n} দিন বাকি",
+  "deadlinePrefix": "আবেদনের",
+  "statusAll": "সব অবস্থা",
+  "statusOngoing": "আবেদন চলছে",
+  "applicationEnd": "আবেদন শেষ",
+  "statusUpcomingExam": "পরীক্ষা আসন্ন",
+  "statusCompleted": "পরীক্ষা সম্পন্ন",
+  "searchPlaceholder": "বিশ্ববিদ্যালয় খুঁজুন — যেমন BUET, DU, GST",
+  "searchAria": "বিশ্ববিদ্যালয় অনুসন্ধান",
+  "categoryFilterAria": "ক্যাটাগরি ফিল্টার",
+  "allCategories": "সব ক্যাটাগরি",
+  "statusFilterAria": "অবস্থা ফিল্টার",
+  "sectionSchedule": "সকল বিশ্ববিদ্যালয়ের ভর্তি সময়সূচি",
+  "emptyResults": "কোনো ফলাফল পাওয়া যায়নি",
+  "emptyResultsDesc": "অনুসন্ধান বা ফিল্টার পরিবর্তন করে আবার চেষ্টা করুন।",
+  "statTotal": "মোট প্রতিষ্ঠান",
+  "statUpcoming": "আসন্ন ভর্তি পরীক্ষা",
+  "statThisWeek": "এই সপ্তাহে পরীক্ষা",
+  "colNo": "ক্রম",
+  "colCategory": "ক্যাটাগরি",
+  "colUniversity": "বিশ্ববিদ্যালয়",
+  "colUnit": "ইউনিট",
+  "applicationStart": "আবেদন শুরু",
+  "examDate": "ভর্তি পরীক্ষা",
+  "colDaysLeft": "বাকি দিন",
+  "details": "বিস্তারিত",
+  "notPublished": "তথ্য প্রকাশিত হয়নি",
+  "notPublishedShort": "প্রকাশিত হয়নি",
+  "sectionImportantDates": "গুরুত্বপূর্ণ তারিখ",
+  "admissionSession": "ভর্তি সেশন",
+  "sectionSeats": "আসন সংখ্যা",
+  "totalSeats": "মোট আসন",
+  "sectionEligibility": "আবেদন যোগ্যতা",
+  "sectionExamPattern": "পরীক্ষার ধরন",
+  "sectionSubjects": "বিষয় ও প্রশ্নসংখ্যা",
+  "sectionResultMethod": "ফলাফল নির্ণয় পদ্ধতি",
+  "sectionCircular": "অফিসিয়াল সার্কুলার",
+  "circularNotPublished": "সার্কুলার প্রকাশিত হয়নি",
+  "viewCircular": "অফিশিয়াল সার্কুলার দেখুন",
+  "viewDetails": "বিস্তারিত তথ্য দেখুন",
+  "backToList": "তালিকায় ফিরে যান",
+  "backToCategoryAria": "ক্যাটাগরি তালিকায় ফিরে যান",
+  "emptyCategory": "এই ক্যাটাগরিতে কোনো তথ্য পাওয়া যায়নি",
+  "emptyDefaultTitle": "কোনো তথ্য পাওয়া যায়নি",
+  "errorTitle": "তথ্য লোড করা যায়নি",
+  "errorDesc": "একটু পর আবার চেষ্টা করুন। সমস্যা থেকে গেলে পেজটি রিফ্রেশ করুন।",
+  "retry": "আবার চেষ্টা করুন",
+  "categoryPickTitle": "ক্যাটাগরি বেছে নিন",
+  "categoryPickDesc": "একটি ক্যাটাগরিতে ক্লিক করে সংশ্লিষ্ট বিশ্ববিদ্যালয়সমূহের ভর্তি তথ্য দেখুন।",
+  "institutionCountSuffix": "টি প্রতিষ্ঠান",
+  "groupScience": "বিজ্ঞান",
+  "groupCommerce": "বাণিজ্য",
+  "groupArts": "মানবিক",
+  "checkerTitle": "আবেদনযোগ্যতা যাচাই করুন",
+  "checkerSubtitle": "আপনার জিপিএ দিন, কোন কোন বিশ্ববিদ্যালয়ে আবেদন করতে পারবেন তা সাথে সাথে দেখুন",
+  "groupLabel": "গ্রুপ *",
+  "sscGpaLabel": "SSC জিপিএ *",
+  "hscGpaLabel": "HSC জিপিএ *",
+  "gpaPlaceholder": "যেমন: ৫.০০",
+  "subjectGpaLabel": "বিষয়ভিত্তিক HSC জিপিএ",
+  "sscYearLabel": "SSC পাসের সাল *",
+  "hscYearLabel": "HSC পাসের সাল *",
+  "mobileLabel": "মোবাইল নম্বর *",
+  "mobilePlaceholder": "যেমন: ০১৭xxxxxxxx",
+  "checkButton": "যাচাই করুন",
+  "checkerDisclaimer": "এই ফলাফল শুধুমাত্র জিপিএ-ভিত্তিক একটি প্রাথমিক অনুমান, যা ২০২৫ সালের ভর্তি বিজ্ঞপ্তির ধরন অনুসারে হিসাব করা হয়েছে। চূড়ান্ত সিদ্ধান্তের আগে সংশ্লিষ্ট বিশ্ববিদ্যালয়ের অফিসিয়াল সার্কুলার অবশ্যই যাচাই করুন।",
+  "noEligibleTitle": "আপনার দেওয়া তথ্য অনুযায়ী কোনো প্রতিষ্ঠানে যোগ্য পাওয়া যায়নি",
+  "noEligibleDesc": "জিপিএ ও গ্রুপ আবার যাচাই করে দেখুন, অথবা বিষয়ভিত্তিক জিপিএ যোগ করে চেষ্টা করুন।",
+  "eligibleCountPrefix": "আপনি মোট",
+  "eligibleCountSuffix": "টি ইউনিটে আবেদনযোগ্য",
+  "minRequirements": "সর্বনিম্ন যোগ্যতা",
+  "noteLabel": "টীকা",
+  "backHome": "হোমে ফিরে যান",
+  "yearPlaceholder": "যেমন: {year}",
+  "pageTitle": "অ্যাডমিশন ক্যালেন্ডার | বিশ্ববিদ্যালয় ভর্তি পরীক্ষার তারিখ ও তথ্য"
+};
+function fillTemplate(template, values) { return Object.entries(values).reduce((out, [k, v]) => out.split("{" + k + "}").join(v), template); }
 /* =========================================================================
    SHARED UI
    ========================================================================= */
@@ -2994,12 +3087,12 @@ function Header() {
         <div className="flex items-center gap-3">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 text-white shadow-soft"><IconCalendarClock className="h-5 w-5" /></div>
           <div>
-            <h1 className="text-lg font-bold leading-tight text-navy-900 sm:text-xl">অ্যাডমিশন ক্যালেন্ডার</h1>
-            <p className="text-xs leading-tight text-slate-500 sm:text-sm">একনজরে বিশ্ববিদ্যালয়সমূহের ভর্তি পরীক্ষার সূচি ও তথ্য</p>
+            <h1 className="text-lg font-bold leading-tight text-navy-900 sm:text-xl">{texts.appName}</h1>
+            <p className="text-xs leading-tight text-slate-500 sm:text-sm">{texts.appTagline}</p>
           </div>
         </div>
         <div className="flex items-center gap-2 text-xs text-slate-400 sm:text-sm">
-          <span className="hidden sm:inline">সর্বশেষ আপডেট:</span>
+          <span className="hidden sm:inline">{texts.lastUpdated}</span>
           <span className="font-medium text-slate-500">{formatted ?? "—"}</span>
         </div>
       </div>
@@ -3007,9 +3100,9 @@ function Header() {
   );
 }
 const TABS = [
-  { id: "overview", labelBn: "একনজরে অ্যাডমিশন ক্যালেন্ডার", Icon: IconGrid, activeClass: "bg-gradient-to-r from-indigo-600 to-blue-600 text-white shadow-card", inactiveClass: "text-indigo-600 hover:bg-indigo-50" },
-  { id: "info", labelBn: "অ্যাডমিশন তথ্যকণিকা", Icon: IconBook, activeClass: "bg-gradient-to-r from-teal-600 to-emerald-600 text-white shadow-card", inactiveClass: "text-teal-600 hover:bg-teal-50" },
-  { id: "eligibility", labelBn: "আবেদনযোগ্যতা চেকার", Icon: IconClipboardCheck, activeClass: "bg-purple-600 text-white shadow-card", inactiveClass: "text-purple-600 hover:bg-purple-50" },
+  { id: "overview", labelKey: "tabOverview", Icon: IconGrid, activeClass: "bg-gradient-to-r from-indigo-600 to-blue-600 text-white shadow-card", inactiveClass: "text-indigo-600 hover:bg-indigo-50" },
+  { id: "info", labelKey: "tabInfo", Icon: IconBook, activeClass: "bg-gradient-to-r from-teal-600 to-emerald-600 text-white shadow-card", inactiveClass: "text-teal-600 hover:bg-teal-50" },
+  { id: "eligibility", labelKey: "tabEligibility", Icon: IconClipboardCheck, activeClass: "bg-purple-600 text-white shadow-card", inactiveClass: "text-purple-600 hover:bg-purple-50" },
 ];
 function MainTabs({ active, onChange }) {
   return (
@@ -3021,7 +3114,7 @@ function MainTabs({ active, onChange }) {
             <button key={tab.id} onClick={() => onChange(tab.id)}
               className={`flex min-h-[56px] flex-col items-center justify-center gap-1 rounded-lg px-1 py-2 text-center text-xs font-semibold leading-tight transition-all sm:min-h-[64px] sm:flex-row sm:gap-2 sm:text-sm ${isActive ? tab.activeClass : tab.inactiveClass}`}>
               <tab.Icon className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
-              <span>{tab.labelBn}</span>
+              <span>{texts[tab.labelKey]}</span>
             </button>
           );
         })}
@@ -3033,10 +3126,10 @@ function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-7xl px-4 py-8 text-center sm:px-6">
-        <p className="text-sm font-bold text-navy-800">অ্যাডমিশন ক্যালেন্ডার</p>
-        <p className="mt-1 text-xs text-slate-500">একনজরে বিশ্ববিদ্যালয়সমূহের ভর্তি পরীক্ষার সূচি ও তথ্য</p>
-        <p className="mt-4 text-xs text-slate-400">সর্বশেষ তথ্যের জন্য সংশ্লিষ্ট বিশ্ববিদ্যালয়ের অফিসিয়াল সার্কুলার অনুসরণ করুন।</p>
-        <p className="mt-1 text-xs text-slate-400">ভর্তি সংক্রান্ত সিদ্ধান্ত নেওয়ার আগে সংশ্লিষ্ট বিশ্ববিদ্যালয়ের অফিসিয়াল ওয়েবসাইট ও প্রকাশিত সার্কুলার যাচাই করুন।</p>
+        <p className="text-sm font-bold text-navy-800">{texts.appName}</p>
+        <p className="mt-1 text-xs text-slate-500">{texts.appTagline}</p>
+        <p className="mt-4 text-xs text-slate-400">{texts.footerNote1}</p>
+        <p className="mt-1 text-xs text-slate-400">{texts.footerNote2}</p>
       </div>
     </footer>
   );
@@ -3046,10 +3139,10 @@ function Footer() {
    TAB 1 — CALENDAR
    ========================================================================= */
 const STAT_META = [
-  { key: "total", label: "মোট প্রতিষ্ঠান", Icon: IconBuilding, tone: "text-indigo-700 bg-indigo-50", topBorder: "border-t-indigo-400" },
-  { key: "ongoing", label: "আবেদন চলছে", Icon: IconFileClock, tone: "text-emerald-700 bg-emerald-50", topBorder: "border-t-emerald-400" },
-  { key: "upcoming", label: "আসন্ন ভর্তি পরীক্ষা", Icon: IconAlarm, tone: "text-amber-700 bg-amber-50", topBorder: "border-t-amber-400" },
-  { key: "thisWeek", label: "এই সপ্তাহে পরীক্ষা", Icon: IconCalendarDays, tone: "text-rose-700 bg-rose-50", topBorder: "border-t-rose-400" },
+  { key: "total", labelKey: "statTotal", Icon: IconBuilding, tone: "text-indigo-700 bg-indigo-50", topBorder: "border-t-indigo-400" },
+  { key: "ongoing", labelKey: "statusOngoing", Icon: IconFileClock, tone: "text-emerald-700 bg-emerald-50", topBorder: "border-t-emerald-400" },
+  { key: "upcoming", labelKey: "statUpcoming", Icon: IconAlarm, tone: "text-amber-700 bg-amber-50", topBorder: "border-t-amber-400" },
+  { key: "thisWeek", labelKey: "statThisWeek", Icon: IconCalendarDays, tone: "text-rose-700 bg-rose-50", topBorder: "border-t-rose-400" },
 ];
 function SummaryStatsBar({ stats }) {
   const values = { total: stats.totalInstitutions, ongoing: stats.ongoingCount, upcoming: stats.upcomingExamCount, thisWeek: stats.examsThisWeekCount };
@@ -3060,7 +3153,7 @@ function SummaryStatsBar({ stats }) {
           <div className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${item.tone}`}><item.Icon className="h-4 w-4" /></div>
           <div className="min-w-0">
             <p className="text-lg font-bold leading-tight text-navy-900 sm:text-xl">{toBanglaNumber(values[item.key])}</p>
-            <p className="truncate text-xs leading-tight text-slate-500 sm:text-xs">{item.label}</p>
+            <p className="truncate text-xs leading-tight text-slate-500 sm:text-xs">{texts[item.labelKey]}</p>
           </div>
         </div>
       ))}
@@ -3070,8 +3163,8 @@ function SummaryStatsBar({ stats }) {
 function buildDeadlineMessage(row, today) {
   const daysLeft = computeDeadlineDaysLeft(row.unit, today);
   const unitLabel = row.unit.nameBn ? ` — ${row.unit.nameBn}` : "";
-  const dayText = daysLeft === 0 ? "আজ শেষ দিন" : `আর মাত্র ${toBanglaNumber(daysLeft ?? 0)} দিন বাকি`;
-  return `${row.university.nameBn}${unitLabel} — আবেদনের ${dayText}`;
+  const dayText = daysLeft === 0 ? texts.todayLastDay : fillTemplate(texts.daysLeftTemplate, { n: toBanglaNumber(daysLeft ?? 0) });
+  return `${row.university.nameBn}${unitLabel} — ${texts.deadlinePrefix} ${dayText}`;
 }
 function DeadlineTicker({ rows, today }) {
   if (rows.length === 0) return null;
@@ -3081,7 +3174,7 @@ function DeadlineTicker({ rows, today }) {
   return (
     <div className="flex items-stretch overflow-hidden rounded-xl border border-rose-200 bg-gradient-to-r from-rose-50 to-orange-50 shadow-soft">
       <div className="flex shrink-0 items-center gap-2 bg-rose-600 px-3 py-2.5 sm:px-4">
-        <IconAlert className="h-4 w-4 text-white" /><span className="whitespace-nowrap text-xs font-bold text-white sm:text-sm">জরুরি</span>
+        <IconAlert className="h-4 w-4 text-white" /><span className="whitespace-nowrap text-xs font-bold text-white sm:text-sm">{texts.urgentLabel}</span>
       </div>
       <div className="min-w-0 flex-1 overflow-hidden py-2.5">
         <div className="marquee-track flex w-max items-center whitespace-nowrap" style={{ animationDuration: `${durationSeconds}s` }}>
@@ -3105,7 +3198,7 @@ function NoticeTicker() {
   return (
     <div className="flex items-stretch overflow-hidden rounded-xl border border-amber-200 bg-gradient-to-r from-amber-50 to-yellow-50 shadow-soft">
       <div className="flex shrink-0 items-center gap-2 bg-amber-600 px-3 py-2.5 sm:px-4">
-        <IconMegaphone className="h-4 w-4 text-white" /><span className="whitespace-nowrap text-xs font-bold text-white sm:text-sm">জরুরি নোটিশ</span>
+        <IconMegaphone className="h-4 w-4 text-white" /><span className="whitespace-nowrap text-xs font-bold text-white sm:text-sm">{texts.noticeLabel}</span>
       </div>
       <div className="min-w-0 flex-1 overflow-hidden py-2.5">
         <div className="marquee-track flex w-max items-center whitespace-nowrap" style={{ animationDuration: `${durationSeconds}s` }}>
@@ -3120,10 +3213,10 @@ function NoticeTicker() {
 function UpcomingTests({ rows, today }) {
   return (
     <section>
-      <h2 className="mb-3 flex items-center gap-1.5 text-sm font-bold text-violet-700 sm:text-base"><IconSparkles className="h-4 w-4 text-violet-500" />সামনে যেসব ভর্তি পরীক্ষা</h2>
+      <h2 className="mb-3 flex items-center gap-1.5 text-sm font-bold text-violet-700 sm:text-base"><IconSparkles className="h-4 w-4 text-violet-500" />{texts.sectionUpcoming}</h2>
       <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-soft sm:p-5">
         {rows.length === 0 ? (
-          <EmptyState title="আসন্ন কোনো ভর্তি পরীক্ষার তথ্য প্রকাশিত হয়নি" description="সার্কুলার প্রকাশিত হলে তথ্য এখানে আপডেট করা হবে।" />
+          <EmptyState title={texts.emptyUpcomingTitle} description={texts.emptyUpcomingDesc} />
         ) : (
           <ul className="divide-y divide-slate-200">
             {rows.map(({ university, unit }, index) => (
@@ -3144,8 +3237,8 @@ function UpcomingTests({ rows, today }) {
   );
 }
 const STATUS_OPTIONS = [
-  { value: "all", labelBn: "সব অবস্থা" }, { value: "ongoing", labelBn: "আবেদন চলছে" },
-  { value: "closed", labelBn: "আবেদন শেষ" }, { value: "upcoming-exam", labelBn: "পরীক্ষা আসন্ন" }, { value: "completed", labelBn: "পরীক্ষা সম্পন্ন" },
+  { value: "all", labelKey: "statusAll" }, { value: "ongoing", labelKey: "statusOngoing" },
+  { value: "closed", labelKey: "applicationEnd" }, { value: "upcoming-exam", labelKey: "statusUpcomingExam" }, { value: "completed", labelKey: "statusCompleted" },
 ];
 const selectClass = "w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-base text-slate-700 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 sm:py-2 sm:text-sm";
 function TableToolbar({ query, onQueryChange, category, onCategoryChange, status, onStatusChange }) {
@@ -3154,16 +3247,16 @@ function TableToolbar({ query, onQueryChange, category, onCategoryChange, status
       <div className="relative">
         <IconSearch className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
         <input type="search" value={query} onChange={(e) => onQueryChange(e.target.value)}
-          placeholder="বিশ্ববিদ্যালয় খুঁজুন — যেমন BUET, DU, GST"
+          placeholder={texts.searchPlaceholder}
           className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pl-9 pr-3 text-base text-slate-700 sm:text-sm focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100" />
       </div>
       <div className="grid grid-cols-2 gap-2">
         <select className={selectClass} value={category} onChange={(e) => onCategoryChange(e.target.value)}>
-          <option value="all">সব ক্যাটাগরি</option>
+          <option value="all">{texts.allCategories}</option>
           {categories.map((c) => <option key={c.id} value={c.id}>{c.shortNameBn}</option>)}
         </select>
         <select className={selectClass} value={status} onChange={(e) => onStatusChange(e.target.value)}>
-          {STATUS_OPTIONS.map((s) => <option key={s.value} value={s.value}>{s.labelBn}</option>)}
+          {STATUS_OPTIONS.map((s) => <option key={s.value} value={s.value}>{texts[s.labelKey]}</option>)}
         </select>
       </div>
     </div>
@@ -3175,7 +3268,7 @@ function AdmissionTable({ rows, today, onOpen }) {
       <table className="w-full min-w-[900px] border-collapse text-left text-sm">
         <thead>
           <tr className="text-xs font-semibold uppercase tracking-wide text-white">
-            {["ক্রম","ক্যাটাগরি","বিশ্ববিদ্যালয়","ইউনিট","আবেদন শুরু","আবেদন শেষ","ভর্তি পরীক্ষা","বাকি দিন","বিস্তারিত"].map((h, i) => (
+            {[texts.colNo,texts.colCategory,texts.colUniversity,texts.colUnit,texts.applicationStart,texts.applicationEnd,texts.examDate,texts.colDaysLeft,texts.details].map((h, i) => (
               <th key={i} className={`whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3 ${i === 8 ? "text-right" : ""}`}>{h}</th>
             ))}
           </tr>
@@ -3192,11 +3285,11 @@ function AdmissionTable({ rows, today, onOpen }) {
                 </td>
                 <td className="border border-slate-200 px-3 py-3"><div className="font-medium text-navy-900">{university.nameBn}</div><div className="text-xs text-slate-400">{university.shortName}</div></td>
                 <td className="border border-slate-200 px-3 py-3 text-slate-600"><div className="flex items-center gap-1.5"><span>{unit.nameBn ?? "—"}</span></div></td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">{formatBanglaDate(unit.applicationStart) ?? "তথ্য প্রকাশিত হয়নি"}</td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">{formatBanglaDate(unit.applicationEnd) ?? "তথ্য প্রকাশিত হয়নি"}</td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">{formatBanglaDate(unit.examDate) ?? "তথ্য প্রকাশিত হয়নি"}</td>
+                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">{formatBanglaDate(unit.applicationStart) ?? texts.notPublished}</td>
+                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">{formatBanglaDate(unit.applicationEnd) ?? texts.notPublished}</td>
+                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">{formatBanglaDate(unit.examDate) ?? texts.notPublished}</td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3"><CountdownBadge unit={unit} today={today} /></td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-right"><button onClick={() => onOpen(university.id)} className="inline-flex items-center gap-0.5 text-xs font-medium text-indigo-600 hover:text-indigo-800">বিস্তারিত<IconChevronRight className="h-3.5 w-3.5" /></button></td>
+                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-right"><button onClick={() => onOpen(university.id)} className="inline-flex items-center gap-0.5 text-xs font-medium text-indigo-600 hover:text-indigo-800">{texts.details}<IconChevronRight className="h-3.5 w-3.5" /></button></td>
               </tr>
             );
           })}
@@ -3224,8 +3317,8 @@ function AdmissionMobileList({ rows, today, onOpen }) {
             </div>
             <div className="mt-3 flex flex-wrap items-center gap-2"><CountdownBadge unit={unit} today={today} /></div>
             <dl className="mt-3 grid grid-cols-2 divide-x divide-slate-200 border-t border-slate-200 pt-3 text-xs">
-              <div className="pr-3"><dt className="text-slate-400">ভর্তি পরীক্ষা</dt><dd className="font-medium text-slate-700">{formatBanglaDate(unit.examDate) ?? "তথ্য প্রকাশিত হয়নি"}</dd></div>
-              <div className="pl-3"><dt className="text-slate-400">আবেদন শেষ</dt><dd className="font-medium text-slate-700">{formatBanglaDate(unit.applicationEnd) ?? "তথ্য প্রকাশিত হয়নি"}</dd></div>
+              <div className="pr-3"><dt className="text-slate-400">{texts.examDate}</dt><dd className="font-medium text-slate-700">{formatBanglaDate(unit.examDate) ?? texts.notPublished}</dd></div>
+              <div className="pl-3"><dt className="text-slate-400">{texts.applicationEnd}</dt><dd className="font-medium text-slate-700">{formatBanglaDate(unit.applicationEnd) ?? texts.notPublished}</dd></div>
             </dl>
           </div>
         );
@@ -3257,10 +3350,10 @@ function CalendarTab({ onOpenUniversity }) {
       <NoticeTicker />
       <UpcomingTests rows={upcomingExams} today={today} />
       <section>
-        <h2 className="mb-3 flex items-center gap-1.5 text-sm font-bold text-indigo-700 sm:text-base"><IconCalendarDays className="h-4 w-4" />সকল বিশ্ববিদ্যালয়ের ভর্তি সময়সূচি</h2>
+        <h2 className="mb-3 flex items-center gap-1.5 text-sm font-bold text-indigo-700 sm:text-base"><IconCalendarDays className="h-4 w-4" />{texts.sectionSchedule}</h2>
         <TableToolbar query={query} onQueryChange={setQuery} category={category} onCategoryChange={setCategory} status={status} onStatusChange={setStatus} />
         <div className="mt-4">
-          {visibleRows.length === 0 ? <EmptyState title="কোনো ফলাফল পাওয়া যায়নি" description="অনুসন্ধান বা ফিল্টার পরিবর্তন করে আবার চেষ্টা করুন।" /> : (
+          {visibleRows.length === 0 ? <EmptyState title={texts.emptyResults} description={texts.emptyResultsDesc} /> : (
             <React.Fragment><AdmissionTable rows={visibleRows} today={today} onOpen={onOpenUniversity} /><AdmissionMobileList rows={visibleRows} today={today} onOpen={onOpenUniversity} /></React.Fragment>
           )}
         </div>
@@ -3276,8 +3369,8 @@ function CategoryGrid({ onSelect }) {
   return (
     <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-soft">
       <div className="bg-teal-600 px-4 py-4 sm:px-6">
-        <h2 className="flex items-center gap-2 text-lg font-extrabold text-white sm:text-xl"><IconGrid className="h-5 w-5" />ক্যাটাগরি বেছে নিন</h2>
-        <p className="mt-1 text-sm font-medium text-teal-100">একটি ক্যাটাগরিতে ক্লিক করে সংশ্লিষ্ট বিশ্ববিদ্যালয়সমূহের ভর্তি তথ্য দেখুন।</p>
+        <h2 className="flex items-center gap-2 text-lg font-extrabold text-white sm:text-xl"><IconGrid className="h-5 w-5" />{texts.categoryPickTitle}</h2>
+        <p className="mt-1 text-sm font-medium text-teal-100">{texts.categoryPickDesc}</p>
       </div>
       <div className="grid grid-cols-1 gap-3 p-4 sm:grid-cols-2 sm:p-6">
         {categories.map((cat) => {
@@ -3289,7 +3382,7 @@ function CategoryGrid({ onSelect }) {
               className={`flex items-center justify-between gap-3 rounded-xl bg-white p-4 text-left shadow-soft ring-1 ring-slate-200 transition-all hover:-translate-y-0.5 hover:shadow-card hover:ring-2 ${theme.cardHoverRing}`}>
               <div className="flex items-center gap-3">
                 <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${theme.iconTile}`}><Icon className="h-5 w-5" /></div>
-                <div><p className="text-sm font-bold text-navy-900 sm:text-base">{cat.nameBn}</p><p className="mt-0.5 text-xs text-slate-400">{toBanglaNumber(count)}টি প্রতিষ্ঠান</p></div>
+                <div><p className="text-sm font-bold text-navy-900 sm:text-base">{cat.nameBn}</p><p className="mt-0.5 text-xs text-slate-400">{toBanglaNumber(count)}{texts.institutionCountSuffix}</p></div>
               </div>
               <IconChevronRight className="h-5 w-5 shrink-0 text-slate-300" />
             </button>
@@ -3337,9 +3430,9 @@ function UniversityCard({ university, onOpen }) {
       {activeUnit && (
         <React.Fragment>
           <div className="mt-4 grid grid-cols-3 gap-2 text-center sm:gap-3">
-            <div className="rounded-lg bg-slate-50 px-2 py-2.5"><p className="text-xs font-semibold text-slate-500 sm:text-sm">আবেদন শুরু</p><p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">{formatBanglaDate(activeUnit.applicationStart) ?? "প্রকাশিত হয়নি"}</p></div>
-            <div className="rounded-lg bg-slate-50 px-2 py-2.5"><p className="text-xs font-semibold text-slate-500 sm:text-sm">আবেদন শেষ</p><p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">{formatBanglaDate(activeUnit.applicationEnd) ?? "প্রকাশিত হয়নি"}</p></div>
-            <div className="rounded-lg bg-slate-50 px-2 py-2.5"><p className="text-xs font-semibold text-slate-500 sm:text-sm">ভর্তি পরীক্ষা</p><p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">{formatBanglaDate(activeUnit.examDate) ?? "প্রকাশিত হয়নি"}</p></div>
+            <div className="rounded-lg bg-slate-50 px-2 py-2.5"><p className="text-xs font-semibold text-slate-500 sm:text-sm">{texts.applicationStart}</p><p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">{formatBanglaDate(activeUnit.applicationStart) ?? texts.notPublishedShort}</p></div>
+            <div className="rounded-lg bg-slate-50 px-2 py-2.5"><p className="text-xs font-semibold text-slate-500 sm:text-sm">{texts.applicationEnd}</p><p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">{formatBanglaDate(activeUnit.applicationEnd) ?? texts.notPublishedShort}</p></div>
+            <div className="rounded-lg bg-slate-50 px-2 py-2.5"><p className="text-xs font-semibold text-slate-500 sm:text-sm">{texts.examDate}</p><p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">{formatBanglaDate(activeUnit.examDate) ?? texts.notPublishedShort}</p></div>
           </div>
           <div className="mt-3 flex flex-wrap items-center gap-2">
             <StatusBadge unit={activeUnit} today={today} />
@@ -3347,7 +3440,7 @@ function UniversityCard({ university, onOpen }) {
           </div>
         </React.Fragment>
       )}
-      <button onClick={() => onOpen(university.id)} className={`mt-4 flex w-full items-center justify-center gap-1 rounded-lg py-2 text-sm font-semibold text-white shadow-sm transition-colors ${theme.solid}`}>বিস্তারিত তথ্য দেখুন<IconChevronRight className="h-4 w-4" /></button>
+      <button onClick={() => onOpen(university.id)} className={`mt-4 flex w-full items-center justify-center gap-1 rounded-lg py-2 text-sm font-semibold text-white shadow-sm transition-colors ${theme.solid}`}>{texts.viewDetails}<IconChevronRight className="h-4 w-4" /></button>
     </div>
   );
 }
@@ -3362,7 +3455,7 @@ function CategoryTab({ onOpenUniversity }) {
           <CategoryPills active={selected} onSelect={setSelected} onBack={() => setSelected(null)} />
           <div>
             <h2 className="mb-3 text-sm font-bold text-navy-900 sm:text-base">{category?.nameBn}</h2>
-            {universityList.length === 0 ? <EmptyState title="এই ক্যাটাগরিতে কোনো তথ্য পাওয়া যায়নি" /> : (
+            {universityList.length === 0 ? <EmptyState title={texts.emptyCategory} /> : (
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {universityList.map((u) => <UniversityCard key={u.id} university={u} onOpen={onOpenUniversity} />)}
               </div>
@@ -3396,16 +3489,16 @@ function InfoSection({ title, icon: Icon, children, isEmpty, emptyText }) {
         {Icon && <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><Icon className="h-4 w-4" /></span>}
         {title}
       </h4>
-      {isEmpty ? <p className="text-base font-medium text-slate-400">{emptyText || "তথ্য প্রকাশিত হয়নি"}</p> : <div className="text-base text-slate-700">{children}</div>}
+      {isEmpty ? <p className="text-base font-medium text-slate-400">{emptyText || texts.notPublished}</p> : <div className="text-base text-slate-700">{children}</div>}
     </div>
   );
 }
 function CircularButton({ url, solidClassName }) {
-  if (!url) return <button disabled className="flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-slate-200 bg-slate-50 py-2.5 text-sm font-medium text-slate-400"><IconFileX className="h-4 w-4" />সার্কুলার প্রকাশিত হয়নি</button>;
-  return <a href={url} target="_blank" rel="noopener noreferrer" className={`flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-semibold text-white shadow-sm transition-colors ${solidClassName || "bg-indigo-600 hover:bg-indigo-700"}`}>অফিশিয়াল সার্কুলার দেখুন<IconExternal className="h-4 w-4" /></a>;
+  if (!url) return <button disabled className="flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-slate-200 bg-slate-50 py-2.5 text-sm font-medium text-slate-400"><IconFileX className="h-4 w-4" />{texts.circularNotPublished}</button>;
+  return <a href={url} target="_blank" rel="noopener noreferrer" className={`flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-semibold text-white shadow-sm transition-colors ${solidClassName || "bg-indigo-600 hover:bg-indigo-700"}`}>{texts.viewCircular}<IconExternal className="h-4 w-4" /></a>;
 }
 function DateBox({ label, value }) {
-  return <div className="rounded-lg bg-slate-50 px-3 py-2.5"><p className="text-xs font-semibold text-slate-500">{label}</p><p className="mt-0.5 text-base font-bold text-navy-900">{value ?? "তথ্য প্রকাশিত হয়নি"}</p></div>;
+  return <div className="rounded-lg bg-slate-50 px-3 py-2.5"><p className="text-xs font-semibold text-slate-500">{label}</p><p className="mt-0.5 text-base font-bold text-navy-900">{value ?? texts.notPublished}</p></div>;
 }
 function UniversityInfoPanel({ university, initialUnitId }) {
   const today = useToday();
@@ -3423,7 +3516,7 @@ function UniversityInfoPanel({ university, initialUnitId }) {
           <h2 className="mt-2 text-xl font-extrabold text-navy-900 sm:text-2xl">{university.nameBn}</h2>
           <p className="text-sm font-medium text-slate-500">{university.nameEn}</p>
         </div>
-        <span className="whitespace-nowrap text-sm font-semibold text-slate-500">ভর্তি সেশন: {university.admissionSession}</span>
+        <span className="whitespace-nowrap text-sm font-semibold text-slate-500">{texts.admissionSession}: {university.admissionSession}</span>
       </div>
       {university.introBn && <p className="mt-3 text-base font-medium text-slate-600">{university.introBn}</p>}
       {hasNamedUnits && university.units.length > 1 && (
@@ -3434,21 +3527,21 @@ function UniversityInfoPanel({ university, initialUnitId }) {
         </div>
       )}
       <div className="mt-5 space-y-4">
-        <InfoSection title="গুরুত্বপূর্ণ তারিখ" icon={IconCalendarClock} isEmpty={false}>
+        <InfoSection title={texts.sectionImportantDates} icon={IconCalendarClock} isEmpty={false}>
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
-            <DateBox label="আবেদন শুরু" value={formatBanglaDate(activeUnit.applicationStart)} />
-            <DateBox label="আবেদন শেষ" value={formatBanglaDate(activeUnit.applicationEnd)} />
-            <DateBox label="ভর্তি পরীক্ষা" value={formatBanglaDate(activeUnit.examDate)} />
+            <DateBox label={texts.applicationStart} value={formatBanglaDate(activeUnit.applicationStart)} />
+            <DateBox label={texts.applicationEnd} value={formatBanglaDate(activeUnit.applicationEnd)} />
+            <DateBox label={texts.examDate} value={formatBanglaDate(activeUnit.examDate)} />
           </div>
           <div className="mt-3 flex flex-wrap items-center gap-2">
             <StatusBadge unit={activeUnit} today={today} />
             {activeUnit.examDate && <CountdownBadge unit={activeUnit} today={today} />}
           </div>
         </InfoSection>
-        <InfoSection title="আসন সংখ্যা" icon={IconArmchair} isEmpty={!activeUnit.seats}>
+        <InfoSection title={texts.sectionSeats} icon={IconArmchair} isEmpty={!activeUnit.seats}>
           {activeUnit.seats && (
             <div>
-              {activeUnit.seats.total !== null && <p className="text-base text-slate-700">মোট আসন: <span className="font-extrabold text-navy-900">{toBanglaNumber(activeUnit.seats.total)}</span></p>}
+              {activeUnit.seats.total !== null && <p className="text-base text-slate-700">{texts.totalSeats}: <span className="font-extrabold text-navy-900">{toBanglaNumber(activeUnit.seats.total)}</span></p>}
               {activeUnit.seats.breakdown && activeUnit.seats.breakdown.length > 0 && (
                 <ul className="mt-2 divide-y divide-slate-200 text-base font-medium text-slate-600">
                   {activeUnit.seats.breakdown.map((b) => <li key={b.nameBn} className="flex justify-between py-2"><span>{b.nameBn}</span><span className="font-bold text-navy-800">{toBanglaNumber(b.count)}</span></li>)}
@@ -3457,18 +3550,18 @@ function UniversityInfoPanel({ university, initialUnitId }) {
             </div>
           )}
         </InfoSection>
-        <InfoSection title="আবেদন যোগ্যতা" icon={IconClipboardCheck} isEmpty={!activeUnit.eligibility?.descriptionBn && !(activeUnit.eligibility?.points?.length)}>
+        <InfoSection title={texts.sectionEligibility} icon={IconClipboardCheck} isEmpty={!activeUnit.eligibility?.descriptionBn && !(activeUnit.eligibility?.points?.length)}>
           {activeUnit.eligibility?.descriptionBn && <p className="text-base font-medium leading-relaxed text-slate-700">{activeUnit.eligibility.descriptionBn}</p>}
           {activeUnit.eligibility?.points && activeUnit.eligibility.points.length > 0 && (
             <ul className="mt-2 list-inside list-disc space-y-1.5 text-base font-medium text-slate-700">{activeUnit.eligibility.points.map((p, i) => <li key={i}>{p}</li>)}</ul>
           )}
         </InfoSection>
-        <InfoSection title="পরীক্ষার ধরন" icon={IconListChecks} isEmpty={!activeUnit.examPattern}><p className="text-base font-medium leading-relaxed text-slate-700">{activeUnit.examPattern}</p></InfoSection>
-        <InfoSection title="বিষয় ও প্রশ্নসংখ্যা" icon={IconListOrdered} isEmpty={activeUnit.subjects.length === 0}>
+        <InfoSection title={texts.sectionExamPattern} icon={IconListChecks} isEmpty={!activeUnit.examPattern}><p className="text-base font-medium leading-relaxed text-slate-700">{activeUnit.examPattern}</p></InfoSection>
+        <InfoSection title={texts.sectionSubjects} icon={IconListOrdered} isEmpty={activeUnit.subjects.length === 0}>
           <ul className="divide-y divide-slate-200 text-base font-medium">{activeUnit.subjects.map((s) => <li key={s.nameBn} className="flex items-center justify-between gap-3 py-2"><span className="text-slate-700">{s.nameBn}</span><span className="shrink-0 font-extrabold text-navy-900">{toBanglaNumber(s.marks)}</span></li>)}</ul>
         </InfoSection>
-        <InfoSection title="ফলাফল নির্ণয় পদ্ধতি" icon={IconCalculator} isEmpty={!activeUnit.resultMethod}><p className="text-base font-medium leading-relaxed text-slate-700">{activeUnit.resultMethod}</p></InfoSection>
-        <InfoSection title="অফিসিয়াল সার্কুলার" icon={IconFileText} isEmpty={false}>
+        <InfoSection title={texts.sectionResultMethod} icon={IconCalculator} isEmpty={!activeUnit.resultMethod}><p className="text-base font-medium leading-relaxed text-slate-700">{activeUnit.resultMethod}</p></InfoSection>
+        <InfoSection title={texts.sectionCircular} icon={IconFileText} isEmpty={false}>
           <CircularButton url={activeUnit.circularUrl} solidClassName={theme.solid} />
         </InfoSection>
       </div>
@@ -3497,12 +3590,12 @@ function InfoTab({ jumpToUniversityId, onConsumeJump }) {
           <CategoryPills active={selectedCategory} onSelect={(id) => { setSelectedCategory(id); setSelectedUniversityId(null); }} onBack={() => setSelectedCategory(null)} />
           <div>
             <h2 className="mb-3 text-sm font-bold text-navy-900 sm:text-base">{category?.nameBn}</h2>
-            {universityList.length === 0 ? <EmptyState title="এই ক্যাটাগরিতে কোনো তথ্য পাওয়া যায়নি" /> : <UniversityPicker universityList={universityList} onSelect={setSelectedUniversityId} />}
+            {universityList.length === 0 ? <EmptyState title={texts.emptyCategory} /> : <UniversityPicker universityList={universityList} onSelect={setSelectedUniversityId} />}
           </div>
         </React.Fragment>
       ) : (
         <div>
-          <button onClick={() => setSelectedUniversityId(null)} className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:text-indigo-800"><IconArrowLeft className="h-4 w-4" />তালিকায় ফিরে যান</button>
+          <button onClick={() => setSelectedUniversityId(null)} className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:text-indigo-800"><IconArrowLeft className="h-4 w-4" />{texts.backToList}</button>
           <UniversityInfoPanel university={selectedUniversity} />
         </div>
       )}
@@ -3515,9 +3608,9 @@ function InfoTab({ jumpToUniversityId, onConsumeJump }) {
    ========================================================================= */
 const CHECKER_SUBJECTS = ["পদার্থবিজ্ঞান", "রসায়ন", "জীববিজ্ঞান", "উচ্চতর গণিত", "ইংরেজি"];
 const GROUP_OPTIONS = [
-  { value: "science", labelBn: "বিজ্ঞান" },
-  { value: "commerce", labelBn: "বাণিজ্য" },
-  { value: "arts", labelBn: "মানবিক" },
+  { value: "science", labelKey: "groupScience" },
+  { value: "commerce", labelKey: "groupCommerce" },
+  { value: "arts", labelKey: "groupArts" },
 ];
 
 function isEligibleForUnit(criteria, input) {
@@ -3603,34 +3696,34 @@ function EligibilityChecker({ onOpenUniversity }) {
     <div className="space-y-5">
       <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-soft">
         <div className="bg-purple-600 px-4 py-4 sm:px-6">
-          <h2 className="flex items-center gap-2 text-lg font-extrabold text-white sm:text-xl"><IconClipboardCheck className="h-5 w-5" />আবেদনযোগ্যতা যাচাই করুন</h2>
-          <p className="mt-1 text-sm font-medium text-purple-100">আপনার জিপিএ দিন, কোন কোন বিশ্ববিদ্যালয়ে আবেদন করতে পারবেন তা সাথে সাথে দেখুন</p>
+          <h2 className="flex items-center gap-2 text-lg font-extrabold text-white sm:text-xl"><IconClipboardCheck className="h-5 w-5" />{texts.checkerTitle}</h2>
+          <p className="mt-1 text-sm font-medium text-purple-100">{texts.checkerSubtitle}</p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4 p-4 sm:p-6">
           <div>
-            <p className="mb-2 text-sm font-bold text-navy-900">গ্রুপ *</p>
+            <p className="mb-2 text-sm font-bold text-navy-900">{texts.groupLabel}</p>
             <div className="flex flex-wrap gap-2">
               {GROUP_OPTIONS.map((opt) => (
                 <button key={opt.value} type="button" onClick={() => setGroup(opt.value)}
                   className={`rounded-full border px-4 py-2 text-sm font-bold transition-colors ${group === opt.value ? "border-purple-600 bg-purple-600 text-white" : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"}`}>
-                  {opt.labelBn}
+                  {texts[opt.labelKey]}
                 </button>
               ))}
             </div>
           </div>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <label className="block">
-              <span className="mb-1.5 block text-sm font-bold text-navy-900">SSC জিপিএ *</span>
-              <input required type="number" min={0} max={5} step={0.01} placeholder="যেমন: ৫.০০" value={sscGpa} onChange={(e) => setSscGpa(e.target.value)} className={checkerInputClass} />
+              <span className="mb-1.5 block text-sm font-bold text-navy-900">{texts.sscGpaLabel}</span>
+              <input required type="number" min={0} max={5} step={0.01} placeholder={texts.gpaPlaceholder} value={sscGpa} onChange={(e) => setSscGpa(e.target.value)} className={checkerInputClass} />
             </label>
             <label className="block">
-              <span className="mb-1.5 block text-sm font-bold text-navy-900">HSC জিপিএ *</span>
-              <input required type="number" min={0} max={5} step={0.01} placeholder="যেমন: ৫.০০" value={hscGpa} onChange={(e) => setHscGpa(e.target.value)} className={checkerInputClass} />
+              <span className="mb-1.5 block text-sm font-bold text-navy-900">{texts.hscGpaLabel}</span>
+              <input required type="number" min={0} max={5} step={0.01} placeholder={texts.gpaPlaceholder} value={hscGpa} onChange={(e) => setHscGpa(e.target.value)} className={checkerInputClass} />
             </label>
           </div>
           {group === "science" && (
             <div>
-              <p className="mb-2 text-sm font-bold text-navy-900">বিষয়ভিত্তিক HSC জিপিএ</p>
+              <p className="mb-2 text-sm font-bold text-navy-900">{texts.subjectGpaLabel}</p>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {CHECKER_SUBJECTS.map((subject) => (
                   <label key={subject} className="block">
@@ -3643,35 +3736,35 @@ function EligibilityChecker({ onOpenUniversity }) {
           )}
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <label className="block">
-              <span className="mb-1.5 block text-sm font-bold text-navy-900">SSC পাসের সাল *</span>
-              <input required type="number" min={2005} max={CHECKER_CURRENT_YEAR} step={1} placeholder={`যেমন: ${CHECKER_CURRENT_YEAR - 2}`} value={sscYear} onChange={(e) => setSscYear(e.target.value)} className={checkerInputClass} />
+              <span className="mb-1.5 block text-sm font-bold text-navy-900">{texts.sscYearLabel}</span>
+              <input required type="number" min={2005} max={CHECKER_CURRENT_YEAR} step={1} placeholder={fillTemplate(texts.yearPlaceholder, { year: String(CHECKER_CURRENT_YEAR - 2) })} value={sscYear} onChange={(e) => setSscYear(e.target.value)} className={checkerInputClass} />
             </label>
             <label className="block">
-              <span className="mb-1.5 block text-sm font-bold text-navy-900">HSC পাসের সাল *</span>
-              <input required type="number" min={2005} max={CHECKER_CURRENT_YEAR} step={1} placeholder={`যেমন: ${CHECKER_CURRENT_YEAR}`} value={hscYear} onChange={(e) => setHscYear(e.target.value)} className={checkerInputClass} />
+              <span className="mb-1.5 block text-sm font-bold text-navy-900">{texts.hscYearLabel}</span>
+              <input required type="number" min={2005} max={CHECKER_CURRENT_YEAR} step={1} placeholder={fillTemplate(texts.yearPlaceholder, { year: String(CHECKER_CURRENT_YEAR) })} value={hscYear} onChange={(e) => setHscYear(e.target.value)} className={checkerInputClass} />
             </label>
           </div>
           <label className="block">
-            <span className="mb-1.5 block text-sm font-bold text-navy-900">মোবাইল নম্বর *</span>
-            <input required type="tel" inputMode="numeric" pattern="01[3-9][0-9]{8}" maxLength={11} placeholder="যেমন: ০১৭xxxxxxxx" value={mobileNumber} onChange={(e) => setMobileNumber(e.target.value.replace(/[^0-9]/g, ""))} className={checkerInputClass} />
+            <span className="mb-1.5 block text-sm font-bold text-navy-900">{texts.mobileLabel}</span>
+            <input required type="tel" inputMode="numeric" pattern="01[3-9][0-9]{8}" maxLength={11} placeholder={texts.mobilePlaceholder} value={mobileNumber} onChange={(e) => setMobileNumber(e.target.value.replace(/[^0-9]/g, ""))} className={checkerInputClass} />
           </label>
-          <button type="submit" className="flex w-full items-center justify-center gap-2 rounded-lg bg-purple-600 py-3 text-base font-extrabold text-white shadow-soft transition-opacity hover:opacity-90"><IconCheckCircle className="h-5 w-5" />যাচাই করুন</button>
+          <button type="submit" className="flex w-full items-center justify-center gap-2 rounded-lg bg-purple-600 py-3 text-base font-extrabold text-white shadow-soft transition-opacity hover:opacity-90"><IconCheckCircle className="h-5 w-5" />{texts.checkButton}</button>
         </form>
       </div>
       {submittedInput && <EligibilityResults resultsByCategory={resultsByCategory} totalCount={results.length} onOpenUniversity={onOpenUniversity} />}
-      <p className="text-center text-xs font-medium text-slate-400">এই ফলাফল শুধুমাত্র জিপিএ-ভিত্তিক একটি প্রাথমিক অনুমান, যা ২০২৫ সালের ভর্তি বিজ্ঞপ্তির ধরন অনুসারে হিসাব করা হয়েছে। চূড়ান্ত সিদ্ধান্তের আগে সংশ্লিষ্ট বিশ্ববিদ্যালয়ের অফিসিয়াল সার্কুলার অবশ্যই যাচাই করুন।</p>
+      <p className="text-center text-xs font-medium text-slate-400">{texts.checkerDisclaimer}</p>
     </div>
   );
 }
 
 function EligibilityResults({ resultsByCategory, totalCount, onOpenUniversity }) {
   if (totalCount === 0) {
-    return <EmptyState title="আপনার দেওয়া তথ্য অনুযায়ী কোনো প্রতিষ্ঠানে যোগ্য পাওয়া যায়নি" description="জিপিএ ও গ্রুপ আবার যাচাই করে দেখুন, অথবা বিষয়ভিত্তিক জিপিএ যোগ করে চেষ্টা করুন।" />;
+    return <EmptyState title={texts.noEligibleTitle} description={texts.noEligibleDesc} />;
   }
   return (
     <div className="space-y-4">
       <div className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-center">
-        <p className="text-base font-extrabold text-emerald-800">আপনি মোট {toBanglaNumber(totalCount)}টি ইউনিটে আবেদনযোগ্য</p>
+        <p className="text-base font-extrabold text-emerald-800">{texts.eligibleCountPrefix} {toBanglaNumber(totalCount)}{texts.eligibleCountSuffix}</p>
       </div>
       {categories.map((category) => {
         const rows = resultsByCategory.get(category.id);
@@ -3691,14 +3784,14 @@ function EligibilityResults({ resultsByCategory, totalCount, onOpenUniversity })
                       <p className="text-base font-extrabold text-navy-900">{university.nameBn}<span className="ml-1.5 text-sm font-semibold text-slate-400">({university.shortName})</span></p>
                       {unit.nameBn && <p className="text-sm font-medium text-slate-500">{unit.nameBn}</p>}
                     </div>
-                    <button onClick={() => onOpenUniversity(university.id)} className="inline-flex shrink-0 items-center gap-0.5 text-sm font-bold text-purple-600 hover:text-purple-800">বিস্তারিত<IconChevronRight className="h-4 w-4" /></button>
+                    <button onClick={() => onOpenUniversity(university.id)} className="inline-flex shrink-0 items-center gap-0.5 text-sm font-bold text-purple-600 hover:text-purple-800">{texts.details}<IconChevronRight className="h-4 w-4" /></button>
                   </div>
                   <div className="mt-2 rounded-lg bg-slate-50 p-3">
-                    <p className="mb-1 text-xs font-bold uppercase tracking-wide text-slate-500">সর্বনিম্ন যোগ্যতা</p>
+                    <p className="mb-1 text-xs font-bold uppercase tracking-wide text-slate-500">{texts.minRequirements}</p>
                     <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold text-slate-700">
                       {formatCriteriaSummary(criteria).map((line, i) => <span key={i}>{line}</span>)}
                     </div>
-                    {criteria.noteBn && <p className="mt-1.5 text-sm font-medium text-amber-700">টীকা: {criteria.noteBn}</p>}
+                    {criteria.noteBn && <p className="mt-1.5 text-sm font-medium text-amber-700">{texts.noteLabel}: {criteria.noteBn}</p>}
                   </div>
                 </li>
               ))}
@@ -3738,6 +3831,12 @@ function applyContent(data) {
     universities.splice(0, universities.length, ...withDefaults);
     changed = true;
   }
+  if (data.texts && typeof data.texts === "object") {
+    for (const key of Object.keys(texts)) {
+      const value = data.texts[key];
+      if (typeof value === "string" && value.trim() !== "") { texts[key] = value; changed = true; }
+    }
+  }
   if (Array.isArray(data.notices) && data.notices.every((n) => typeof n === "string")) {
     NOTICES.splice(0, NOTICES.length, ...data.notices);
     changed = true;
@@ -3754,6 +3853,7 @@ function DateOverridesProvider({ children }) {
       let changed = applyContent(await getJson("content.json"));
       const dates = await getJson("dates.json");
       if (dates && typeof dates === "object" && applyDateOverrides(dates) > 0) changed = true;
+      document.title = texts.pageTitle;
       if (!cancelled && changed) setVersion((v) => v + 1);
     })();
     return () => { cancelled = true; };
@@ -3766,7 +3866,7 @@ function App() {
   const openUniversityInInfoTab = (id) => { setJumpToUniversityId(id); setActiveTab("info"); };
   // Tab switches replace the whole panel below the sticky nav, so always
   // reset scroll to top — otherwise a switch triggered from far down a long
-  // list (e.g. a table row's "বিস্তারিত" button) leaves new content hidden
+  // list (e.g. a table row's texts.details button) leaves new content hidden
   // underneath the sticky header/tabs bar.
   useEffect(() => { window.scrollTo(0, 0); }, [activeTab]);
   return (

@@ -8,6 +8,7 @@ import { UniversityCard } from "@/components/category/UniversityCard";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { categories, getCategoryBySlug } from "@/data/categories";
 import { getUniversitiesByCategory } from "@/data/universities";
+import { texts } from "@/lib/texts";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -43,11 +44,11 @@ export default async function CategoryPage({ params }: PageProps) {
           className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:text-indigo-800"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden />
-          হোমে ফিরে যান
+          {texts.backHome}
         </Link>
         <h1 className="mb-4 text-lg font-bold text-navy-900 sm:text-xl">{category.nameBn}</h1>
         {universityList.length === 0 ? (
-          <EmptyState title="এই ক্যাটাগরিতে কোনো তথ্য পাওয়া যায়নি" />
+          <EmptyState title={texts.emptyCategory} />
         ) : (
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {universityList.map((u) => (

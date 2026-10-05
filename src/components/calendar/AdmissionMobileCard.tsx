@@ -5,6 +5,7 @@ import { getCategoryById } from "@/data/categories";
 import { formatBanglaDate } from "@/lib/bangla";
 import { CountdownBadge } from "@/components/ui/CountdownBadge";
 import { getCategoryTheme } from "@/lib/categoryTheme";
+import { texts } from "@/lib/texts";
 
 export function AdmissionMobileList({ rows, today }: { rows: FlatUnitRow[]; today: string }) {
   return (
@@ -40,15 +41,15 @@ export function AdmissionMobileList({ rows, today }: { rows: FlatUnitRow[]; toda
 
             <dl className="mt-3 grid grid-cols-2 divide-x divide-slate-200 border-t border-slate-200 pt-3 text-xs">
               <div className="pr-3">
-                <dt className="text-slate-400">ভর্তি পরীক্ষা</dt>
+                <dt className="text-slate-400">{texts.examDate}</dt>
                 <dd className="font-medium text-slate-700">
-                  {formatBanglaDate(unit.examDate) ?? "তথ্য প্রকাশিত হয়নি"}
+                  {formatBanglaDate(unit.examDate) ?? texts.notPublished}
                 </dd>
               </div>
               <div className="pl-3">
-                <dt className="text-slate-400">আবেদন শেষ</dt>
+                <dt className="text-slate-400">{texts.applicationEnd}</dt>
                 <dd className="font-medium text-slate-700">
-                  {formatBanglaDate(unit.applicationEnd) ?? "তথ্য প্রকাশিত হয়নি"}
+                  {formatBanglaDate(unit.applicationEnd) ?? texts.notPublished}
                 </dd>
               </div>
             </dl>

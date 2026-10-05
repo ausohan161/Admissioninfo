@@ -1,4 +1,5 @@
 import { ExternalLink, FileX2 } from "lucide-react";
+import { texts } from "@/lib/texts";
 
 export function CircularButton({
   url,
@@ -15,7 +16,7 @@ export function CircularButton({
         className="flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-slate-200 bg-slate-50 py-2.5 text-sm font-medium text-slate-400"
       >
         <FileX2 className="h-4 w-4" aria-hidden />
-        সার্কুলার প্রকাশিত হয়নি
+        {texts.circularNotPublished}
       </button>
     );
   }
@@ -27,7 +28,7 @@ export function CircularButton({
       rel="noopener noreferrer"
       className={`flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-semibold text-white shadow-sm transition-colors ${solidClassName}`}
     >
-      অফিশিয়াল সার্কুলার দেখুন
+      {texts.viewCircular}
       <ExternalLink className="h-4 w-4" aria-hidden />
     </a>
   );

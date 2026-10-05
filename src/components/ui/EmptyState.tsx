@@ -1,7 +1,8 @@
 import { Inbox } from "lucide-react";
+import { texts } from "@/lib/texts";
 
 export function EmptyState({
-  title = "কোনো তথ্য পাওয়া যায়নি",
+  title = texts.emptyDefaultTitle,
   description,
 }: {
   title?: string;

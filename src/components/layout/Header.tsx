@@ -3,6 +3,7 @@
 import { CalendarClock } from "lucide-react";
 import { formatBanglaDate } from "@/lib/bangla";
 import { useToday } from "@/lib/useToday";
+import { texts } from "@/lib/texts";
 
 export function Header() {
   const today = useToday();
@@ -17,16 +18,16 @@ export function Header() {
           </div>
           <div>
             <h1 className="text-lg font-bold leading-tight text-navy-900 sm:text-xl">
-              অ্যাডমিশন ক্যালেন্ডার
+              {texts.appName}
             </h1>
             <p className="text-xs leading-tight text-slate-500 sm:text-sm">
-              একনজরে বিশ্ববিদ্যালয়সমূহের ভর্তি পরীক্ষার সূচি ও তথ্য
+              {texts.appTagline}
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-2 text-xs text-slate-400 sm:text-sm">
-          <span className="hidden sm:inline">সর্বশেষ আপডেট:</span>
+          <span className="hidden sm:inline">{texts.lastUpdated}</span>
           <span className="font-medium text-slate-500">{formatted ?? "—"}</span>
         </div>
       </div>

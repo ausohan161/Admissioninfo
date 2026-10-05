@@ -141,7 +141,9 @@ function writeContentFile(universities) {
   const noticesFile = path.join(__dirname, "..", "src", "data", "notices.json");
   const notices = JSON.parse(fs.readFileSync(noticesFile, "utf8")).notices;
   const contentFile = path.join(__dirname, "..", "public", "content.json");
-  fs.writeFileSync(contentFile, JSON.stringify({ universities, notices }, null, 2) + "\n", "utf8");
+  const textsFile = path.join(__dirname, "..", "src", "data", "texts.json");
+  const texts = JSON.parse(fs.readFileSync(textsFile, "utf8"));
+  fs.writeFileSync(contentFile, JSON.stringify({ universities, notices, texts }, null, 2) + "\n", "utf8");
   console.log(`✓ Wrote ${contentFile}`);
 }
 

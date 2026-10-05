@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { texts } from "@/lib/texts";
 import { Suspense } from "react";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
@@ -40,7 +41,7 @@ export default async function UniversityPage({ params }: PageProps) {
           className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:text-indigo-800"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden />
-          হোমে ফিরে যান
+          {texts.backHome}
         </Link>
         {/* UniversityInfoPanel reads the `?unit=` query on the client (useSearchParams),
             which Next.js requires to be wrapped in Suspense for static export. */}

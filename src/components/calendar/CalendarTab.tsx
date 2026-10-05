@@ -16,6 +16,7 @@ import { TableToolbar } from "./TableToolbar";
 import { AdmissionTable } from "./AdmissionTable";
 import { AdmissionMobileList } from "./AdmissionMobileCard";
 import { EmptyState } from "@/components/ui/EmptyState";
+import { texts } from "@/lib/texts";
 
 export function CalendarTab() {
   const today = useToday();
@@ -51,7 +52,7 @@ export function CalendarTab() {
       <section>
         <h2 className="mb-3 flex items-center gap-1.5 text-sm font-bold text-indigo-700 sm:text-base">
           <CalendarRange className="h-4 w-4" />
-          সকল বিশ্ববিদ্যালয়ের ভর্তি সময়সূচি
+          {texts.sectionSchedule}
         </h2>
         <TableToolbar
           query={query}
@@ -65,8 +66,8 @@ export function CalendarTab() {
         <div className="mt-4">
           {visibleRows.length === 0 ? (
             <EmptyState
-              title="কোনো ফলাফল পাওয়া যায়নি"
-              description="অনুসন্ধান বা ফিল্টার পরিবর্তন করে আবার চেষ্টা করুন।"
+              title={texts.emptyResults}
+              description={texts.emptyResultsDesc}
             />
           ) : (
             <>

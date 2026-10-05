@@ -8,6 +8,7 @@ import { CategoryGrid } from "./CategoryGrid";
 import { CategoryPills } from "./CategoryPills";
 import { UniversityCard } from "./UniversityCard";
 import { EmptyState } from "@/components/ui/EmptyState";
+import { texts } from "@/lib/texts";
 
 export function CategoryTab() {
   const [selected, setSelected] = useState<CategoryId | null>(null);
@@ -29,7 +30,7 @@ export function CategoryTab() {
           <div>
             <h2 className="mb-3 text-sm font-bold text-navy-900 sm:text-base">{category?.nameBn}</h2>
             {universityList.length === 0 ? (
-              <EmptyState title="এই ক্যাটাগরিতে কোনো তথ্য পাওয়া যায়নি" />
+              <EmptyState title={texts.emptyCategory} />
             ) : (
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {universityList.map((u) => (

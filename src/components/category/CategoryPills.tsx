@@ -2,6 +2,7 @@ import { ArrowLeft } from "lucide-react";
 import { categories } from "@/data/categories";
 import { CategoryId } from "@/data/types";
 import { getCategoryTheme } from "@/lib/categoryTheme";
+import { texts } from "@/lib/texts";
 
 export function CategoryPills({
   active,
@@ -16,7 +17,7 @@ export function CategoryPills({
     <div className="flex items-center gap-2">
       <button
         onClick={onBack}
-        aria-label="ক্যাটাগরি তালিকায় ফিরে যান"
+        aria-label={texts.backToCategoryAria}
         className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-500 hover:bg-slate-50"
       >
         <ArrowLeft className="h-4 w-4" aria-hidden />

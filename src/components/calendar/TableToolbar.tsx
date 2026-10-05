@@ -4,13 +4,14 @@ import { Search } from "lucide-react";
 import { categories } from "@/data/categories";
 import { CategoryId } from "@/data/types";
 import { StatusFilter } from "@/lib/filters";
+import { texts, TextKey } from "@/lib/texts";
 
-const STATUS_OPTIONS: { value: StatusFilter; labelBn: string }[] = [
-  { value: "all", labelBn: "সব অবস্থা" },
-  { value: "ongoing", labelBn: "আবেদন চলছে" },
-  { value: "closed", labelBn: "আবেদন শেষ" },
-  { value: "upcoming-exam", labelBn: "পরীক্ষা আসন্ন" },
-  { value: "completed", labelBn: "পরীক্ষা সম্পন্ন" },
+const STATUS_OPTIONS: { value: StatusFilter; labelKey: TextKey }[] = [
+  { value: "all", labelKey: "statusAll" },
+  { value: "ongoing", labelKey: "statusOngoing" },
+  { value: "closed", labelKey: "applicationEnd" },
+  { value: "upcoming-exam", labelKey: "statusUpcomingExam" },
+  { value: "completed", labelKey: "statusCompleted" },
 ];
 
 interface Props {
@@ -41,20 +42,20 @@ export function TableToolbar({
           type="search"
           value={query}
           onChange={(e) => onQueryChange(e.target.value)}
-          placeholder="বিশ্ববিদ্যালয় খুঁজুন — যেমন BUET, DU, GST"
-          aria-label="বিশ্ববিদ্যালয় অনুসন্ধান"
+          placeholder={texts.searchPlaceholder}
+          aria-label={texts.searchAria}
           className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pl-9 pr-3 text-base text-slate-700 sm:text-sm focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
         />
       </div>
 
       <div className="grid grid-cols-2 gap-2">
         <select
-          aria-label="ক্যাটাগরি ফিল্টার"
+          aria-label={texts.categoryFilterAria}
           className={selectClass}
           value={category}
           onChange={(e) => onCategoryChange(e.target.value as CategoryId | "all")}
         >
-          <option value="all">সব ক্যাটাগরি</option>
+          <option value="all">{texts.allCategories}</option>
           {categories.map((c) => (
             <option key={c.id} value={c.id}>
               {c.shortNameBn}
@@ -63,14 +64,14 @@ export function TableToolbar({
         </select>
 
         <select
-          aria-label="অবস্থা ফিল্টার"
+          aria-label={texts.statusFilterAria}
           className={selectClass}
           value={status}
           onChange={(e) => onStatusChange(e.target.value as StatusFilter)}
         >
           {STATUS_OPTIONS.map((s) => (
             <option key={s.value} value={s.value}>
-              {s.labelBn}
+              {texts[s.labelKey]}
             </option>
           ))}
         </select>

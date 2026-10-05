@@ -10,6 +10,7 @@ import { CategoryPills } from "@/components/category/CategoryPills";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { UniversityPicker } from "./UniversityPicker";
 import { UniversityInfoPanel } from "./UniversityInfoPanel";
+import { texts } from "@/lib/texts";
 
 export function InfoTab() {
   const [selectedCategory, setSelectedCategory] = useState<CategoryId | null>(null);
@@ -39,7 +40,7 @@ export function InfoTab() {
           <div>
             <h2 className="mb-3 text-sm font-bold text-navy-900 sm:text-base">{category?.nameBn}</h2>
             {universityList.length === 0 ? (
-              <EmptyState title="এই ক্যাটাগরিতে কোনো তথ্য পাওয়া যায়নি" />
+              <EmptyState title={texts.emptyCategory} />
             ) : (
               <UniversityPicker universityList={universityList} onSelect={setSelectedUniversityId} />
             )}
@@ -52,7 +53,7 @@ export function InfoTab() {
             className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:text-indigo-800"
           >
             <ArrowLeft className="h-4 w-4" aria-hidden />
-            তালিকায় ফিরে যান
+            {texts.backToList}
           </button>
           <UniversityInfoPanel university={selectedUniversity} />
         </div>

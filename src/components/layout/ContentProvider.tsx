@@ -3,6 +3,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { applyDateOverrides } from "@/lib/dateOverrides";
 import { applyContent } from "@/lib/contentStore";
+import { texts } from "@/lib/texts";
 
 async function fetchJson(path: string): Promise<unknown> {
   const res = await fetch(`${path}?t=${Date.now()}`, { cache: "no-store" });
@@ -32,6 +33,7 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
       } catch (err) {
         console.warn("dates.json লোড করা যায়নি (JSON ভুল থাকতে পারে):", err);
       }
+      document.title = texts.pageTitle;
       // Remount only when something changed, so memoised views recompute from the new data.
       if (!cancelled && changed) setVersion((v) => v + 1);
     })();

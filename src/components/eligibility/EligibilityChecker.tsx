@@ -17,11 +17,12 @@ import {
 } from "@/lib/eligibility";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { toBanglaNumber } from "@/lib/bangla";
+import { texts, TextKey, fillTemplate } from "@/lib/texts";
 
-const GROUP_OPTIONS: { value: StudentGroup; labelBn: string }[] = [
-  { value: "science", labelBn: "বিজ্ঞান" },
-  { value: "commerce", labelBn: "বাণিজ্য" },
-  { value: "arts", labelBn: "মানবিক" },
+const GROUP_OPTIONS: { value: StudentGroup; labelKey: TextKey }[] = [
+  { value: "science", labelKey: "groupScience" },
+  { value: "commerce", labelKey: "groupCommerce" },
+  { value: "arts", labelKey: "groupArts" },
 ];
 
 const inputClass =
@@ -81,16 +82,16 @@ export function EligibilityChecker() {
         <div className="bg-purple-600 px-4 py-4 sm:px-6">
           <h2 className="flex items-center gap-2 text-lg font-extrabold text-white sm:text-xl">
             <ClipboardCheck className="h-5 w-5" aria-hidden />
-            আবেদনযোগ্যতা যাচাই করুন
+            {texts.checkerTitle}
           </h2>
           <p className="mt-1 text-sm font-medium text-purple-100">
-            আপনার জিপিএ দিন, কোন কোন বিশ্ববিদ্যালয়ে আবেদন করতে পারবেন তা সাথে সাথে দেখুন
+            {texts.checkerSubtitle}
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4 p-4 sm:p-6">
           <div>
-            <p className="mb-2 text-sm font-bold text-navy-900">গ্রুপ *</p>
+            <p className="mb-2 text-sm font-bold text-navy-900">{texts.groupLabel}</p>
             <div className="flex flex-wrap gap-2">
               {GROUP_OPTIONS.map((opt) => (
                 <button
@@ -103,7 +104,7 @@ export function EligibilityChecker() {
                       : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
                   }`}
                 >
-                  {opt.labelBn}
+                  {texts[opt.labelKey]}
                 </button>
               ))}
             </div>
@@ -111,28 +112,28 @@ export function EligibilityChecker() {
 
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <label className="block">
-              <span className="mb-1.5 block text-sm font-bold text-navy-900">SSC জিপিএ *</span>
+              <span className="mb-1.5 block text-sm font-bold text-navy-900">{texts.sscGpaLabel}</span>
               <input
                 required
                 type="number"
                 min={0}
                 max={5}
                 step={0.01}
-                placeholder="যেমন: ৫.০০"
+                placeholder={texts.gpaPlaceholder}
                 value={sscGpa}
                 onChange={(e) => setSscGpa(e.target.value)}
                 className={inputClass}
               />
             </label>
             <label className="block">
-              <span className="mb-1.5 block text-sm font-bold text-navy-900">HSC জিপিএ *</span>
+              <span className="mb-1.5 block text-sm font-bold text-navy-900">{texts.hscGpaLabel}</span>
               <input
                 required
                 type="number"
                 min={0}
                 max={5}
                 step={0.01}
-                placeholder="যেমন: ৫.০০"
+                placeholder={texts.gpaPlaceholder}
                 value={hscGpa}
                 onChange={(e) => setHscGpa(e.target.value)}
                 className={inputClass}
@@ -143,7 +144,7 @@ export function EligibilityChecker() {
           {group === "science" && (
             <div>
               <p className="mb-2 flex items-center gap-1.5 text-sm font-bold text-navy-900">
-                বিষয়ভিত্তিক HSC জিপিএ
+                {texts.subjectGpaLabel}
               </p>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {CHECKER_SUBJECTS.map((subject) => (
@@ -166,28 +167,28 @@ export function EligibilityChecker() {
 
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <label className="block">
-              <span className="mb-1.5 block text-sm font-bold text-navy-900">SSC পাসের সাল *</span>
+              <span className="mb-1.5 block text-sm font-bold text-navy-900">{texts.sscYearLabel}</span>
               <input
                 required
                 type="number"
                 min={2005}
                 max={CURRENT_YEAR}
                 step={1}
-                placeholder={`যেমন: ${CURRENT_YEAR - 2}`}
+                placeholder={fillTemplate(texts.yearPlaceholder, { year: String(CURRENT_YEAR - 2) })}
                 value={sscYear}
                 onChange={(e) => setSscYear(e.target.value)}
                 className={inputClass}
               />
             </label>
             <label className="block">
-              <span className="mb-1.5 block text-sm font-bold text-navy-900">HSC পাসের সাল *</span>
+              <span className="mb-1.5 block text-sm font-bold text-navy-900">{texts.hscYearLabel}</span>
               <input
                 required
                 type="number"
                 min={2005}
                 max={CURRENT_YEAR}
                 step={1}
-                placeholder={`যেমন: ${CURRENT_YEAR}`}
+                placeholder={fillTemplate(texts.yearPlaceholder, { year: String(CURRENT_YEAR) })}
                 value={hscYear}
                 onChange={(e) => setHscYear(e.target.value)}
                 className={inputClass}
@@ -196,14 +197,14 @@ export function EligibilityChecker() {
           </div>
 
           <label className="block">
-            <span className="mb-1.5 block text-sm font-bold text-navy-900">মোবাইল নম্বর *</span>
+            <span className="mb-1.5 block text-sm font-bold text-navy-900">{texts.mobileLabel}</span>
             <input
               required
               type="tel"
               inputMode="numeric"
               pattern="01[3-9][0-9]{8}"
               maxLength={11}
-              placeholder="যেমন: ০১৭xxxxxxxx"
+              placeholder={texts.mobilePlaceholder}
               value={mobileNumber}
               onChange={(e) => setMobileNumber(e.target.value.replace(/[^0-9]/g, ""))}
               className={inputClass}
@@ -215,7 +216,7 @@ export function EligibilityChecker() {
             className="flex w-full items-center justify-center gap-2 rounded-lg bg-purple-600 py-3 text-base font-extrabold text-white shadow-soft transition-opacity hover:opacity-90"
           >
             <CheckCircle2 className="h-5 w-5" aria-hidden />
-            যাচাই করুন
+            {texts.checkButton}
           </button>
         </form>
       </div>
@@ -223,7 +224,7 @@ export function EligibilityChecker() {
       {submittedInput && <ResultsSection resultsByCategory={resultsByCategory} totalCount={results.length} />}
 
       <p className="text-center text-xs font-medium text-slate-400">
-        এই ফলাফল শুধুমাত্র জিপিএ-ভিত্তিক একটি প্রাথমিক অনুমান, যা ২০২৫ সালের ভর্তি বিজ্ঞপ্তির ধরন অনুসারে হিসাব করা হয়েছে। চূড়ান্ত সিদ্ধান্তের আগে সংশ্লিষ্ট বিশ্ববিদ্যালয়ের অফিসিয়াল সার্কুলার অবশ্যই যাচাই করুন।
+        {texts.checkerDisclaimer}
       </p>
     </div>
   );
@@ -239,8 +240,8 @@ function ResultsSection({
   if (totalCount === 0) {
     return (
       <EmptyState
-        title="আপনার দেওয়া তথ্য অনুযায়ী কোনো প্রতিষ্ঠানে যোগ্য পাওয়া যায়নি"
-        description="জিপিএ ও গ্রুপ আবার যাচাই করে দেখুন, অথবা বিষয়ভিত্তিক জিপিএ যোগ করে চেষ্টা করুন।"
+        title={texts.noEligibleTitle}
+        description={texts.noEligibleDesc}
       />
     );
   }
@@ -249,7 +250,7 @@ function ResultsSection({
     <div className="space-y-4">
       <div className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-center">
         <p className="text-base font-extrabold text-emerald-800">
-          আপনি মোট {toBanglaNumber(totalCount)}টি ইউনিটে আবেদনযোগ্য
+          {texts.eligibleCountPrefix} {toBanglaNumber(totalCount)}{texts.eligibleCountSuffix}
         </p>
       </div>
 
@@ -278,20 +279,20 @@ function ResultsSection({
                       href={`/university/${university.id}${unit.nameBn ? `?unit=${unit.id}` : ""}`}
                       className="inline-flex shrink-0 items-center gap-0.5 text-sm font-bold text-purple-600 hover:text-purple-800"
                     >
-                      বিস্তারিত
+                      {texts.details}
                       <ChevronRight className="h-4 w-4" aria-hidden />
                     </Link>
                   </div>
                   <div className="mt-2 rounded-lg bg-slate-50 p-3">
                     <p className="mb-1 text-xs font-bold uppercase tracking-wide text-slate-500">
-                      সর্বনিম্ন যোগ্যতা
+                      {texts.minRequirements}
                     </p>
                     <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold text-slate-700">
                       {formatCriteriaSummary(criteria, unit).map((line, i) => (
                         <span key={i}>{line}</span>
                       ))}
                     </div>
-                    {criteria.noteBn && <p className="mt-1.5 text-sm font-medium text-amber-700">টীকা: {criteria.noteBn}</p>}
+                    {criteria.noteBn && <p className="mt-1.5 text-sm font-medium text-amber-700">{texts.noteLabel}: {criteria.noteBn}</p>}
                   </div>
                 </li>
               ))}

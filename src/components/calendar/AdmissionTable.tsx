@@ -5,6 +5,7 @@ import { getCategoryById } from "@/data/categories";
 import { formatBanglaDate, toBanglaNumber } from "@/lib/bangla";
 import { CountdownBadge } from "@/components/ui/CountdownBadge";
 import { getCategoryTheme } from "@/lib/categoryTheme";
+import { texts } from "@/lib/texts";
 
 export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: string }) {
   return (
@@ -12,15 +13,15 @@ export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: st
       <table className="w-full min-w-[960px] border-collapse text-left text-sm">
         <thead>
           <tr className="text-xs font-semibold uppercase tracking-wide text-white">
-            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">ক্রম</th>
-            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">ক্যাটাগরি</th>
-            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">বিশ্ববিদ্যালয়</th>
-            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">ইউনিট</th>
-            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">আবেদন শুরু</th>
-            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">আবেদন শেষ</th>
-            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">ভর্তি পরীক্ষা</th>
-            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">বাকি দিন</th>
-            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3 text-right">বিস্তারিত</th>
+            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">{texts.colNo}</th>
+            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">{texts.colCategory}</th>
+            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">{texts.colUniversity}</th>
+            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">{texts.colUnit}</th>
+            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">{texts.applicationStart}</th>
+            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">{texts.applicationEnd}</th>
+            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">{texts.examDate}</th>
+            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">{texts.colDaysLeft}</th>
+            <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3 text-right">{texts.details}</th>
           </tr>
         </thead>
         <tbody>
@@ -53,13 +54,13 @@ export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: st
                   </div>
                 </td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">
-                  {formatBanglaDate(unit.applicationStart) ?? "তথ্য প্রকাশিত হয়নি"}
+                  {formatBanglaDate(unit.applicationStart) ?? texts.notPublished}
                 </td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">
-                  {formatBanglaDate(unit.applicationEnd) ?? "তথ্য প্রকাশিত হয়নি"}
+                  {formatBanglaDate(unit.applicationEnd) ?? texts.notPublished}
                 </td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">
-                  {formatBanglaDate(unit.examDate) ?? "তথ্য প্রকাশিত হয়নি"}
+                  {formatBanglaDate(unit.examDate) ?? texts.notPublished}
                 </td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3">
                   <CountdownBadge unit={unit} today={today} />
@@ -69,7 +70,7 @@ export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: st
                     href={`/university/${university.id}`}
                     className="inline-flex items-center gap-0.5 text-xs font-medium text-indigo-600 hover:text-indigo-800"
                   >
-                    বিস্তারিত
+                    {texts.details}
                     <ChevronRight className="h-3.5 w-3.5" aria-hidden />
                   </Link>
                 </td>

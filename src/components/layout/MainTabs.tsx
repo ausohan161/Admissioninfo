@@ -1,33 +1,34 @@
 "use client";
 
 import { LayoutGrid, BookOpenText, ClipboardCheck } from "lucide-react";
+import { texts, TextKey } from "@/lib/texts";
 
 export type MainTabId = "overview" | "info" | "eligibility";
 
 const TABS: {
   id: MainTabId;
-  labelBn: string;
+  labelKey: TextKey;
   icon: React.ElementType;
   activeClass: string;
   inactiveClass: string;
 }[] = [
   {
     id: "overview",
-    labelBn: "একনজরে অ্যাডমিশন ক্যালেন্ডার",
+    labelKey: "tabOverview",
     icon: LayoutGrid,
     activeClass: "bg-gradient-to-r from-indigo-600 to-blue-600 text-white shadow-card",
     inactiveClass: "text-indigo-600 hover:bg-indigo-50",
   },
   {
     id: "info",
-    labelBn: "অ্যাডমিশন তথ্যকণিকা",
+    labelKey: "tabInfo",
     icon: BookOpenText,
     activeClass: "bg-gradient-to-r from-teal-600 to-emerald-600 text-white shadow-card",
     inactiveClass: "text-teal-600 hover:bg-teal-50",
   },
   {
     id: "eligibility",
-    labelBn: "আবেদনযোগ্যতা চেকার",
+    labelKey: "tabEligibility",
     icon: ClipboardCheck,
     activeClass: "bg-purple-600 text-white shadow-card",
     inactiveClass: "text-purple-600 hover:bg-purple-50",
@@ -45,7 +46,7 @@ export function MainTabs({
     <div className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div
         role="tablist"
-        aria-label="প্রধান মেনু"
+        aria-label={texts.mainMenuAria}
         className="mx-auto grid max-w-7xl grid-cols-3 gap-1 px-2 py-2 sm:gap-2 sm:px-6"
       >
         {TABS.map((tab) => {
@@ -64,7 +65,7 @@ export function MainTabs({
               }`}
             >
               <Icon className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" aria-hidden />
-              <span>{tab.labelBn}</span>
+              <span>{texts[tab.labelKey]}</span>
             </button>
           );
         })}

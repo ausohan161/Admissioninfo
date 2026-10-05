@@ -9,6 +9,7 @@ import { StatusBadge } from "@/components/ui/StatusBadge";
 import { CountdownBadge } from "@/components/ui/CountdownBadge";
 import { getCategoryTheme } from "@/lib/categoryTheme";
 import { useToday } from "@/lib/useToday";
+import { texts } from "@/lib/texts";
 
 export function UniversityCard({ university }: { university: University }) {
   // Computed on the client so the countdown/status stays accurate every day even when
@@ -55,21 +56,21 @@ export function UniversityCard({ university }: { university: University }) {
         <>
           <div className="mt-4 grid grid-cols-3 gap-2 text-center sm:gap-3">
             <div className="rounded-lg bg-slate-50 px-2 py-2.5">
-              <p className="text-xs font-semibold text-slate-500 sm:text-sm">আবেদন শুরু</p>
+              <p className="text-xs font-semibold text-slate-500 sm:text-sm">{texts.applicationStart}</p>
               <p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">
-                {formatBanglaDate(activeUnit.applicationStart) ?? "প্রকাশিত হয়নি"}
+                {formatBanglaDate(activeUnit.applicationStart) ?? texts.notPublishedShort}
               </p>
             </div>
             <div className="rounded-lg bg-slate-50 px-2 py-2.5">
-              <p className="text-xs font-semibold text-slate-500 sm:text-sm">আবেদন শেষ</p>
+              <p className="text-xs font-semibold text-slate-500 sm:text-sm">{texts.applicationEnd}</p>
               <p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">
-                {formatBanglaDate(activeUnit.applicationEnd) ?? "প্রকাশিত হয়নি"}
+                {formatBanglaDate(activeUnit.applicationEnd) ?? texts.notPublishedShort}
               </p>
             </div>
             <div className="rounded-lg bg-slate-50 px-2 py-2.5">
-              <p className="text-xs font-semibold text-slate-500 sm:text-sm">ভর্তি পরীক্ষা</p>
+              <p className="text-xs font-semibold text-slate-500 sm:text-sm">{texts.examDate}</p>
               <p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">
-                {formatBanglaDate(activeUnit.examDate) ?? "প্রকাশিত হয়নি"}
+                {formatBanglaDate(activeUnit.examDate) ?? texts.notPublishedShort}
               </p>
             </div>
           </div>
@@ -85,7 +86,7 @@ export function UniversityCard({ university }: { university: University }) {
         href={`/university/${university.id}${activeUnit && hasNamedUnits ? `?unit=${activeUnit.id}` : ""}`}
         className={`mt-4 flex items-center justify-center gap-1 rounded-lg py-2 text-sm font-semibold text-white shadow-sm transition-colors ${theme.solid}`}
       >
-        বিস্তারিত তথ্য দেখুন
+        {texts.viewDetails}
         <ChevronRight className="h-4 w-4" aria-hidden />
       </Link>
     </div>

@@ -1,8 +1,9 @@
 import { AlertTriangle } from "lucide-react";
+import { texts } from "@/lib/texts";
 
 export function ErrorState({
-  title = "তথ্য লোড করা যায়নি",
-  description = "একটু পর আবার চেষ্টা করুন। সমস্যা থেকে গেলে পেজটি রিফ্রেশ করুন।",
+  title = texts.errorTitle,
+  description = texts.errorDesc,
   onRetry,
 }: {
   title?: string;
@@ -21,7 +22,7 @@ export function ErrorState({
           onClick={onRetry}
           className="mt-1 rounded-md border border-red-200 bg-white px-3 py-1.5 text-xs font-medium text-red-600 hover:bg-red-50"
         >
-          আবার চেষ্টা করুন
+          {texts.retry}
         </button>
       )}
     </div>

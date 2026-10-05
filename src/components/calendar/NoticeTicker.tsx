@@ -1,5 +1,6 @@
 import { Megaphone } from "lucide-react";
 import { notices } from "@/lib/notices";
+import { texts } from "@/lib/texts";
 
 /** Scrolling news-ticker style banner for general site/admission notices —
  * distinct from `DeadlineTicker`, which only shows auto-computed deadline
@@ -16,7 +17,7 @@ export function NoticeTicker() {
     <div className="flex items-stretch overflow-hidden rounded-xl border border-amber-200 bg-gradient-to-r from-amber-50 to-yellow-50 shadow-soft">
       <div className="flex shrink-0 items-center gap-2 bg-amber-600 px-3 py-2.5 sm:px-4">
         <Megaphone className="h-4 w-4 text-white" aria-hidden />
-        <span className="whitespace-nowrap text-xs font-bold text-white sm:text-sm">জরুরি নোটিশ</span>
+        <span className="whitespace-nowrap text-xs font-bold text-white sm:text-sm">{texts.noticeLabel}</span>
       </div>
       <div className="min-w-0 flex-1 overflow-hidden py-2.5">
         <div

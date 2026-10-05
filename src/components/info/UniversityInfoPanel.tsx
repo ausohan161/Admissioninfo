@@ -12,6 +12,7 @@ import { InfoSection } from "./InfoSection";
 import { CircularButton } from "./CircularButton";
 import { getCategoryTheme } from "@/lib/categoryTheme";
 import { useToday } from "@/lib/useToday";
+import { texts } from "@/lib/texts";
 
 export function UniversityInfoPanel({ university }: { university: University }) {
   // Computed on the client so the countdown/status stays accurate every day even when
@@ -42,7 +43,7 @@ export function UniversityInfoPanel({ university }: { university: University }) 
           <p className="text-sm font-medium text-slate-500">{university.nameEn}</p>
         </div>
         <span className="whitespace-nowrap text-sm font-semibold text-slate-500">
-          ভর্তি সেশন: {university.admissionSession}
+          {texts.admissionSession}: {university.admissionSession}
         </span>
       </div>
 
@@ -67,11 +68,11 @@ export function UniversityInfoPanel({ university }: { university: University }) 
       )}
 
       <div className="mt-5 space-y-4">
-        <InfoSection title="গুরুত্বপূর্ণ তারিখ" icon={CalendarClock} isEmpty={false}>
+        <InfoSection title={texts.sectionImportantDates} icon={CalendarClock} isEmpty={false}>
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
-            <DateBox label="আবেদন শুরু" value={formatBanglaDate(activeUnit.applicationStart)} />
-            <DateBox label="আবেদন শেষ" value={formatBanglaDate(activeUnit.applicationEnd)} />
-            <DateBox label="ভর্তি পরীক্ষা" value={formatBanglaDate(activeUnit.examDate)} />
+            <DateBox label={texts.applicationStart} value={formatBanglaDate(activeUnit.applicationStart)} />
+            <DateBox label={texts.applicationEnd} value={formatBanglaDate(activeUnit.applicationEnd)} />
+            <DateBox label={texts.examDate} value={formatBanglaDate(activeUnit.examDate)} />
           </div>
           <div className="mt-3 flex flex-wrap items-center gap-2">
             <StatusBadge unit={activeUnit} today={today} />
@@ -79,12 +80,12 @@ export function UniversityInfoPanel({ university }: { university: University }) 
           </div>
         </InfoSection>
 
-        <InfoSection title="আসন সংখ্যা" icon={Armchair} isEmpty={!activeUnit.seats}>
+        <InfoSection title={texts.sectionSeats} icon={Armchair} isEmpty={!activeUnit.seats}>
           {activeUnit.seats && (
             <div>
               {activeUnit.seats.total !== null && (
                 <p className="text-base text-slate-700">
-                  মোট আসন: <span className="font-extrabold text-navy-900">{toBanglaNumber(activeUnit.seats.total)}</span>
+                  {texts.totalSeats}: <span className="font-extrabold text-navy-900">{toBanglaNumber(activeUnit.seats.total)}</span>
                 </p>
               )}
               {activeUnit.seats.breakdown && activeUnit.seats.breakdown.length > 0 && (
@@ -102,7 +103,7 @@ export function UniversityInfoPanel({ university }: { university: University }) 
         </InfoSection>
 
         <InfoSection
-          title="আবেদন যোগ্যতা"
+          title={texts.sectionEligibility}
           icon={ClipboardCheck}
           isEmpty={!activeUnit.eligibility?.descriptionBn && !activeUnit.eligibility?.points?.length}
         >
@@ -118,11 +119,11 @@ export function UniversityInfoPanel({ university }: { university: University }) 
           )}
         </InfoSection>
 
-        <InfoSection title="পরীক্ষার ধরন" icon={ListChecks} isEmpty={!activeUnit.examPattern}>
+        <InfoSection title={texts.sectionExamPattern} icon={ListChecks} isEmpty={!activeUnit.examPattern}>
           <p className="text-base font-medium leading-relaxed text-slate-700">{activeUnit.examPattern}</p>
         </InfoSection>
 
-        <InfoSection title="বিষয় ও প্রশ্নসংখ্যা" icon={ListOrdered} isEmpty={activeUnit.subjects.length === 0}>
+        <InfoSection title={texts.sectionSubjects} icon={ListOrdered} isEmpty={activeUnit.subjects.length === 0}>
           <ul className="divide-y divide-slate-200 text-base font-medium">
             {activeUnit.subjects.map((s) => (
               <li key={s.nameBn} className="flex items-center justify-between gap-3 py-2">
@@ -133,11 +134,11 @@ export function UniversityInfoPanel({ university }: { university: University }) 
           </ul>
         </InfoSection>
 
-        <InfoSection title="ফলাফল নির্ণয় পদ্ধতি" icon={Calculator} isEmpty={!activeUnit.resultMethod}>
+        <InfoSection title={texts.sectionResultMethod} icon={Calculator} isEmpty={!activeUnit.resultMethod}>
           <p className="text-base font-medium leading-relaxed text-slate-700">{activeUnit.resultMethod}</p>
         </InfoSection>
 
-        <InfoSection title="অফিসিয়াল সার্কুলার" icon={FileText} isEmpty={false}>
+        <InfoSection title={texts.sectionCircular} icon={FileText} isEmpty={false}>
           <CircularButton url={activeUnit.circularUrl} solidClassName={theme.solid} />
         </InfoSection>
       </div>
@@ -149,7 +150,7 @@ function DateBox({ label, value }: { label: string; value: string | null }) {
   return (
     <div className="rounded-lg bg-slate-50 px-3 py-2.5">
       <p className="text-xs font-semibold text-slate-500">{label}</p>
-      <p className="mt-0.5 text-base font-bold text-navy-900">{value ?? "তথ্য প্রকাশিত হয়নি"}</p>
+      <p className="mt-0.5 text-base font-bold text-navy-900">{value ?? texts.notPublished}</p>
     </div>
   );
 }
