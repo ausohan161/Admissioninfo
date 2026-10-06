@@ -41,7 +41,7 @@ export default async function CategoryPage({ params }: PageProps) {
       <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-6 sm:px-6">
         <Link
           href="/"
-          className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:text-indigo-800"
+          className="mb-4 inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 hover:text-indigo-800"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden />
           {texts.backHome}

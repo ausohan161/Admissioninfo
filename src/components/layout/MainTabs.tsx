@@ -60,7 +60,7 @@ export function MainTabs({
               id={`tab-${tab.id}`}
               aria-controls={`panel-${tab.id}`}
               onClick={() => onChange(tab.id)}
-              className={`flex min-h-[56px] flex-col items-center justify-center gap-1 rounded-lg px-1 py-2 text-center text-xs font-semibold leading-tight transition-all sm:min-h-[64px] sm:flex-row sm:gap-2 sm:text-sm ${
+              className={`flex min-h-[56px] flex-col items-center justify-center gap-1 rounded-lg px-1 py-2 text-center text-xs font-bold leading-tight transition-all sm:min-h-[64px] sm:flex-row sm:gap-2 sm:text-sm ${
                 isActive ? tab.activeClass : tab.inactiveClass
               }`}
             >

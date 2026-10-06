@@ -13,7 +13,7 @@ export function CircularButton({
     return (
       <button
         disabled
-        className="flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-slate-200 bg-slate-50 py-2.5 text-sm font-medium text-slate-400"
+        className="flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-slate-200 bg-slate-50 py-2.5 text-sm font-semibold text-slate-400"
       >
         <FileX2 className="h-4 w-4" aria-hidden />
         {texts.circularNotPublished}
@@ -26,7 +26,7 @@ export function CircularButton({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-semibold text-white shadow-sm transition-colors ${solidClassName}`}
+      className={`flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-bold text-white shadow-sm transition-colors ${solidClassName}`}
     >
       {texts.viewCircular}
       <ExternalLink className="h-4 w-4" aria-hidden />

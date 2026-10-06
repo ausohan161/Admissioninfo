@@ -14,7 +14,7 @@ export function CategoryGrid({ onSelect }: { onSelect: (id: CategoryId) => void 
           <LayoutGrid className="h-5 w-5" aria-hidden />
           {texts.categoryPickTitle}
         </h2>
-        <p className="mt-1 text-sm font-medium text-teal-100">
+        <p className="mt-1 text-sm font-semibold text-teal-100">
           {texts.categoryPickDesc}
         </p>
       </div>

@@ -32,7 +32,7 @@
   html { font-size: 18px; }
   html, body { font-family: "Lato", "Hind Siliguri", system-ui, sans-serif; background-color: #f7f9fc; color: #14213d; margin: 0; }
   h1, h2, h3 { font-family: "Baloo Da 2", "Hind Siliguri", system-ui, sans-serif; }
-  body { font-weight: 600; }
+  body { font-weight: 700; }
   ::-webkit-scrollbar { height: 8px; width: 8px; }
   ::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 9999px; }
   ::-webkit-scrollbar-track { background-color: transparent; }
@@ -2841,8 +2841,8 @@ function computeCountdown(unit, today) {
   if (!unit.examDate) return { labelBn: "তথ্য প্রকাশিত হয়নি", daysLeft: null, className: "bg-slate-50 text-slate-400 border-slate-200" };
   const daysLeft = daysUntil(today, unit.examDate);
   if (daysLeft < 0) return { labelBn: "পরীক্ষা সম্পন্ন", daysLeft, className: "bg-slate-100 text-slate-500 border-slate-200" };
-  if (daysLeft === 0) return { labelBn: "আজ পরীক্ষা", daysLeft, className: "bg-gradient-to-r from-rose-600 to-orange-500 text-white border-transparent font-semibold" };
-  if (daysLeft === 1) return { labelBn: "আগামীকাল", daysLeft, className: "bg-rose-100 text-rose-700 border-rose-200 font-semibold" };
+  if (daysLeft === 0) return { labelBn: "আজ পরীক্ষা", daysLeft, className: "bg-gradient-to-r from-rose-600 to-orange-500 text-white border-transparent font-bold" };
+  if (daysLeft === 1) return { labelBn: "আগামীকাল", daysLeft, className: "bg-rose-100 text-rose-700 border-rose-200 font-bold" };
   const label = `আর ${toBanglaNumber(daysLeft)} দিন`;
   if (daysLeft < 7) return { labelBn: label, daysLeft, className: "bg-rose-50 text-rose-700 border-rose-200" };
   if (daysLeft < 15) return { labelBn: label, daysLeft, className: "bg-amber-50 text-amber-700 border-amber-200" };
@@ -3060,7 +3060,7 @@ function fillTemplate(template, values) { return Object.entries(values).reduce((
    ========================================================================= */
 function StatusBadge({ unit, today }) {
   const info = computeStatus(unit, today);
-  return <span className={`inline-flex items-center whitespace-nowrap rounded-full border px-2.5 py-1 text-xs font-medium ${info.className}`}>{info.labelBn}</span>;
+  return <span className={`inline-flex items-center whitespace-nowrap rounded-full border px-2.5 py-1 text-xs font-semibold ${info.className}`}>{info.labelBn}</span>;
 }
 function CountdownBadge({ unit, today }) {
   const info = computeCountdown(unit, today);
@@ -3070,7 +3070,7 @@ function EmptyState({ title, description }) {
   return (
     <div className="flex flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-slate-200 bg-white px-6 py-14 text-center">
       <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-50 text-slate-300"><IconInbox className="h-6 w-6" /></div>
-      <p className="text-sm font-medium text-slate-600">{title}</p>
+      <p className="text-sm font-semibold text-slate-600">{title}</p>
       {description && <p className="max-w-sm text-xs text-slate-400">{description}</p>}
     </div>
   );
@@ -3094,7 +3094,7 @@ function Header() {
         </div>
         <div className="flex items-center gap-2 text-xs text-slate-400 sm:text-sm">
           <span className="hidden sm:inline">{texts.lastUpdated}</span>
-          <span className="font-medium text-slate-500">{formatted ?? "—"}</span>
+          <span className="font-semibold text-slate-500">{formatted ?? "—"}</span>
         </div>
       </div>
     </header>
@@ -3113,7 +3113,7 @@ function MainTabs({ active, onChange }) {
           const isActive = tab.id === active;
           return (
             <button key={tab.id} onClick={() => onChange(tab.id)}
-              className={`flex min-h-[56px] flex-col items-center justify-center gap-1 rounded-lg px-1 py-2 text-center text-xs font-semibold leading-tight transition-all sm:min-h-[64px] sm:flex-row sm:gap-2 sm:text-sm ${isActive ? tab.activeClass : tab.inactiveClass}`}>
+              className={`flex min-h-[56px] flex-col items-center justify-center gap-1 rounded-lg px-1 py-2 text-center text-xs font-bold leading-tight transition-all sm:min-h-[64px] sm:flex-row sm:gap-2 sm:text-sm ${isActive ? tab.activeClass : tab.inactiveClass}`}>
               <tab.Icon className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
               <span>{texts[tab.labelKey]}</span>
             </button>
@@ -3154,7 +3154,7 @@ function SummaryStatsBar({ stats }) {
           <div className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${item.tone}`}><item.Icon className="h-4 w-4" /></div>
           <div className="min-w-0">
             <p className="text-lg font-bold leading-tight text-navy-900 sm:text-xl">{toBanglaNumber(values[item.key])}</p>
-            <p className="truncate text-xs leading-tight text-slate-500 sm:text-xs">{texts[item.labelKey]}</p>
+            <p className="text-xs leading-tight text-slate-500 sm:text-xs">{texts[item.labelKey]}</p>
           </div>
         </div>
       ))}
@@ -3180,7 +3180,7 @@ function DeadlineTicker({ rows, today }) {
       <div className="min-w-0 flex-1 overflow-hidden py-2.5">
         <div className="marquee-track flex w-max items-center whitespace-nowrap" style={{ animationDuration: `${durationSeconds}s` }}>
           {track.map((message, i) => (
-            <span key={i} className="flex items-center whitespace-nowrap px-4 text-sm font-medium text-rose-700">{message}<span className="ml-4 text-rose-300">●</span></span>
+            <span key={i} className="flex items-center whitespace-nowrap px-4 text-sm font-semibold text-rose-700">{message}<span className="ml-4 text-rose-300">●</span></span>
           ))}
         </div>
       </div>
@@ -3204,7 +3204,7 @@ function NoticeTicker() {
       <div className="min-w-0 flex-1 overflow-hidden py-2.5">
         <div className="marquee-track flex w-max items-center whitespace-nowrap" style={{ animationDuration: `${durationSeconds}s` }}>
           {track.map((notice, i) => (
-            <span key={i} className="flex items-center whitespace-nowrap px-4 text-sm font-medium text-amber-800">{notice}<span className="ml-4 text-amber-300">●</span></span>
+            <span key={i} className="flex items-center whitespace-nowrap px-4 text-sm font-semibold text-amber-800">{notice}<span className="ml-4 text-amber-300">●</span></span>
           ))}
         </div>
       </div>
@@ -3225,7 +3225,7 @@ function UpcomingTests({ rows, today }) {
                 <div className="flex min-w-0 items-start gap-2.5">
                   <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 text-lg font-extrabold text-white">{toBanglaNumber(index + 1)}</span>
                   <div className="min-w-0">
-                    <p className="text-sm font-medium leading-snug text-navy-800">{university.shortName}{unit.nameBn && <span className="font-normal text-slate-500"> — {unit.nameBn}</span>}</p>
+                    <p className="text-sm font-semibold leading-snug text-navy-800">{university.shortName}{unit.nameBn && <span className="font-normal text-slate-500"> — {unit.nameBn}</span>}</p>
                   </div>
                 </div>
                 <CountdownBadge unit={unit} today={today} />
@@ -3268,7 +3268,7 @@ function AdmissionTable({ rows, today, onOpen }) {
     <div className="hidden overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-soft sm:block">
       <table className="w-full min-w-[900px] border-collapse text-left text-sm">
         <thead>
-          <tr className="text-xs font-semibold uppercase tracking-wide text-white">
+          <tr className="text-xs font-bold uppercase tracking-wide text-white">
             {[texts.colNo,texts.colCategory,texts.colUniversity,texts.colUnit,texts.applicationStart,texts.applicationEnd,texts.examDate,texts.colDaysLeft,texts.details].map((h, i) => (
               <th key={i} className={`whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3 ${i === 8 ? "text-right" : ""}`}>{h}</th>
             ))}
@@ -3282,15 +3282,15 @@ function AdmissionTable({ rows, today, onOpen }) {
               <tr key={`${university.id}-${unit.id}`} className={`align-top hover:bg-indigo-50/40 ${index % 2 === 1 ? "bg-slate-50/60" : "bg-white"}`}>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-base font-extrabold text-slate-600">{toBanglaNumber(index + 1)}</td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3">
-                  <span className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-semibold ${theme.badge}`}><span className={`h-1.5 w-1.5 rounded-full ${theme.dot}`}></span>{category?.shortNameBn ?? "—"}</span>
+                  <span className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-bold ${theme.badge}`}><span className={`h-1.5 w-1.5 rounded-full ${theme.dot}`}></span>{category?.shortNameBn ?? "—"}</span>
                 </td>
-                <td className="border border-slate-200 px-3 py-3"><div className="font-medium text-navy-900">{university.nameBn}</div><div className="text-xs text-slate-400">{university.shortName}</div></td>
+                <td className="border border-slate-200 px-3 py-3"><div className="font-semibold text-navy-900">{university.nameBn}</div><div className="text-xs text-slate-400">{university.shortName}</div></td>
                 <td className="border border-slate-200 px-3 py-3 text-slate-600"><div className="flex items-center gap-1.5"><span>{unit.nameBn ?? "—"}</span></div></td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">{formatBanglaDate(unit.applicationStart) ?? texts.notPublished}</td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">{formatBanglaDate(unit.applicationEnd) ?? texts.notPublished}</td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">{formatBanglaDate(unit.examDate) ?? texts.notPublished}</td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3"><CountdownBadge unit={unit} today={today} /></td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-right"><button onClick={() => onOpen(university.id)} className="inline-flex items-center gap-0.5 text-xs font-medium text-indigo-600 hover:text-indigo-800">{texts.details}<IconChevronRight className="h-3.5 w-3.5" /></button></td>
+                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-right"><button onClick={() => onOpen(university.id)} className="inline-flex items-center gap-0.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800">{texts.details}<IconChevronRight className="h-3.5 w-3.5" /></button></td>
               </tr>
             );
           })}
@@ -3310,7 +3310,7 @@ function AdmissionMobileList({ rows, today, onOpen }) {
             className={`block cursor-pointer rounded-xl border border-slate-200 border-t-4 bg-white p-4 shadow-soft active:bg-slate-50 ${theme.topBorder}`}>
             <div className="flex items-start justify-between gap-2">
               <div className="min-w-0">
-                <span className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-semibold ${theme.badge}`}><span className={`h-1.5 w-1.5 rounded-full ${theme.dot}`}></span>{category?.shortNameBn}</span>
+                <span className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-bold ${theme.badge}`}><span className={`h-1.5 w-1.5 rounded-full ${theme.dot}`}></span>{category?.shortNameBn}</span>
                 <h3 className="mt-1.5 text-sm font-bold leading-snug text-navy-900">{university.nameBn}</h3>
                 <div className="mt-1 flex flex-wrap items-center gap-1.5">{unit.nameBn && <p className="text-xs text-slate-500">{unit.nameBn}</p>}</div>
               </div>
@@ -3318,8 +3318,8 @@ function AdmissionMobileList({ rows, today, onOpen }) {
             </div>
             <div className="mt-3 flex flex-wrap items-center gap-2"><CountdownBadge unit={unit} today={today} /></div>
             <dl className="mt-3 grid grid-cols-2 divide-x divide-slate-200 border-t border-slate-200 pt-3 text-xs">
-              <div className="pr-3"><dt className="text-slate-400">{texts.examDate}</dt><dd className="font-medium text-slate-700">{formatBanglaDate(unit.examDate) ?? texts.notPublished}</dd></div>
-              <div className="pl-3"><dt className="text-slate-400">{texts.applicationEnd}</dt><dd className="font-medium text-slate-700">{formatBanglaDate(unit.applicationEnd) ?? texts.notPublished}</dd></div>
+              <div className="pr-3"><dt className="text-slate-400">{texts.examDate}</dt><dd className="font-semibold text-slate-700">{formatBanglaDate(unit.examDate) ?? texts.notPublished}</dd></div>
+              <div className="pl-3"><dt className="text-slate-400">{texts.applicationEnd}</dt><dd className="font-semibold text-slate-700">{formatBanglaDate(unit.applicationEnd) ?? texts.notPublished}</dd></div>
             </dl>
           </div>
         );
@@ -3371,7 +3371,7 @@ function CategoryGrid({ onSelect }) {
     <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-soft">
       <div className="bg-teal-600 px-4 py-4 sm:px-6">
         <h2 className="flex items-center gap-2 text-lg font-extrabold text-white sm:text-xl"><IconGrid className="h-5 w-5" />{texts.categoryPickTitle}</h2>
-        <p className="mt-1 text-sm font-medium text-teal-100">{texts.categoryPickDesc}</p>
+        <p className="mt-1 text-sm font-semibold text-teal-100">{texts.categoryPickDesc}</p>
       </div>
       <div className="grid grid-cols-1 gap-3 p-4 sm:grid-cols-2 sm:p-6">
         {categories.map((cat) => {
@@ -3401,7 +3401,7 @@ function CategoryPills({ active, onSelect, onBack }) {
         {categories.map((cat) => {
           const isActive = cat.id === active;
           const theme = getCategoryTheme(cat.id);
-          return <button key={cat.id} onClick={() => onSelect(cat.id)} className={`shrink-0 whitespace-nowrap rounded-full border px-3.5 py-2 text-xs font-medium shadow-sm sm:text-sm ${isActive ? theme.activePill : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"}`}>{cat.shortNameBn}</button>;
+          return <button key={cat.id} onClick={() => onSelect(cat.id)} className={`shrink-0 whitespace-nowrap rounded-full border px-3.5 py-2 text-xs font-semibold shadow-sm sm:text-sm ${isActive ? theme.activePill : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"}`}>{cat.shortNameBn}</button>;
         })}
       </div>
     </div>
@@ -3417,23 +3417,23 @@ function UniversityCard({ university, onOpen }) {
     <div className={`rounded-xl border border-slate-200 border-t-4 bg-white p-4 shadow-soft sm:p-5 ${theme.topBorder}`}>
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <h3 className="text-base font-bold leading-snug text-navy-900">{university.nameBn}<span className="ml-1.5 text-sm font-medium text-slate-400">({university.shortName})</span></h3>
+          <h3 className="text-base font-bold leading-snug text-navy-900">{university.nameBn}<span className="ml-1.5 text-sm font-semibold text-slate-400">({university.shortName})</span></h3>
           {university.subGroupBn && <p className="text-xs text-slate-400">{university.subGroupBn}</p>}
         </div>
       </div>
       {hasNamedUnits && university.units.length > 1 && (
         <div className="mt-3 flex gap-1.5 overflow-x-auto pb-1">
           {university.units.map((unit) => (
-            <button key={unit.id} onClick={() => setActiveUnitId(unit.id)} className={`shrink-0 whitespace-nowrap rounded-full border px-3 py-1.5 text-xs font-medium ${unit.id === activeUnit?.id ? theme.activePill : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"}`}>{unit.nameBn}</button>
+            <button key={unit.id} onClick={() => setActiveUnitId(unit.id)} className={`shrink-0 whitespace-nowrap rounded-full border px-3 py-1.5 text-xs font-semibold ${unit.id === activeUnit?.id ? theme.activePill : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"}`}>{unit.nameBn}</button>
           ))}
         </div>
       )}
       {activeUnit && (
         <React.Fragment>
           <div className="mt-4 grid grid-cols-3 gap-2 text-center sm:gap-3">
-            <div className="rounded-lg bg-slate-50 px-2 py-2.5"><p className="text-xs font-semibold text-slate-500 sm:text-sm">{texts.applicationStart}</p><p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">{formatBanglaDate(activeUnit.applicationStart) ?? texts.notPublishedShort}</p></div>
-            <div className="rounded-lg bg-slate-50 px-2 py-2.5"><p className="text-xs font-semibold text-slate-500 sm:text-sm">{texts.applicationEnd}</p><p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">{formatBanglaDate(activeUnit.applicationEnd) ?? texts.notPublishedShort}</p></div>
-            <div className="rounded-lg bg-slate-50 px-2 py-2.5"><p className="text-xs font-semibold text-slate-500 sm:text-sm">{texts.examDate}</p><p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">{formatBanglaDate(activeUnit.examDate) ?? texts.notPublishedShort}</p></div>
+            <div className="rounded-lg bg-slate-50 px-2 py-2.5"><p className="text-xs font-bold text-slate-500 sm:text-sm">{texts.applicationStart}</p><p className="mt-0.5 text-xs font-bold text-navy-800 sm:text-sm">{formatBanglaDate(activeUnit.applicationStart) ?? texts.notPublishedShort}</p></div>
+            <div className="rounded-lg bg-slate-50 px-2 py-2.5"><p className="text-xs font-bold text-slate-500 sm:text-sm">{texts.applicationEnd}</p><p className="mt-0.5 text-xs font-bold text-navy-800 sm:text-sm">{formatBanglaDate(activeUnit.applicationEnd) ?? texts.notPublishedShort}</p></div>
+            <div className="rounded-lg bg-slate-50 px-2 py-2.5"><p className="text-xs font-bold text-slate-500 sm:text-sm">{texts.examDate}</p><p className="mt-0.5 text-xs font-bold text-navy-800 sm:text-sm">{formatBanglaDate(activeUnit.examDate) ?? texts.notPublishedShort}</p></div>
           </div>
           <div className="mt-3 flex flex-wrap items-center gap-2">
             <StatusBadge unit={activeUnit} today={today} />
@@ -3441,7 +3441,7 @@ function UniversityCard({ university, onOpen }) {
           </div>
         </React.Fragment>
       )}
-      <button onClick={() => onOpen(university.id)} className={`mt-4 flex w-full items-center justify-center gap-1 rounded-lg py-2 text-sm font-semibold text-white shadow-sm transition-colors ${theme.solid}`}>{texts.viewDetails}<IconChevronRight className="h-4 w-4" /></button>
+      <button onClick={() => onOpen(university.id)} className={`mt-4 flex w-full items-center justify-center gap-1 rounded-lg py-2 text-sm font-bold text-white shadow-sm transition-colors ${theme.solid}`}>{texts.viewDetails}<IconChevronRight className="h-4 w-4" /></button>
     </div>
   );
 }
@@ -3490,16 +3490,16 @@ function InfoSection({ title, icon: Icon, children, isEmpty, emptyText }) {
         {Icon && <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"><Icon className="h-4 w-4" /></span>}
         {title}
       </h4>
-      {isEmpty ? <p className="text-base font-medium text-slate-400">{emptyText || texts.notPublished}</p> : <div className="text-base text-slate-700">{children}</div>}
+      {isEmpty ? <p className="text-base font-semibold text-slate-400">{emptyText || texts.notPublished}</p> : <div className="text-base text-slate-700">{children}</div>}
     </div>
   );
 }
 function CircularButton({ url, solidClassName }) {
-  if (!url) return <button disabled className="flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-slate-200 bg-slate-50 py-2.5 text-sm font-medium text-slate-400"><IconFileX className="h-4 w-4" />{texts.circularNotPublished}</button>;
-  return <a href={url} target="_blank" rel="noopener noreferrer" className={`flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-semibold text-white shadow-sm transition-colors ${solidClassName || "bg-indigo-600 hover:bg-indigo-700"}`}>{texts.viewCircular}<IconExternal className="h-4 w-4" /></a>;
+  if (!url) return <button disabled className="flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-slate-200 bg-slate-50 py-2.5 text-sm font-semibold text-slate-400"><IconFileX className="h-4 w-4" />{texts.circularNotPublished}</button>;
+  return <a href={url} target="_blank" rel="noopener noreferrer" className={`flex w-full items-center justify-center gap-2 rounded-lg py-2.5 text-sm font-bold text-white shadow-sm transition-colors ${solidClassName || "bg-indigo-600 hover:bg-indigo-700"}`}>{texts.viewCircular}<IconExternal className="h-4 w-4" /></a>;
 }
 function DateBox({ label, value }) {
-  return <div className="rounded-lg bg-slate-50 px-3 py-2.5"><p className="text-xs font-semibold text-slate-500">{label}</p><p className="mt-0.5 text-base font-bold text-navy-900">{value ?? texts.notPublished}</p></div>;
+  return <div className="rounded-lg bg-slate-50 px-3 py-2.5"><p className="text-xs font-bold text-slate-500">{label}</p><p className="mt-0.5 text-base font-bold text-navy-900">{value ?? texts.notPublished}</p></div>;
 }
 function UniversityInfoPanel({ university, initialUnitId }) {
   const today = useToday();
@@ -3513,17 +3513,17 @@ function UniversityInfoPanel({ university, initialUnitId }) {
     <div className={`rounded-xl border border-slate-200 border-t-4 bg-white p-4 shadow-soft sm:p-6 ${theme.topBorder}`}>
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div>
-          {category && <span className={`inline-flex items-center rounded-full border px-3 py-1 text-sm font-semibold ${theme.badge}`}>{category.shortNameBn}</span>}
+          {category && <span className={`inline-flex items-center rounded-full border px-3 py-1 text-sm font-bold ${theme.badge}`}>{category.shortNameBn}</span>}
           <h2 className="mt-2 text-xl font-extrabold text-navy-900 sm:text-2xl">{university.nameBn}</h2>
-          <p className="text-sm font-medium text-slate-500">{university.nameEn}</p>
+          <p className="text-sm font-semibold text-slate-500">{university.nameEn}</p>
         </div>
-        <span className="whitespace-nowrap text-sm font-semibold text-slate-500">{texts.admissionSession}: {university.admissionSession}</span>
+        <span className="whitespace-nowrap text-sm font-bold text-slate-500">{texts.admissionSession}: {university.admissionSession}</span>
       </div>
-      {university.introBn && <p className="mt-3 text-base font-medium text-slate-600">{university.introBn}</p>}
+      {university.introBn && <p className="mt-3 text-base font-semibold text-slate-600">{university.introBn}</p>}
       {hasNamedUnits && university.units.length > 1 && (
         <div className="mt-4 flex gap-1.5 overflow-x-auto pb-1">
           {university.units.map((unit) => (
-            <button key={unit.id} onClick={() => setActiveUnitId(unit.id)} className={`shrink-0 whitespace-nowrap rounded-full border px-3.5 py-2 text-sm font-semibold ${unit.id === activeUnit.id ? theme.activePill : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"}`}>{unit.nameBn}</button>
+            <button key={unit.id} onClick={() => setActiveUnitId(unit.id)} className={`shrink-0 whitespace-nowrap rounded-full border px-3.5 py-2 text-sm font-bold ${unit.id === activeUnit.id ? theme.activePill : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"}`}>{unit.nameBn}</button>
           ))}
         </div>
       )}
@@ -3544,7 +3544,7 @@ function UniversityInfoPanel({ university, initialUnitId }) {
             <div>
               {activeUnit.seats.total !== null && <p className="text-base text-slate-700">{texts.totalSeats}: <span className="font-extrabold text-navy-900">{toBanglaNumber(activeUnit.seats.total)}</span></p>}
               {activeUnit.seats.breakdown && activeUnit.seats.breakdown.length > 0 && (
-                <ul className="mt-2 divide-y divide-slate-200 text-base font-medium text-slate-600">
+                <ul className="mt-2 divide-y divide-slate-200 text-base font-semibold text-slate-600">
                   {activeUnit.seats.breakdown.map((b) => <li key={b.nameBn} className="flex justify-between py-2"><span>{b.nameBn}</span><span className="font-bold text-navy-800">{toBanglaNumber(b.count)}</span></li>)}
                 </ul>
               )}
@@ -3552,16 +3552,16 @@ function UniversityInfoPanel({ university, initialUnitId }) {
           )}
         </InfoSection>
         <InfoSection title={texts.sectionEligibility} icon={IconClipboardCheck} isEmpty={!activeUnit.eligibility?.descriptionBn && !(activeUnit.eligibility?.points?.length)}>
-          {activeUnit.eligibility?.descriptionBn && <p className="text-base font-medium leading-relaxed text-slate-700">{activeUnit.eligibility.descriptionBn}</p>}
+          {activeUnit.eligibility?.descriptionBn && <p className="text-base font-semibold leading-relaxed text-slate-700">{activeUnit.eligibility.descriptionBn}</p>}
           {activeUnit.eligibility?.points && activeUnit.eligibility.points.length > 0 && (
-            <ul className="mt-2 list-inside list-disc space-y-1.5 text-base font-medium text-slate-700">{activeUnit.eligibility.points.map((p, i) => <li key={i}>{p}</li>)}</ul>
+            <ul className="mt-2 list-inside list-disc space-y-1.5 text-base font-semibold text-slate-700">{activeUnit.eligibility.points.map((p, i) => <li key={i}>{p}</li>)}</ul>
           )}
         </InfoSection>
-        <InfoSection title={texts.sectionExamPattern} icon={IconListChecks} isEmpty={!activeUnit.examPattern}><p className="text-base font-medium leading-relaxed text-slate-700">{activeUnit.examPattern}</p></InfoSection>
+        <InfoSection title={texts.sectionExamPattern} icon={IconListChecks} isEmpty={!activeUnit.examPattern}><p className="text-base font-semibold leading-relaxed text-slate-700">{activeUnit.examPattern}</p></InfoSection>
         <InfoSection title={texts.sectionSubjects} icon={IconListOrdered} isEmpty={activeUnit.subjects.length === 0}>
-          <ul className="divide-y divide-slate-200 text-base font-medium">{activeUnit.subjects.map((s) => <li key={s.nameBn} className="flex items-center justify-between gap-3 py-2"><span className="text-slate-700">{s.nameBn}</span><span className="shrink-0 font-extrabold text-navy-900">{toBanglaNumber(s.marks)}</span></li>)}</ul>
+          <ul className="divide-y divide-slate-200 text-base font-semibold">{activeUnit.subjects.map((s) => <li key={s.nameBn} className="flex items-center justify-between gap-3 py-2"><span className="text-slate-700">{s.nameBn}</span><span className="shrink-0 font-extrabold text-navy-900">{toBanglaNumber(s.marks)}</span></li>)}</ul>
         </InfoSection>
-        <InfoSection title={texts.sectionResultMethod} icon={IconCalculator} isEmpty={!activeUnit.resultMethod}><p className="text-base font-medium leading-relaxed text-slate-700">{activeUnit.resultMethod}</p></InfoSection>
+        <InfoSection title={texts.sectionResultMethod} icon={IconCalculator} isEmpty={!activeUnit.resultMethod}><p className="text-base font-semibold leading-relaxed text-slate-700">{activeUnit.resultMethod}</p></InfoSection>
         <InfoSection title={texts.sectionCircular} icon={IconFileText} isEmpty={false}>
           <CircularButton url={activeUnit.circularUrl} solidClassName={theme.solid} />
         </InfoSection>
@@ -3596,7 +3596,7 @@ function InfoTab({ jumpToUniversityId, onConsumeJump }) {
         </React.Fragment>
       ) : (
         <div>
-          <button onClick={() => setSelectedUniversityId(null)} className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:text-indigo-800"><IconArrowLeft className="h-4 w-4" />{texts.backToList}</button>
+          <button onClick={() => setSelectedUniversityId(null)} className="mb-4 inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 hover:text-indigo-800"><IconArrowLeft className="h-4 w-4" />{texts.backToList}</button>
           <UniversityInfoPanel university={selectedUniversity} />
         </div>
       )}
@@ -3656,7 +3656,7 @@ function formatCriteriaSummary(criteria) {
   return lines;
 }
 
-const checkerInputClass = "w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-base font-semibold text-navy-900 focus:border-purple-400 focus:ring-2 focus:ring-purple-100";
+const checkerInputClass = "w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-base font-bold text-navy-900 focus:border-purple-400 focus:ring-2 focus:ring-purple-100";
 const CHECKER_CURRENT_YEAR = new Date().getFullYear();
 
 function EligibilityChecker({ onOpenUniversity }) {
@@ -3698,7 +3698,7 @@ function EligibilityChecker({ onOpenUniversity }) {
       <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-soft">
         <div className="bg-purple-600 px-4 py-4 sm:px-6">
           <h2 className="flex items-center gap-2 text-lg font-extrabold text-white sm:text-xl"><IconClipboardCheck className="h-5 w-5" />{texts.checkerTitle}</h2>
-          <p className="mt-1 text-sm font-medium text-purple-100">{texts.checkerSubtitle}</p>
+          <p className="mt-1 text-sm font-semibold text-purple-100">{texts.checkerSubtitle}</p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4 p-4 sm:p-6">
           <div>
@@ -3728,7 +3728,7 @@ function EligibilityChecker({ onOpenUniversity }) {
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {CHECKER_SUBJECTS.map((subject) => (
                   <label key={subject} className="block">
-                    <span className="mb-1.5 block text-xs font-semibold text-slate-500">{subject}</span>
+                    <span className="mb-1.5 block text-xs font-bold text-slate-500">{subject}</span>
                     <input type="number" min={0} max={5} step={0.01} value={subjectGpas[subject] || ""} onChange={(e) => setSubjectGpas((prev) => ({ ...prev, [subject]: e.target.value }))} className={checkerInputClass} />
                   </label>
                 ))}
@@ -3753,7 +3753,7 @@ function EligibilityChecker({ onOpenUniversity }) {
         </form>
       </div>
       {submittedInput && <EligibilityResults resultsByCategory={resultsByCategory} totalCount={results.length} onOpenUniversity={onOpenUniversity} />}
-      <p className="text-center text-xs font-medium text-slate-400">{texts.checkerDisclaimer}</p>
+      <p className="text-center text-xs font-semibold text-slate-400">{texts.checkerDisclaimer}</p>
     </div>
   );
 }
@@ -3782,17 +3782,17 @@ function EligibilityResults({ resultsByCategory, totalCount, onOpenUniversity })
                 <li key={`${university.id}-${unit.id}`} className="p-4 sm:p-5">
                   <div className="flex flex-wrap items-start justify-between gap-2">
                     <div>
-                      <p className="text-base font-extrabold text-navy-900">{university.nameBn}<span className="ml-1.5 text-sm font-semibold text-slate-400">({university.shortName})</span></p>
-                      {unit.nameBn && <p className="text-sm font-medium text-slate-500">{unit.nameBn}</p>}
+                      <p className="text-base font-extrabold text-navy-900">{university.nameBn}<span className="ml-1.5 text-sm font-bold text-slate-400">({university.shortName})</span></p>
+                      {unit.nameBn && <p className="text-sm font-semibold text-slate-500">{unit.nameBn}</p>}
                     </div>
                     <button onClick={() => onOpenUniversity(university.id)} className="inline-flex shrink-0 items-center gap-0.5 text-sm font-bold text-purple-600 hover:text-purple-800">{texts.details}<IconChevronRight className="h-4 w-4" /></button>
                   </div>
                   <div className="mt-2 rounded-lg bg-slate-50 p-3">
                     <p className="mb-1 text-xs font-bold uppercase tracking-wide text-slate-500">{texts.minRequirements}</p>
-                    <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold text-slate-700">
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm font-bold text-slate-700">
                       {formatCriteriaSummary(criteria).map((line, i) => <span key={i}>{line}</span>)}
                     </div>
-                    {criteria.noteBn && <p className="mt-1.5 text-sm font-medium text-amber-700">{texts.noteLabel}: {criteria.noteBn}</p>}
+                    {criteria.noteBn && <p className="mt-1.5 text-sm font-semibold text-amber-700">{texts.noteLabel}: {criteria.noteBn}</p>}
                   </div>
                 </li>
               ))}

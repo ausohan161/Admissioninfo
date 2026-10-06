@@ -26,7 +26,7 @@ const GROUP_OPTIONS: { value: StudentGroup; labelKey: TextKey }[] = [
 ];
 
 const inputClass =
-  "w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-base font-semibold text-navy-900 focus:border-purple-400 focus:ring-2 focus:ring-purple-100";
+  "w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-base font-bold text-navy-900 focus:border-purple-400 focus:ring-2 focus:ring-purple-100";
 
 const CURRENT_YEAR = new Date().getFullYear();
 
@@ -84,7 +84,7 @@ export function EligibilityChecker() {
             <ClipboardCheck className="h-5 w-5" aria-hidden />
             {texts.checkerTitle}
           </h2>
-          <p className="mt-1 text-sm font-medium text-purple-100">
+          <p className="mt-1 text-sm font-semibold text-purple-100">
             {texts.checkerSubtitle}
           </p>
         </div>
@@ -149,7 +149,7 @@ export function EligibilityChecker() {
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {CHECKER_SUBJECTS.map((subject) => (
                   <label key={subject} className="block">
-                    <span className="mb-1.5 block text-xs font-semibold text-slate-500">{subject}</span>
+                    <span className="mb-1.5 block text-xs font-bold text-slate-500">{subject}</span>
                     <input
                       type="number"
                       min={0}
@@ -223,7 +223,7 @@ export function EligibilityChecker() {
 
       {submittedInput && <ResultsSection resultsByCategory={resultsByCategory} totalCount={results.length} />}
 
-      <p className="text-center text-xs font-medium text-slate-400">
+      <p className="text-center text-xs font-semibold text-slate-400">
         {texts.checkerDisclaimer}
       </p>
     </div>
@@ -271,9 +271,9 @@ function ResultsSection({
                     <div>
                       <p className="text-base font-extrabold text-navy-900">
                         {university.nameBn}
-                        <span className="ml-1.5 text-sm font-semibold text-slate-400">({university.shortName})</span>
+                        <span className="ml-1.5 text-sm font-bold text-slate-400">({university.shortName})</span>
                       </p>
-                      {unit.nameBn && <p className="text-sm font-medium text-slate-500">{unit.nameBn}</p>}
+                      {unit.nameBn && <p className="text-sm font-semibold text-slate-500">{unit.nameBn}</p>}
                     </div>
                     <Link
                       href={`/university/?id=${university.id}${unit.nameBn ? `&unit=${unit.id}` : ""}`}
@@ -287,12 +287,12 @@ function ResultsSection({
                     <p className="mb-1 text-xs font-bold uppercase tracking-wide text-slate-500">
                       {texts.minRequirements}
                     </p>
-                    <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold text-slate-700">
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm font-bold text-slate-700">
                       {formatCriteriaSummary(criteria, unit).map((line, i) => (
                         <span key={i}>{line}</span>
                       ))}
                     </div>
-                    {criteria.noteBn && <p className="mt-1.5 text-sm font-medium text-amber-700">{texts.noteLabel}: {criteria.noteBn}</p>}
+                    {criteria.noteBn && <p className="mt-1.5 text-sm font-semibold text-amber-700">{texts.noteLabel}: {criteria.noteBn}</p>}
                   </div>
                 </li>
               ))}

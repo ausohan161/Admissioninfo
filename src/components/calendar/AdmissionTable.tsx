@@ -12,7 +12,7 @@ export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: st
     <div className="hidden overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-soft sm:block">
       <table className="w-full min-w-[960px] border-collapse text-left text-sm">
         <thead>
-          <tr className="text-xs font-semibold uppercase tracking-wide text-white">
+          <tr className="text-xs font-bold uppercase tracking-wide text-white">
             <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">{texts.colNo}</th>
             <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">{texts.colCategory}</th>
             <th className="whitespace-nowrap border border-indigo-500 bg-indigo-700 px-3 py-3">{texts.colUniversity}</th>
@@ -38,14 +38,14 @@ export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: st
                 </td>
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3">
                   <span
-                    className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-semibold ${theme.badge}`}
+                    className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-bold ${theme.badge}`}
                   >
                     <span className={`h-1.5 w-1.5 rounded-full ${theme.dot}`} aria-hidden />
                     {category?.shortNameBn ?? "—"}
                   </span>
                 </td>
                 <td className="border border-slate-200 px-3 py-3">
-                  <div className="font-medium text-navy-900">{university.nameBn}</div>
+                  <div className="font-semibold text-navy-900">{university.nameBn}</div>
                   <div className="text-xs text-slate-400">{university.shortName}</div>
                 </td>
                 <td className="border border-slate-200 px-3 py-3 text-slate-600">
@@ -68,7 +68,7 @@ export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: st
                 <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-right">
                   <Link
                     href={`/university/?id=${university.id}`}
-                    className="inline-flex items-center gap-0.5 text-xs font-medium text-indigo-600 hover:text-indigo-800"
+                    className="inline-flex items-center gap-0.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800"
                   >
                     {texts.details}
                     <ChevronRight className="h-3.5 w-3.5" aria-hidden />

@@ -30,7 +30,7 @@ export function CategoryPills({
             <button
               key={cat.id}
               onClick={() => onSelect(cat.id)}
-              className={`shrink-0 whitespace-nowrap rounded-full border px-3.5 py-2 text-xs font-medium shadow-sm sm:text-sm ${
+              className={`shrink-0 whitespace-nowrap rounded-full border px-3.5 py-2 text-xs font-semibold shadow-sm sm:text-sm ${
                 isActive ? theme.activePill : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
               }`}
             >

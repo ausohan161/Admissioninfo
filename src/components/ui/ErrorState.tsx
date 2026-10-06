@@ -15,12 +15,12 @@ export function ErrorState({
       <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-50 text-red-400">
         <AlertTriangle className="h-6 w-6" aria-hidden />
       </div>
-      <p className="text-sm font-medium text-red-700">{title}</p>
+      <p className="text-sm font-semibold text-red-700">{title}</p>
       <p className="max-w-sm text-xs text-red-400">{description}</p>
       {onRetry && (
         <button
           onClick={onRetry}
-          className="mt-1 rounded-md border border-red-200 bg-white px-3 py-1.5 text-xs font-medium text-red-600 hover:bg-red-50"
+          className="mt-1 rounded-md border border-red-200 bg-white px-3 py-1.5 text-xs font-semibold text-red-600 hover:bg-red-50"
         >
           {texts.retry}
         </button>

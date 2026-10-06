@@ -27,7 +27,7 @@ export function UpcomingTests({ rows, today }: { rows: FlatUnitRow[]; today: str
                     {toBanglaNumber(index + 1)}
                   </span>
                   <div className="min-w-0">
-                    <p className="text-sm font-medium leading-snug text-navy-800">
+                    <p className="text-sm font-semibold leading-snug text-navy-800">
                       {university.shortName}
                       {unit.nameBn && (
                         <span className="font-normal text-slate-500"> — {unit.nameBn}</span>

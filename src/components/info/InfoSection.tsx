@@ -26,7 +26,7 @@ export function InfoSection({
         {title}
       </h4>
       {isEmpty ? (
-        <p className="text-base font-medium text-slate-400">{emptyText}</p>
+        <p className="text-base font-semibold text-slate-400">{emptyText}</p>
       ) : (
         <div className="text-base text-slate-700">{children}</div>
       )}

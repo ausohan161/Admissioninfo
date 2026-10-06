@@ -25,7 +25,7 @@ export function NoticeTicker() {
           style={{ animationDuration: `${durationSeconds}s` }}
         >
           {track.map((notice, i) => (
-            <span key={i} className="flex items-center whitespace-nowrap px-4 text-sm font-medium text-amber-800">
+            <span key={i} className="flex items-center whitespace-nowrap px-4 text-sm font-semibold text-amber-800">
               {notice}
               <span className="ml-4 text-amber-300" aria-hidden>
                 ●

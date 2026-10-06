@@ -22,7 +22,7 @@ export function AdmissionMobileList({ rows, today }: { rows: FlatUnitRow[]; toda
             <div className="flex items-start justify-between gap-2">
               <div className="min-w-0">
                 <span
-                  className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-semibold ${theme.badge}`}
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-bold ${theme.badge}`}
                 >
                   <span className={`h-1.5 w-1.5 rounded-full ${theme.dot}`} aria-hidden />
                   {category?.shortNameBn}
@@ -42,13 +42,13 @@ export function AdmissionMobileList({ rows, today }: { rows: FlatUnitRow[]; toda
             <dl className="mt-3 grid grid-cols-2 divide-x divide-slate-200 border-t border-slate-200 pt-3 text-xs">
               <div className="pr-3">
                 <dt className="text-slate-400">{texts.examDate}</dt>
-                <dd className="font-medium text-slate-700">
+                <dd className="font-semibold text-slate-700">
                   {formatBanglaDate(unit.examDate) ?? texts.notPublished}
                 </dd>
               </div>
               <div className="pl-3">
                 <dt className="text-slate-400">{texts.applicationEnd}</dt>
-                <dd className="font-medium text-slate-700">
+                <dd className="font-semibold text-slate-700">
                   {formatBanglaDate(unit.applicationEnd) ?? texts.notPublished}
                 </dd>
               </div>

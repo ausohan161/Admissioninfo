@@ -27,8 +27,8 @@ body {
   color: #14213d;
   /* Slightly bolder baseline than the browser default (400) so plain text
      without an explicit Tailwind font-weight utility reads more clearly;
-     elements with font-semibold/font-bold remain visibly heavier still. */
-  font-weight: 600;
+     elements with font-bold/font-bold remain visibly heavier still. */
+  font-weight: 700;
 }
 
 /* Custom focus ring for accessibility, consistent with the navy accent */

@@ -33,7 +33,7 @@ export function DeadlineTicker({ rows, today }: { rows: FlatUnitRow[]; today: st
           style={{ animationDuration: `${durationSeconds}s` }}
         >
           {track.map((message, i) => (
-            <span key={i} className="flex items-center whitespace-nowrap px-4 text-sm font-medium text-rose-700">
+            <span key={i} className="flex items-center whitespace-nowrap px-4 text-sm font-semibold text-rose-700">
               {message}
               <span className="ml-4 text-rose-300" aria-hidden>
                 ●

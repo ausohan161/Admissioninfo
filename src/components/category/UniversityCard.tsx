@@ -28,7 +28,7 @@ export function UniversityCard({ university }: { university: University }) {
         <div className="min-w-0">
           <h3 className="text-base font-bold leading-snug text-navy-900">
             {university.nameBn}
-            <span className="ml-1.5 text-sm font-medium text-slate-400">({university.shortName})</span>
+            <span className="ml-1.5 text-sm font-semibold text-slate-400">({university.shortName})</span>
           </h3>
           {university.subGroupBn && <p className="text-xs text-slate-400">{university.subGroupBn}</p>}
         </div>
@@ -40,7 +40,7 @@ export function UniversityCard({ university }: { university: University }) {
             <button
               key={unit.id}
               onClick={() => setActiveUnitId(unit.id)}
-              className={`shrink-0 whitespace-nowrap rounded-full border px-3 py-1.5 text-xs font-medium ${
+              className={`shrink-0 whitespace-nowrap rounded-full border px-3 py-1.5 text-xs font-semibold ${
                 unit.id === activeUnit?.id
                   ? theme.activePill
                   : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
@@ -56,20 +56,20 @@ export function UniversityCard({ university }: { university: University }) {
         <>
           <div className="mt-4 grid grid-cols-3 gap-2 text-center sm:gap-3">
             <div className="rounded-lg bg-slate-50 px-2 py-2.5">
-              <p className="text-xs font-semibold text-slate-500 sm:text-sm">{texts.applicationStart}</p>
-              <p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">
+              <p className="text-xs font-bold text-slate-500 sm:text-sm">{texts.applicationStart}</p>
+              <p className="mt-0.5 text-xs font-bold text-navy-800 sm:text-sm">
                 {formatBanglaDate(activeUnit.applicationStart) ?? texts.notPublishedShort}
               </p>
             </div>
             <div className="rounded-lg bg-slate-50 px-2 py-2.5">
-              <p className="text-xs font-semibold text-slate-500 sm:text-sm">{texts.applicationEnd}</p>
-              <p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">
+              <p className="text-xs font-bold text-slate-500 sm:text-sm">{texts.applicationEnd}</p>
+              <p className="mt-0.5 text-xs font-bold text-navy-800 sm:text-sm">
                 {formatBanglaDate(activeUnit.applicationEnd) ?? texts.notPublishedShort}
               </p>
             </div>
             <div className="rounded-lg bg-slate-50 px-2 py-2.5">
-              <p className="text-xs font-semibold text-slate-500 sm:text-sm">{texts.examDate}</p>
-              <p className="mt-0.5 text-xs font-semibold text-navy-800 sm:text-sm">
+              <p className="text-xs font-bold text-slate-500 sm:text-sm">{texts.examDate}</p>
+              <p className="mt-0.5 text-xs font-bold text-navy-800 sm:text-sm">
                 {formatBanglaDate(activeUnit.examDate) ?? texts.notPublishedShort}
               </p>
             </div>
@@ -84,7 +84,7 @@ export function UniversityCard({ university }: { university: University }) {
 
       <Link
         href={`/university/?id=${university.id}${activeUnit && hasNamedUnits ? `&unit=${activeUnit.id}` : ""}`}
-        className={`mt-4 flex items-center justify-center gap-1 rounded-lg py-2 text-sm font-semibold text-white shadow-sm transition-colors ${theme.solid}`}
+        className={`mt-4 flex items-center justify-center gap-1 rounded-lg py-2 text-sm font-bold text-white shadow-sm transition-colors ${theme.solid}`}
       >
         {texts.viewDetails}
         <ChevronRight className="h-4 w-4" aria-hidden />

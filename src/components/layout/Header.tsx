@@ -28,7 +28,7 @@ export function Header() {
 
         <div className="flex items-center gap-2 text-xs text-slate-400 sm:text-sm">
           <span className="hidden sm:inline">{texts.lastUpdated}</span>
-          <span className="font-medium text-slate-500">{formatted ?? "—"}</span>
+          <span className="font-semibold text-slate-500">{formatted ?? "—"}</span>
         </div>
       </div>
     </header>

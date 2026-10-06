@@ -5,7 +5,7 @@ export function StatusBadge({ unit, today }: { unit: AdmissionUnit; today: strin
   const info = computeStatus(unit, today);
   return (
     <span
-      className={`inline-flex items-center whitespace-nowrap rounded-full border px-2.5 py-1 text-xs font-medium ${info.className}`}
+      className={`inline-flex items-center whitespace-nowrap rounded-full border px-2.5 py-1 text-xs font-semibold ${info.className}`}
     >
       {info.labelBn}
     </span>

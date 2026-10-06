@@ -23,7 +23,7 @@ function UniversityDetail() {
     <>
       <Link
         href="/"
-        className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:text-indigo-800"
+        className="mb-4 inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 hover:text-indigo-800"
       >
         <ArrowLeft className="h-4 w-4" aria-hidden />
         {texts.backHome}
