@@ -17,7 +17,6 @@ export interface EligibilityInput {
    * data is added to `EligibilityCriteria`, wire it in here instead of ignoring it. */
   sscYear: number;
   hscYear: number;
-  mobileNumber: string;
 }
 
 /** Whether a single unit's criteria are satisfied by the given input.

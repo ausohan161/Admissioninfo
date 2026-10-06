@@ -37,7 +37,6 @@ export function EligibilityChecker() {
   const [subjectGpas, setSubjectGpas] = useState<Partial<Record<CheckerSubject, string>>>({});
   const [sscYear, setSscYear] = useState("");
   const [hscYear, setHscYear] = useState("");
-  const [mobileNumber, setMobileNumber] = useState("");
   const [submittedInput, setSubmittedInput] = useState<EligibilityInput | null>(null);
 
   const results = useMemo(() => {
@@ -72,7 +71,6 @@ export function EligibilityChecker() {
       subjectGpas: parsedSubjects,
       sscYear: Number(sscYear) || 0,
       hscYear: Number(hscYear) || 0,
-      mobileNumber,
     });
   };
 
@@ -195,21 +193,6 @@ export function EligibilityChecker() {
               />
             </label>
           </div>
-
-          <label className="block">
-            <span className="mb-1.5 block text-sm font-bold text-navy-900">{texts.mobileLabel}</span>
-            <input
-              required
-              type="tel"
-              inputMode="numeric"
-              pattern="01[3-9][0-9]{8}"
-              maxLength={11}
-              placeholder={texts.mobilePlaceholder}
-              value={mobileNumber}
-              onChange={(e) => setMobileNumber(e.target.value.replace(/[^0-9]/g, ""))}
-              className={inputClass}
-            />
-          </label>
 
           <button
             type="submit"

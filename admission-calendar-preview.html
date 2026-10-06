@@ -3042,8 +3042,6 @@ const texts = {
   "subjectGpaLabel": "বিষয়ভিত্তিক HSC জিপিএ",
   "sscYearLabel": "SSC পাসের সাল *",
   "hscYearLabel": "HSC পাসের সাল *",
-  "mobileLabel": "মোবাইল নম্বর *",
-  "mobilePlaceholder": "যেমন: ০১৭xxxxxxxx",
   "checkButton": "যাচাই করুন",
   "checkerDisclaimer": "এই ফলাফল শুধুমাত্র জিপিএ-ভিত্তিক একটি প্রাথমিক অনুমান, যা ২০২৫ সালের ভর্তি বিজ্ঞপ্তির ধরন অনুসারে হিসাব করা হয়েছে। চূড়ান্ত সিদ্ধান্তের আগে সংশ্লিষ্ট বিশ্ববিদ্যালয়ের অফিসিয়াল সার্কুলার অবশ্যই যাচাই করুন।",
   "noEligibleTitle": "আপনার দেওয়া তথ্য অনুযায়ী কোনো প্রতিষ্ঠানে যোগ্য পাওয়া যায়নি",
@@ -3668,7 +3666,6 @@ function EligibilityChecker({ onOpenUniversity }) {
   const [subjectGpas, setSubjectGpas] = useState({});
   const [sscYear, setSscYear] = useState("");
   const [hscYear, setHscYear] = useState("");
-  const [mobileNumber, setMobileNumber] = useState("");
   const [submittedInput, setSubmittedInput] = useState(null);
 
   const results = useMemo(() => (submittedInput ? findEligibleUnits(universities, submittedInput) : []), [submittedInput]);
@@ -3692,7 +3689,7 @@ function EligibilityChecker({ onOpenUniversity }) {
         if (!Number.isNaN(n)) parsedSubjects[subject] = n;
       }
     }
-    setSubmittedInput({ group, sscGpa: Number(sscGpa) || 0, hscGpa: Number(hscGpa) || 0, subjectGpas: parsedSubjects, sscYear: Number(sscYear) || 0, hscYear: Number(hscYear) || 0, mobileNumber });
+    setSubmittedInput({ group, sscGpa: Number(sscGpa) || 0, hscGpa: Number(hscGpa) || 0, subjectGpas: parsedSubjects, sscYear: Number(sscYear) || 0, hscYear: Number(hscYear) || 0 });
   };
 
   return (
@@ -3747,10 +3744,6 @@ function EligibilityChecker({ onOpenUniversity }) {
               <input required type="number" min={2005} max={CHECKER_CURRENT_YEAR} step={1} placeholder={fillTemplate(texts.yearPlaceholder, { year: String(CHECKER_CURRENT_YEAR) })} value={hscYear} onChange={(e) => setHscYear(e.target.value)} className={checkerInputClass} />
             </label>
           </div>
-          <label className="block">
-            <span className="mb-1.5 block text-sm font-bold text-navy-900">{texts.mobileLabel}</span>
-            <input required type="tel" inputMode="numeric" pattern="01[3-9][0-9]{8}" maxLength={11} placeholder={texts.mobilePlaceholder} value={mobileNumber} onChange={(e) => setMobileNumber(e.target.value.replace(/[^0-9]/g, ""))} className={checkerInputClass} />
-          </label>
           <button type="submit" className="flex w-full items-center justify-center gap-2 rounded-lg bg-purple-600 py-3 text-base font-extrabold text-white shadow-soft transition-opacity hover:opacity-90"><IconCheckCircle className="h-5 w-5" />{texts.checkButton}</button>
         </form>
       </div>

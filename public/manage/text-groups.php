@@ -92,8 +92,6 @@ return [
         'subjectGpaLabel' => 'বিষয়ভিত্তিক জিপিএ শিরোনাম',
         'sscYearLabel' => 'SSC পাসের সাল লেবেল',
         'hscYearLabel' => 'HSC পাসের সাল লেবেল',
-        'mobileLabel' => 'মোবাইল নম্বর লেবেল',
-        'mobilePlaceholder' => 'মোবাইল নম্বর ঘরের নমুনা লেখা',
         'yearPlaceholder' => 'সালের ঘরের নমুনা ("যেমন: {year}")',
         'checkButton' => 'বাটন: যাচাই করুন',
         'checkerDisclaimer' => 'ফলাফলের নিচের সতর্কবার্তা',
