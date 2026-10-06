@@ -30,7 +30,7 @@ export function UpcomingTests({ rows, today }: { rows: FlatUnitRow[]; today: str
                     <p className="text-sm font-semibold leading-snug text-navy-800">
                       {university.shortName}
                       {unit.nameBn && (
-                        <span className="font-normal text-slate-500"> — {unit.nameBn}</span>
+                        <span className="font-semibold text-slate-500"> — {unit.nameBn}</span>
                       )}
                     </p>
                   </div>
