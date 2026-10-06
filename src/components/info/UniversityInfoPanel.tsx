@@ -89,7 +89,7 @@ export function UniversityInfoPanel({ university }: { university: University }) 
                 </p>
               )}
               {activeUnit.seats.breakdown && activeUnit.seats.breakdown.length > 0 && (
-                <ul className="mt-2 divide-y divide-slate-200 text-base font-semibold text-slate-600">
+                <ul className="mt-2 divide-y-2 divide-slate-300 text-base font-semibold text-slate-600">
                   {activeUnit.seats.breakdown.map((b) => (
                     <li key={b.nameBn} className="flex justify-between py-2">
                       <span>{b.nameBn}</span>
@@ -124,7 +124,7 @@ export function UniversityInfoPanel({ university }: { university: University }) 
         </InfoSection>
 
         <InfoSection title={texts.sectionSubjects} icon={ListOrdered} isEmpty={activeUnit.subjects.length === 0}>
-          <ul className="divide-y divide-slate-200 text-base font-semibold">
+          <ul className="divide-y-2 divide-slate-300 text-base font-semibold">
             {activeUnit.subjects.map((s) => (
               <li key={s.nameBn} className="flex items-center justify-between gap-3 py-2">
                 <span className="text-slate-700">{s.nameBn}</span>

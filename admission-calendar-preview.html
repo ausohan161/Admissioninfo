@@ -3219,7 +3219,7 @@ function UpcomingTests({ rows, today }) {
         {rows.length === 0 ? (
           <EmptyState title={texts.emptyUpcomingTitle} description={texts.emptyUpcomingDesc} />
         ) : (
-          <ul className="divide-y divide-slate-200">
+          <ul className="divide-y-2 divide-slate-300">
             {rows.map(({ university, unit }, index) => (
               <li key={`${university.id}-${unit.id}`} className="flex items-start justify-between gap-3 py-2.5">
                 <div className="flex min-w-0 items-start gap-2.5">
@@ -3280,17 +3280,17 @@ function AdmissionTable({ rows, today, onOpen }) {
             const theme = getCategoryTheme(university.category);
             return (
               <tr key={`${university.id}-${unit.id}`} className={`align-top hover:bg-indigo-50/40 ${index % 2 === 1 ? "bg-slate-50/60" : "bg-white"}`}>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-base font-extrabold text-slate-600">{toBanglaNumber(index + 1)}</td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3">
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3 text-base font-extrabold text-slate-600">{toBanglaNumber(index + 1)}</td>
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3">
                   <span className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-bold ${theme.badge}`}><span className={`h-1.5 w-1.5 rounded-full ${theme.dot}`}></span>{category?.shortNameBn ?? "—"}</span>
                 </td>
-                <td className="border border-slate-200 px-3 py-3"><div className="font-semibold text-navy-900">{university.nameBn}</div><div className="text-xs text-slate-400">{university.shortName}</div></td>
-                <td className="border border-slate-200 px-3 py-3 text-slate-600"><div className="flex items-center gap-1.5"><span>{unit.nameBn ?? "—"}</span></div></td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">{formatBanglaDate(unit.applicationStart) ?? texts.notPublished}</td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">{formatBanglaDate(unit.applicationEnd) ?? texts.notPublished}</td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">{formatBanglaDate(unit.examDate) ?? texts.notPublished}</td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3"><CountdownBadge unit={unit} today={today} /></td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-right"><button onClick={() => onOpen(university.id)} className="inline-flex items-center gap-0.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800">{texts.details}<IconChevronRight className="h-3.5 w-3.5" /></button></td>
+                <td className="border border-slate-300 px-3 py-3"><div className="font-semibold text-navy-900">{university.nameBn}</div><div className="text-xs text-slate-400">{university.shortName}</div></td>
+                <td className="border border-slate-300 px-3 py-3 text-slate-600"><div className="flex items-center gap-1.5"><span>{unit.nameBn ?? "—"}</span></div></td>
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3 text-slate-600">{formatBanglaDate(unit.applicationStart) ?? texts.notPublished}</td>
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3 text-slate-600">{formatBanglaDate(unit.applicationEnd) ?? texts.notPublished}</td>
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3 text-slate-600">{formatBanglaDate(unit.examDate) ?? texts.notPublished}</td>
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3"><CountdownBadge unit={unit} today={today} /></td>
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3 text-right"><button onClick={() => onOpen(university.id)} className="inline-flex items-center gap-0.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800">{texts.details}<IconChevronRight className="h-3.5 w-3.5" /></button></td>
               </tr>
             );
           })}
@@ -3317,7 +3317,7 @@ function AdmissionMobileList({ rows, today, onOpen }) {
               <IconChevronRight className="mt-1 h-4 w-4 shrink-0 text-slate-300" />
             </div>
             <div className="mt-3 flex flex-wrap items-center gap-2"><CountdownBadge unit={unit} today={today} /></div>
-            <dl className="mt-3 grid grid-cols-2 divide-x divide-slate-200 border-t border-slate-200 pt-3 text-xs">
+            <dl className="mt-3 grid grid-cols-2 divide-x divide-slate-300 border-t-2 border-slate-300 pt-3 text-xs">
               <div className="pr-3"><dt className="text-slate-400">{texts.examDate}</dt><dd className="font-semibold text-slate-700">{formatBanglaDate(unit.examDate) ?? texts.notPublished}</dd></div>
               <div className="pl-3"><dt className="text-slate-400">{texts.applicationEnd}</dt><dd className="font-semibold text-slate-700">{formatBanglaDate(unit.applicationEnd) ?? texts.notPublished}</dd></div>
             </dl>
@@ -3544,7 +3544,7 @@ function UniversityInfoPanel({ university, initialUnitId }) {
             <div>
               {activeUnit.seats.total !== null && <p className="text-base text-slate-700">{texts.totalSeats}: <span className="font-extrabold text-navy-900">{toBanglaNumber(activeUnit.seats.total)}</span></p>}
               {activeUnit.seats.breakdown && activeUnit.seats.breakdown.length > 0 && (
-                <ul className="mt-2 divide-y divide-slate-200 text-base font-semibold text-slate-600">
+                <ul className="mt-2 divide-y-2 divide-slate-300 text-base font-semibold text-slate-600">
                   {activeUnit.seats.breakdown.map((b) => <li key={b.nameBn} className="flex justify-between py-2"><span>{b.nameBn}</span><span className="font-bold text-navy-800">{toBanglaNumber(b.count)}</span></li>)}
                 </ul>
               )}
@@ -3559,7 +3559,7 @@ function UniversityInfoPanel({ university, initialUnitId }) {
         </InfoSection>
         <InfoSection title={texts.sectionExamPattern} icon={IconListChecks} isEmpty={!activeUnit.examPattern}><p className="text-base font-semibold leading-relaxed text-slate-700">{activeUnit.examPattern}</p></InfoSection>
         <InfoSection title={texts.sectionSubjects} icon={IconListOrdered} isEmpty={activeUnit.subjects.length === 0}>
-          <ul className="divide-y divide-slate-200 text-base font-semibold">{activeUnit.subjects.map((s) => <li key={s.nameBn} className="flex items-center justify-between gap-3 py-2"><span className="text-slate-700">{s.nameBn}</span><span className="shrink-0 font-extrabold text-navy-900">{toBanglaNumber(s.marks)}</span></li>)}</ul>
+          <ul className="divide-y-2 divide-slate-300 text-base font-semibold">{activeUnit.subjects.map((s) => <li key={s.nameBn} className="flex items-center justify-between gap-3 py-2"><span className="text-slate-700">{s.nameBn}</span><span className="shrink-0 font-extrabold text-navy-900">{toBanglaNumber(s.marks)}</span></li>)}</ul>
         </InfoSection>
         <InfoSection title={texts.sectionResultMethod} icon={IconCalculator} isEmpty={!activeUnit.resultMethod}><p className="text-base font-semibold leading-relaxed text-slate-700">{activeUnit.resultMethod}</p></InfoSection>
         <InfoSection title={texts.sectionCircular} icon={IconFileText} isEmpty={false}>
@@ -3777,7 +3777,7 @@ function EligibilityResults({ resultsByCategory, totalCount, onOpenUniversity })
               <h3 className="text-base font-extrabold sm:text-lg">{category.nameBn}</h3>
               <span className="rounded-full bg-white/20 px-2.5 py-0.5 text-sm font-bold">{toBanglaNumber(rows.length)}</span>
             </div>
-            <ul className="divide-y divide-slate-200">
+            <ul className="divide-y-2 divide-slate-300">
               {rows.map(({ university, unit, criteria }) => (
                 <li key={`${university.id}-${unit.id}`} className="p-4 sm:p-5">
                   <div className="flex flex-wrap items-start justify-between gap-2">

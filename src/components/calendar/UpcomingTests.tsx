@@ -19,7 +19,7 @@ export function UpcomingTests({ rows, today }: { rows: FlatUnitRow[]; today: str
             description={texts.emptyUpcomingDesc}
           />
         ) : (
-          <ul className="divide-y divide-slate-200">
+          <ul className="divide-y-2 divide-slate-300">
             {rows.map(({ university, unit }, index) => (
               <li key={`${university.id}-${unit.id}`} className="flex items-start justify-between gap-3 py-2.5">
                 <div className="flex min-w-0 items-start gap-2.5">

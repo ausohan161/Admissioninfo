@@ -39,7 +39,7 @@ export function AdmissionMobileList({ rows, today }: { rows: FlatUnitRow[]; toda
               <CountdownBadge unit={unit} today={today} />
             </div>
 
-            <dl className="mt-3 grid grid-cols-2 divide-x divide-slate-200 border-t border-slate-200 pt-3 text-xs">
+            <dl className="mt-3 grid grid-cols-2 divide-x divide-slate-300 border-t-2 border-slate-300 pt-3 text-xs">
               <div className="pr-3">
                 <dt className="text-slate-400">{texts.examDate}</dt>
                 <dd className="font-semibold text-slate-700">

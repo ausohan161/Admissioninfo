@@ -33,10 +33,10 @@ export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: st
                 key={`${university.id}-${unit.id}`}
                 className={`align-top hover:bg-indigo-50/40 ${index % 2 === 1 ? "bg-slate-50/60" : "bg-white"}`}
               >
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-base font-extrabold text-slate-600">
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3 text-base font-extrabold text-slate-600">
                   {toBanglaNumber(index + 1)}
                 </td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3">
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3">
                   <span
                     className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-bold ${theme.badge}`}
                   >
@@ -44,28 +44,28 @@ export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: st
                     {category?.shortNameBn ?? "—"}
                   </span>
                 </td>
-                <td className="border border-slate-200 px-3 py-3">
+                <td className="border border-slate-300 px-3 py-3">
                   <div className="font-semibold text-navy-900">{university.nameBn}</div>
                   <div className="text-xs text-slate-400">{university.shortName}</div>
                 </td>
-                <td className="border border-slate-200 px-3 py-3 text-slate-600">
+                <td className="border border-slate-300 px-3 py-3 text-slate-600">
                   <div className="flex items-center gap-1.5">
                     <span>{unit.nameBn ?? "—"}</span>
                   </div>
                 </td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3 text-slate-600">
                   {formatBanglaDate(unit.applicationStart) ?? texts.notPublished}
                 </td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3 text-slate-600">
                   {formatBanglaDate(unit.applicationEnd) ?? texts.notPublished}
                 </td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-slate-600">
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3 text-slate-600">
                   {formatBanglaDate(unit.examDate) ?? texts.notPublished}
                 </td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3">
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3">
                   <CountdownBadge unit={unit} today={today} />
                 </td>
-                <td className="whitespace-nowrap border border-slate-200 px-3 py-3 text-right">
+                <td className="whitespace-nowrap border border-slate-300 px-3 py-3 text-right">
                   <Link
                     href={`/university/?id=${university.id}`}
                     className="inline-flex items-center gap-0.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800"

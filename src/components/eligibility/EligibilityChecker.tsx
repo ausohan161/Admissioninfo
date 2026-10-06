@@ -264,7 +264,7 @@ function ResultsSection({
               <h3 className="text-base font-extrabold sm:text-lg">{category.nameBn}</h3>
               <span className="rounded-full bg-white/20 px-2.5 py-0.5 text-sm font-bold">{toBanglaNumber(rows.length)}</span>
             </div>
-            <ul className="divide-y divide-slate-200">
+            <ul className="divide-y-2 divide-slate-300">
               {rows.map(({ university, unit, criteria }) => (
                 <li key={`${university.id}-${unit.id}`} className="p-4 sm:p-5">
                   <div className="flex flex-wrap items-start justify-between gap-2">
