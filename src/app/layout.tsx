@@ -1,13 +1,27 @@
 import type { Metadata } from "next";
-import { Noto_Sans_Bengali } from "next/font/google";
+import { Hind_Siliguri, Lato, Baloo_Da_2 } from "next/font/google";
 import "./globals.css";
 import { ContentProvider } from "@/components/layout/ContentProvider";
 import { texts } from "@/lib/texts";
 
-const notoBengali = Noto_Sans_Bengali({
+// Same families as udvash.com: Hind Siliguri for Bengali text, Lato for Latin text
+// and digits, Baloo Da 2 for headings.
+const hindSiliguri = Hind_Siliguri({
   subsets: ["bengali", "latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-noto-bangla",
+  weight: ["400", "600", "700"],
+  variable: "--font-hind",
+  display: "swap",
+});
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  variable: "--font-lato",
+  display: "swap",
+});
+const balooDa2 = Baloo_Da_2({
+  subsets: ["bengali", "latin"],
+  weight: ["400", "600", "700", "800"],
+  variable: "--font-baloo",
   display: "swap",
 });
 
@@ -35,7 +49,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="bn" className={notoBengali.variable}>
+    <html lang="bn" className={`${hindSiliguri.variable} ${lato.variable} ${balooDa2.variable}`}>
       <body className="min-h-screen antialiased">
         <ContentProvider>{children}</ContentProvider>
       </body>
