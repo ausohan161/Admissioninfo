@@ -1,0 +1,15 @@
+---
+# শুধু তখনই দরকার যদি cPanel-এ "Repository Path" সরাসরি public_html না দিয়ে
+# আলাদা একটি ফোল্ডারে ক্লোন করা হয় — তাহলে cPanel-এর "Deploy HEAD Commit" বাটন এই
+# ফাইলের tasks চালিয়ে সেই ক্লোন থেকে ফাইলগুলো public_html-এ কপি করে দেয়।
+#
+# DEPLOYPATH-এর জায়গায় আপনার আসল cPanel ব্যবহারকারীনাম ও (দরকার হলে) ডোমেইনের
+# আসল পাবলিক ফোল্ডার বসান — cPanel-এর "File Manager"-এ home ফোল্ডার থেকে এই
+# পাথ দেখা যায় (যেমন /home/u123456789/public_html/ অথবা অ্যাডঅন ডোমেইন হলে
+# /home/u123456789/domains/yourdomain.com/public_html/)।
+#
+# সরাসরি public_html-এ ক্লোন করলে (রিকমেন্ডেড পদ্ধতি) এই ফাইলের দরকার নেই।
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/ausohanc/public_html/admissioninfo/
+    - /bin/cp -R * $DEPLOYPATH

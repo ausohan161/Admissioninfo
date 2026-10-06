@@ -1,0 +1,632 @@
+{
+  "agriculture-cluster": {
+    "default": {
+      "group": "science",
+      "minSscGpa": 4,
+      "minHscGpa": 4,
+      "minCombinedGpa": 8.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": "SSC ও HSC-তে জীববিজ্ঞান, রসায়ন, পদার্থবিজ্ঞান ও গণিত বিষয়ে উত্তীর্ণ থাকতে হবে।"
+    }
+  },
+  "armed-forces-medical": {
+    "default": {
+      "group": "science",
+      "minSscGpa": null,
+      "minHscGpa": null,
+      "minCombinedGpa": 8.5,
+      "subjectMinimums": [
+        {
+          "subjectBn": "জীববিজ্ঞান",
+          "minGpa": 3.5
+        }
+      ],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "army-medical": {
+    "default": {
+      "group": "science",
+      "minSscGpa": null,
+      "minHscGpa": null,
+      "minCombinedGpa": 8.5,
+      "subjectMinimums": [
+        {
+          "subjectBn": "জীববিজ্ঞান",
+          "minGpa": 3.5
+        }
+      ],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "buet": {
+    "default": {
+      "group": "science",
+      "minSscGpa": 4,
+      "minHscGpa": 5,
+      "minCombinedGpa": null,
+      "subjectMinimums": [
+        {
+          "subjectBn": "উচ্চতর গণিত",
+          "minGpa": 5
+        },
+        {
+          "subjectBn": "পদার্থবিজ্ঞান",
+          "minGpa": 5
+        },
+        {
+          "subjectBn": "রসায়ন",
+          "minGpa": 5
+        }
+      ],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "bup": {
+    "fst": {
+      "group": "science",
+      "minSscGpa": null,
+      "minHscGpa": null,
+      "minCombinedGpa": 8,
+      "subjectMinimums": [
+        {
+          "subjectBn": "পদার্থবিজ্ঞান",
+          "minGpa": 4
+        },
+        {
+          "subjectBn": "রসায়ন",
+          "minGpa": 4
+        },
+        {
+          "subjectBn": "জীববিজ্ঞান",
+          "minGpa": 4
+        },
+        {
+          "subjectBn": "ইংরেজি",
+          "minGpa": 3.5
+        }
+      ],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "fass": {
+      "group": "any",
+      "minSscGpa": null,
+      "minHscGpa": null,
+      "minCombinedGpa": 7.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "fsss": {
+      "group": "any",
+      "minSscGpa": null,
+      "minHscGpa": null,
+      "minCombinedGpa": 8,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "butex": {
+    "default": {
+      "group": "science",
+      "minSscGpa": 4,
+      "minHscGpa": 4,
+      "minCombinedGpa": null,
+      "subjectMinimums": [
+        {
+          "subjectBn": "উচ্চতর গণিত",
+          "minGpa": 3.5
+        },
+        {
+          "subjectBn": "পদার্থবিজ্ঞান",
+          "minGpa": 3.5
+        },
+        {
+          "subjectBn": "রসায়ন",
+          "minGpa": 3.5
+        },
+        {
+          "subjectBn": "ইংরেজি",
+          "minGpa": 3.5
+        }
+      ],
+      "subjectGroupMinTotal": {
+        "subjectsBn": [
+          "উচ্চতর গণিত",
+          "পদার্থবিজ্ঞান",
+          "রসায়ন",
+          "ইংরেজি"
+        ],
+        "minTotal": 17.5
+      },
+      "noteBn": null
+    }
+  },
+  "cou": {
+    "a-unit": {
+      "group": "science",
+      "minSscGpa": 3,
+      "minHscGpa": 3,
+      "minCombinedGpa": 7,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "b-unit": {
+      "group": "any",
+      "minSscGpa": 3,
+      "minHscGpa": 3,
+      "minCombinedGpa": 6,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "cu": {
+    "a-unit": {
+      "group": "science",
+      "minSscGpa": 4,
+      "minHscGpa": 3,
+      "minCombinedGpa": 8,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "b-unit": {
+      "group": "any",
+      "minSscGpa": 3,
+      "minHscGpa": 2.5,
+      "minCombinedGpa": 6.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "b1-unit": {
+      "group": "any",
+      "minSscGpa": 3,
+      "minHscGpa": 2.5,
+      "minCombinedGpa": 6.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "b2-unit": {
+      "group": "any",
+      "minSscGpa": 3,
+      "minHscGpa": 2.5,
+      "minCombinedGpa": 6.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "d-unit": {
+      "group": "any",
+      "minSscGpa": 3.5,
+      "minHscGpa": 3,
+      "minCombinedGpa": 7.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "cuet": {
+    "default": {
+      "group": "science",
+      "minSscGpa": 4,
+      "minHscGpa": null,
+      "minCombinedGpa": null,
+      "subjectMinimums": [
+        {
+          "subjectBn": "ইংরেজি",
+          "minGpa": 3
+        }
+      ],
+      "subjectGroupMinTotal": {
+        "subjectsBn": [
+          "উচ্চতর গণিত",
+          "পদার্থবিজ্ঞান",
+          "রসায়ন"
+        ],
+        "minTotal": 14
+      },
+      "noteBn": "ইংরেজিতে ন্যূনতম 'B' গ্রেড (জিপি ৩) প্রয়োজন। বায়োমেডিকেল ইঞ্জিনিয়ারিং বিভাগে জীববিজ্ঞানে কমপক্ষে জিপি ৪ আলাদাভাবে প্রয়োজন।"
+    }
+  },
+  "du": {
+    "science": {
+      "group": "science",
+      "minSscGpa": 3.5,
+      "minHscGpa": 3.5,
+      "minCombinedGpa": 8,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "arts": {
+      "group": "any",
+      "minSscGpa": 3,
+      "minHscGpa": 3,
+      "minCombinedGpa": 7.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "gst-cluster": {
+    "a-unit": {
+      "group": "science",
+      "minSscGpa": 3.25,
+      "minHscGpa": 3.25,
+      "minCombinedGpa": 7,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "b-unit": {
+      "group": "any",
+      "minSscGpa": 3,
+      "minHscGpa": 3,
+      "minCombinedGpa": 6,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "hstu": {
+    "a-unit": {
+      "group": "science",
+      "minSscGpa": 3.5,
+      "minHscGpa": 3.5,
+      "minCombinedGpa": 7.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "b-unit": {
+      "group": "science",
+      "minSscGpa": 3.5,
+      "minHscGpa": 3.5,
+      "minCombinedGpa": 7.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "d-unit": {
+      "group": "any",
+      "minSscGpa": 3,
+      "minHscGpa": 3,
+      "minCombinedGpa": 6,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "iut": {
+    "default": {
+      "group": "science",
+      "minSscGpa": 4.5,
+      "minHscGpa": 4.5,
+      "minCombinedGpa": null,
+      "subjectMinimums": [
+        {
+          "subjectBn": "পদার্থবিজ্ঞান",
+          "minGpa": 5
+        },
+        {
+          "subjectBn": "রসায়ন",
+          "minGpa": 5
+        },
+        {
+          "subjectBn": "উচ্চতর গণিত",
+          "minGpa": 5
+        },
+        {
+          "subjectBn": "ইংরেজি",
+          "minGpa": 4
+        }
+      ],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "jnu": {
+    "a-unit": {
+      "group": "science",
+      "minSscGpa": 3.25,
+      "minHscGpa": 3.25,
+      "minCombinedGpa": 7.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "b-unit": {
+      "group": "any",
+      "minSscGpa": 3,
+      "minHscGpa": 3,
+      "minCombinedGpa": 6.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "d-unit": {
+      "group": "any",
+      "minSscGpa": 3,
+      "minHscGpa": 3,
+      "minCombinedGpa": 6.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "ju": {
+    "a-unit": {
+      "group": "science",
+      "minSscGpa": 4,
+      "minHscGpa": 4,
+      "minCombinedGpa": 8.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "d-unit": {
+      "group": "science",
+      "minSscGpa": 4,
+      "minHscGpa": 4,
+      "minCombinedGpa": 9,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "b-unit": {
+      "group": "any",
+      "minSscGpa": 3.5,
+      "minHscGpa": 3.5,
+      "minCombinedGpa": 7.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "c-unit": {
+      "group": "any",
+      "minSscGpa": 3.5,
+      "minHscGpa": 3.5,
+      "minCombinedGpa": 7.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "c1-unit": {
+      "group": "any",
+      "minSscGpa": 3.5,
+      "minHscGpa": 3.5,
+      "minCombinedGpa": 7.5,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "ku": {
+    "a-unit": {
+      "group": "science",
+      "minSscGpa": null,
+      "minHscGpa": null,
+      "minCombinedGpa": 8,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "b-unit": {
+      "group": "science",
+      "minSscGpa": null,
+      "minHscGpa": null,
+      "minCombinedGpa": 8,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "c-unit": {
+      "group": "arts",
+      "minSscGpa": null,
+      "minHscGpa": null,
+      "minCombinedGpa": 7,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "kuet": {
+    "default": {
+      "group": "science",
+      "minSscGpa": 4,
+      "minHscGpa": null,
+      "minCombinedGpa": null,
+      "subjectMinimums": [
+        {
+          "subjectBn": "উচ্চতর গণিত",
+          "minGpa": 4
+        },
+        {
+          "subjectBn": "পদার্থবিজ্ঞান",
+          "minGpa": 4
+        },
+        {
+          "subjectBn": "রসায়ন",
+          "minGpa": 4
+        }
+      ],
+      "subjectGroupMinTotal": {
+        "subjectsBn": [
+          "উচ্চতর গণিত",
+          "পদার্থবিজ্ঞান",
+          "রসায়ন",
+          "ইংরেজি"
+        ],
+        "minTotal": 18
+      },
+      "noteBn": "বায়োমেডিকেল ইঞ্জিনিয়ারিং বিভাগে জীববিজ্ঞানে কমপক্ষে জিপি ৪ আলাদাভাবে প্রয়োজন।"
+    }
+  },
+  "medical-dental": {
+    "default": {
+      "group": "science",
+      "minSscGpa": null,
+      "minHscGpa": null,
+      "minCombinedGpa": 8.5,
+      "subjectMinimums": [
+        {
+          "subjectBn": "জীববিজ্ঞান",
+          "minGpa": 3.5
+        }
+      ],
+      "subjectGroupMinTotal": null,
+      "noteBn": "উপজাতি/প্রতিবন্ধী কোটাসহ কিছু ক্ষেত্রে সর্বমোট জিপিএ ৮ পর্যন্ত শিথিলযোগ্য — নির্দিষ্ট সার্কুলারে যাচাই করুন।"
+    }
+  },
+  "mist": {
+    "a-unit": {
+      "group": "science",
+      "minSscGpa": 4,
+      "minHscGpa": null,
+      "minCombinedGpa": null,
+      "subjectMinimums": [
+        {
+          "subjectBn": "উচ্চতর গণিত",
+          "minGpa": 4
+        },
+        {
+          "subjectBn": "পদার্থবিজ্ঞান",
+          "minGpa": 4
+        },
+        {
+          "subjectBn": "রসায়ন",
+          "minGpa": 4
+        }
+      ],
+      "subjectGroupMinTotal": {
+        "subjectsBn": [
+          "উচ্চতর গণিত",
+          "পদার্থবিজ্ঞান",
+          "রসায়ন",
+          "ইংরেজি"
+        ],
+        "minTotal": 18
+      },
+      "noteBn": null
+    },
+    "b-unit": {
+      "group": "science",
+      "minSscGpa": 4,
+      "minHscGpa": null,
+      "minCombinedGpa": null,
+      "subjectMinimums": [
+        {
+          "subjectBn": "উচ্চতর গণিত",
+          "minGpa": 4
+        },
+        {
+          "subjectBn": "পদার্থবিজ্ঞান",
+          "minGpa": 4
+        },
+        {
+          "subjectBn": "রসায়ন",
+          "minGpa": 4
+        }
+      ],
+      "subjectGroupMinTotal": {
+        "subjectsBn": [
+          "উচ্চতর গণিত",
+          "পদার্থবিজ্ঞান",
+          "রসায়ন",
+          "ইংরেজি"
+        ],
+        "minTotal": 18
+      },
+      "noteBn": null
+    }
+  },
+  "navy-medical": {
+    "default": {
+      "group": "science",
+      "minSscGpa": null,
+      "minHscGpa": null,
+      "minCombinedGpa": 8.5,
+      "subjectMinimums": [
+        {
+          "subjectBn": "জীববিজ্ঞান",
+          "minGpa": 3.5
+        }
+      ],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "ru": {
+    "c-unit": {
+      "group": "science",
+      "minSscGpa": 3.5,
+      "minHscGpa": 3.5,
+      "minCombinedGpa": 8,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "a-unit": {
+      "group": "arts",
+      "minSscGpa": 3,
+      "minHscGpa": 3,
+      "minCombinedGpa": 7,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  },
+  "ruet": {
+    "default": {
+      "group": "science",
+      "minSscGpa": 4,
+      "minHscGpa": null,
+      "minCombinedGpa": null,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": {
+        "subjectsBn": [
+          "উচ্চতর গণিত",
+          "পদার্থবিজ্ঞান",
+          "রসায়ন"
+        ],
+        "minTotal": 14
+      },
+      "noteBn": null
+    }
+  },
+  "sust": {
+    "a-unit": {
+      "group": "science",
+      "minSscGpa": 3,
+      "minHscGpa": 3,
+      "minCombinedGpa": 6.5,
+      "subjectMinimums": [
+        {
+          "subjectBn": "উচ্চতর গণিত",
+          "minGpa": 3
+        }
+      ],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    },
+    "b-unit": {
+      "group": "any",
+      "minSscGpa": 3,
+      "minHscGpa": 3,
+      "minCombinedGpa": 6,
+      "subjectMinimums": [],
+      "subjectGroupMinTotal": null,
+      "noteBn": null
+    }
+  }
+}
