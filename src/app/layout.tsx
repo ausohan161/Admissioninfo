@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hind_Siliguri, Lato, Baloo_Da_2 } from "next/font/google";
+import { Hind_Siliguri, Lato } from "next/font/google";
 import "./globals.css";
 import { ContentProvider } from "@/components/layout/ContentProvider";
 import { texts } from "@/lib/texts";
@@ -16,12 +16,6 @@ const lato = Lato({
   subsets: ["latin"],
   weight: ["400", "700", "900"],
   variable: "--font-lato",
-  display: "swap",
-});
-const balooDa2 = Baloo_Da_2({
-  subsets: ["bengali", "latin"],
-  weight: ["400", "600", "700", "800"],
-  variable: "--font-baloo",
   display: "swap",
 });
 
@@ -49,7 +43,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="bn" className={`${hindSiliguri.variable} ${lato.variable} ${balooDa2.variable}`}>
+    <html lang="bn" className={`${hindSiliguri.variable} ${lato.variable}`}>
+      <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@700&text=%E0%A7%A6%E0%A7%A7%E0%A7%A8%E0%A7%A9%E0%A7%AA%E0%A7%AB%E0%A7%AC%E0%A7%AD%E0%A7%AE%E0%A7%AF&display=swap" />
+      </head>
       <body className="min-h-screen antialiased">
         <ContentProvider>{children}</ContentProvider>
       </body>

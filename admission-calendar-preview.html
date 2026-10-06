@@ -6,7 +6,8 @@
 <title>অ্যাডমিশন ক্যালেন্ডার | বিশ্ববিদ্যালয় ভর্তি পরীক্ষার তারিখ ও তথ্য</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Lato:wght@400;700;900&family=Baloo+Da+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@700&text=%E0%A7%A6%E0%A7%A7%E0%A7%A8%E0%A7%A9%E0%A7%AA%E0%A7%AB%E0%A7%AC%E0%A7%AD%E0%A7%AE%E0%A7%AF&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -30,8 +31,9 @@
 </script>
 <style>
   html { font-size: 18px; }
-  html, body { font-family: "Lato", "Hind Siliguri", system-ui, sans-serif; background-color: #f7f9fc; color: #14213d; margin: 0; }
-  h1, h2, h3 { font-family: "Hind Siliguri", system-ui, sans-serif; font-weight: 700; }
+  * { font-weight: 700 !important; }
+  html, body { font-family: "Baloo Da 2", "Lato", "Hind Siliguri", system-ui, sans-serif; background-color: #f7f9fc; color: #14213d; margin: 0; }
+  h1, h2, h3 { font-family: "Baloo Da 2", "Lato", "Hind Siliguri", system-ui, sans-serif; font-weight: 700; }
   body { font-weight: 700; }
   ::-webkit-scrollbar { height: 8px; width: 8px; }
   ::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 9999px; }
@@ -3223,7 +3225,7 @@ function UpcomingTests({ rows, today }) {
             {rows.map(({ university, unit }, index) => (
               <li key={`${university.id}-${unit.id}`} className="flex items-start justify-between gap-3 py-2.5">
                 <div className="flex min-w-0 items-start gap-2.5">
-                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 text-lg font-extrabold text-white" style={{ fontFamily: "'Baloo Da 2', sans-serif" }}>{toBanglaNumber(index + 1)}</span>
+                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 text-lg font-extrabold text-white">{toBanglaNumber(index + 1)}</span>
                   <div className="min-w-0">
                     <p className="text-sm font-bold leading-snug text-navy-800">{university.shortName}{unit.nameBn && <span className="font-bold text-navy-800"> — {unit.nameBn}</span>}</p>
                   </div>

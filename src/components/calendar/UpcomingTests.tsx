@@ -23,7 +23,7 @@ export function UpcomingTests({ rows, today }: { rows: FlatUnitRow[]; today: str
             {rows.map(({ university, unit }, index) => (
               <li key={`${university.id}-${unit.id}`} className="flex items-start justify-between gap-3 py-2.5">
                 <div className="flex min-w-0 items-start gap-2.5">
-                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 text-lg font-extrabold text-white" style={{ fontFamily: "var(--font-baloo), var(--font-hind), sans-serif" }}>
+                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 text-lg font-extrabold text-white">
                     {toBanglaNumber(index + 1)}
                   </span>
                   <div className="min-w-0">
