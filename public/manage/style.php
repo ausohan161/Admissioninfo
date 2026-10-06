@@ -36,6 +36,15 @@ code{font-family:"Lato",monospace;background:#eef2ff;padding:1px 6px;border-radi
 main{max-width:1100px;margin:22px auto 60px;padding:0 20px}
 .flash{background:linear-gradient(120deg,#ecfdf5,#d1fae5);border:1px solid #6ee7b7;color:#065f46;padding:12px 16px;border-radius:14px;margin-bottom:18px;font-weight:700}
 
+/* formatting bar */
+.fmt-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 14px;margin-bottom:18px;box-shadow:0 8px 20px -16px rgba(15,23,42,.3)}
+.fmt-label{font-size:14px;color:var(--muted);margin-right:4px}
+.fmt{border:1.5px solid #cfd8e6;background:#f8fafc;color:var(--ink);border-radius:10px;padding:7px 12px;font:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s}
+.fmt:hover{border-color:var(--violet);color:var(--violet);background:#f5f3ff}
+.fmt-color{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:700;margin:0 4px}
+.fmt-color input{width:38px;height:34px;padding:2px;border:1.5px solid #cfd8e6;border-radius:8px;background:#fff;cursor:pointer}
+.fmt-help{font-size:13px;color:var(--muted);margin-left:auto}
+
 /* cards */
 .box{background:var(--card);border-radius:20px;border:1px solid var(--line);box-shadow:0 1px 2px rgba(15,23,42,.04),0 18px 40px -24px rgba(15,23,42,.18);padding:24px;margin-bottom:22px}
 .box-accent{border-top:4px solid var(--indigo)}

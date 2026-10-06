@@ -1,6 +1,7 @@
 import { Megaphone } from "lucide-react";
 import { notices } from "@/lib/notices";
 import { texts } from "@/lib/texts";
+import { Rich } from "@/lib/rich";
 
 /** Scrolling news-ticker style banner for general site/admission notices —
  * distinct from `DeadlineTicker`, which only shows auto-computed deadline
@@ -26,7 +27,7 @@ export function NoticeTicker() {
         >
           {track.map((notice, i) => (
             <span key={i} className="flex items-center whitespace-nowrap px-4 text-sm font-semibold text-amber-800">
-              {notice}
+              <Rich text={notice} />
               <span className="ml-4 text-amber-300" aria-hidden>
                 ●
               </span>

@@ -1,4 +1,5 @@
 import { texts } from "@/lib/texts";
+import { Rich } from "@/lib/rich";
 export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-white">
@@ -8,10 +9,10 @@ export function Footer() {
           {texts.appTagline}
         </p>
         <p className="mt-4 text-xs text-slate-400">
-          {texts.footerNote1}
+          <Rich text={texts.footerNote1} />
         </p>
         <p className="mt-1 text-xs text-slate-400">
-          {texts.footerNote2}
+          <Rich text={texts.footerNote2} />
         </p>
       </div>
     </footer>

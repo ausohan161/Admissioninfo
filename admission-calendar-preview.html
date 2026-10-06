@@ -3129,8 +3129,8 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-8 text-center sm:px-6">
         <p className="text-sm font-bold text-navy-800">{texts.appName}</p>
         <p className="mt-1 text-xs text-slate-500">{texts.appTagline}</p>
-        <p className="mt-4 text-xs text-slate-400">{texts.footerNote1}</p>
-        <p className="mt-1 text-xs text-slate-400">{texts.footerNote2}</p>
+        <p className="mt-4 text-xs text-slate-400">{richNodes(texts.footerNote1)}</p>
+        <p className="mt-1 text-xs text-slate-400">{richNodes(texts.footerNote2)}</p>
       </div>
     </footer>
   );
@@ -3192,6 +3192,25 @@ const NOTICES = [
   "যেকোনো সিদ্ধান্ত নেওয়ার আগে সংশ্লিষ্ট বিশ্ববিদ্যালয়ের অফিসিয়াল ওয়েবসাইট ও প্রকাশিত সার্কুলার অবশ্যই যাচাই করুন।",
   "নতুন সার্কুলার প্রকাশিত হওয়ার সাথে সাথে এই ক্যালেন্ডারে তথ্য আপডেট করা হবে।",
 ];
+/* Safe inline formatting for admin-edited text (same rules as src/lib/rich.tsx). */
+const RICH_TOKEN = /\*\*([\s\S]+?)\*\*|~~([\s\S]+?)~~|\*([^*\n]+?)\*|\[c=(#[0-9a-fA-F]{6})\]([\s\S]+?)\[\/c\]/;
+function richNodes(input, keyPrefix = "r") {
+  const out = [];
+  let rest = input;
+  let i = 0;
+  while (rest.length > 0) {
+    const m = RICH_TOKEN.exec(rest);
+    if (!m) { out.push(<React.Fragment key={keyPrefix + "-" + i++}>{rest}</React.Fragment>); break; }
+    if (m.index > 0) out.push(<React.Fragment key={keyPrefix + "-" + i++}>{rest.slice(0, m.index)}</React.Fragment>);
+    const key = keyPrefix + "-" + i++;
+    if (m[1] !== undefined) out.push(<strong key={key}>{richNodes(m[1], key)}</strong>);
+    else if (m[2] !== undefined) out.push(<s key={key}>{richNodes(m[2], key)}</s>);
+    else if (m[3] !== undefined) out.push(<em key={key}>{richNodes(m[3], key)}</em>);
+    else out.push(<span key={key} style={{ color: m[4] }}>{richNodes(m[5], key)}</span>);
+    rest = rest.slice(m.index + m[0].length);
+  }
+  return out;
+}
 function NoticeTicker() {
   if (NOTICES.length === 0) return null;
   const track = [...NOTICES, ...NOTICES];
@@ -3204,7 +3223,7 @@ function NoticeTicker() {
       <div className="min-w-0 flex-1 overflow-hidden py-2.5">
         <div className="marquee-track flex w-max items-center whitespace-nowrap" style={{ animationDuration: `${durationSeconds}s` }}>
           {track.map((notice, i) => (
-            <span key={i} className="flex items-center whitespace-nowrap px-4 text-sm font-semibold text-amber-800">{notice}<span className="ml-4 text-amber-300">●</span></span>
+            <span key={i} className="flex items-center whitespace-nowrap px-4 text-sm font-semibold text-amber-800">{richNodes(notice)}<span className="ml-4 text-amber-300">●</span></span>
           ))}
         </div>
       </div>
@@ -3519,7 +3538,7 @@ function UniversityInfoPanel({ university, initialUnitId }) {
         </div>
         <span className="whitespace-nowrap text-sm font-bold text-slate-500">{texts.admissionSession}: {university.admissionSession}</span>
       </div>
-      {university.introBn && <p className="mt-3 text-base font-semibold text-slate-600">{university.introBn}</p>}
+      {university.introBn && <p className="mt-3 text-base font-semibold text-slate-600">{richNodes(university.introBn)}</p>}
       {hasNamedUnits && university.units.length > 1 && (
         <div className="mt-4 flex gap-1.5 overflow-x-auto pb-1">
           {university.units.map((unit) => (
@@ -3552,7 +3571,7 @@ function UniversityInfoPanel({ university, initialUnitId }) {
           )}
         </InfoSection>
         <InfoSection title={texts.sectionEligibility} icon={IconClipboardCheck} isEmpty={!activeUnit.eligibility?.descriptionBn && !(activeUnit.eligibility?.points?.length)}>
-          {activeUnit.eligibility?.descriptionBn && <p className="text-base font-semibold leading-relaxed text-slate-700">{activeUnit.eligibility.descriptionBn}</p>}
+          {activeUnit.eligibility?.descriptionBn && <p className="text-base font-semibold leading-relaxed text-slate-700">{richNodes(activeUnit.eligibility.descriptionBn)}</p>}
           {activeUnit.eligibility?.points && activeUnit.eligibility.points.length > 0 && (
             <ul className="mt-2 list-inside list-disc space-y-1.5 text-base font-semibold text-slate-700">{activeUnit.eligibility.points.map((p, i) => <li key={i}>{p}</li>)}</ul>
           )}
@@ -3748,7 +3767,7 @@ function EligibilityChecker({ onOpenUniversity }) {
         </form>
       </div>
       {submittedInput && <EligibilityResults resultsByCategory={resultsByCategory} totalCount={results.length} onOpenUniversity={onOpenUniversity} />}
-      <p className="text-center text-xs font-semibold text-slate-400">{texts.checkerDisclaimer}</p>
+      <p className="text-center text-xs font-semibold text-slate-400">{richNodes(texts.checkerDisclaimer)}</p>
     </div>
   );
 }

@@ -13,6 +13,7 @@ import { CircularButton } from "./CircularButton";
 import { getCategoryTheme } from "@/lib/categoryTheme";
 import { useToday } from "@/lib/useToday";
 import { texts } from "@/lib/texts";
+import { Rich } from "@/lib/rich";
 
 export function UniversityInfoPanel({ university }: { university: University }) {
   // Computed on the client so the countdown/status stays accurate every day even when
@@ -47,7 +48,7 @@ export function UniversityInfoPanel({ university }: { university: University }) 
         </span>
       </div>
 
-      {university.introBn && <p className="mt-3 text-base font-semibold text-slate-600">{university.introBn}</p>}
+      {university.introBn && <p className="mt-3 text-base font-semibold text-slate-600"><Rich text={university.introBn} /></p>}
 
       {hasNamedUnits && university.units.length > 1 && (
         <div className="mt-4 flex gap-1.5 overflow-x-auto pb-1">
@@ -108,7 +109,7 @@ export function UniversityInfoPanel({ university }: { university: University }) 
           isEmpty={!activeUnit.eligibility?.descriptionBn && !activeUnit.eligibility?.points?.length}
         >
           {activeUnit.eligibility?.descriptionBn && (
-            <p className="text-base font-semibold leading-relaxed text-slate-700">{activeUnit.eligibility.descriptionBn}</p>
+            <p className="text-base font-semibold leading-relaxed text-slate-700"><Rich text={activeUnit.eligibility.descriptionBn} /></p>
           )}
           {activeUnit.eligibility?.points && activeUnit.eligibility.points.length > 0 && (
             <ul className="mt-2 list-inside list-disc space-y-1.5 text-base font-semibold text-slate-700">

@@ -457,6 +457,41 @@ $csrf = h(csrf_token());
   <div class="flash"><?= h($message) ?></div>
 <?php endif; ?>
 
+<?php if ($tab !== 'users'): ?>
+<div class="fmt-bar">
+  <span class="fmt-label">লেখা নির্বাচন করে বাটনে চাপুন:</span>
+  <button type="button" class="fmt" data-wrap="**" data-after="**"><b>B</b> বোল্ড</button>
+  <button type="button" class="fmt" data-wrap="*" data-after="*"><i>I</i> ইটালিক</button>
+  <button type="button" class="fmt" data-wrap="~~" data-after="~~"><s>S</s> কাটা দাগ</button>
+  <label class="fmt-color">রং <input type="color" id="fmtcolor" value="#dc2626"></label>
+  <button type="button" class="fmt" id="fmtcolorbtn">রং প্রয়োগ</button>
+  <span class="fmt-help">উদাহরণ: **গুরুত্বপূর্ণ** · *ইটালিক* · ~~বাদ~~ · [c=#dc2626]লাল[/c]</span>
+  <script>
+    (function () {
+      var last = null;
+      document.addEventListener('focusin', function (e) {
+        if (e.target.matches('textarea, input[type=text]')) last = e.target;
+      });
+      function wrap(before, after) {
+        if (!last) { alert('প্রথমে যে ঘরে লিখবেন সেখানে ক্লিক করুন।'); return; }
+        var s = last.selectionStart, t = last.selectionEnd, v = last.value;
+        if (s === t) { alert('লেখাটি নির্বাচন করুন।'); return; }
+        last.value = v.slice(0, s) + before + v.slice(s, t) + after + v.slice(t);
+        last.focus();
+        last.selectionStart = s;
+        last.selectionEnd = t + before.length + after.length;
+      }
+      document.querySelectorAll('.fmt[data-wrap]').forEach(function (b) {
+        b.addEventListener('click', function () { wrap(b.dataset.wrap, b.dataset.after); });
+      });
+      document.getElementById('fmtcolorbtn').addEventListener('click', function () {
+        wrap('[c=' + document.getElementById('fmtcolor').value + ']', '[/c]');
+      });
+    })();
+  </script>
+</div>
+<?php endif; ?>
+
 <?php if ($tab === 'home'): ?>
   <section class="box box-accent">
     <h3>প্রতিষ্ঠান ও ইউনিট</h3>

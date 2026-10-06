@@ -18,6 +18,7 @@ import {
 import { EmptyState } from "@/components/ui/EmptyState";
 import { toBanglaNumber } from "@/lib/bangla";
 import { texts, TextKey, fillTemplate } from "@/lib/texts";
+import { Rich } from "@/lib/rich";
 
 const GROUP_OPTIONS: { value: StudentGroup; labelKey: TextKey }[] = [
   { value: "science", labelKey: "groupScience" },
@@ -207,7 +208,7 @@ export function EligibilityChecker() {
       {submittedInput && <ResultsSection resultsByCategory={resultsByCategory} totalCount={results.length} />}
 
       <p className="text-center text-xs font-semibold text-slate-400">
-        {texts.checkerDisclaimer}
+        <Rich text={texts.checkerDisclaimer} />
       </p>
     </div>
   );
