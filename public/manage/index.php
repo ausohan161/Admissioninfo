@@ -595,23 +595,42 @@ $csrf = h(csrf_token());
   </section>
 
 <?php elseif ($tab === 'texts'): ?>
-  <section class="box box-accent" style="border-top-color:#0284c7">
-    <h3>সাধারণ লেখা (টাইটেল, মেনু, হেডিং, বাটন)</h3>
-    <p class="hint">বাম পাশের নাম (যেমন sectionUpcoming) বদলাবেন না, শুধু ডানের লেখা বদলান। <code>{n}</code>, <code>{year}</code> চিহ্ন ঠিক রাখুন।</p>
-    <form method="post">
-      <input type="hidden" name="csrf" value="<?= $csrf ?>">
-      <input type="hidden" name="action" value="texts">
-      <?php foreach (load_json('site-texts') as $key => $value): ?>
-        <label><code><?= h($key) ?></code></label>
-        <?php if (mb_strlen((string) $value) > 60): ?>
-          <textarea name="t[<?= h($key) ?>]"><?= h((string) $value) ?></textarea>
-        <?php else: ?>
-          <input type="text" name="t[<?= h($key) ?>]" value="<?= h((string) $value) ?>">
-        <?php endif; ?>
-      <?php endforeach; ?>
-      <div class="actions"><button class="btn btn-sky">💾 লেখাগুলো সংরক্ষণ করুন</button></div>
-    </form>
-  </section>
+  <?php
+  $values = load_json('site-texts');
+  $groups = require __DIR__ . '/text-groups.php';
+  $listed = [];
+  foreach ($groups as $fields) {
+      $listed = array_merge($listed, array_keys($fields));
+  }
+  $rest = array_diff(array_keys($values), $listed);
+  if ($rest !== []) {
+      $groups['অন্যান্য'] = array_combine($rest, $rest);
+  }
+  ?>
+  <form method="post">
+    <input type="hidden" name="csrf" value="<?= $csrf ?>">
+    <input type="hidden" name="action" value="texts">
+    <section class="box" style="background:linear-gradient(120deg,#eff6ff,#fff);border-color:#bfdbfe">
+      <p class="hint" style="margin:0">প্রতিটি লেবেলের পাশের ছোট কোড (যেমন <code>appName</code>) বদলাবেন না। শুধু লেখা বদলান। <code>{n}</code>, <code>{year}</code> চিহ্ন ঠিক রাখুন।</p>
+    </section>
+    <?php foreach ($groups as $title => $fields): ?>
+      <section class="box box-accent" style="border-top-color:#0284c7">
+        <h3><?= h($title) ?></h3>
+        <?php foreach ($fields as $key => $label):
+            if (!array_key_exists($key, $values)) { continue; }
+            $value = (string) $values[$key];
+        ?>
+          <label><?= h($label) ?> <span class="hint"><code><?= h($key) ?></code></span></label>
+          <?php if (mb_strlen($value) > 60): ?>
+            <textarea name="t[<?= h($key) ?>]"><?= h($value) ?></textarea>
+          <?php else: ?>
+            <input type="text" name="t[<?= h($key) ?>]" value="<?= h($value) ?>">
+          <?php endif; ?>
+        <?php endforeach; ?>
+      </section>
+    <?php endforeach; ?>
+    <div class="actions"><button class="btn btn-sky">💾 লেখাগুলো সংরক্ষণ করুন</button></div>
+  </form>
 
 <?php elseif ($tab === 'users'): ?>
   <section class="box box-accent" style="border-top-color:#059669">
