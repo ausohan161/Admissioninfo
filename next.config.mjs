@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
+// The site lives at https://ausohan.com/admissioninfo/ — every link and asset is prefixed with it.
+const BASE_PATH = "/admissioninfo";
+
 const nextConfig = {
   reactStrictMode: true,
+  basePath: BASE_PATH,
+  env: { NEXT_PUBLIC_BASE_PATH: BASE_PATH },
   // Static HTML export — required for shared hosting (e.g. Hostinger) that has
   // no Node.js runtime. `npm run build` writes plain HTML/CSS/JS into `out/`,
   // which you upload as-is (see README.md for the exact steps).

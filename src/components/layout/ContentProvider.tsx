@@ -8,7 +8,7 @@ const CONTENT_FILES = ["admissions", "info", "eligibility", "notices", "site-tex
 
 async function fetchJson(name: string): Promise<unknown> {
   try {
-    const res = await fetch(`/content/${name}.json?t=${Date.now()}`, { cache: "no-store" });
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/content/${name}.json?t=${Date.now()}`, { cache: "no-store" });
     return res.ok ? await res.json() : null;
   } catch (err) {
     console.warn(`${name}.json লোড করা যায়নি (JSON ভুল থাকতে পারে):`, err);

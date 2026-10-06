@@ -11,5 +11,5 @@
 # সরাসরি public_html-এ ক্লোন করলে (রিকমেন্ডেড পদ্ধতি) এই ফাইলের দরকার নেই।
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ausohanc/admissioninfo.ausohan.com/public_html/
+    - export DEPLOYPATH=/home/ausohanc/public_html/admissioninfo/
     - /bin/cp -R * $DEPLOYPATH

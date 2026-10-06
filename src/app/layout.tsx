@@ -11,7 +11,7 @@ const notoBengali = Noto_Sans_Bengali({
   display: "swap",
 });
 
-const SITE_URL = "https://admission-calendar.example.com";
+const SITE_URL = "https://ausohan.com/admissioninfo";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
