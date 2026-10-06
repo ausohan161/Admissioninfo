@@ -22,8 +22,8 @@ import { Rich } from "@/lib/rich";
 
 const GROUP_OPTIONS: { value: StudentGroup; labelKey: TextKey }[] = [
   { value: "science", labelKey: "groupScience" },
-  { value: "commerce", labelKey: "groupCommerce" },
   { value: "arts", labelKey: "groupArts" },
+  { value: "commerce", labelKey: "groupCommerce" },
 ];
 
 const inputClass =

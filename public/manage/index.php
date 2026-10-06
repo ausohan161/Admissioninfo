@@ -12,7 +12,7 @@ const CATEGORIES = [
     'general-independent' => 'সাধারণ বিশ্ববিদ্যালয় (স্বতন্ত্র)',
     'general-cluster' => 'সাধারণ বিশ্ববিদ্যালয় (গুচ্ছ)',
 ];
-const GROUPS = ['science' => 'বিজ্ঞান', 'commerce' => 'বাণিজ্য', 'arts' => 'মানবিক', 'any' => 'সব গ্রুপ'];
+const GROUPS = ['science' => 'বিজ্ঞান', 'arts' => 'মানবিক', 'commerce' => 'বাণিজ্য', 'any' => 'সব গ্রুপ'];
 const TABS = ['home' => '১. হোম পেজ', 'info' => '২. তথ্যকণিকা', 'checker' => '৩. আবেদনযোগ্যতা যাচাই', 'texts' => '৪. সাধারণ লেখা', 'users' => '৫. ব্যবহারকারী'];
 
 // ---------- first-time setup: create the admin account once ----------
