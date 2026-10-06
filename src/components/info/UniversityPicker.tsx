@@ -18,7 +18,7 @@ export function UniversityPicker({
         >
           <div className="min-w-0">
             <p className="text-sm font-bold leading-snug text-navy-900">{u.nameBn}</p>
-            <p className="text-xs text-slate-400">{u.shortName}</p>
+            <p className="text-sm font-bold text-slate-600">{u.shortName}</p>
           </div>
           <ChevronRight className="h-4 w-4 shrink-0 text-slate-300" aria-hidden />
         </button>

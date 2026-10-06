@@ -46,7 +46,7 @@ export function AdmissionTable({ rows, today }: { rows: FlatUnitRow[]; today: st
                 </td>
                 <td className="border border-slate-300 px-3 py-3">
                   <div className="font-semibold text-navy-900">{university.nameBn}</div>
-                  <div className="text-xs text-slate-400">{university.shortName}</div>
+                  <div className="text-sm font-bold text-slate-600">{university.shortName}</div>
                 </td>
                 <td className="border border-slate-300 px-3 py-3 text-slate-600">
                   <div className="flex items-center gap-1.5">

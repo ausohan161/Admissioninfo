@@ -3284,7 +3284,7 @@ function AdmissionTable({ rows, today, onOpen }) {
                 <td className="whitespace-nowrap border border-slate-300 px-3 py-3">
                   <span className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs font-bold ${theme.badge}`}><span className={`h-1.5 w-1.5 rounded-full ${theme.dot}`}></span>{category?.shortNameBn ?? "—"}</span>
                 </td>
-                <td className="border border-slate-300 px-3 py-3"><div className="font-semibold text-navy-900">{university.nameBn}</div><div className="text-xs text-slate-400">{university.shortName}</div></td>
+                <td className="border border-slate-300 px-3 py-3"><div className="font-semibold text-navy-900">{university.nameBn}</div><div className="text-sm font-bold text-slate-600">{university.shortName}</div></td>
                 <td className="border border-slate-300 px-3 py-3 text-slate-600"><div className="flex items-center gap-1.5"><span>{unit.nameBn ?? "—"}</span></div></td>
                 <td className="whitespace-nowrap border border-slate-300 px-3 py-3 text-slate-600">{formatBanglaDate(unit.applicationStart) ?? texts.notPublished}</td>
                 <td className="whitespace-nowrap border border-slate-300 px-3 py-3 text-slate-600">{formatBanglaDate(unit.applicationEnd) ?? texts.notPublished}</td>
@@ -3476,7 +3476,7 @@ function UniversityPicker({ universityList, onSelect }) {
     <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
       {universityList.map((u) => (
         <button key={u.id} onClick={() => onSelect(u.id)} className="flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white p-4 text-left shadow-soft transition-colors hover:border-indigo-300 hover:bg-indigo-50/40">
-          <div className="min-w-0"><p className="text-sm font-bold leading-snug text-navy-900">{u.nameBn}</p><p className="text-xs text-slate-400">{u.shortName}</p></div>
+          <div className="min-w-0"><p className="text-sm font-bold leading-snug text-navy-900">{u.nameBn}</p><p className="text-sm font-bold text-slate-600">{u.shortName}</p></div>
           <IconChevronRight className="h-4 w-4 shrink-0 text-slate-300" />
         </button>
       ))}
