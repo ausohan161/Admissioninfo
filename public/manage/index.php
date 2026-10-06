@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 session_start(['cookie_httponly' => true, 'cookie_samesite' => 'Strict']);
 require __DIR__ . '/lib.php';
+require __DIR__ . '/style.php';
 
 const CATEGORIES = [
     'medical' => 'মেডিকেল অ্যান্ড ডেন্টাল কলেজ',
@@ -29,17 +30,17 @@ if (!file_exists(config_path())) {
         }
     }
     ?>
-<!doctype html><html lang="bn"><head><meta charset="utf-8"><title>অ্যাডমিন সেটআপ</title></head>
-<body style="font-family:sans-serif;max-width:420px;margin:40px auto;padding:0 16px">
+<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>অ্যাডমিন সেটআপ</title><?= admin_style() ?></head>
+<body class="auth"><div class="auth-card">
 <h2>প্রথমবার সেটআপ</h2>
-<p>অ্যাডমিন অ্যাকাউন্ট তৈরি করুন। এই পেজ একবারই কাজ করে — সেট করার পর এখনই পাসওয়ার্ড দিন।</p>
-<?php if ($message !== '') echo '<p style="color:#b91c1c">' . h($message) . '</p>'; ?>
+<p class="hint">অ্যাডমিন অ্যাকাউন্ট তৈরি করুন। সেট করার পর এখনই পাসওয়ার্ড দিন।</p>
+<?php if ($message !== '') echo '<div class="flash" style="background:#fff1f2;border-color:#fecdd3;color:#9f1239">' . h($message) . '</div>'; ?>
 <form method="post">
-<p><label>ইউজারনেম<br><input name="username" required style="width:100%;padding:8px"></label></p>
-<p><label>পাসওয়ার্ড (কমপক্ষে ১০ অক্ষর)<br><input type="password" name="password" required style="width:100%;padding:8px"></label></p>
-<p><label>পাসওয়ার্ড আবার<br><input type="password" name="confirm" required style="width:100%;padding:8px"></label></p>
-<p><button style="padding:10px 18px">অ্যাকাউন্ট তৈরি করুন</button></p>
-</form></body></html>
+<label>ইউজারনেম</label><input name="username" required>
+<label>পাসওয়ার্ড <span class="hint">(কমপক্ষে ১০ অক্ষর)</span></label><input type="password" name="password" required>
+<label>পাসওয়ার্ড আবার</label><input type="password" name="confirm" required>
+<button class="btn btn-indigo">✓ অ্যাকাউন্ট তৈরি করুন</button>
+</form></div></body></html>
 <?php
     exit;
 }
@@ -67,15 +68,16 @@ if (empty($_SESSION['user'])) {
         $loginError = 'ইউজারনেম বা পাসওয়ার্ড ভুল।';
     }
     ?>
-<!doctype html><html lang="bn"><head><meta charset="utf-8"><title>অ্যাডমিন লগইন</title></head>
-<body style="font-family:sans-serif;max-width:360px;margin:60px auto;padding:0 16px">
-<h2>অ্যাডমিন লগইন</h2>
-<?php if ($loginError !== '') echo '<p style="color:#b91c1c">' . h($loginError) . '</p>'; ?>
+<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>অ্যাডমিন লগইন</title><?= admin_style() ?></head>
+<body class="auth"><div class="auth-card">
+<h2>স্বাগতম</h2>
+<p class="hint">অ্যাডমিশন ক্যালেন্ডারের তথ্য বদলাতে লগইন করুন।</p>
+<?php if ($loginError !== '') echo '<div class="flash" style="background:#fff1f2;border-color:#fecdd3;color:#9f1239">' . h($loginError) . '</div>'; ?>
 <form method="post">
-<p><label>ইউজারনেম<br><input name="username" required style="width:100%;padding:8px"></label></p>
-<p><label>পাসওয়ার্ড<br><input type="password" name="password" required style="width:100%;padding:8px"></label></p>
-<p><button style="padding:10px 18px">লগইন</button></p>
-</form></body></html>
+<label>ইউজারনেম</label><input name="username" required>
+<label>পাসওয়ার্ড</label><input type="password" name="password" required>
+<button class="btn btn-indigo">লগইন করুন →</button>
+</form></div></body></html>
 <?php
     exit;
 }
@@ -430,44 +432,35 @@ $csrf = h(csrf_token());
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>অ্যাডমিন প্যানেল — অ্যাডমিশন ক্যালেন্ডার</title>
-<style>
-body{font-family:sans-serif;margin:0;background:#f5f7fb;color:#14213d;font-size:16px}
-header{background:#4f46e5;color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-nav a{color:#fff;margin-right:12px;text-decoration:none;font-weight:600}
-nav a.active{text-decoration:underline}
-main{max-width:980px;margin:16px auto;padding:0 12px}
-.box{background:#fff;border:1px solid #d7dce6;border-radius:10px;padding:16px;margin-bottom:16px}
-.box h3{margin-top:0}
-label{display:block;font-weight:600;margin:10px 0 4px}
-input[type=text],input[type=number],textarea,select{width:100%;box-sizing:border-box;padding:8px;font-size:15px;border:1px solid #c5ccd9;border-radius:6px}
-textarea{min-height:90px;font-family:inherit}
-.unit{border:1px dashed #b8c1d1;border-radius:8px;padding:10px;margin:10px 0}
-.hint{color:#64708a;font-size:13px;font-weight:400}
-button{background:#4f46e5;color:#fff;border:0;border-radius:6px;padding:10px 18px;font-size:15px;cursor:pointer}
-.ok{background:#dcfce7;border:1px solid #86efac;padding:10px;border-radius:6px;margin-bottom:12px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media(max-width:640px){.grid{grid-template-columns:1fr}}
-</style>
+<?= admin_style() ?>
 </head>
 <body>
-<header>
-  <strong>অ্যাডমিন প্যানেল</strong>
-  <nav>
-    <?php foreach (TABS as $key => $label): ?>
-      <a href="?tab=<?= h($key) ?>" class="<?= $tab === $key ? 'active' : '' ?>"><?= h($label) ?></a>
-    <?php endforeach; ?>
-    <a href="?logout=1">লগআউট</a>
-  </nav>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand"><span class="brand-dot">📅</span> অ্যাডমিন প্যানেল</div>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <span class="user-chip">👤 <?= h($_SESSION['user']) ?> · <?= ($_SESSION['role'] ?? '') === 'admin' ? 'অ্যাডমিন' : 'সম্পাদক' ?></span>
+      <a class="logout" href="?logout=1">লগআউট</a>
+    </div>
+  </div>
 </header>
+
+<nav class="tabs">
+  <?php
+  foreach (TABS as $key => $label): ?>
+    <a href="?tab=<?= h($key) ?>" class="tab <?= $tab === $key ? 'active' : '' ?>"><?= h($label) ?></a>
+  <?php endforeach; ?>
+</nav>
+
 <main>
 <?php if ($message !== ''): ?>
-  <div class="ok"><?= h($message) ?></div>
+  <div class="flash"><?= h($message) ?></div>
 <?php endif; ?>
 
 <?php if ($tab === 'home'): ?>
-  <div class="box">
-    <h3>প্রতিষ্ঠান ও ইউনিট (একনজরে ক্যালেন্ডার)</h3>
-    <?= institution_select('home') ?>
+  <section class="box box-accent">
+    <h3>প্রতিষ্ঠান ও ইউনিট</h3>
+    <div class="picker"><?= institution_select('home') ?></div>
     <?php
     $u = current_institution();
     $isNew = selected_id() === 'new';
@@ -479,7 +472,7 @@ button{background:#4f46e5;color:#fff;border:0;border-radius:6px;padding:10px 18p
             }
         }
     ?>
-    <form method="post">
+    <form method="post" style="margin-top:18px">
       <input type="hidden" name="csrf" value="<?= $csrf ?>">
       <input type="hidden" name="action" value="home">
       <input type="hidden" name="orig_id" value="<?= h($u['id'] ?? '') ?>">
@@ -498,34 +491,38 @@ button{background:#4f46e5;color:#fff;border:0;border-radius:6px;padding:10px 18p
       </div>
       <label>ইউনিট ও তারিখ <span class="hint">প্রতি লাইনে একটি ইউনিট: আইডি | নাম | আবেদন শুরু | আবেদন শেষ | পরীক্ষার তারিখ | নমুনা (১ বা ০)। তারিখ YYYY-MM-DD, না জানলে খালি।</span></label>
       <textarea name="units" rows="6" required><?= h($unitLines !== '' ? $unitLines : "default||||0\n") ?></textarea>
-      <p><button name="save" value="1">সংরক্ষণ করুন</button></p>
+      <div class="actions">
+        <button class="btn btn-indigo">💾 সংরক্ষণ করুন</button>
+      </div>
       <?php if ($u !== null): ?>
-        <label><input type="checkbox" name="delete" value="1" style="width:auto"> এই প্রতিষ্ঠানটি মুছে ফেলুন (তথ্যকণিকা ও শর্তসহ)</label>
+        <div class="danger-zone">
+          <label><input type="checkbox" name="delete" value="1"> এই প্রতিষ্ঠানটি মুছে ফেলুন (তথ্যকণিকা ও শর্তসহ)</label>
+        </div>
       <?php endif; ?>
     </form>
     <?php endif; ?>
-  </div>
+  </section>
 
-  <div class="box">
+  <section class="box box-accent" style="border-top-color:#d97706">
     <h3>জরুরি নোটিশ (স্ক্রলিং ব্যানার)</h3>
     <form method="post">
       <input type="hidden" name="csrf" value="<?= $csrf ?>">
       <input type="hidden" name="action" value="notices">
       <label>প্রতি লাইনে একটি নোটিশ</label>
       <textarea name="notices" rows="6"><?= h(implode("\n", load_json('notices')['notices'] ?? [])) ?></textarea>
-      <p><button>নোটিশ সংরক্ষণ করুন</button></p>
+      <div class="actions"><button class="btn btn-amber">📢 নোটিশ সংরক্ষণ করুন</button></div>
     </form>
-  </div>
+  </section>
 
 <?php elseif ($tab === 'info'): ?>
-  <div class="box">
+  <section class="box box-accent" style="border-top-color:#0d9488">
     <h3>তথ্যকণিকা</h3>
-    <?= institution_select('info') ?>
+    <div class="picker"><?= institution_select('info') ?></div>
     <?php $u = current_institution(); if ($u !== null):
         $info = load_json('info')[$u['id']] ?? [];
         $units = $info['units'] ?? [];
     ?>
-    <form method="post">
+    <form method="post" style="margin-top:18px">
       <input type="hidden" name="csrf" value="<?= $csrf ?>">
       <input type="hidden" name="action" value="info">
       <input type="hidden" name="id" value="<?= h($u['id']) ?>">
@@ -537,7 +534,7 @@ button{background:#4f46e5;color:#fff;border:0;border-radius:6px;padding:10px 18p
           foreach (($i['subjects'] ?? []) as $s) { $subjectLines .= ($s['nameBn'] ?? '') . '|' . ($s['marks'] ?? '') . "\n"; }
       ?>
       <div class="unit">
-        <strong><?= h($unit['nameBn'] ?: $u['nameBn']) ?></strong> <span class="hint">(<?= h($uid) ?>)</span>
+        <div class="unit-title"><?= h($unit['nameBn'] ?: $u['nameBn']) ?> <small><?= h($uid) ?></small></div>
         <div class="grid">
           <div><label>মোট আসন</label><input type="number" name="seats[<?= h($uid) ?>]" value="<?= h((string) ($i['seats']['total'] ?? '')) ?>"></div>
           <div><label>পরীক্ষার ধরন</label><input type="text" name="exampattern[<?= h($uid) ?>]" value="<?= val($i, 'examPattern') ?>"></div>
@@ -550,19 +547,19 @@ button{background:#4f46e5;color:#fff;border:0;border-radius:6px;padding:10px 18p
         <textarea name="subjects[<?= h($uid) ?>]"><?= h($subjectLines) ?></textarea>
       </div>
       <?php endforeach; ?>
-      <p><button>তথ্যকণিকা সংরক্ষণ করুন</button></p>
+      <div class="actions"><button class="btn btn-teal">💾 তথ্যকণিকা সংরক্ষণ করুন</button></div>
     </form>
     <?php endif; ?>
-  </div>
+  </section>
 
 <?php elseif ($tab === 'checker'): ?>
-  <div class="box">
+  <section class="box box-accent" style="border-top-color:#9333ea">
     <h3>আবেদনযোগ্যতা যাচাই — জিপিএ শর্ত</h3>
-    <?= institution_select('checker') ?>
+    <div class="picker"><?= institution_select('checker') ?></div>
     <?php $u = current_institution(); if ($u !== null):
         $elig = load_json('eligibility')[$u['id']] ?? [];
     ?>
-    <form method="post">
+    <form method="post" style="margin-top:18px">
       <input type="hidden" name="csrf" value="<?= $csrf ?>">
       <input type="hidden" name="action" value="checker">
       <input type="hidden" name="id" value="<?= h($u['id']) ?>">
@@ -574,7 +571,7 @@ button{background:#4f46e5;color:#fff;border:0;border-radius:6px;padding:10px 18p
           $sgtLine = $sgt ? implode(',', $sgt['subjectsBn'] ?? []) . '|' . ($sgt['minTotal'] ?? '') : '';
       ?>
       <div class="unit">
-        <strong><?= h($unit['nameBn'] ?: $u['nameBn']) ?></strong> <span class="hint">(<?= h($uid) ?>)</span>
+        <div class="unit-title"><?= h($unit['nameBn'] ?: $u['nameBn']) ?> <small><?= h($uid) ?></small></div>
         <div class="grid">
           <div><label>গ্রুপ <span class="hint">(খালি রাখলে এই ইউনিট চেকারে আসবে না)</span></label>
             <select name="group[<?= h($uid) ?>]"><option value="">— নেই —</option>
@@ -592,32 +589,32 @@ button{background:#4f46e5;color:#fff;border:0;border-radius:6px;padding:10px 18p
         <textarea name="note[<?= h($uid) ?>]"><?= h($c['noteBn'] ?? '') ?></textarea>
       </div>
       <?php endforeach; ?>
-      <p><button>শর্ত সংরক্ষণ করুন</button></p>
+      <div class="actions"><button class="btn btn-purple">💾 শর্ত সংরক্ষণ করুন</button></div>
     </form>
     <?php endif; ?>
-  </div>
+  </section>
 
 <?php elseif ($tab === 'texts'): ?>
-  <div class="box">
-    <h3>সাধারণ লেখা (টাইটেল, মেনু, হেডিং, বাটন — সব পেজ)</h3>
+  <section class="box box-accent" style="border-top-color:#0284c7">
+    <h3>সাধারণ লেখা (টাইটেল, মেনু, হেডিং, বাটন)</h3>
     <p class="hint">বাম পাশের নাম (যেমন sectionUpcoming) বদলাবেন না, শুধু ডানের লেখা বদলান। <code>{n}</code>, <code>{year}</code> চিহ্ন ঠিক রাখুন।</p>
     <form method="post">
       <input type="hidden" name="csrf" value="<?= $csrf ?>">
       <input type="hidden" name="action" value="texts">
       <?php foreach (load_json('site-texts') as $key => $value): ?>
-        <label><?= h($key) ?></label>
+        <label><code><?= h($key) ?></code></label>
         <?php if (mb_strlen((string) $value) > 60): ?>
           <textarea name="t[<?= h($key) ?>]"><?= h((string) $value) ?></textarea>
         <?php else: ?>
           <input type="text" name="t[<?= h($key) ?>]" value="<?= h((string) $value) ?>">
         <?php endif; ?>
       <?php endforeach; ?>
-      <p><button>লেখাগুলো সংরক্ষণ করুন</button></p>
+      <div class="actions"><button class="btn btn-sky">💾 লেখাগুলো সংরক্ষণ করুন</button></div>
     </form>
-  </div>
+  </section>
 
 <?php elseif ($tab === 'users'): ?>
-  <div class="box">
+  <section class="box box-accent" style="border-top-color:#059669">
     <h3>আমার পাসওয়ার্ড বদলান</h3>
     <form method="post">
       <input type="hidden" name="csrf" value="<?= $csrf ?>">
@@ -626,35 +623,35 @@ button{background:#4f46e5;color:#fff;border:0;border-radius:6px;padding:10px 18p
         <div><label>বর্তমান পাসওয়ার্ড</label><input type="password" name="current_password" required></div>
         <div><label>নতুন পাসওয়ার্ড (কমপক্ষে ১০ অক্ষর)</label><input type="password" name="new_password_own" required></div>
       </div>
-      <p><button>পাসওয়ার্ড বদলান</button></p>
+      <div class="actions"><button class="btn btn-amber">🔑 পাসওয়ার্ড বদলান</button></div>
     </form>
-  </div>
+  </section>
 
   <?php if (is_admin()): $users = load_users(); ?>
-  <div class="box">
+  <section class="box box-accent" style="border-top-color:#4f46e5">
     <h3>ব্যবহারকারীর তালিকা</h3>
-    <table style="width:100%;border-collapse:collapse">
-      <tr><th style="text-align:left">ইউজারনেম</th><th style="text-align:left">ভূমিকা</th><th></th></tr>
+    <table>
+      <tr><th>ইউজারনেম</th><th>ভূমিকা</th><th></th></tr>
       <?php foreach ($users as $name => $account): ?>
-      <tr style="border-top:1px solid #e2e8f0">
-        <td><?= h($name) ?><?= $name === $_SESSION['user'] ? ' <span class="hint">(আপনি)</span>' : '' ?></td>
-        <td><?= $account['role'] === 'admin' ? 'অ্যাডমিন' : 'সম্পাদক' ?></td>
-        <td>
+      <tr>
+        <td><strong><?= h($name) ?></strong><?= $name === $_SESSION['user'] ? ' <span class="hint">(আপনি)</span>' : '' ?></td>
+        <td><span class="role <?= $account['role'] === 'admin' ? 'role-admin' : 'role-editor' ?>"><?= $account['role'] === 'admin' ? 'অ্যাডমিন' : 'সম্পাদক' ?></span></td>
+        <td style="text-align:right">
           <?php if ($name !== $_SESSION['user']): ?>
-          <form method="post" onsubmit="return confirm('এই ব্যবহারকারী মুছবেন?')">
+          <form method="post" onsubmit="return confirm('এই ব্যবহারকারী মুছবেন?')" style="margin:0">
             <input type="hidden" name="csrf" value="<?= $csrf ?>">
             <input type="hidden" name="action" value="delete_user">
             <input type="hidden" name="target" value="<?= h($name) ?>">
-            <button style="background:#dc2626">মুছুন</button>
+            <button class="btn btn-rose btn-small">🗑 মুছুন</button>
           </form>
           <?php endif; ?>
         </td>
       </tr>
       <?php endforeach; ?>
     </table>
-  </div>
+  </section>
 
-  <div class="box">
+  <section class="box box-accent" style="border-top-color:#059669">
     <h3>নতুন ব্যবহারকারী যোগ করুন</h3>
     <form method="post">
       <input type="hidden" name="csrf" value="<?= $csrf ?>">
@@ -665,10 +662,10 @@ button{background:#4f46e5;color:#fff;border:0;border-radius:6px;padding:10px 18p
         <div><label>ভূমিকা</label>
           <select name="new_role"><option value="editor">সম্পাদক (তথ্য বদলাতে পারবেন)</option><option value="admin">অ্যাডমিন (ব্যবহারকারীও পরিচালনা করতে পারবেন)</option></select></div>
       </div>
-      <p><button>যোগ করুন</button></p>
+      <div class="actions"><button class="btn btn-emerald">➕ যোগ করুন</button></div>
+      <p class="hint">নতুন ব্যবহারকারীকে পাসওয়ার্ড আলাদাভাবে জানান। তিনি লগইন করে নিজের পাসওয়ার্ড বদলাতে পারবেন।</p>
     </form>
-    <p class="hint">নতুন ব্যবহারকারীকে পাসওয়ার্ড আলাদাভাবে জানান। তিনি লগইন করে নিজের পাসওয়ার্ড বদলাতে পারবেন।</p>
-  </div>
+  </section>
   <?php endif; ?>
 <?php endif; ?>
 </main>
