@@ -3227,7 +3227,7 @@ function UpcomingTests({ rows, today }) {
                 <div className="flex min-w-0 items-start gap-2.5">
                   <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 text-lg font-extrabold text-white">{toBanglaNumber(index + 1)}</span>
                   <div className="min-w-0">
-                    <p className="text-sm font-bold leading-snug text-navy-800">{university.shortName}{unit.nameBn && <span className="font-bold text-navy-800"> — {unit.nameBn}</span>}</p>
+                    <p className="text-sm font-bold leading-snug text-navy-800">{university.nameBn}<span className="font-bold text-slate-500"> ({university.shortName})</span>{unit.nameBn && <span className="font-bold text-navy-800"> — {unit.nameBn}</span>}</p>
                   </div>
                 </div>
                 <CountdownBadge unit={unit} today={today} />

@@ -28,7 +28,8 @@ export function UpcomingTests({ rows, today }: { rows: FlatUnitRow[]; today: str
                   </span>
                   <div className="min-w-0">
                     <p className="text-sm font-bold leading-snug text-navy-800">
-                      {university.shortName}
+                      {university.nameBn}
+                      <span className="font-bold text-slate-500"> ({university.shortName})</span>
                       {unit.nameBn && (
                         <span className="font-bold text-navy-800"> — {unit.nameBn}</span>
                       )}
